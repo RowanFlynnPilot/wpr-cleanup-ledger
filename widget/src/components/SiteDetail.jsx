@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import {
+  addressDisplay,
   dnrUrl,
   fmtDate,
+  muniDisplay,
   statusOf,
   titleCase,
   TYPE_LABELS,
@@ -19,23 +21,57 @@ export default function SiteDetail({ site, onClose }) {
   const closeRef = useRef(null);
   const st = statusOf(site);
 
+  const drawerRef = useRef(null);
+
+  // Keyed on site.dsn as well as onClose so selecting a different site
+  // while the drawer is open moves focus to the new dialog content.
   useEffect(() => {
     const prev = document.activeElement;
     closeRef.current?.focus();
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const onKey = (e) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      // Keep Tab focus inside the dialog — including recapture when focus
+      // sits on <body> (e.g. after clicking non-interactive drawer text).
+      if (e.key === "Tab" && drawerRef.current) {
+        const focusables = drawerRef.current.querySelectorAll(
+          'button:not([disabled]), a[href], input:not([disabled]), ' +
+            'select:not([disabled]), textarea:not([disabled]), ' +
+            '[contenteditable], [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const inside = drawerRef.current.contains(document.activeElement);
+        if (!inside) {
+          e.preventDefault();
+          first.focus();
+        } else if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
       if (prev instanceof HTMLElement) prev.focus();
     };
-  }, [onClose]);
+  }, [onClose, site.dsn]);
 
   return (
     <>
       <div className="drawer-backdrop" onClick={onClose} aria-hidden="true" />
       <aside
+        ref={drawerRef}
         className="drawer"
         role="dialog"
         aria-modal="true"
@@ -54,8 +90,8 @@ export default function SiteDetail({ site, onClose }) {
           <p className="drawer__brrts">BRRTS {site.brrts}</p>
           <h2 className="drawer__title">{site.name}</h2>
           <p className="drawer__addr">
-            {site.address ? `${titleCase(site.address)}, ` : ""}
-            {titleCase(site.muni ?? "")}
+            {site.address ? `${addressDisplay(site.address)}, ` : ""}
+            {muniDisplay(site.muni)}
           </p>
           <div className="drawer__chips">
             <span className={`chip chip--${st.key}`}>{st.label}</span>

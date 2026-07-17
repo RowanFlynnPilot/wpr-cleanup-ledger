@@ -23,6 +23,13 @@ OUT_DIR = REPO_ROOT / "public" / "data"
 
 PUBLISHED_ROLES = ("Responsible Party", "Owner")
 
+# The widget renders these statuses with vetted editorial copy. Anything
+# else (CONDITIONALLY CLOSED and VPLE WITHDRAWN both exist in Marathon
+# County) must fail the build so a human writes the copy before it ships —
+# same philosophy as the ingest scripts: structural surprises raise.
+# Blank status is legitimate only on OFF-SITE records.
+KNOWN_STATUSES = {"OPEN", "CLOSED"}
+
 
 def write(path: Path, payload: dict) -> None:
     path.write_text(
@@ -48,6 +55,14 @@ def build_sites(conn: sqlite3.Connection) -> dict:
         "FROM activity WHERE co_flag = 1 ORDER BY activity_display_number"
     ):
         dsn = a[0]
+        status, activity_type = a[6], a[3]
+        if status not in KNOWN_STATUSES and not (
+            status == "" and activity_type == "OFF-SITE"
+        ):
+            raise RuntimeError(
+                f"Activity {a[1]} has status {status!r} ({activity_type}); "
+                "add vetted display copy to the widget before publishing it"
+            )
         parties = conn.execute(
             "SELECT DISTINCT role, full_name, city, state FROM party "
             f"WHERE detail_seq_no = ? AND role IN ({','.join('?' * len(PUBLISHED_ROLES))}) "

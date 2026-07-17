@@ -8,9 +8,17 @@ on:
 permissions:
   contents: write
 
+# Shares the nightly workflow's group: bulk ingest and map pull must not
+# mutate the DB and push at the same time. One pending run per group —
+# a newer queued run cancels an older queued one, so if this quarterly
+# run ever shows as canceled, re-dispatch it manually.
+concurrency:
+  group: data-pipeline
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     outputs:
       pushed: ${{ steps.commit.outputs.pushed }}
     steps:

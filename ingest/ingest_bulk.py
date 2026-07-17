@@ -53,10 +53,20 @@ def number(value: str):
 
 
 def rows_of(zf: zipfile.ZipFile, member: str):
-    """Yield dict rows from one tab-delimited member of the zip."""
+    """Yield dict rows from one tab-delimited member of the zip.
+
+    Every value is stripped here, at the door: bulk fields carry stray
+    leading/trailing whitespace, and downstream consumers (JSON builds,
+    DISTINCT dedup, exact-match status/type checks, Phase 2 joins) all
+    assume clean strings. One correct path: nothing dirty enters the DB.
+    """
     with zf.open(f"{MEMBER_DIR}/{member}") as raw:
         text = io.TextIOWrapper(raw, encoding="cp1252", errors="replace")
-        yield from csv.DictReader(text, delimiter="\t")
+        for row in csv.DictReader(text, delimiter="\t"):
+            yield {
+                k: v.strip() if isinstance(v, str) else v
+                for k, v in row.items()
+            }
 
 
 def load_activities(zf: zipfile.ZipFile) -> list[dict]:
@@ -84,7 +94,9 @@ def main() -> None:
                 tmp.write(chunk)
         tmp.flush()
 
-        zf = zipfile.ZipFile(tmp.name)
+        # Open via the existing handle, not the path: on Windows the
+        # NamedTemporaryFile holds the file exclusively while open.
+        zf = zipfile.ZipFile(tmp)
         extract_date = date(
             *zf.getinfo(f"{MEMBER_DIR}/facility-activity.txt").date_time[:3]
         ).isoformat()

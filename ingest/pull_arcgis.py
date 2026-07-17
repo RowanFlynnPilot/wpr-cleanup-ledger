@@ -83,7 +83,12 @@ def fetch_layer(layer_id: int) -> dict[int, dict]:
 
     records = {}
     for feature in payload["features"]:
-        a = feature["attributes"]
+        # Map attributes carry the same stray whitespace as the bulk feed;
+        # strip at the door so map_state and the event feed stay clean.
+        a = {
+            k: v.strip() if isinstance(v, str) else v
+            for k, v in feature["attributes"].items()
+        }
         records[a["DETAIL_SEQ_NO"]] = {
             "activity_number": a["ACTIVITY_DETAIL_NO"],
             "activity_name": a["ACTIVITY_DETAIL_NAME"],

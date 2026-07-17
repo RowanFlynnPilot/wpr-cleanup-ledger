@@ -1,6 +1,11 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
-import { STATUS_COLORS, statusOf, titleCase } from "../lib/format.js";
+import {
+  muniDisplay,
+  STATUS_COLORS,
+  STATUS_DRAW_ORDER,
+  statusOf,
+} from "../lib/format.js";
 
 // Marathon County, roughly. Used before data arrives and as a fallback.
 const COUNTY_CENTER = [44.9, -89.77];
@@ -16,7 +21,6 @@ export default function SiteMap({ sites, selected, onSelect }) {
   const mapRef = useRef(null);
   const markersRef = useRef(null);
   const haloRef = useRef(null);
-  const byDsnRef = useRef(new Map());
 
   useEffect(() => {
     const map = L.map(divRef.current, {
@@ -50,11 +54,15 @@ export default function SiteMap({ sites, selected, onSelect }) {
     const group = markersRef.current;
     if (!map || !group) return;
     group.clearLayers();
-    byDsnRef.current.clear();
 
-    for (const site of sites) {
+    // Open cases render last so they sit on top where markers crowd.
+    // Decorate with the status key once per site, then sort by rank.
+    const ordered = sites
+      .map((site) => [statusOf(site).key, site])
+      .sort(([a], [b]) => STATUS_DRAW_ORDER[a] - STATUS_DRAW_ORDER[b]);
+
+    for (const [key, site] of ordered) {
       if (site.lat == null || site.lon == null) continue;
-      const key = statusOf(site).key;
       const marker = L.circleMarker([site.lat, site.lon], {
         radius: key === "open" ? 8 : 6,
         color: "#20312d",
@@ -65,18 +73,17 @@ export default function SiteMap({ sites, selected, onSelect }) {
       marker.bindTooltip(
         `<span class="site-tip__name">${escapeHtml(site.name)}</span>` +
           `<span class="site-tip__sub">${escapeHtml(site.brrts)} · ${escapeHtml(
-            titleCase(site.muni ?? "")
+            muniDisplay(site.muni)
           )}</span>`,
         { className: "site-tip", direction: "top", offset: [0, -6] }
       );
       marker.on("click", () => onSelect(site));
       marker.addTo(group);
-      byDsnRef.current.set(site.dsn, marker);
     }
 
     if (sites.length) {
       const bounds = L.latLngBounds(
-        sites.filter((s) => s.lat != null).map((s) => [s.lat, s.lon])
+        sites.filter((site) => site.lat != null).map((site) => [site.lat, site.lon])
       );
       if (bounds.isValid()) {
         map.fitBounds(bounds.pad(0.12), { maxZoom: 14 });

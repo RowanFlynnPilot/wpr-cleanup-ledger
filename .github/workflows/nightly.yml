@@ -8,9 +8,18 @@ on:
 permissions:
   contents: write
 
+# Never let two data-pipeline runs mutate the DB and push concurrently.
+# GitHub keeps at most ONE pending run per group and cancels the older
+# pending run when a newer one queues — so don't stack manual dispatches
+# while a run is in flight, and keep timeouts tight so a hung run can't
+# hold the group hostage.
+concurrency:
+  group: data-pipeline
+
 jobs:
   pull:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     outputs:
       pushed: ${{ steps.commit.outputs.pushed }}
     steps:

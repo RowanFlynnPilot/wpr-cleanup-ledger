@@ -24,7 +24,7 @@ export default function Masthead({ asOf, onAbout }) {
         what it requires of the property today.
       </p>
       <p className="masthead__meta">
-        {asOf ? <>Data as of {fmtDate(asOf)} · </> : null}
+        {asOf ? <>Data as of {fmtDate(asOf)} · map checked nightly · </> : null}
         Source: Wisconsin DNR BRRTS ·{" "}
         <button type="button" onClick={onAbout}>
           About this data

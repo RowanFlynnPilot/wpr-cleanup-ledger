@@ -1,5 +1,11 @@
 import { useMemo, useState } from "react";
-import { fmtDate, statusOf, titleCase, typeShort } from "../lib/format.js";
+import {
+  addressDisplay,
+  fmtDate,
+  muniDisplay,
+  statusOf,
+  typeShort,
+} from "../lib/format.js";
 
 const COLUMNS = [
   { key: "brrts", label: "BRRTS #" },
@@ -25,13 +31,16 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
   const [sort, setSort] = useState({ key: "brrts", dir: 1 });
 
   const sorted = useMemo(() => {
-    const copy = [...sites];
-    copy.sort((a, b) => {
-      const va = sortValue(a, sort.key);
-      const vb = sortValue(b, sort.key);
-      return sort.dir * String(va).localeCompare(String(vb));
+    // Decorate once per site instead of per comparison.
+    const keyed = sites.map((site) => [String(sortValue(site, sort.key)), site]);
+    keyed.sort(([va], [vb]) => {
+      // Missing values sort last regardless of direction.
+      if (!va && !vb) return 0;
+      if (!va) return 1;
+      if (!vb) return -1;
+      return sort.dir * va.localeCompare(vb);
     });
-    return copy;
+    return keyed.map(([, site]) => site);
   }, [sites, sort]);
 
   const clickSort = (key) =>
@@ -83,7 +92,7 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
                     }
                   }}
                   tabIndex={0}
-                  aria-label={`${site.name}, ${titleCase(site.muni ?? "")} — open details`}
+                  aria-label={`${site.name}, ${muniDisplay(site.muni)} — open details`}
                 >
                   <td className="sites__brrts">{site.brrts}</td>
                   <td>
@@ -92,12 +101,12 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
                       <>
                         <br />
                         <span className="sites__addr">
-                          {titleCase(site.address)}
+                          {addressDisplay(site.address)}
                         </span>
                       </>
                     ) : null}
                   </td>
-                  <td>{titleCase(site.muni ?? "")}</td>
+                  <td>{muniDisplay(site.muni)}</td>
                   <td className="hide-sm">{typeShort(site.type)}</td>
                   <td>
                     <span className={`chip chip--${st.key}`}>{st.short}</span>

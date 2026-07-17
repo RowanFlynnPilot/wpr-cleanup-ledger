@@ -1125,7 +1125,7 @@
    "type": "ERP"
   },
   {
-   "address": "SE CORNER OF W BEECH & S 6TH ",
+   "address": "SE CORNER OF W BEECH & S 6TH",
    "brrts": "02-37-000499",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -2547,7 +2547,7 @@
      "state": "WI"
     },
     {
-     "city": "MANAWA ",
+     "city": "MANAWA",
      "name": "TOMORROW VALLEY COOP SERVICES",
      "role": "Responsible Party",
      "state": "WI"
@@ -2802,7 +2802,7 @@
    "parties": [
     {
      "city": "WAUSAU",
-     "name": "DOCTORS PARK, LP ",
+     "name": "DOCTORS PARK, LP",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -3489,7 +3489,7 @@
    "lat": 45.014652415,
    "lon": -89.676490473,
    "muni": "WAUSAU",
-   "name": "KUFAHL TRUCKING ",
+   "name": "KUFAHL TRUCKING",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual Soil Contamination",
@@ -3782,7 +3782,7 @@
    "type": "ERP"
   },
   {
-   "address": "132 RIVER ST ",
+   "address": "132 RIVER ST",
    "brrts": "02-37-584785",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -6528,7 +6528,7 @@
    "lat": 44.872276823,
    "lon": -90.239371453,
    "muni": "UNITY",
-   "name": "KOPS FARM ",
+   "name": "KOPS FARM",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -10958,7 +10958,7 @@
    "type": "LUST"
   },
   {
-   "address": "CENTRAL AVE N AND N PEACH AVE ",
+   "address": "CENTRAL AVE N AND N PEACH AVE",
    "brrts": "03-37-580146",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11124,7 +11124,7 @@
    "type": "LUST"
   },
   {
-   "address": "H2682 CTH N ",
+   "address": "H2682 CTH N",
    "brrts": "13-37-572969",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11133,7 +11133,7 @@
    "lat": 44.902056173,
    "lon": -90.216632262,
    "muni": "COLBY",
-   "name": "H2682 CTH N ",
+   "name": "H2682 CTH N",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11151,7 +11151,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "H2688 CTH N ",
+   "address": "H2688 CTH N",
    "brrts": "13-37-572970",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11160,7 +11160,7 @@
    "lat": 44.901992127,
    "lon": -90.217176673,
    "muni": "COLBY",
-   "name": "H2688 CTH N ",
+   "name": "H2688 CTH N",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11178,7 +11178,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "5500 SCHOFIELD AVE ",
+   "address": "5500 SCHOFIELD AVE",
    "brrts": "13-37-572977",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11187,7 +11187,7 @@
    "lat": 44.905133775,
    "lon": -89.553526021,
    "muni": "WESTON",
-   "name": "5500 SCHOFIELD AVE ",
+   "name": "5500 SCHOFIELD AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11205,7 +11205,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "F1036 CTH N ",
+   "address": "F1036 CTH N",
    "brrts": "13-37-572991",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11214,7 +11214,7 @@
    "lat": 44.902504365,
    "lon": -90.079013189,
    "muni": "EDGAR",
-   "name": "F1036 CTH N ",
+   "name": "F1036 CTH N",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11232,7 +11232,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1118 E GRAND AVE ",
+   "address": "1118 E GRAND AVE",
    "brrts": "13-37-572992",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11241,7 +11241,7 @@
    "lat": 44.900280526,
    "lon": -89.609737024,
    "muni": "ROTHSCHILD",
-   "name": "1118 E GRAND AVE ",
+   "name": "1118 E GRAND AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11259,7 +11259,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "2205 RIB MOUNTAIN DR ",
+   "address": "2205 RIB MOUNTAIN DR",
    "brrts": "13-37-572995",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11268,7 +11268,7 @@
    "lat": 44.936780319,
    "lon": -89.656256788,
    "muni": "RIB MOUNTAIN TN",
-   "name": "2205 RIB MOUNTAIN DR ",
+   "name": "2205 RIB MOUNTAIN DR",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11286,7 +11286,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "505/509 21ST AVE ",
+   "address": "505/509 21ST AVE",
    "brrts": "13-37-573149",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11295,7 +11295,7 @@
    "lat": 44.958203299,
    "lon": -89.661682167,
    "muni": "WAUSAU",
-   "name": "505/509 21ST AVE ",
+   "name": "505/509 21ST AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11313,7 +11313,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "515 21ST AVE ",
+   "address": "515 21ST AVE",
    "brrts": "13-37-573150",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11322,7 +11322,7 @@
    "lat": 44.957870457,
    "lon": -89.661760193,
    "muni": "WAUSAU",
-   "name": "515 21ST AVE ",
+   "name": "515 21ST AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11340,7 +11340,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "521 21ST AVE ",
+   "address": "521 21ST AVE",
    "brrts": "13-37-573151",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11349,7 +11349,7 @@
    "lat": 44.957429516,
    "lon": -89.661813496,
    "muni": "WAUSAU",
-   "name": "521 21ST AVE ",
+   "name": "521 21ST AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11367,7 +11367,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "601 21ST AVE ",
+   "address": "601 21ST AVE",
    "brrts": "13-37-573152",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11376,7 +11376,7 @@
    "lat": 44.957195357,
    "lon": -89.661776839,
    "muni": "WAUSAU",
-   "name": "601 21ST AVE ",
+   "name": "601 21ST AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11394,7 +11394,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1010 N FIRST ST ",
+   "address": "1010 N FIRST ST",
    "brrts": "13-37-573341",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11403,7 +11403,7 @@
    "lat": 44.966578447,
    "lon": -89.630781229,
    "muni": "WAUSAU",
-   "name": "1010 N FIRST ST ",
+   "name": "1010 N FIRST ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11421,7 +11421,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "914 TRILLIUM RD ",
+   "address": "914 TRILLIUM RD",
    "brrts": "13-37-573455",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11430,7 +11430,7 @@
    "lat": 44.742442899,
    "lon": -89.895790697,
    "muni": "MOSINEE",
-   "name": "914 TRILLIUM RD ",
+   "name": "914 TRILLIUM RD",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11448,7 +11448,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "2108 N 6TH ST ",
+   "address": "2108 N 6TH ST",
    "brrts": "13-37-573536",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11457,7 +11457,7 @@
    "lat": 44.973694016,
    "lon": -89.62373506,
    "muni": "WAUSAU",
-   "name": "2108 N 6TH ST ",
+   "name": "2108 N 6TH ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11484,7 +11484,7 @@
    "lat": 44.974009911,
    "lon": -89.623986636,
    "muni": "WAUSAU",
-   "name": "2202 N 6TH ST ",
+   "name": "2202 N 6TH ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11502,7 +11502,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "2208 N 6TH ST ",
+   "address": "2208 N 6TH ST",
    "brrts": "13-37-573538",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11511,7 +11511,7 @@
    "lat": 44.974170982,
    "lon": -89.623693896,
    "muni": "WAUSAU",
-   "name": "2208 N 6TH ST ",
+   "name": "2208 N 6TH ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11529,7 +11529,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "517 E WAUSAU AVE ",
+   "address": "517 E WAUSAU AVE",
    "brrts": "13-37-573539",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11538,7 +11538,7 @@
    "lat": 44.973606126,
    "lon": -89.624382422,
    "muni": "WAUSAU",
-   "name": "517 E WAUSAU AVE ",
+   "name": "517 E WAUSAU AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11556,7 +11556,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "520 E WAUSAU AVE ",
+   "address": "520 E WAUSAU AVE",
    "brrts": "13-37-573540",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11565,7 +11565,7 @@
    "lat": 44.97402925,
    "lon": -89.624392341,
    "muni": "WAUSAU",
-   "name": "520 E WAUSAU AVE ",
+   "name": "520 E WAUSAU AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11583,7 +11583,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "523 E WAUSAU AVE ",
+   "address": "523 E WAUSAU AVE",
    "brrts": "13-37-573541",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11592,7 +11592,7 @@
    "lat": 44.973659387,
    "lon": -89.624153797,
    "muni": "WAUSAU",
-   "name": "523 E WAUSAU AVE ",
+   "name": "523 E WAUSAU AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11610,7 +11610,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "106 S THIRD AVE ",
+   "address": "106 S THIRD AVE",
    "brrts": "13-37-573553",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11619,7 +11619,7 @@
    "lat": 44.800483892,
    "lon": -90.077508259,
    "muni": "STRATFORD",
-   "name": "106 S THIRD AVE ",
+   "name": "106 S THIRD AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11637,7 +11637,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "2031 RUSSELL ST ",
+   "address": "2031 RUSSELL ST",
    "brrts": "13-37-573952",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11646,7 +11646,7 @@
    "lat": 44.841397081,
    "lon": -89.66027872,
    "muni": "MOSINEE",
-   "name": "2031 RUSSELL ST ",
+   "name": "2031 RUSSELL ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11664,7 +11664,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1000 S 66TH AVE ",
+   "address": "1000 S 66TH AVE",
    "brrts": "13-37-573955",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11673,7 +11673,7 @@
    "lat": 44.949885028,
    "lon": -89.716773603,
    "muni": "WAUSAU",
-   "name": "1000 S 66TH AVE ",
+   "name": "1000 S 66TH AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11700,7 +11700,7 @@
    "lat": 44.951134021,
    "lon": -89.717484042,
    "muni": "WAUSAU",
-   "name": "835 S 66TH AVE ",
+   "name": "835 S 66TH AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11727,7 +11727,7 @@
    "lat": 44.951447055,
    "lon": -89.716474385,
    "muni": "WAUSAU",
-   "name": "840 S 62ND AVE ",
+   "name": "840 S 62ND AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11745,7 +11745,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "910 CLEVELAND AVE ",
+   "address": "910 CLEVELAND AVE",
    "brrts": "13-37-574006",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11754,7 +11754,7 @@
    "lat": 44.949213567,
    "lon": -89.636381586,
    "muni": "WAUSAU",
-   "name": "910 CLEVELAND AVE ",
+   "name": "910 CLEVELAND AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11781,7 +11781,7 @@
    "lat": 45.025525931,
    "lon": -90.078357158,
    "muni": "ATHENS",
-   "name": "900 PINE ST ",
+   "name": "900 PINE ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11799,7 +11799,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1108 S 6TH AVE ",
+   "address": "1108 S 6TH AVE",
    "brrts": "13-37-574307",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11808,7 +11808,7 @@
    "lat": 44.948083831,
    "lon": -89.643525558,
    "muni": "WAUSAU",
-   "name": "1108 S 6TH AVE ",
+   "name": "1108 S 6TH AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11826,7 +11826,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "601 W THOMAS ST ",
+   "address": "601 W THOMAS ST",
    "brrts": "13-37-574308",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11835,7 +11835,7 @@
    "lat": 44.948209699,
    "lon": -89.643474074,
    "muni": "WAUSAU",
-   "name": "601 W THOMAS ST ",
+   "name": "601 W THOMAS ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11853,7 +11853,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "610 W THOMAS ST ",
+   "address": "610 W THOMAS ST",
    "brrts": "13-37-574309",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11862,7 +11862,7 @@
    "lat": 44.948516355,
    "lon": -89.643662323,
    "muni": "WAUSAU",
-   "name": "610 W THOMAS ST ",
+   "name": "610 W THOMAS ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11880,7 +11880,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "626 E S 153 ",
+   "address": "626 E S 153",
    "brrts": "13-37-574430",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11889,7 +11889,7 @@
    "lat": 44.801264028,
    "lon": -90.068190486,
    "muni": "STRATFORD",
-   "name": "626 E S 153 ",
+   "name": "626 E S 153",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11916,7 +11916,7 @@
    "lat": 44.921341636,
    "lon": -89.968374262,
    "muni": "EDGAR",
-   "name": "316 REDWOOD ST ",
+   "name": "316 REDWOOD ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11934,7 +11934,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1013 N 4TH AVE ",
+   "address": "1013 N 4TH AVE",
    "brrts": "13-37-574477",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11943,7 +11943,7 @@
    "lat": 44.975566454,
    "lon": -89.640363248,
    "muni": "WAUSAU",
-   "name": "1013 N 4TH AVE ",
+   "name": "1013 N 4TH AVE",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -11988,7 +11988,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "216 ALFRED ST ",
+   "address": "216 ALFRED ST",
    "brrts": "13-37-574863",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -11997,7 +11997,7 @@
    "lat": 45.033360727,
    "lon": -90.073607127,
    "muni": "ATHENS",
-   "name": "216 ALFRED ST ",
+   "name": "216 ALFRED ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -12015,7 +12015,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "220 ALFRED ST ",
+   "address": "220 ALFRED ST",
    "brrts": "13-37-574864",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -12024,7 +12024,7 @@
    "lat": 45.033243711,
    "lon": -90.073594282,
    "muni": "ATHENS",
-   "name": "220 ALFRED ST ",
+   "name": "220 ALFRED ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -12042,7 +12042,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "300 ALFRED ST ",
+   "address": "300 ALFRED ST",
    "brrts": "13-37-574865",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -12051,7 +12051,7 @@
    "lat": 45.032901795,
    "lon": -90.073352635,
    "muni": "ATHENS",
-   "name": "300 ALFRED ST ",
+   "name": "300 ALFRED ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -12069,7 +12069,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "301 ALFRED ST ",
+   "address": "301 ALFRED ST",
    "brrts": "13-37-574866",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -12078,7 +12078,7 @@
    "lat": 45.03285631,
    "lon": -90.074088896,
    "muni": "ATHENS",
-   "name": "301 ALFRED ST ",
+   "name": "301 ALFRED ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",
@@ -12096,7 +12096,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "304 ALFRED ST ",
+   "address": "304 ALFRED ST",
    "brrts": "13-37-574867",
    "co_from_another_property": false,
    "contamination_moved_offsite": false,
@@ -12105,7 +12105,7 @@
    "lat": 45.032685767,
    "lon": -90.073326969,
    "muni": "ATHENS",
-   "name": "304 ALFRED ST ",
+   "name": "304 ALFRED ST",
    "obligations": [
     {
      "action": "Continuing Obligation - Residual GW Contamination",

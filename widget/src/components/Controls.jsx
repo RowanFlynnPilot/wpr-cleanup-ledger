@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { titleCase } from "../lib/format.js";
+import { muniDisplay } from "../lib/format.js";
 
 export default function Controls({ sites, filters, onChange, onReset }) {
   const munis = useMemo(() => {
@@ -71,7 +71,7 @@ export default function Controls({ sites, filters, onChange, onReset }) {
           <option value="all">All</option>
           {munis.map(([muni, n]) => (
             <option key={muni} value={muni}>
-              {titleCase(muni)} ({n})
+              {muniDisplay(muni)} ({n})
             </option>
           ))}
         </select>
