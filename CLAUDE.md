@@ -79,18 +79,32 @@ python -m pip install -r requirements.txt
 python ingest\ingest_bulk.py    # quarterly spine (~35 MB download)
 python ingest\pull_arcgis.py    # nightly diff (first run = baseline)
 python build\build_json.py      # emit public/data/*.json
+
+cd widget
+npm install
+npm run dev                     # widget at /wpr-cleanup-ledger/ (honors $env:PORT)
+npm run build                   # production build -> widget/dist
 ```
 
 Workflows: `.github/workflows/nightly.yml` (10:30 UTC daily) and
 `quarterly.yml` (5th of Mar/Jun/Sep/Dec + manual dispatch; bulk publishes
-around the 1st).
+around the 1st). Both call `deploy.yml` (GitHub Pages) after committing —
+bot pushes with GITHUB_TOKEN never fire push-triggered workflows, so the
+explicit workflow_call is required, gated on the commit actually happening.
 
 ## Roadmap
 
-- **Phase 1 — widget.** React/Vite in the WPR design system (teal `#3A867C`,
-  cream `#F6F2E9`, Fraunces display, Public Sans body, JetBrains Mono for
-  data). Map + searchable site table + obligation detail from
-  `public/data/sites.json`. GitHub Pages, iframe embed.
+- **Phase 1 — widget. SHIPPED July 2026.** React/Vite in `widget/`, WPR
+  design system (teal `#3A867C`, cream `#F6F2E9`, Fraunces display, Public
+  Sans body, JetBrains Mono for data) plus the live-site logo/wordmark.
+  Leaflet map + searchable site table + obligation detail drawer from
+  `public/data/sites.json`; every site deep-links to its DNR record
+  (`apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>`). Live at
+  https://rowanflynnpilot.github.io/wpr-cleanup-ledger/ — iframe embed
+  snippet in README.md. Not yet embedded in production (awaits Shereen's
+  editorial review). Note: the news site itself uses Merriweather/Oswald;
+  the Fraunces/Public Sans system is the Ledger data-product brand — don't
+  "fix" the widget to match the news theme.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char
