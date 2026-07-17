@@ -22,13 +22,15 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    # Job-level, not workflow-level: workflow-level concurrency does not
-    # reliably govern this job when the workflow runs via workflow_call
-    # (the jobs belong to the caller's run). cancel-in-progress stays off
-    # so an in-flight Pages deployment is never killed halfway; a newer
-    # queued deploy supersedes any older queued one, and since every
-    # deploy checks out main's tip, whichever run survives ships the
-    # newest data.
+    # Job-level, not workflow-level: a called workflow's TOP-LEVEL
+    # concurrency is evaluated in the caller's context, so with
+    # cancel-in-progress it can cancel the caller run itself (the whole
+    # nightly pipeline) when a standalone deploy races it. Job-level
+    # scopes the "pages" group to just this job. cancel-in-progress stays
+    # off so an in-flight Pages deployment is never killed halfway; a
+    # newer queued deploy replaces any older queued one (GitHub keeps one
+    # pending slot per group), and since every deploy checks out main's
+    # tip, whichever run survives ships the newest data.
     concurrency:
       group: pages
       cancel-in-progress: false
