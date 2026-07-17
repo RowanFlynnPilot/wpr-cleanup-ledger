@@ -29,7 +29,9 @@ export default function App() {
   }, []);
 
   // Report our height to the parent page so the WordPress iframe can size
-  // itself (see README for the embed snippet).
+  // itself (see README for the embed snippet). The parent may register its
+  // listener after our first post, so we also answer pings and post again
+  // on window load.
   useEffect(() => {
     if (window.parent === window) return;
     const post = () =>
@@ -40,10 +42,19 @@ export default function App() {
         },
         "*"
       );
+    const onMsg = (e) => {
+      if (e.data?.type === "cleanup-ledger:ping") post();
+    };
     const ro = new ResizeObserver(post);
     ro.observe(document.documentElement);
+    window.addEventListener("message", onMsg);
+    window.addEventListener("load", post);
     post();
-    return () => ro.disconnect();
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("message", onMsg);
+      window.removeEventListener("load", post);
+    };
   }, []);
 
   const sites = data?.sites ?? [];

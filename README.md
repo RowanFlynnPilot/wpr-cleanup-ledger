@@ -51,21 +51,23 @@ DNR RR Sites Map (nightly) ───┘
 
 ## Embedding (WordPress)
 
-Paste into a Custom HTML block:
+Paste into a Custom HTML block (the script must come before the iframe):
 
 ```html
-<iframe src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"
-        title="The Cleanup Ledger — contamination sites and continuing obligations in Marathon County"
-        width="100%" height="1500" style="border:0;" loading="lazy"></iframe>
 <script>
   window.addEventListener("message", function (e) {
     if (e.origin === "https://rowanflynnpilot.github.io" &&
         e.data && e.data.type === "cleanup-ledger:height") {
-      var f = document.querySelector('iframe[src^="https://rowanflynnpilot.github.io/wpr-cleanup-ledger"]');
+      var f = document.getElementById("cleanup-ledger");
       if (f) f.style.height = e.data.height + "px";
     }
   });
 </script>
+<iframe id="cleanup-ledger"
+        src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"
+        title="The Cleanup Ledger — contamination sites and continuing obligations in Marathon County"
+        width="100%" height="1500" style="border:0;" loading="lazy"
+        onload="this.contentWindow.postMessage({type:'cleanup-ledger:ping'}, 'https://rowanflynnpilot.github.io')"></iframe>
 ```
 
 The `<script>` is optional — the widget reports its height so the iframe can
