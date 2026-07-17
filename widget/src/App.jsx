@@ -34,11 +34,15 @@ export default function App() {
   // on window load.
   useEffect(() => {
     if (window.parent === window) return;
+    // Laid-out height of <html>, not scrollHeight: scrollHeight is clamped
+    // to the viewport, which would let the iframe grow but never shrink.
     const post = () =>
       window.parent.postMessage(
         {
           type: "cleanup-ledger:height",
-          height: document.documentElement.scrollHeight,
+          height: Math.ceil(
+            document.documentElement.getBoundingClientRect().height
+          ),
         },
         "*"
       );
