@@ -62,6 +62,7 @@ def build_sites(conn: sqlite3.Connection) -> dict:
             (dsn,),
         ).fetchall()
         sites.append({
+            "dsn": dsn,  # DNR public record: apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>
             "brrts": a[1],
             "name": a[2],
             "type": a[3],
