@@ -67,7 +67,10 @@ restrictions. Marathon County numbers from the July 2026 audit:
    comment fields statewide. Structural problems still raise.
 8. Spill detail tables (`spilldetails.txt`, `spiller-actions.txt`) are out of
    v1 scope. Spills are in the activity spine with impacts/substances.
-
+9. **Monthly heartbeat.** The nightly workflow writes the current month to
+   `data/heartbeat.txt`; the resulting one-commit-per-month is a deliberate
+   exception to the quiet-repo rule, keeping scheduled workflows inside
+   GitHub's 60-day activity window. Do not remove.
 ## Commands (PowerShell)
 
 ```powershell
