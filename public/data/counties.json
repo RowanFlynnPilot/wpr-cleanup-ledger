@@ -1,0 +1,36 @@
+{
+ "counties": [
+  {
+   "name": "Marathon",
+   "slug": "marathon"
+  },
+  {
+   "name": "Langlade",
+   "slug": "langlade"
+  },
+  {
+   "name": "Lincoln",
+   "slug": "lincoln"
+  },
+  {
+   "name": "Oneida",
+   "slug": "oneida"
+  },
+  {
+   "name": "Portage",
+   "slug": "portage"
+  },
+  {
+   "name": "Shawano",
+   "slug": "shawano"
+  },
+  {
+   "name": "Taylor",
+   "slug": "taylor"
+  },
+  {
+   "name": "Wood",
+   "slug": "wood"
+  }
+ ]
+}

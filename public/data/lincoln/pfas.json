@@ -1,0 +1,36 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "IRMA",
+   "lat": 45.32997478148196,
+   "lon": -89.64055574125855,
+   "name": "LINCOLN HILLS SCHOOL",
+   "pws_id": "73501219",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-24",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MERRILL",
+   "lat": 45.18501635344106,
+   "lon": -89.66243447689862,
+   "name": "MERRILL WATERWORKS",
+   "pws_id": "73501230",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-31",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "TOMAHAWK",
+   "lat": 45.46049584388135,
+   "lon": -89.72336455111306,
+   "name": "TOMAHAWK WATERWORKS",
+   "pws_id": "73501274",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-03-04",
+   "sample_status": "Sampled"
+  }
+ ]
+}

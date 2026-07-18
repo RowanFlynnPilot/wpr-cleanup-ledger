@@ -1,0 +1,46 @@
+{
+ "activities_total": 544,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 385,
+  "N/A": 146,
+  "OPEN": 13
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 6,
+  "ERP": 59,
+  "GENERAL PROPERTY": 15,
+  "LUST": 99,
+  "NO ACTION REQUIRED": 109,
+  "OFF-SITE": 22,
+  "SPILL": 234
+ },
+ "co_by_municipality": {
+  "ANTIGO": 53,
+  "BRYANT": 2,
+  "DEERBROOK": 2,
+  "ELCHO": 5,
+  "KEMPSTER": 1,
+  "LILY": 1,
+  "PEARSON": 2,
+  "PECK": 1,
+  "PICKEREL": 1,
+  "ROLLING TN": 1,
+  "SUMMIT LAKE": 6,
+  "UPHAM": 1,
+  "WHITE LAKE": 3,
+  "WOLF RIVER": 1
+ },
+ "continuing_obligation_sites": 80,
+ "enforcement": {
+  "audit_followup_complete": 0,
+  "audit_followup_needed": 0,
+  "audits_complete": 16,
+  "audits_vapor_only": 0,
+  "co_applied": 80,
+  "deed_recorded": 20,
+  "deed_terminated": 0,
+  "modifications_approved": 1,
+  "obligations_removed": 0
+ }
+}

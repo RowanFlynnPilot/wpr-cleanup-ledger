@@ -1,0 +1,4953 @@
+{
+ "bulk_extract_date": "2026-07-01",
+ "sites": [
+  {
+   "address": "CTH B & BOGUS RD",
+   "affected_properties": [],
+   "brrts": "02-34-000141",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 33300,
+   "end_date": "2002-10-03",
+   "impacts": [],
+   "lat": 45.308166324,
+   "lon": -89.167425379,
+   "muni": "UPHAM",
+   "name": "WITTMAN, JIM",
+   "obligations": [
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2002-07-11"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2002-10-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-10-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2025-04-29"
+    }
+   ],
+   "parties": [
+    {
+     "city": "LYNDON",
+     "name": "LYNDON TN",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-10-26",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "931 10TH AVE",
+   "affected_properties": [],
+   "brrts": "02-34-000165",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 33398,
+   "end_date": "2003-12-27",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.132686465,
+   "lon": -89.15820508,
+   "muni": "ANTIGO",
+   "name": "ANTIGO EVANGELICAL FREE CHURCH",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-11-27"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2003-11-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-12-27"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-08-19"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-06-28",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "118 CLERMONT ST",
+   "affected_properties": [],
+   "brrts": "02-34-000224",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "vapor"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 33607,
+   "end_date": "",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Sediment Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.133210849,
+   "lon": -89.154960737,
+   "muni": "ANTIGO",
+   "name": "ANTIGO CITY GAS CO MGP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2025-04-04"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2025-04-04"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2025-04-04"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2025-04-04"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2025-04-04"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2025-04-04"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "CITY GAS COMPANY",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-10-29",
+   "status": "OPEN",
+   "substances": [
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "N5112 HILL RD",
+   "affected_properties": [],
+   "brrts": "02-34-000295",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 33852,
+   "end_date": "2007-12-07",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.23139257,
+   "lon": -89.051777458,
+   "muni": "BRYANT",
+   "name": "ZALEWSKI, RONALD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-12-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-12-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2008-01-18"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-12-12",
+   "status": "CLOSED",
+   "substances": [
+    "Fertilizer"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "212 GRUBER ST",
+   "affected_properties": [],
+   "brrts": "02-34-000318",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 33935,
+   "end_date": "1995-09-14",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.131216882,
+   "lon": -89.143408427,
+   "muni": "ANTIGO",
+   "name": "HALEY, LEONA",
+   "obligations": [
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "1995-08-18"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "1995-09-14"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "1995-09-14"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1995-09-14"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1995-09-14"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2025-04-21"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1992-02-15",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "ERP"
+  },
+  {
+   "address": "1922 N EDISON ST",
+   "affected_properties": [],
+   "brrts": "02-34-097273",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 97273,
+   "end_date": "2008-11-13",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.159628883,
+   "lon": -89.15581087,
+   "muni": "ANTIGO",
+   "name": "FARM BUREAU COOP-ANTIGO",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2008-11-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2008-11-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2008-11-13"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2008-11-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2008-11-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2008-11-21"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2020-06-12"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2020-06-23"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2021-01-14"
+    },
+    {
+     "action": "CO Modification Final Documentation Received",
+     "date": "2021-02-03"
+    },
+    {
+     "action": "Continuing Obligation Modification Approval",
+     "date": "2021-02-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-12-11",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "ERP"
+  },
+  {
+   "address": "N3955 MILL RD",
+   "affected_properties": [],
+   "brrts": "02-34-100329",
+   "co_from_another_property": false,
+   "co_types": [
+    "industrial-soil",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 100329,
+   "end_date": "2007-12-03",
+   "impacts": [],
+   "lat": 45.171549671,
+   "lon": -88.993983547,
+   "muni": "BRYANT",
+   "name": "POLAR MFG",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-12-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-12-03"
+    },
+    {
+     "action": "Continuing Obligation - Soil at Industrial Levels",
+     "date": "2007-12-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-12-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-12-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2019-08-02"
+    }
+   ],
+   "parties": [
+    {
+     "city": "BRYANT",
+     "name": "MATT CALHOUN",
+     "role": "Owner",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-01-05",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "ERP"
+  },
+  {
+   "address": "627 IRVING ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-585900",
+     "dsn": 585900,
+     "name": "619 IRVING ST"
+    },
+    {
+     "brrts": "13-34-585901",
+     "dsn": 585901,
+     "name": "232 MILTON ST"
+    }
+   ],
+   "brrts": "02-34-118451",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 118451,
+   "end_date": "2018-08-30",
+   "impacts": [
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.134979226,
+   "lon": -89.15098813,
+   "muni": "ANTIGO",
+   "name": "WAGNER OIL CO BULK PLT FACILITY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2020-06-16"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "WAGNER OIL (WAGNER HOLDINGS LLC)",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-02-19",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "420 E FREIBURGER AVE",
+   "affected_properties": [],
+   "brrts": "02-34-269953",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 269953,
+   "end_date": "2002-10-16",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.129470285,
+   "lon": -89.136163715,
+   "muni": "ANTIGO",
+   "name": "VIRGIL HUNTER & SONS PROPERTY (FORMER)",
+   "obligations": [
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2002-07-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-10-16"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-06-05"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2013-06-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2013-06-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2001-01-02",
+   "status": "CLOSED",
+   "substances": [
+    "Engine Waste Oil"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "620 6TH AVE",
+   "affected_properties": [],
+   "brrts": "02-34-403499",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "lgu-exemption",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 403499,
+   "end_date": "",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Direct Contact",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.139228963,
+   "lon": -89.15077641,
+   "muni": "ANTIGO",
+   "name": "ANTIGO COOP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2013-02-15"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Liability Exemption for LGU",
+     "date": "2013-02-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2013-02-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2013-02-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2013-02-15"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-05-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2024-06-26"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "CITY OF ANTIGO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-01-15",
+   "status": "OPEN",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "N9626 S SHORE DR",
+   "affected_properties": [],
+   "brrts": "02-34-495253",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 495253,
+   "end_date": "2005-09-12",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.388481959,
+   "lon": -88.928179425,
+   "muni": "PICKEREL",
+   "name": "NORTHERN ADVERTSING",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-09-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-09-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-09-26"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-05-19",
+   "status": "CLOSED",
+   "substances": [
+    "Metals"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "W10564 COLE ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-574820",
+     "dsn": 574820,
+     "name": "N11130 HUNTING RIVER RD"
+    }
+   ],
+   "brrts": "02-34-513142",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 513142,
+   "end_date": "2009-07-31",
+   "impacts": [
+    {
+     "desc": "Direct Contact",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.434585394,
+   "lon": -89.181471399,
+   "muni": "ELCHO",
+   "name": "AMOCO ELCHO BULK PLT (FORMER)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-08-07"
+    }
+   ],
+   "parties": [
+    {
+     "city": "BROOKFIELD",
+     "name": "ATLANTIC RICHFIELD CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-09-19",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "620 EDISON ST",
+   "affected_properties": [],
+   "brrts": "02-34-543713",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 543713,
+   "end_date": "2017-01-04",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.141442299,
+   "lon": -89.156600806,
+   "muni": "ANTIGO",
+   "name": "RASMUSSEN PROPERTY (FMR) - LOT 1 & 3",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2017-01-04"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2017-01-04"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-01-04"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2017-03-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MADISON",
+     "name": "STATION HOUSE LTD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2005-08-02",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Lead (Pb)",
+    "Polynuclear Aromatic Hydrocarbons",
+    "Tetrachloroethene (Perchloroethylene)"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "810 HUDSON ST",
+   "affected_properties": [],
+   "brrts": "02-34-578537",
+   "co_from_another_property": false,
+   "co_types": [
+    "industrial-soil",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 578537,
+   "end_date": "2020-03-20",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.143708292,
+   "lon": -89.147783861,
+   "muni": "ANTIGO",
+   "name": "MERIT GEAR CORP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2020-03-20"
+    },
+    {
+     "action": "Continuing Obligation - Soil at Industrial Levels",
+     "date": "2020-03-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2020-03-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2020-03-23"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2025-05-13"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "ACE EQUIPMENT CO",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "ANTIGO",
+     "name": "MERIT GEAR",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2016-11-17",
+   "status": "CLOSED",
+   "substances": [
+    "Antifreeze"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "915 1ST AVE",
+   "affected_properties": [],
+   "brrts": "02-34-584715",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 584715,
+   "end_date": "2023-02-24",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.14588378,
+   "lon": -89.156613097,
+   "muni": "ANTIGO",
+   "name": "LANGLADE CNTY - 915 1ST AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2023-02-24"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2023-02-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2023-02-24"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2023-03-27"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "LANGLADE COUNTY",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2019-11-14",
+   "status": "CLOSED",
+   "substances": [
+    "Lead (Pb)",
+    "Metals",
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "201 SUPERIOR ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-564176",
+     "dsn": 564176,
+     "name": "133 SUPERIOR ST"
+    }
+   ],
+   "brrts": "03-34-000280",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 21338,
+   "end_date": "2000-05-12",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.134393932,
+   "lon": -89.152307736,
+   "muni": "ANTIGO",
+   "name": "EDS BICYCLE SHOP",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-01-21"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-05-01",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "747 BISSELL ST",
+   "affected_properties": [],
+   "brrts": "03-34-000322",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21574,
+   "end_date": "2018-09-07",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.160811069,
+   "lon": -88.762209601,
+   "muni": "WHITE LAKE",
+   "name": "ROBBINS INC (YAWKEY-BISSEL)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-09-07"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2018-09-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-09-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2018-10-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2025-05-13"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WHITE LAKE",
+     "name": "ROBBINS INC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1983-05-02",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "1ST AVE, 2ND AVE & EDISON ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-564178",
+     "dsn": 564178,
+     "name": "2ND AVE"
+    },
+    {
+     "brrts": "13-34-564179",
+     "dsn": 564179,
+     "name": "W OF EDISON ST"
+    },
+    {
+     "brrts": "13-34-564234",
+     "dsn": 564234,
+     "name": "W OF EDISON ST"
+    }
+   ],
+   "brrts": "03-34-000354",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 21732,
+   "end_date": "2001-09-26",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.145951743,
+   "lon": -89.157549219,
+   "muni": "ANTIGO",
+   "name": "ANTIGO 2ND AVE & EDISON ST CONTAMINATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-04-01"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "CITY OF ANTIGO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-08-31",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "101 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-000384",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21892,
+   "end_date": "2000-06-07",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.133069537,
+   "lon": -89.152097662,
+   "muni": "ANTIGO",
+   "name": "SPUR GAS STATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-08-17",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "N9911 CTH B",
+   "affected_properties": [],
+   "brrts": "03-34-000398",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21968,
+   "end_date": "2003-11-21",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.387201593,
+   "lon": -89.201674629,
+   "muni": "SUMMIT LAKE",
+   "name": "WI DNR SUMMIT LAKE RANGER STATION",
+   "obligations": [
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1999-01-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-11-21"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2003-11-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-11-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2006-04-26"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MADISON",
+     "name": "WI DNR PARKS & RECREATION",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-09-17",
+   "status": "CLOSED",
+   "substances": [
+    "Fuel Oil",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N7695 STH 55",
+   "affected_properties": [],
+   "brrts": "03-34-000547",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 22709,
+   "end_date": "2006-07-13",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.306658507,
+   "lon": -88.853938455,
+   "muni": "LILY",
+   "name": "WELLS SHELL",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-07-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-07-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-09-01"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2006-12-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MURRAY",
+     "name": "WELLS SHELL STATION",
+     "role": "Responsible Party",
+     "state": "KY"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-07-24",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N5620 CTH H",
+   "affected_properties": [],
+   "brrts": "03-34-000587",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 22922,
+   "end_date": "1995-04-25",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.230706408,
+   "lon": -89.232563432,
+   "muni": "PECK",
+   "name": "RIVER GROVE ELEMENTARY SCHOOL",
+   "obligations": [
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1995-04-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "1995-04-25"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "1995-04-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1995-04-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2006-04-24"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "ANTIGO SCHOOL DIST",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-06-24",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "920 AMRON AVE",
+   "affected_properties": [],
+   "brrts": "03-34-000595",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 22965,
+   "end_date": "2017-01-30",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.167740383,
+   "lon": -89.155945557,
+   "muni": "ANTIGO",
+   "name": "AMRON CORP #2",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-01-30"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2017-01-30"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2017-01-30"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-01-30"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2017-09-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2025-05-13"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "AMRON CORP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-04-04",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N4495 STH 55",
+   "affected_properties": [
+    {
+     "brrts": "13-34-573360",
+     "dsn": 573360,
+     "name": "STH 55 & STH 64"
+    }
+   ],
+   "brrts": "03-34-000684",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 23459,
+   "end_date": "2005-12-16",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.189801923,
+   "lon": -88.732283297,
+   "muni": "WOLF RIVER",
+   "name": "BOBS TAVERN",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2005-12-16"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-12-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-12-16"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2005-12-16"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-09-30"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WHITE LAKE",
+     "name": "BOBS TAVERN",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-11-19",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "N11180 USH 45",
+   "affected_properties": [
+    {
+     "brrts": "13-34-573365",
+     "dsn": 573365,
+     "name": "N11173 USH 45"
+    }
+   ],
+   "brrts": "03-34-000706",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 23586,
+   "end_date": "2004-09-10",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.434684143,
+   "lon": -89.183950254,
+   "muni": "ELCHO",
+   "name": "KRAUSE SERVICE GARAGE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-12-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2008-07-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ELCHO",
+     "name": "KRAUSE SERVICE GARAGE",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1992-01-10",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "812 LAKE ST",
+   "affected_properties": [],
+   "brrts": "03-34-000809",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 24182,
+   "end_date": "2003-01-28",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.161318801,
+   "lon": -88.761645237,
+   "muni": "WHITE LAKE",
+   "name": "VILLAGE PANTRY RESTAURANT",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-01-28"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-01-28"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-07-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "VILLAGE PANTRY RESTAURANT",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1992-07-15",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "201 MORSE ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-573446",
+     "dsn": 573446,
+     "name": "118 CLERMONT ST PARCEL #201-1178"
+    }
+   ],
+   "brrts": "03-34-000979",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 24993,
+   "end_date": "2010-03-29",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.133485745,
+   "lon": -89.156730814,
+   "muni": "ANTIGO",
+   "name": "KRAFT INC - ANTIGO",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2010-09-28"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2024-06-26"
+    }
+   ],
+   "parties": [
+    {
+     "city": "GLENVILLE",
+     "name": "KRAFT GENERAL FOODS INC",
+     "role": "Responsible Party",
+     "state": "IL"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-07-20",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N11221 USH 45",
+   "affected_properties": [],
+   "brrts": "03-34-001036",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 25245,
+   "end_date": "2001-11-07",
+   "impacts": [
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.436143887,
+   "lon": -89.183090045,
+   "muni": "ELCHO",
+   "name": "GOERKE CORNER",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-03-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ELCHO",
+     "name": "GOERKE CORNER",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-09-27",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "2120 NEVA RD",
+   "affected_properties": [],
+   "brrts": "03-34-001065",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 25390,
+   "end_date": "2000-06-13",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.160610886,
+   "lon": -89.148645762,
+   "muni": "ANTIGO",
+   "name": "DRAEGER OIL ANTIGO NORTH STATION",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-12-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2014-08-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2014-11-18"
+    },
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2014-11-18"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2014-11-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2022-08-09"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "DRAEGER OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-12-30",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "802 EDISON ST",
+   "affected_properties": [],
+   "brrts": "03-34-001099",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 25552,
+   "end_date": "2000-10-03",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.143505752,
+   "lon": -89.156520577,
+   "muni": "ANTIGO",
+   "name": "FERMANICH FUEL CO",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-10-02"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "FERMANICH FUEL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1994-05-19",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "104 SUPERIOR ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-573531",
+     "dsn": 573531,
+     "name": "100 S SUPERIOR ST"
+    }
+   ],
+   "brrts": "03-34-001261",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 26312,
+   "end_date": "2004-05-24",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.132934432,
+   "lon": -89.152783848,
+   "muni": "ANTIGO",
+   "name": "CITGO QUICK FOOD MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-05-24"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-05-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-05-24"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2004-05-24"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-10-07"
+    }
+   ],
+   "parties": [
+    {
+     "city": "IRON RIVER",
+     "name": "KRIST OIL CO (CITGO)",
+     "role": "Responsible Party",
+     "state": "MI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-03-29",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "803 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-001276",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 26383,
+   "end_date": "2015-08-13",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.14345037,
+   "lon": -89.151934823,
+   "muni": "ANTIGO",
+   "name": "SUPERAMERICA STORE #4096",
+   "obligations": [
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-05-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2015-08-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2015-08-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2015-08-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2015-08-25"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "DRAEGER OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-05-05",
+   "status": "CLOSED",
+   "substances": [
+    "Other Substance Not Listed",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N9307 MILL RD",
+   "affected_properties": [
+    {
+     "brrts": "13-34-587872",
+     "dsn": 587872,
+     "name": "N9319 MILL RD"
+    }
+   ],
+   "brrts": "03-34-001281",
+   "co_from_another_property": false,
+   "co_types": [],
+   "contamination_moved_offsite": true,
+   "dsn": 26408,
+   "end_date": "2021-06-18",
+   "impacts": [
+    {
+     "desc": "Contaminated Private Well",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.365233948,
+   "lon": -89.196213422,
+   "muni": "SUMMIT LAKE",
+   "name": "RAITH LOGGING",
+   "obligations": [
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-06-18"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2021-06-18"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "SUMMIT LAKE",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-05-24",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "2008 NEVA RD",
+   "affected_properties": [],
+   "brrts": "03-34-001325",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 26590,
+   "end_date": "2000-06-07",
+   "impacts": [
+    {
+     "desc": "Contaminated Private Well",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.159444887,
+   "lon": -89.148433186,
+   "muni": "ANTIGO",
+   "name": "HACKBARTH SPUR STATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-06-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-03-19"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "HACKBARTH SPUR STATION",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-09-12",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "206 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-100484",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 100484,
+   "end_date": "2007-08-23",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.134494804,
+   "lon": -89.153301192,
+   "muni": "ANTIGO",
+   "name": "BRICKNERS OF ANTIGO",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-08-23"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-08-23"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-08-23"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-26"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-05-10",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "10TH AVE & DORR ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-575634",
+     "dsn": 575634,
+     "name": "120 DORR STREET"
+    }
+   ],
+   "brrts": "03-34-106552",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "vapor",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 106552,
+   "end_date": "2012-06-15",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Vapor Intrusion Pathway",
+     "potential": false
+    }
+   ],
+   "lat": 45.132881103,
+   "lon": -89.158965258,
+   "muni": "ANTIGO",
+   "name": "ANTIGO COOP OIL",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2012-06-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANITGO",
+     "name": "ANTIGO COOP OIL ASSOC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-07-24",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "709 S SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-107367",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 107367,
+   "end_date": "2000-10-27",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.125824702,
+   "lon": -89.152665174,
+   "muni": "ANTIGO",
+   "name": "CLARK GAS STATION (FORMER)/WAGNER OIL",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-10-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-10-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-10-27"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2000-10-27"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-10-02"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-08-12",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "525 5TH AVE",
+   "affected_properties": [
+    {
+     "brrts": "13-34-574236",
+     "dsn": 574236,
+     "name": "533 5TH AVE"
+    }
+   ],
+   "brrts": "03-34-110680",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 110680,
+   "end_date": "2006-11-07",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.140247241,
+   "lon": -89.149610276,
+   "muni": "ANTIGO",
+   "name": "DEANS AUTO REPAIR",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-02"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-21",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1404 SMITH AVE",
+   "affected_properties": [],
+   "brrts": "03-34-110987",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 110987,
+   "end_date": "2002-06-26",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.149771994,
+   "lon": -89.166046642,
+   "muni": "ANTIGO",
+   "name": "ANTIGO MUNICIPAL GARAGE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-06-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-06-26"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-09-11"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "ANTIGO STREET DEPT",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-22",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N3502 CTH H",
+   "affected_properties": [],
+   "brrts": "03-34-112856",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 112856,
+   "end_date": "1999-08-12",
+   "impacts": [],
+   "lat": 45.154775212,
+   "lon": -89.209680526,
+   "muni": "ANTIGO",
+   "name": "BAGINSKI FARMS",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1999-08-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-04-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2017-04-04"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-11-21",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "133 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-113295",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 113295,
+   "end_date": "2004-05-19",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.134027942,
+   "lon": -89.152150754,
+   "muni": "ANTIGO",
+   "name": "MIKES SERVICE CENTER",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-05-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-05-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-05-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-05-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "MIKES SERVICE CENTER",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-12-03",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "738 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-118454",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 118454,
+   "end_date": "2000-06-13",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.14302383,
+   "lon": -89.152597024,
+   "muni": "ANTIGO",
+   "name": "MARTY SHELL SERVICE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2000-06-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-12-19"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    },
+    {
+     "city": "ANTIGO",
+     "name": "WAGNER OIL (WAGNER HOLDINGS LLC)",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-02-27",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "335 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-123692",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 123692,
+   "end_date": "2002-06-03",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.137319919,
+   "lon": -89.151967367,
+   "muni": "ANTIGO",
+   "name": "BOBS STANDARD SERVICE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2002-06-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-06-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2002-06-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-06-03"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2002-06-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-07-09"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-04-30",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N2305 USH 45 S",
+   "affected_properties": [
+    {
+     "brrts": "13-34-574363",
+     "dsn": 574363,
+     "name": "N2297 STH 45 S"
+    }
+   ],
+   "brrts": "03-34-153022",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 153022,
+   "end_date": "2003-10-17",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 1000 ft of Public Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.109553124,
+   "lon": -89.153485779,
+   "muni": "ANTIGO",
+   "name": "REMINGTON OIL - ANTIGO",
+   "obligations": [
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2003-02-06"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-11-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2008-07-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2022-08-09"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-07-15",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N10304 STH 55",
+   "affected_properties": [
+    {
+     "brrts": "13-34-574365",
+     "dsn": 574365,
+     "name": "N10302 STH 55"
+    }
+   ],
+   "brrts": "03-34-153492",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 153492,
+   "end_date": "2009-06-25",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.399964606,
+   "lon": -88.981958449,
+   "muni": "PEARSON",
+   "name": "SCHAEFERS COUNTRY STORE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-07-03"
+    }
+   ],
+   "parties": [
+    {
+     "city": "PEARSON",
+     "name": "SCHAEFERS COUNTRY STORE",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-07-24",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N5294 CTH A",
+   "affected_properties": [],
+   "brrts": "03-34-167353",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 167353,
+   "end_date": "2001-06-27",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.219445219,
+   "lon": -89.145087041,
+   "muni": "DEERBROOK",
+   "name": "SIKORAS MARKET",
+   "obligations": [
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2000-06-01"
+    },
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-06-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-06-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2001-06-27"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2001-06-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-06-27"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2014-08-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "DEERBROOK",
+     "name": "PAM BECERRA",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "DEERBROOK",
+     "name": "SIKORAS MARKET",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-07-30",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded",
+    "Lead (Pb)"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "W13298 CTH C",
+   "affected_properties": [],
+   "brrts": "03-34-168150",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 168150,
+   "end_date": "2004-04-26",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.233273493,
+   "lon": -89.325382215,
+   "muni": "DEERBROOK",
+   "name": "WHISKEY REDS",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-04-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-04-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-04-26"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-06-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "DEERBROOK",
+     "name": "WHISKEY REDS",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-08-15",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "601 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "03-34-171785",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 171785,
+   "end_date": "2002-09-09",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.140580707,
+   "lon": -89.152085531,
+   "muni": "ANTIGO",
+   "name": "REMINGTON MIDTOWN",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-12-04"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-09-19",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1440 NEVA RD",
+   "affected_properties": [
+    {
+     "brrts": "13-34-574426",
+     "dsn": 574426,
+     "name": "1435 NEVA RD"
+    },
+    {
+     "brrts": "13-34-574427",
+     "dsn": 574427,
+     "name": "1436 NEVA RD"
+    }
+   ],
+   "brrts": "03-34-179966",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 179966,
+   "end_date": "2002-11-19",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.151544601,
+   "lon": -89.1499673,
+   "muni": "ANTIGO",
+   "name": "ANTIGO CAR CO",
+   "obligations": [
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2002-04-09"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-03-10"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2017-04-04"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "FERMANICH FUEL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-01-12",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "2220 NEVA RD",
+   "affected_properties": [],
+   "brrts": "03-34-182751",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 182751,
+   "end_date": "2000-05-17",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.162347697,
+   "lon": -89.148858562,
+   "muni": "ANTIGO",
+   "name": "BESS BEAUTY SHOP",
+   "obligations": [
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2000-05-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-05-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-05-17"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2000-05-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-03"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "BESS' BEAUTY SHOP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-02-25",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1502 NEVA RD",
+   "affected_properties": [],
+   "brrts": "03-34-204972",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 204972,
+   "end_date": "2000-10-03",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.151853804,
+   "lon": -89.149640741,
+   "muni": "ANTIGO",
+   "name": "NORTHSIDE MOBIL - GASOLINE USTS",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-10-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-11-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "FERMANICH FUEL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1994-08-30",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "N7232 CTH B",
+   "affected_properties": [],
+   "brrts": "03-34-244771",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 244771,
+   "end_date": "2016-06-26",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.289107765,
+   "lon": -89.166969563,
+   "muni": "KEMPSTER",
+   "name": "KEMPSTER INN",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2016-06-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2016-06-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2016-06-26"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2017-05-11"
+    }
+   ],
+   "parties": [
+    {
+     "city": "DEERBROOK",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2000-02-11",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1529 N EDISON ST",
+   "affected_properties": [],
+   "brrts": "03-34-523734",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 523734,
+   "end_date": "2006-06-26",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.15273949,
+   "lon": -89.155391001,
+   "muni": "ANTIGO",
+   "name": "BRUNSWICK BOWLING PIN CO",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-06-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-06-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-06-26"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-07"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "VULCAN BRUNSWICK BOWLING PIN CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2004-03-12",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N977 CTH HH",
+   "affected_properties": [],
+   "brrts": "03-34-549943",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 549943,
+   "end_date": "2008-11-05",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.061650324,
+   "lon": -89.215935111,
+   "muni": "ROLLING TN",
+   "name": "KARCZ PROPERTY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2008-11-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2008-11-05"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2010-08-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "BOWLER",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2007-08-03",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "802 EDISON ST",
+   "affected_properties": [],
+   "brrts": "03-34-554475",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 554475,
+   "end_date": "2010-07-14",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.143798082,
+   "lon": -89.156343423,
+   "muni": "ANTIGO",
+   "name": "RIISER ENERGY (FMR FERMANICH FUEL)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2010-07-14"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2010-07-14"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-02-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WAUSAU",
+     "name": "RIISER ENERGY",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2009-10-21",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "400 FIELD ST",
+   "affected_properties": [],
+   "brrts": "03-34-558854",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 558854,
+   "end_date": "2013-01-10",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.13881357,
+   "lon": -89.149288185,
+   "muni": "ANTIGO",
+   "name": "ANTIGO CITY ROW",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2013-01-10"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2013-01-10"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2013-01-10"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-01-29"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "CITY OF ANTIGO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-06-05",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N9276 MILL RD",
+   "affected_properties": [
+    {
+     "brrts": "13-34-587468",
+     "dsn": 587468,
+     "name": "N9287 MILL RD"
+    },
+    {
+     "brrts": "13-34-587469",
+     "dsn": 587469,
+     "name": "N9295 MILL RD"
+    }
+   ],
+   "brrts": "03-34-563946",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "inspection-reports",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 563946,
+   "end_date": "2021-01-15",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.364286549,
+   "lon": -89.196738893,
+   "muni": "SUMMIT LAKE",
+   "name": "GREATER BASS LAKE STORAGE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Inspection Reports Required",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-04"
+    }
+   ],
+   "parties": [
+    {
+     "city": "PELICAN LAKE",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2015-07-15",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "511 CLERMONT ST",
+   "affected_properties": [
+    {
+     "brrts": "13-34-587868",
+     "dsn": 587868,
+     "name": "505 CLERMONT ST"
+    },
+    {
+     "brrts": "13-34-587869",
+     "dsn": 587869,
+     "name": "718 6TH ST"
+    }
+   ],
+   "brrts": "03-34-583708",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 583708,
+   "end_date": "2021-05-20",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.13957467,
+   "lon": -89.153659081,
+   "muni": "ANTIGO",
+   "name": "ANTIGO CTY (FMR LANGLADE CLEANERS)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-05-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-05-20"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2021-05-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "CITY OF ANTIGO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2019-06-10",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "133 SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "13-34-564176",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 564176,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.134018734,
+   "lon": -89.152160729,
+   "muni": "ANTIGO",
+   "name": "133 SUPERIOR ST",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-05-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-05-12"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000280",
+    "dsn": 21338,
+    "name": "EDS BICYCLE SHOP"
+   },
+   "start_date": "1990-05-01",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "2ND AVE",
+   "affected_properties": [],
+   "brrts": "13-34-564178",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 564178,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.14495164,
+   "lon": -89.156421857,
+   "muni": "ANTIGO",
+   "name": "2ND AVE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-09-26"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000354",
+    "dsn": 21732,
+    "name": "ANTIGO 2ND AVE & EDISON ST CONTAMINATION"
+   },
+   "start_date": "1990-08-31",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "W OF EDISON ST",
+   "affected_properties": [],
+   "brrts": "13-34-564179",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 564179,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.144737601,
+   "lon": -89.156330285,
+   "muni": "ANTIGO",
+   "name": "W OF EDISON ST",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-09-26"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000354",
+    "dsn": 21732,
+    "name": "ANTIGO 2ND AVE & EDISON ST CONTAMINATION"
+   },
+   "start_date": "1990-08-31",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "W OF EDISON ST",
+   "affected_properties": [],
+   "brrts": "13-34-564234",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 564234,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.144707869,
+   "lon": -89.156323694,
+   "muni": "ANTIGO",
+   "name": "W OF EDISON ST",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-09-26"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-09-26"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000354",
+    "dsn": 21732,
+    "name": "ANTIGO 2ND AVE & EDISON ST CONTAMINATION"
+   },
+   "start_date": "1990-08-31",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "STH 55 & STH 64",
+   "affected_properties": [],
+   "brrts": "13-34-573360",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573360,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.189617314,
+   "lon": -88.732682028,
+   "muni": "WHITE LAKE",
+   "name": "STH 55 & STH 64",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2005-12-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-12-16"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000684",
+    "dsn": 23459,
+    "name": "BOBS TAVERN"
+   },
+   "start_date": "1991-11-19",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N11173 USH 45",
+   "affected_properties": [],
+   "brrts": "13-34-573365",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573365,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.434698031,
+   "lon": -89.183374731,
+   "muni": "ELCHO",
+   "name": "N11173 USH 45",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-09-10"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-09-10"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000706",
+    "dsn": 23586,
+    "name": "KRAUSE SERVICE GARAGE"
+   },
+   "start_date": "1992-01-10",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "118 CLERMONT ST PARCEL #201-11",
+   "affected_properties": [],
+   "brrts": "13-34-573446",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573446,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.133626281,
+   "lon": -89.156258196,
+   "muni": "ANTIGO",
+   "name": "118 CLERMONT ST PARCEL #201-1178",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2010-03-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2010-03-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-000979",
+    "dsn": 24993,
+    "name": "KRAFT INC - ANTIGO"
+   },
+   "start_date": "1993-07-20",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "100 S SUPERIOR ST",
+   "affected_properties": [],
+   "brrts": "13-34-573531",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573531,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.132585949,
+   "lon": -89.153132375,
+   "muni": "ANTIGO",
+   "name": "100 S SUPERIOR ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-05-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-05-24"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-001261",
+    "dsn": 26312,
+    "name": "CITGO QUICK FOOD MART"
+   },
+   "start_date": "1995-03-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "533 5TH AVE",
+   "affected_properties": [],
+   "brrts": "13-34-574236",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574236,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.140221848,
+   "lon": -89.149826878,
+   "muni": "ANTIGO",
+   "name": "533 5TH AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-11-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-11-07"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-110680",
+    "dsn": 110680,
+    "name": "DEANS AUTO REPAIR"
+   },
+   "start_date": "1996-10-21",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N2297 STH 45 S",
+   "affected_properties": [],
+   "brrts": "13-34-574363",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574363,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.109300819,
+   "lon": -89.153451375,
+   "muni": "ANTIGO",
+   "name": "N2297 STH 45 S",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2003-10-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-10-17"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-153022",
+    "dsn": 153022,
+    "name": "REMINGTON OIL - ANTIGO"
+   },
+   "start_date": "1997-07-15",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N10302 STH 55",
+   "affected_properties": [],
+   "brrts": "13-34-574365",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574365,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.399783129,
+   "lon": -88.981795607,
+   "muni": "PEARSON",
+   "name": "N10302 STH 55",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-06-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-06-25"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-153492",
+    "dsn": 153492,
+    "name": "SCHAEFERS COUNTRY STORE"
+   },
+   "start_date": "1997-07-24",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1435 NEVA RD",
+   "affected_properties": [],
+   "brrts": "13-34-574426",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574426,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.151167375,
+   "lon": -89.149684285,
+   "muni": "ANTIGO",
+   "name": "1435 NEVA RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-11-19"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-179966",
+    "dsn": 179966,
+    "name": "ANTIGO CAR CO"
+   },
+   "start_date": "1998-01-12",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1436 NEVA RD",
+   "affected_properties": [],
+   "brrts": "13-34-574427",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574427,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.151311788,
+   "lon": -89.150047334,
+   "muni": "ANTIGO",
+   "name": "1436 NEVA RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2002-11-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-11-19"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-179966",
+    "dsn": 179966,
+    "name": "ANTIGO CAR CO"
+   },
+   "start_date": "1998-01-12",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N11130 HUNTING RIVER RD",
+   "affected_properties": [],
+   "brrts": "13-34-574820",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574820,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.43436066,
+   "lon": -89.181513004,
+   "muni": "ELCHO",
+   "name": "N11130 HUNTING RIVER RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-07-31"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-07-31"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-34-513142",
+    "dsn": 513142,
+    "name": "AMOCO ELCHO BULK PLT (FORMER)"
+   },
+   "start_date": "2003-09-19",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "120 DORR ST",
+   "affected_properties": [],
+   "brrts": "13-34-575634",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 575634,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.132375812,
+   "lon": -89.159078133,
+   "muni": "ANTIGO",
+   "name": "120 DORR STREET",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2012-06-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2012-06-15"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-106552",
+    "dsn": 106552,
+    "name": "ANTIGO COOP OIL"
+   },
+   "start_date": "1996-07-24",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "619 IRVING ST",
+   "affected_properties": [],
+   "brrts": "13-34-585900",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 585900,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.135117339,
+   "lon": -89.150856261,
+   "muni": "ANTIGO",
+   "name": "619 IRVING ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-08-30"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-34-118451",
+    "dsn": 118451,
+    "name": "WAGNER OIL CO BULK PLT FACILITY"
+   },
+   "start_date": "2018-08-30",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "232 MILTON ST",
+   "affected_properties": [],
+   "brrts": "13-34-585901",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 585901,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.134886222,
+   "lon": -89.150822414,
+   "muni": "ANTIGO",
+   "name": "232 MILTON ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-08-30"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-08-30"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-34-118451",
+    "dsn": 118451,
+    "name": "WAGNER OIL CO BULK PLT FACILITY"
+   },
+   "start_date": "2018-08-30",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N9287 MILL RD",
+   "affected_properties": [],
+   "brrts": "13-34-587468",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587468,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.364465963,
+   "lon": -89.196034809,
+   "muni": "SUMMIT LAKE",
+   "name": "N9287 MILL RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-01-15"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-563946",
+    "dsn": 563946,
+    "name": "GREATER BASS LAKE STORAGE"
+   },
+   "start_date": "2021-01-15",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N9295 MILL RD",
+   "affected_properties": [],
+   "brrts": "13-34-587469",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587469,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.364782709,
+   "lon": -89.1960337,
+   "muni": "SUMMIT LAKE",
+   "name": "N9295 MILL RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2021-01-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-01-15"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-563946",
+    "dsn": 563946,
+    "name": "GREATER BASS LAKE STORAGE"
+   },
+   "start_date": "2021-01-15",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "505 CLERMONT ST",
+   "affected_properties": [],
+   "brrts": "13-34-587868",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587868,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.139382679,
+   "lon": -89.153875399,
+   "muni": "ANTIGO",
+   "name": "505 CLERMONT ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-05-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-05-20"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-583708",
+    "dsn": 583708,
+    "name": "ANTIGO CTY (FMR LANGLADE CLEANERS)"
+   },
+   "start_date": "2021-05-20",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "718 6TH ST",
+   "affected_properties": [],
+   "brrts": "13-34-587869",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587869,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.139384649,
+   "lon": -89.15349847,
+   "muni": "ANTIGO",
+   "name": "718 6TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-05-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-05-20"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-583708",
+    "dsn": 583708,
+    "name": "ANTIGO CTY (FMR LANGLADE CLEANERS)"
+   },
+   "start_date": "2021-05-20",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "N9319 MILL RD",
+   "affected_properties": [],
+   "brrts": "13-34-587872",
+   "co_from_another_property": false,
+   "co_types": [
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587872,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.365569868,
+   "lon": -89.195967673,
+   "muni": "SUMMIT LAKE",
+   "name": "N9319 MILL RD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2021-06-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-06-18"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-34-001281",
+    "dsn": 26408,
+    "name": "RAITH LOGGING"
+   },
+   "start_date": "2021-06-18",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  }
+ ]
+}

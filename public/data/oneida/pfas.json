@@ -1,0 +1,46 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "LAKE TOMAHAWK",
+   "lat": 45.79710155282674,
+   "lon": -89.64213237793375,
+   "name": "MCNAUGHTON CORRECTIONAL CENTER",
+   "pws_id": "74401151",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2026-03-30",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MINOCQUA",
+   "lat": 45.86850199544487,
+   "lon": -89.70526194522259,
+   "name": "LAKELAND SANITARY DIST 1",
+   "pws_id": "74401162",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2026-03-17",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "RHINELANDER",
+   "lat": 45.62190765356775,
+   "lon": -89.39771171183858,
+   "name": "RHINELANDER WATER & WASTEWATER",
+   "pws_id": "74401261",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2025-05-28",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "THREE LAKES",
+   "lat": 45.791122510035486,
+   "lon": -89.1642276382786,
+   "name": "THREE LAKES SANITARY DISTRICT",
+   "pws_id": "74401294",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-21",
+   "sample_status": "Sampled"
+  }
+ ]
+}

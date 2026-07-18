@@ -1,0 +1,41 @@
+{
+ "activities_total": 692,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 537,
+  "N/A": 150,
+  "OPEN": 5
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 5,
+  "ERP": 56,
+  "GENERAL PROPERTY": 19,
+  "LUST": 146,
+  "NO ACTION REQUIRED": 104,
+  "OFF-SITE": 27,
+  "SPILL": 333,
+  "VPLE": 2
+ },
+ "co_by_municipality": {
+  "GLEASON": 4,
+  "HARRISON": 1,
+  "HARRISON TN": 1,
+  "MERRILL": 52,
+  "PINE RIVER": 1,
+  "SCOTT TN": 1,
+  "SOMO": 2,
+  "TOMAHAWK": 37
+ },
+ "continuing_obligation_sites": 99,
+ "enforcement": {
+  "audit_followup_complete": 2,
+  "audit_followup_needed": 2,
+  "audits_complete": 11,
+  "audits_vapor_only": 0,
+  "co_applied": 100,
+  "deed_recorded": 18,
+  "deed_terminated": 2,
+  "modifications_approved": 3,
+  "obligations_removed": 4
+ }
+}

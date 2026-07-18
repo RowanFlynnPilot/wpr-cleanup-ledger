@@ -1,0 +1,49 @@
+{
+ "activities_total": 441,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 266,
+  "N/A": 166,
+  "OPEN": 9
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 2,
+  "ERP": 37,
+  "GENERAL PROPERTY": 16,
+  "LUST": 116,
+  "NO ACTION REQUIRED": 51,
+  "OFF-SITE": 99,
+  "SPILL": 119,
+  "VPLE": 1
+ },
+ "co_by_municipality": {
+  "AURORA": 1,
+  "CHELSEA": 2,
+  "DONALD": 2,
+  "GILMAN": 12,
+  "GROVER": 1,
+  "HANNIBAL": 3,
+  "JUMP RIVER": 2,
+  "JUMP RIVER TN": 1,
+  "LITTLE BLACK": 1,
+  "LUBLIN": 2,
+  "MEDFORD": 57,
+  "OWEN": 1,
+  "RIB LAKE": 11,
+  "SHELDON": 3,
+  "STETSONVILLE": 72,
+  "WESTBORO": 9
+ },
+ "continuing_obligation_sites": 180,
+ "enforcement": {
+  "audit_followup_complete": 2,
+  "audit_followup_needed": 5,
+  "audits_complete": 30,
+  "audits_vapor_only": 0,
+  "co_applied": 181,
+  "deed_recorded": 19,
+  "deed_terminated": 0,
+  "modifications_approved": 6,
+  "obligations_removed": 4
+ }
+}

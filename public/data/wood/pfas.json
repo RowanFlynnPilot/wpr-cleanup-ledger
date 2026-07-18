@@ -1,0 +1,96 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "NEKOOSA",
+   "lat": 44.31456582791822,
+   "lon": -89.91443028883653,
+   "name": "ROME WATER UTILITY",
+   "pws_id": "70101086",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-04",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WISCONSIN RAPIDS",
+   "lat": 44.35860202819866,
+   "lon": -89.79662273369375,
+   "name": "WIS RAPIDS WATER WORKS & LIGHTING COMM",
+   "pws_id": "77201080",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2025-03-04",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "PITTSVILLE",
+   "lat": 44.44613378998038,
+   "lon": -90.13045950137882,
+   "name": "PITTSVILLE WATERWORKS",
+   "pws_id": "77201124",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-04-11",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "PORT EDWARDS",
+   "lat": 44.34383360396101,
+   "lon": -89.89538751930867,
+   "name": "PORT EDWARDS WATER UTILITY",
+   "pws_id": "77201135",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2025-01-28",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "VESPER",
+   "lat": 44.47451007508152,
+   "lon": -89.97398779422521,
+   "name": "VESPER WATERWORKS",
+   "pws_id": "77201344",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-04-18",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MARSHFIELD",
+   "lat": 44.634020694768154,
+   "lon": -90.16977152543721,
+   "name": "MARSHFIELD UTILITIES",
+   "pws_id": "77201652",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-04-14",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "NEKOOSA",
+   "lat": 44.32916111287343,
+   "lon": -89.89489701204637,
+   "name": "NEKOOSA WATERWORKS",
+   "pws_id": "77201696",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2025-07-22",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WISCONSIN RAPIDS",
+   "lat": 44.416469772646465,
+   "lon": -89.7767108340323,
+   "name": "BIRON WATER UTILITY",
+   "pws_id": "77201718",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-05-23",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MILLADORE",
+   "lat": 44.620118501219125,
+   "lon": -89.85532434309933,
+   "name": "MILLADORE WATERWORKS",
+   "pws_id": "77209946",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-07-30",
+   "sample_status": "Sampled"
+  }
+ ]
+}

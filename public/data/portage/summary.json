@@ -1,0 +1,54 @@
+{
+ "activities_total": 1398,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 1113,
+  "N/A": 259,
+  "OPEN": 26
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 7,
+  "ERP": 163,
+  "GENERAL PROPERTY": 29,
+  "LUST": 233,
+  "NO ACTION REQUIRED": 187,
+  "OFF-SITE": 43,
+  "SPILL": 735,
+  "VPLE": 1
+ },
+ "co_by_municipality": {
+  "ALMOND": 3,
+  "AMHERST": 5,
+  "AMHERST JUNCTION": 8,
+  "BANCROFT": 4,
+  "CARSON": 3,
+  "CARSON TN": 2,
+  "CUSTER": 1,
+  "GRANT TN": 1,
+  "JUNCTION CITY": 9,
+  "MILLADORE": 1,
+  "MOSINEE": 1,
+  "NELSONVILLE": 1,
+  "NEW HOPE": 1,
+  "PINE GROVE TN": 1,
+  "PLAINFIELD": 1,
+  "PLOVER": 21,
+  "PLOVER TN": 1,
+  "PLOVER VIL": 1,
+  "ROSHOLT": 4,
+  "STEVENS POINT": 80,
+  "WISCONSIN RAPIDS": 1
+ },
+ "continuing_obligation_sites": 150,
+ "enforcement": {
+  "audit_followup_complete": 1,
+  "audit_followup_needed": 1,
+  "audits_complete": 13,
+  "audits_vapor_only": 0,
+  "co_applied": 152,
+  "deed_recorded": 38,
+  "deed_terminated": 2,
+  "modifications_approved": 3,
+  "obligations_removed": 5
+ }
+}

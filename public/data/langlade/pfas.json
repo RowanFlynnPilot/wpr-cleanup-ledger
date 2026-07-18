@@ -1,0 +1,36 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "ANTIGO",
+   "lat": 45.14038107863261,
+   "lon": -89.14605809933086,
+   "name": "ANTIGO WATERWORKS",
+   "pws_id": "73400866",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-07",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "ELCHO",
+   "lat": 45.43130349399363,
+   "lon": -89.18764326813348,
+   "name": "ELCHO SANITARY DISTRICT 1",
+   "pws_id": "73401174",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-06-13",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WHITE LAKE",
+   "lat": 45.15366206353527,
+   "lon": -88.75427810902252,
+   "name": "WHITE LAKE WATERWORKS",
+   "pws_id": "73401185",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-04-26",
+   "sample_status": "Sampled"
+  }
+ ]
+}

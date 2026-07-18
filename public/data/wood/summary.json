@@ -1,0 +1,61 @@
+{
+ "activities_total": 2214,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 1755,
+  "CONDITIONALLY CLOSED": 3,
+  "N/A": 427,
+  "OPEN": 25,
+  "VPLE WITHDRAWN": 4
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 8,
+  "ERP": 160,
+  "GENERAL PROPERTY": 49,
+  "LUST": 363,
+  "NO ACTION REQUIRED": 212,
+  "OFF-SITE": 166,
+  "SPILL": 1250,
+  "VPLE": 6
+ },
+ "co_by_municipality": {
+  "ARPIN": 2,
+  "AUBURNDALE": 12,
+  "BLENKER": 2,
+  "CAMERON TN": 2,
+  "GRAND RAPIDS": 1,
+  "GRAND RAPIDS TN": 1,
+  "HANSEN": 1,
+  "LINCOLN TN": 1,
+  "MARSHFIELD": 146,
+  "MARSHFIELD CITY": 1,
+  "MILLADORE": 6,
+  "MILLADORE TN": 1,
+  "NEKOOSA": 23,
+  "PITTSVILLE": 12,
+  "PORT EDWARDS": 12,
+  "RICHFIELD": 1,
+  "ROCK TN": 1,
+  "RUDOLPH": 9,
+  "RUDOLPH TN": 1,
+  "SARATOGA": 7,
+  "SHERRY": 2,
+  "SIGEL": 1,
+  "VESPER": 4,
+  "WI RAPIDS": 1,
+  "WISCONSIN RAPDIS": 1,
+  "WISCONSIN RAPIDS": 143
+ },
+ "continuing_obligation_sites": 394,
+ "enforcement": {
+  "audit_followup_complete": 2,
+  "audit_followup_needed": 2,
+  "audits_complete": 22,
+  "audits_vapor_only": 1,
+  "co_applied": 395,
+  "deed_recorded": 48,
+  "deed_terminated": 2,
+  "modifications_approved": 8,
+  "obligations_removed": 4
+ }
+}

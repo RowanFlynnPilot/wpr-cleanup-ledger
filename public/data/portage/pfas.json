@@ -1,0 +1,56 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "AMHERST",
+   "lat": 44.45405051850275,
+   "lon": -89.27431686225461,
+   "name": "AMHERST WATERWORKS",
+   "pws_id": "75000948",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-09",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "JUNCTION CITY",
+   "lat": 44.59094015486211,
+   "lon": -89.75717514198435,
+   "name": "JUNCTION CITY WATERWORKS",
+   "pws_id": "75001278",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-23",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "STEVENS POINT",
+   "lat": 44.489992220872566,
+   "lon": -89.53838595492384,
+   "name": "WHITING WATERWORKS",
+   "pws_id": "75001366",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-08",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "STEVENS POINT",
+   "lat": 44.51964958657032,
+   "lon": -89.53941174085418,
+   "name": "STEVENS POINT WATERWORKS",
+   "pws_id": "75001410",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2024-11-08",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "PLOVER",
+   "lat": 44.46148101533467,
+   "lon": -89.49834204357775,
+   "name": "PLOVER WATERWORKS",
+   "pws_id": "75007262",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2026-05-19",
+   "sample_status": "Sampled"
+  }
+ ]
+}

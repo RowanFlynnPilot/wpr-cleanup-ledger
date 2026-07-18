@@ -21,6 +21,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 OUT_DIR = REPO_ROOT / "public" / "data"
 
+sys.path.insert(0, str(REPO_ROOT))
+from ingest.counties import COUNTIES, ordered_codes  # noqa: E402
+
 PUBLISHED_ROLES = ("Responsible Party", "Owner")
 
 # The widget renders these statuses with vetted editorial copy. Anything
@@ -48,6 +51,9 @@ KNOWN_CO_CONDITIONS = {
     "Continuing Obligation - Soil at Industrial Levels": "industrial-soil",
     "Continuing Obligation - Site Specific Condition": "site-specific",
     "Continuing Obligation - Sediment Engineering Control": "sediment",
+    # Surfaced by the July 2026 eight-county expansion:
+    "Continuing Obligation - Inspection Reports Required": "inspection-reports",
+    "Continuing Obligation - Maintain Liability Exemption for LGU": "lgu-exemption",
 }
 CO_CONDITION_PREFIX = "Continuing Obligation - "
 
@@ -76,13 +82,15 @@ def meta_value(conn: sqlite3.Connection, key: str) -> str:
     return row[0]
 
 
-def build_sites(conn: sqlite3.Connection) -> dict:
+def build_sites(conn: sqlite3.Connection, code: str) -> dict:
     sites = []
     for a in conn.execute(
         "SELECT detail_seq_no, activity_display_number, activity_name, activity_type, "
         "address, muni, status, start_date, end_date, lat, lon, "
         "co_contamination_flag, offsite_impact_flag, pfas_flag "
-        "FROM activity WHERE co_flag = 1 ORDER BY activity_display_number"
+        "FROM activity WHERE co_flag = 1 AND substr(activity_number, 3, 2) = ? "
+        "ORDER BY activity_display_number",
+        (code,),
     ):
         dsn = a[0]
         status, activity_type = a[6], a[3]
@@ -212,8 +220,8 @@ def build_events(conn: sqlite3.Connection) -> dict:
     return {"events": events}
 
 
-def build_pfas(conn: sqlite3.Connection) -> dict:
-    """Municipal PFAS sampling state + internal event feed.
+def build_pfas(conn: sqlite3.Connection, slug: str) -> dict:
+    """Municipal PFAS sampling state + internal event feed, one county.
 
     Kept as its own file: the shape is system-keyed, not BRRTS-keyed. The
     widget renders each DNR result category only through vetted display
@@ -234,9 +242,14 @@ def build_pfas(conn: sqlite3.Connection) -> dict:
         }
         for s in conn.execute(
             "SELECT pws_id, pws_name, city, sample_status, sample_date, "
-            "sample_results, lat, lon FROM pfas_system ORDER BY pws_id"
+            "sample_results, lat, lon FROM pfas_system WHERE county = ? "
+            "ORDER BY pws_id",
+            (slug,),
         )
     ]
+    # The internal event feed stays area-wide; the per-county files carry
+    # only that county's events by pws membership.
+    county_ids = {s["pws_id"] for s in systems}
     events = [
         {
             "detected_at": e[0],
@@ -251,6 +264,7 @@ def build_pfas(conn: sqlite3.Connection) -> dict:
             "SELECT detected_at, event_type, pws_id, pws_name, city, "
             "old_results, new_results FROM pfas_event ORDER BY id DESC"
         )
+        if e[2] in county_ids
     ]
     return {
         "last_pfas_pull": meta_value(conn, "last_pfas_pull"),
@@ -259,27 +273,35 @@ def build_pfas(conn: sqlite3.Connection) -> dict:
     }
 
 
-def build_summary(conn: sqlite3.Connection) -> dict:
+def build_summary(conn: sqlite3.Connection, code: str) -> dict:
+    county = ("substr(activity_number, 3, 2) = ?", (code,))
     by_type = dict(conn.execute(
-        "SELECT activity_type, COUNT(*) FROM activity GROUP BY activity_type"))
+        f"SELECT activity_type, COUNT(*) FROM activity WHERE {county[0]} "
+        "GROUP BY activity_type", county[1]))
     by_status = dict(conn.execute(
-        "SELECT COALESCE(NULLIF(status, ''), 'N/A'), COUNT(*) FROM activity GROUP BY 1"))
+        "SELECT COALESCE(NULLIF(status, ''), 'N/A'), COUNT(*) FROM activity "
+        f"WHERE {county[0]} GROUP BY 1", county[1]))
     co_by_muni = dict(conn.execute(
-        "SELECT muni, COUNT(*) FROM activity WHERE co_flag = 1 GROUP BY muni"))
+        f"SELECT muni, COUNT(*) FROM activity WHERE co_flag = 1 AND {county[0]} "
+        "GROUP BY muni", county[1]))
     return {
         "bulk_extract_date": meta_value(conn, "bulk_extract_date"),
-        "activities_total": conn.execute("SELECT COUNT(*) FROM activity").fetchone()[0],
+        "activities_total": conn.execute(
+            f"SELECT COUNT(*) FROM activity WHERE {county[0]}", county[1]
+        ).fetchone()[0],
         "continuing_obligation_sites": conn.execute(
-            "SELECT COUNT(*) FROM activity WHERE co_flag = 1").fetchone()[0],
+            f"SELECT COUNT(*) FROM activity WHERE co_flag = 1 AND {county[0]}",
+            county[1],
+        ).fetchone()[0],
         "by_type": by_type,
         "by_status": by_status,
         "co_by_municipality": co_by_muni,
-        "enforcement": build_enforcement(conn),
+        "enforcement": build_enforcement(conn, code),
     }
 
 
-def build_enforcement(conn: sqlite3.Connection) -> dict:
-    """County-wide, all-time counts of how obligations get enforced.
+def build_enforcement(conn: sqlite3.Connection, code: str) -> dict:
+    """One county's all-time counts of how obligations get enforced.
 
     Exact action-name matches against the quarterly bulk record: obligations
     applied vs compliance audits ever completed (the audit gap), and deed
@@ -290,7 +312,9 @@ def build_enforcement(conn: sqlite3.Connection) -> dict:
     """
     def count(name: str) -> int:
         return conn.execute(
-            "SELECT COUNT(*) FROM action WHERE action_name = ?", (name,)
+            "SELECT COUNT(*) FROM action x JOIN activity a USING (detail_seq_no) "
+            "WHERE substr(a.activity_number, 3, 2) = ? AND x.action_name = ?",
+            (code, name),
         ).fetchone()[0]
 
     enforcement = {
@@ -309,15 +333,17 @@ def build_enforcement(conn: sqlite3.Connection) -> dict:
         "deed_terminated": count("Deed Instrument Terminated"),
         "modifications_approved": count("Continuing Obligation Modification Approval"),
         "obligations_removed": conn.execute(
-            "SELECT COUNT(*) FROM action WHERE action_name LIKE "
-            "'Continuing Obligation Removed - %' OR action_name = "
-            "'Continuing Obligations Satisfied - No Longer Apply'"
+            "SELECT COUNT(*) FROM action x JOIN activity a USING (detail_seq_no) "
+            "WHERE substr(a.activity_number, 3, 2) = ? AND "
+            "(x.action_name LIKE 'Continuing Obligation Removed - %' OR "
+            "x.action_name = 'Continuing Obligations Satisfied - No Longer Apply')",
+            (code,),
         ).fetchone()[0],
     }
     if enforcement["co_applied"] == 0:
         raise RuntimeError(
-            "Zero 'Continuing Obligation(s) Applied' actions — the bulk "
-            "action vocabulary changed; do not publish an empty panel"
+            f"Zero 'Continuing Obligation(s) Applied' actions for county {code} "
+            "— the bulk action vocabulary changed; do not publish an empty panel"
         )
     return enforcement
 
@@ -326,19 +352,34 @@ def main() -> None:
     conn = sqlite3.connect(DB_PATH)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     print("Building public/data:")
-    write(OUT_DIR / "sites.json", build_sites(conn))
+    # Manifest the widget loads first: county order = Marathon (default),
+    # then alphabetical.
+    write(OUT_DIR / "counties.json", {
+        "counties": [
+            {"slug": COUNTIES[code]["slug"], "name": COUNTIES[code]["name"]}
+            for code in ordered_codes()
+        ]
+    })
+    # The internal editorial event feed stays area-wide and top-level.
     write(OUT_DIR / "events.json", build_events(conn))
-    write(OUT_DIR / "pfas.json", build_pfas(conn))
-    write(OUT_DIR / "summary.json", build_summary(conn))
-    # County outline for the widget map: verbatim copy of the committed
-    # boundary (Census TIGERweb, GEOID 55073), so the widget serves it
-    # like any other data file. Byte-identical copy keeps the quiet-repo
-    # rule intact.
-    (OUT_DIR / "county.geojson").write_text(
-        (REPO_ROOT / "data" / "marathon_county.geojson").read_text(encoding="utf-8"),
-        encoding="utf-8",
-    )
-    print(f"  wrote {(OUT_DIR / 'county.geojson').relative_to(REPO_ROOT)}")
+    for code in ordered_codes():
+        county = COUNTIES[code]
+        slug = county["slug"]
+        county_dir = OUT_DIR / slug
+        county_dir.mkdir(exist_ok=True)
+        write(county_dir / "sites.json", build_sites(conn, code))
+        write(county_dir / "pfas.json", build_pfas(conn, slug))
+        write(county_dir / "summary.json", build_summary(conn, code))
+        # County outline for the widget map: verbatim copy of the
+        # committed boundary, so the widget serves it like any other data
+        # file. Byte-identical copy keeps the quiet-repo rule intact.
+        (county_dir / "county.geojson").write_text(
+            (REPO_ROOT / "data" / "counties" / f"{slug}.geojson").read_text(
+                encoding="utf-8"
+            ),
+            encoding="utf-8",
+        )
+        print(f"  wrote {(county_dir / 'county.geojson').relative_to(REPO_ROOT)}")
     conn.close()
 
 

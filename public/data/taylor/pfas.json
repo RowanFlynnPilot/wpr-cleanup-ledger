@@ -1,0 +1,56 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "GILMAN",
+   "lat": 45.16993716735346,
+   "lon": -90.81298281140354,
+   "name": "GILMAN WATERWORKS",
+   "pws_id": "86101246",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2025-02-26",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MEDFORD",
+   "lat": 45.1281026951532,
+   "lon": -90.32166892898428,
+   "name": "MEDFORD WATERWORKS",
+   "pws_id": "86101257",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2025-05-12",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "RIB LAKE",
+   "lat": 45.31624344132392,
+   "lon": -90.21857907730188,
+   "name": "RIB LAKE WATERWORKS",
+   "pws_id": "86101268",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-05-31",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WESTBORO",
+   "lat": 45.359131852824035,
+   "lon": -90.30111111087976,
+   "name": "WESTBORO SAN DIST 1",
+   "pws_id": "86103468",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2026-04-28",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "STETSONVILLE",
+   "lat": 45.08416128448966,
+   "lon": -90.32490779285406,
+   "name": "STETSONVILLE WATERWORKS",
+   "pws_id": "86105503",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-04-25",
+   "sample_status": "Sampled"
+  }
+ ]
+}

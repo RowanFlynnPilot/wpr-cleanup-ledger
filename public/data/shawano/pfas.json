@@ -1,0 +1,96 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "systems": [
+  {
+   "city": "BIRNAMWOOD",
+   "lat": 44.93576234147207,
+   "lon": -89.19427824426471,
+   "name": "BIRNAMWOOD WATERWORKS",
+   "pws_id": "45904496",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-06",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "BONDUEL",
+   "lat": 44.74204549343519,
+   "lon": -88.45645882916901,
+   "name": "BONDUEL WATERWORKS",
+   "pws_id": "45904507",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-04-04",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "BOWLER",
+   "lat": 44.86294436648591,
+   "lon": -88.97135545690405,
+   "name": "BOWLER WATERWORKS",
+   "pws_id": "45904518",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-04-19",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "GRESHAM",
+   "lat": 44.84818864356359,
+   "lon": -88.7869193344622,
+   "name": "GRESHAM WATERWORKS",
+   "pws_id": "45904540",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-05-23",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MATTOON",
+   "lat": 45.00807193727181,
+   "lon": -89.05230742423063,
+   "name": "MATTOON WATERWORKS",
+   "pws_id": "45904551",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-04-20",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "SHAWANO",
+   "lat": 44.758820606266866,
+   "lon": -88.57789211924127,
+   "name": "SHAWANO WATERWORKS",
+   "pws_id": "45904562",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-22",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "SHAWANO",
+   "lat": 44.774114252392074,
+   "lon": -88.49703925623871,
+   "name": "SHAWANO LK SAN DIST 1",
+   "pws_id": "45904573",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-05-16",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "TIGERTON",
+   "lat": 44.74531539759127,
+   "lon": -89.05285045848844,
+   "name": "TIGERTON WATERWORKS",
+   "pws_id": "45904628",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-15",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WITTENBERG",
+   "lat": 44.819360344647585,
+   "lon": -89.153427686125,
+   "name": "WITTENBERG WATERWORKS",
+   "pws_id": "45904650",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2025-01-29",
+   "sample_status": "Sampled"
+  }
+ ]
+}

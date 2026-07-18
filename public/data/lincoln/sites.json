@@ -1,0 +1,5990 @@
+{
+ "bulk_extract_date": "2026-07-01",
+ "sites": [
+  {
+   "address": "400 S KYES ST",
+   "affected_properties": [],
+   "brrts": "02-35-000003",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 32715,
+   "end_date": "2025-08-19",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Other",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.177763516,
+   "lon": -89.676115444,
+   "muni": "MERRILL",
+   "name": "SEMLING-MENKE CO (SEMCO) - DIP TANK",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2025-08-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2025-08-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2025-08-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2025-08-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2026-03-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "KYES ST HOLDINGS LLC",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "",
+     "name": "SEMLING-MENIKE CO",
+     "role": "Responsible Party",
+     "state": ""
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1987-08-18",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Non-Chlorinated Solvents",
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "211 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-000019",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 32791,
+   "end_date": "2007-10-11",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.175965354,
+   "lon": -89.703424853,
+   "muni": "MERRILL",
+   "name": "HURD MILLWORK GW",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1987-11-14",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene",
+    "Unknown Substance"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "710 N STATE ST",
+   "affected_properties": [],
+   "brrts": "02-35-000028",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "industrial-soil",
+    "residual-gw",
+    "residual-soil",
+    "structural",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 32833,
+   "end_date": "2016-06-17",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Sediment Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.183220228,
+   "lon": -89.714136464,
+   "muni": "MERRILL",
+   "name": "LINCOLN WOOD PROD - COAL GAS MGP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation - Soil at Industrial Levels",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2016-06-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2016-08-06"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2021-07-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Needed",
+     "date": "2021-08-02"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Complete",
+     "date": "2021-09-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "WEST CHIPPEWA LLC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1986-08-08",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene",
+    "Polynuclear Aromatic Hydrocarbons",
+    "Volatile Organic Compounds"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "211 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-000232",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 33637,
+   "end_date": "2007-10-11",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.175929349,
+   "lon": -89.70342504,
+   "muni": "MERRILL",
+   "name": "HURD MILLWORK INC #2",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2007-10-11"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "HURD MILLWORK INC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-12-19",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene",
+    "Unknown Substance"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "806 N CENTER AVE",
+   "affected_properties": [
+    {
+     "brrts": "13-35-579369",
+     "dsn": 579369,
+     "name": "702 N CENTER AVE"
+    },
+    {
+     "brrts": "13-35-579370",
+     "dsn": 579370,
+     "name": "704 N CENTER AVE"
+    },
+    {
+     "brrts": "13-35-579371",
+     "dsn": 579371,
+     "name": "705 N CENTER AVE"
+    },
+    {
+     "brrts": "13-35-579373",
+     "dsn": 579373,
+     "name": "804 N CENTER AVE"
+    },
+    {
+     "brrts": "13-35-579374",
+     "dsn": 579374,
+     "name": "1107 E 9TH ST"
+    },
+    {
+     "brrts": "13-35-579375",
+     "dsn": 579375,
+     "name": "1111 E 8TH ST"
+    },
+    {
+     "brrts": "13-35-579376",
+     "dsn": 579376,
+     "name": "1200 E 7TH ST"
+    },
+    {
+     "brrts": "13-35-579377",
+     "dsn": 579377,
+     "name": "615 N CENTER AVE"
+    },
+    {
+     "brrts": "13-35-579379",
+     "dsn": 579379,
+     "name": "1106 E 8TH ST"
+    }
+   ],
+   "brrts": "02-35-000622",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "vapor"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 35054,
+   "end_date": "2017-05-03",
+   "impacts": [
+    {
+     "desc": "Direct Contact",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Vapor Intrusion Pathway",
+     "potential": false
+    }
+   ],
+   "lat": 45.187542048,
+   "lon": -89.683519473,
+   "muni": "MERRILL",
+   "name": "KOCH MARGARET ANTIQUE STORE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2017-10-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "CITY OF MERRILL",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1995-10-20",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Naphthalene",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "1111 W JACKSON ST",
+   "affected_properties": [
+    {
+     "brrts": "13-35-574804",
+     "dsn": 574804,
+     "name": "1109 W JACKSON ST"
+    }
+   ],
+   "brrts": "02-35-364194",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 364194,
+   "end_date": "2009-04-28",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.173105823,
+   "lon": -89.7152115,
+   "muni": "MERRILL",
+   "name": "KWATERSKI MILLWORK",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-04-28"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-04-28"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2009-04-28"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-05-14"
+    }
+   ],
+   "parties": [
+    {
+     "city": "EAGLE RIVER",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-09-11",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Naphthalene",
+    "Non-Chlorinated Solvents"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "N5352 STH 17",
+   "affected_properties": [],
+   "brrts": "02-35-517752",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 517752,
+   "end_date": "2006-07-20",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.307819055,
+   "lon": -89.499686789,
+   "muni": "GLEASON",
+   "name": "REMINGTON OIL - GLEASON",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-07-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-07-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-07"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-11-05",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "N1545 CTH W",
+   "affected_properties": [],
+   "brrts": "02-35-546636",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 546636,
+   "end_date": "2017-02-28",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.172245237,
+   "lon": -89.642817117,
+   "muni": "MERRILL",
+   "name": "INTERSTATE TRUCKING - SOLVENTS",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-02-28"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2017-02-28"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-02-28"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2017-10-11"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "INTERSTATE TRUCKING",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2006-04-17",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "401 S PARK ST",
+   "affected_properties": [],
+   "brrts": "02-35-546726",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 546726,
+   "end_date": "2012-07-19",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.178963689,
+   "lon": -89.680359649,
+   "muni": "MERRILL",
+   "name": "HALRON OIL CO",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2012-07-19"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2012-07-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2012-07-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2012-07-23"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "ROMAN & RUTH RADLINGER C/O LEAH JUHLKE",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "TULSA",
+     "name": "SEMGROUP",
+     "role": "Responsible Party",
+     "state": "OK"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2006-04-27",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "18 N TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "02-35-551789",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 551789,
+   "end_date": "2018-01-31",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.471600229,
+   "lon": -89.733183442,
+   "muni": "TOMAHAWK",
+   "name": "QUALITY DRY CLEANERS",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-01-31"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-01-31"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2018-01-31"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-01-31"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2018-03-28"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2008-06-19",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "W6059 HELDT ST",
+   "affected_properties": [],
+   "brrts": "02-35-554020",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 554020,
+   "end_date": "2009-11-17",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.169873571,
+   "lon": -89.733590579,
+   "muni": "SCOTT TN",
+   "name": "SCHULZS RECYCLING INC",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-11-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-11-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-11-19"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2009-08-11",
+   "status": "CLOSED",
+   "substances": [
+    "Lead (Pb)",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "401 S PARK ST",
+   "affected_properties": [],
+   "brrts": "02-35-557756",
+   "co_from_another_property": true,
+   "co_types": [
+    "cap",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 557756,
+   "end_date": "2016-05-13",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.178972513,
+   "lon": -89.680295961,
+   "muni": "MERRILL",
+   "name": "RADLINGER PROPERTY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2016-05-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2016-05-13"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2016-05-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2016-05-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2016-08-06"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "RIVERS EDGE VENTURES LLC",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "MERRILL",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2011-10-07",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Naphthalene",
+    "Volatile Organic Compounds"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "211 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-559458",
+   "co_from_another_property": false,
+   "co_types": [
+    "industrial-soil",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559458,
+   "end_date": "2022-12-15",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.17601513,
+   "lon": -89.701479294,
+   "muni": "MERRILL",
+   "name": "HURD WINDOWS & DOORS (FMR) - DISPOSAL AREA",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2022-12-15"
+    },
+    {
+     "action": "Continuing Obligation - Soil at Industrial Levels",
+     "date": "2022-12-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2022-12-15"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2022-12-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL AREA DEVELOPMENT CORP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-09-27",
+   "status": "CLOSED",
+   "substances": [
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "211 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-559459",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559459,
+   "end_date": "2021-12-17",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.175021208,
+   "lon": -89.703673584,
+   "muni": "MERRILL",
+   "name": "HURD WINDOWS & DOORS (FMR) - S OF MFG BLDG",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2021-12-17"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-12-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-12-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2022-03-01"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL AREA DEVELOPMENT CORP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-09-27",
+   "status": "CLOSED",
+   "substances": [
+    "Arsenic",
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "211 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-559460",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "inspection-reports",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559460,
+   "end_date": "2019-02-12",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.17603702,
+   "lon": -89.703583604,
+   "muni": "MERRILL",
+   "name": "HURD WINDOWS & DOORS (FMR) - DIP TANK AREA",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Inspection Reports Required",
+     "date": "2019-02-12"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2019-02-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2019-02-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2019-02-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2019-07-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL AREA DEVELOPMENT CORP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-09-27",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Naphthalene",
+    "Polynuclear Aromatic Hydrocarbons",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Volatile Organic Compounds"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "NEAR W3697 MOSSER RD",
+   "affected_properties": [],
+   "brrts": "02-35-559482",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559482,
+   "end_date": "2013-01-04",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.250810655,
+   "lon": -89.486776441,
+   "muni": "GLEASON",
+   "name": "SERVCO FS COOP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2013-01-04"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2013-01-04"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-01-11"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "SERVCO FS COOP/ GROWMARK INC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-06-27",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "236 S GENESEE ST",
+   "affected_properties": [],
+   "brrts": "02-35-577540",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 577540,
+   "end_date": "2024-03-21",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.17606124,
+   "lon": -89.707956691,
+   "muni": "MERRILL",
+   "name": "MERRILL MFG CORP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2024-03-21"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2024-03-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-03-21"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2024-03-26"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL MANUFACTURING CORP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2016-07-14",
+   "status": "CLOSED",
+   "substances": [
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "900 E MAIN ST",
+   "affected_properties": [],
+   "brrts": "02-35-584409",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 584409,
+   "end_date": "2020-10-23",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.180423462,
+   "lon": -89.686942114,
+   "muni": "MERRILL",
+   "name": "BMO HARRIS BANK BRANCH",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2020-10-23"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2020-10-23"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2020-10-23"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-01-19"
+    }
+   ],
+   "parties": [
+    {
+     "city": "CHICAGO",
+     "name": "BMO HARRIS BANK NA",
+     "role": "Responsible Party",
+     "state": "IL"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2019-10-07",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded",
+    "Metals",
+    "Polynuclear Aromatic Hydrocarbons",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Volatile Organic Compounds"
+   ],
+   "type": "ERP"
+  },
+  {
+   "address": "N10002 CTH B",
+   "affected_properties": [],
+   "brrts": "03-35-000002",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20005,
+   "end_date": "2003-01-24",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.477222298,
+   "lon": -89.497020664,
+   "muni": "HARRISON",
+   "name": "COUNTRY TAP BAR",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-01-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-01-24"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-07-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "COUNTRY TAP BAR",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1994-06-20",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "2806 E MAIN ST",
+   "affected_properties": [
+    {
+     "brrts": "13-35-564165",
+     "dsn": 564165,
+     "name": "MAIN ST STH 64"
+    }
+   ],
+   "brrts": "03-35-000003",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 20008,
+   "end_date": "2000-12-21",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.179506925,
+   "lon": -89.661309084,
+   "muni": "MERRILL",
+   "name": "GENES REFRIGERATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-02-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2011-06-03"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2021-04-26"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2021-07-02"
+    },
+    {
+     "action": "CO Modification Final Documentation Received",
+     "date": "2022-09-16"
+    },
+    {
+     "action": "Continuing Obligation Modification Approval",
+     "date": "2022-10-18"
+    },
+    {
+     "action": "Continuing Obligation Removed - Structural Impediment",
+     "date": "2022-10-18"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WAUSAU",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1986-07-24",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "402 N 4TH ST",
+   "affected_properties": [
+    {
+     "brrts": "13-35-575936",
+     "dsn": 575936,
+     "name": "408 N 4TH ST"
+    },
+    {
+     "brrts": "13-35-575937",
+     "dsn": 575937,
+     "name": "9 E PROSPECT AVE"
+    }
+   ],
+   "brrts": "03-35-000005",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 20012,
+   "end_date": "2007-06-14",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Other",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.475127865,
+   "lon": -89.729008722,
+   "muni": "TOMAHAWK",
+   "name": "HARVEYS SERVICE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "DENNIS JANECZKO",
+     "role": "Owner",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-10-27",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "601 E SECOND",
+   "affected_properties": [],
+   "brrts": "03-35-000008",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20022,
+   "end_date": "1998-05-18",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.180571296,
+   "lon": -89.692123994,
+   "muni": "MERRILL",
+   "name": "STILLMANS SERVICE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "1998-05-18"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "1998-05-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1998-05-18"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1998-05-18"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2012-07-27"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-06-05",
+   "status": "CLOSED",
+   "substances": [
+    "Engine Waste Oil",
+    "Gasoline - Unleaded and Leaded",
+    "Naphthalene",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "W11069 USH 8",
+   "affected_properties": [],
+   "brrts": "03-35-000010",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20028,
+   "end_date": "2013-05-03",
+   "impacts": [
+    {
+     "desc": "Contaminated Private Well",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.554694702,
+   "lon": -89.990480597,
+   "muni": "SOMO",
+   "name": "TNT - TRIPOLI",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2013-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2013-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2013-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2013-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2013-05-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-05-16"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2018-03-30"
+    },
+    {
+     "action": "CO Modification Request Withdrawn",
+     "date": "2020-02-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TRIPOLI",
+     "name": "MARK LISTLE",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "NEENAH",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-09-20",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "305 E FIRST AVE",
+   "affected_properties": [],
+   "brrts": "03-35-000011",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20031,
+   "end_date": "2003-08-19",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.179466049,
+   "lon": -89.696215537,
+   "muni": "MERRILL",
+   "name": "WEAVER & SONS",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2003-08-19"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-08-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-08-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2008-06-13"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-07-27",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "838 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-000169",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20765,
+   "end_date": "1999-10-27",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.48251428,
+   "lon": -89.728751543,
+   "muni": "TOMAHAWK",
+   "name": "H & S SERVICE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "1999-10-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "1999-10-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1999-10-27"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WAUSAU",
+     "name": "RIISER ENERGY",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1988-05-13",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "1300 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "03-35-000191",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20868,
+   "end_date": "2003-07-15",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.189884246,
+   "lon": -89.6809223,
+   "muni": "MERRILL",
+   "name": "MERRILL FUEL MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-07-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-07-15"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-02-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2021-12-06"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL FUEL MART",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-12-04",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "406 SOUTHGATE DR",
+   "affected_properties": [],
+   "brrts": "03-35-000192",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 20872,
+   "end_date": "2005-05-06",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.465659452,
+   "lon": -89.733185886,
+   "muni": "TOMAHAWK",
+   "name": "CHARLIES SELF SERVICE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-05-06"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-05-06"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MILWAUKEE",
+     "name": "MILWAUKEE PETROLEUM",
+     "role": "Responsible Party",
+     "state": "WI"
+    },
+    {
+     "city": "COOKEVILLE",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "TN"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1989-12-04",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "2301 W MAIN ST",
+   "affected_properties": [],
+   "brrts": "03-35-000329",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21613,
+   "end_date": "2001-11-07",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.177588257,
+   "lon": -89.730869139,
+   "muni": "MERRILL",
+   "name": "BOBS WEST 64",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-11-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-03-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "BOB'S WEST 64",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-06-11",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N BUS HWY 51",
+   "affected_properties": [],
+   "brrts": "03-35-000330",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21617,
+   "end_date": "2006-01-20",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.196222863,
+   "lon": -89.678238742,
+   "muni": "MERRILL",
+   "name": "COOP FILLING STATION (FORMER)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-01-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-01-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-07-24"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-06-18",
+   "status": "CLOSED",
+   "substances": [
+    "Lead (Pb)",
+    "Naphthalene",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "3350 E MAIN ST",
+   "affected_properties": [],
+   "brrts": "03-35-000340",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21663,
+   "end_date": "2004-04-05",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.178420305,
+   "lon": -89.652400121,
+   "muni": "MERRILL",
+   "name": "PINE RIDGE MOBIL MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-04-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-04-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-04-05"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-05-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "PINE RIDGE MOBIL MART",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-08-13",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "438 W WISCONSIN AVE",
+   "affected_properties": [],
+   "brrts": "03-35-000361",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 21771,
+   "end_date": "2004-10-13",
+   "impacts": [
+    {
+     "desc": "Fire/Explosion Threat",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.471168423,
+   "lon": -89.729462666,
+   "muni": "TOMAHAWK",
+   "name": "LES STANDARD",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2004-10-13"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-10-13"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2004-10-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-10-13"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2004-10-13"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2012-07-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Needed",
+     "date": "2012-08-01"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Complete",
+     "date": "2012-10-02"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "LES' STANDARD",
+     "role": "Responsible Party",
+     "state": "WI"
+    },
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-07-09",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "604 S CENTER ST",
+   "affected_properties": [],
+   "brrts": "03-35-000451",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 22234,
+   "end_date": "2005-12-20",
+   "impacts": [
+    {
+     "desc": "Contamination in Fractured Bedrock",
+     "potential": false
+    },
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.174509599,
+   "lon": -89.684215269,
+   "muni": "MERRILL",
+   "name": "MERRILL FUEL MART SOUTH",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2005-12-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2006-05-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2009-07-16"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "MERRILL FUEL MART",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-09-18",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Methyl Tertiery Butyl Ether",
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "18 E WASHINGTON",
+   "affected_properties": [],
+   "brrts": "03-35-000465",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 22297,
+   "end_date": "1995-12-18",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.47270466,
+   "lon": -89.728214341,
+   "muni": "TOMAHAWK",
+   "name": "TOMAHAWK ADMIN BLDG",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "1995-12-18"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "1995-12-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "1995-12-18"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "1996-03-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2005-06-23"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TOMAHAWK SCHOOL DIST",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1990-10-22",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N5370 STH 17",
+   "affected_properties": [],
+   "brrts": "03-35-000604",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 23019,
+   "end_date": "2006-02-22",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.30879818,
+   "lon": -89.496879639,
+   "muni": "GLEASON",
+   "name": "MERLES SERVICE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-02-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-02-22"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2006-02-22"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-02"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1991-03-26",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "1325 W MAIN ST",
+   "affected_properties": [],
+   "brrts": "03-35-000816",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 24220,
+   "end_date": "2001-03-12",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.178630016,
+   "lon": -89.718746436,
+   "muni": "MERRILL",
+   "name": "AUTO STOP SERVICE STATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-03-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-03-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-03-12"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-03-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-10-09"
+    }
+   ],
+   "parties": [
+    {
+     "city": "HUDSON",
+     "name": "SSG CORP DBA AUTOSTOP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1992-08-25",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "705 S CENTER ST",
+   "affected_properties": [],
+   "brrts": "03-35-000895",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 24598,
+   "end_date": "2000-01-18",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.17343729,
+   "lon": -89.683813952,
+   "muni": "MERRILL",
+   "name": "STARK GM",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-01-18"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2000-01-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-01-18"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2000-01-18"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2008-05-30"
+    },
+    {
+     "action": "CO Packet created for Soil Deed Instrument Closure",
+     "date": "2009-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "STARK GM",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1992-12-18",
+   "status": "CLOSED",
+   "substances": [
+    "Engine Waste Oil",
+    "Gasoline - Unleaded and Leaded",
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "693 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-001043",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 25280,
+   "end_date": "2002-09-30",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.481573935,
+   "lon": -89.729528029,
+   "muni": "TOMAHAWK",
+   "name": "TOMAHAWK SPORTS CENTER",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-09-30"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2002-09-30"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-09-30"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2003-05-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TOMAHAWK SPORTS CENTER",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1993-09-27",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "630 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-001096",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 25537,
+   "end_date": "2001-09-11",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.479491549,
+   "lon": -89.728685652,
+   "muni": "TOMAHAWK",
+   "name": "CHUCKS SPORT SHOP",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2001-09-11"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-03-15"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2016-07-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "CHUCKS SPORTS SHOP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1994-05-02",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "703 S CENTER AVE",
+   "affected_properties": [
+    {
+     "brrts": "13-35-573501",
+     "dsn": 573501,
+     "name": "1205 ODAY ST"
+    },
+    {
+     "brrts": "13-35-573502",
+     "dsn": 573502,
+     "name": "705 CENTER AVE"
+    }
+   ],
+   "brrts": "03-35-001167",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 25872,
+   "end_date": "2007-04-05",
+   "impacts": [
+    {
+     "desc": "Contamination in Fractured Bedrock",
+     "potential": false
+    },
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Off-Site Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.174058114,
+   "lon": -89.683708706,
+   "muni": "MERRILL",
+   "name": "MILLER, TOM PROPERTY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-05-02"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2009-07-15"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2025-04-22"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2025-05-02"
+    },
+    {
+     "action": "CO Modification Final Documentation Received",
+     "date": "2025-05-30"
+    },
+    {
+     "action": "Continuing Obligation Modification Approval",
+     "date": "2025-06-20"
+    },
+    {
+     "action": "Continuing Obligation Removed - Structural Impediment",
+     "date": "2025-06-20"
+    },
+    {
+     "action": "Deed Instrument Terminated",
+     "date": "2025-06-20"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "CITY OF MERRILL",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1994-09-07",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "113 E MAIN ST",
+   "affected_properties": [],
+   "brrts": "03-35-110345",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 110345,
+   "end_date": "2001-01-11",
+   "impacts": [],
+   "lat": 45.180405212,
+   "lon": -89.683281832,
+   "muni": "MERRILL",
+   "name": "JOES STANDARD",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-01-11"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-01-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-01-11"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-01-11"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-10-16"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-08",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "981 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-110360",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 110360,
+   "end_date": "2003-09-11",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Surface Water Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.484147873,
+   "lon": -89.729362158,
+   "muni": "TOMAHAWK",
+   "name": "VIEGUTS DO IT BEST MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2003-09-11"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-09-11"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-09-11"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-12-21"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-10",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "407 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "03-35-110597",
+   "co_from_another_property": true,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 110597,
+   "end_date": "2005-01-13",
+   "impacts": [
+    {
+     "desc": "Co-contamination",
+     "potential": false
+    },
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.46585391,
+   "lon": -89.731662722,
+   "muni": "TOMAHAWK",
+   "name": "TOMAHAWK SAND & GRAVEL",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2005-01-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-01-13"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-02-21"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TOMAHAWK SAND & GRAVEL",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-16",
+   "status": "CLOSED",
+   "substances": [],
+   "type": "LUST"
+  },
+  {
+   "address": "119 S FOSTER ST",
+   "affected_properties": [],
+   "brrts": "03-35-110642",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 110642,
+   "end_date": "2000-06-02",
+   "impacts": [],
+   "lat": 45.178492544,
+   "lon": -89.718694791,
+   "muni": "MERRILL",
+   "name": "WILDES OIL/HARRYS DRIVE-IN",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-06-02"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-06-02"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-06-02"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-02-22"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "WILDES OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1996-10-17",
+   "status": "CLOSED",
+   "substances": [
+    "Naphthalene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "303 W WISCONSIN AVE",
+   "affected_properties": [],
+   "brrts": "03-35-120815",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 120815,
+   "end_date": "2001-10-25",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.470813652,
+   "lon": -89.733864387,
+   "muni": "TOMAHAWK",
+   "name": "GREIL AMERICAN FAMILY INSURANCE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-10-25"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-10-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-10-25"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-10-25"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-03-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "GREIL AMERICAN FAMILY INSURANCE",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-04-24",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded",
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "227 S TOMAHAWK",
+   "affected_properties": [],
+   "brrts": "03-35-120865",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 120865,
+   "end_date": "2011-07-08",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.468099196,
+   "lon": -89.733366261,
+   "muni": "TOMAHAWK",
+   "name": "RODS OF TOMAHAWK",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2011-07-08"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2011-07-08"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2011-07-08"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-01-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-04-23",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "629 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-151675",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 151675,
+   "end_date": "2006-11-16",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.479539027,
+   "lon": -89.729256271,
+   "muni": "TOMAHAWK",
+   "name": "TOWN & COUNTRY REALTY INC",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-11-16"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-11-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-11-16"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-08"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2016-01-25"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TOWN & COUNTRY REALTY, INC.",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-06-20",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Gasoline - Unleaded and Leaded",
+    "Tetrachloroethene (Perchloroethylene)"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "504 E SECOND ST",
+   "affected_properties": [],
+   "brrts": "03-35-153171",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 153171,
+   "end_date": "2000-10-20",
+   "impacts": [],
+   "lat": 45.181230184,
+   "lon": -89.693211812,
+   "muni": "MERRILL",
+   "name": "DOMINOS PIZZA SITE #2",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-10-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-10-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2000-10-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-10-20"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2000-10-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2001-10-02"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-06-13",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "612 E SECOND ST",
+   "affected_properties": [],
+   "brrts": "03-35-177170",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 177170,
+   "end_date": "2001-10-12",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.180795676,
+   "lon": -89.691058869,
+   "muni": "MERRILL",
+   "name": "ADOLPHS SERVICE",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2001-10-12"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2001-10-12"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2001-10-12"
+    },
+    {
+     "action": "Deed Affidavit Recorded at Closure",
+     "date": "2001-10-12"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-03-15"
+    }
+   ],
+   "parties": [
+    {
+     "city": "WAUSAU",
+     "name": "RIISER ENERGY",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1997-10-23",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Gasoline - Unleaded and Leaded",
+    "Tetrachloroethene (Perchloroethylene)"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "411 N 4TH ST",
+   "affected_properties": [
+    {
+     "brrts": "13-35-587859",
+     "dsn": 587859,
+     "name": "408 N 4TH ST"
+    },
+    {
+     "brrts": "13-35-587860",
+     "dsn": 587860,
+     "name": "412 N 4TH ST"
+    },
+    {
+     "brrts": "13-35-587861",
+     "dsn": 587861,
+     "name": "413 N 4TH ST"
+    },
+    {
+     "brrts": "13-35-587862",
+     "dsn": 587862,
+     "name": "416 N 4TH ST"
+    },
+    {
+     "brrts": "13-35-587863",
+     "dsn": 587863,
+     "name": "417 N 4TH ST"
+    }
+   ],
+   "brrts": "03-35-197014",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 197014,
+   "end_date": "2018-06-29",
+   "impacts": [
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.475233383,
+   "lon": -89.72952917,
+   "muni": "TOMAHAWK",
+   "name": "CLARK STATION",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-24"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-07-29",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N1647 DEER RUN AVE",
+   "affected_properties": [],
+   "brrts": "03-35-197258",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 197258,
+   "end_date": "2009-07-20",
+   "impacts": [
+    {
+     "desc": "Contam Within 1 Meter of Bedrock",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.176129606,
+   "lon": -89.632929453,
+   "muni": "MERRILL",
+   "name": "PINE RIVER TN GARAGE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-07-20"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-07-20"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2009-07-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-07-20"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2009-07-21"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "TOWN OF PINE RIVER",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-09-11",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N1545 CTH W",
+   "affected_properties": [],
+   "brrts": "03-35-202266",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 202266,
+   "end_date": "2006-06-07",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.172968735,
+   "lon": -89.643894326,
+   "muni": "MERRILL",
+   "name": "INTERSTATE TRUCKING CORP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-06-07"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-06-07"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-07"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "INTERSTATE TRUCKING",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-10-26",
+   "status": "CLOSED",
+   "substances": [
+    "Chlorinated Solvents",
+    "Diesel Fuel",
+    "Tetrachloroethene (Perchloroethylene)",
+    "Trichloroethylene"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "422 E SECOND ST",
+   "affected_properties": [],
+   "brrts": "03-35-203927",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 203927,
+   "end_date": "2005-12-05",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.181153478,
+   "lon": -89.694386451,
+   "muni": "MERRILL",
+   "name": "CLARK OIL STATION #103",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2005-12-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-12-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-12-05"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-08"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-04-30",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1001 S STATE ST",
+   "affected_properties": [],
+   "brrts": "03-35-205562",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 205562,
+   "end_date": "2005-03-17",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.166636488,
+   "lon": -89.70568739,
+   "muni": "MERRILL",
+   "name": "WOOD CHIP CORP OF AMERICA",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2005-03-17"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2005-03-17"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2008-04-02"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "WOOD CHIP CORP OF AMERICA",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-11-16",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N9090 CTH E",
+   "affected_properties": [],
+   "brrts": "03-35-214012",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 214012,
+   "end_date": "2012-01-09",
+   "impacts": [
+    {
+     "desc": "Free Product",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.446847178,
+   "lon": -89.737174831,
+   "muni": "TOMAHAWK",
+   "name": "TENNECO COAL UNLOADING BAY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2012-01-09"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2012-01-09"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2012-01-09"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2012-01-09"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2012-08-09"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TENNECO PACKAGING",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1998-12-01",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "312 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "03-35-227232",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 227232,
+   "end_date": "2004-05-27",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.467434398,
+   "lon": -89.733919466,
+   "muni": "TOMAHAWK",
+   "name": "REMINGTON OIL SERVICE STATION",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2004-05-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-05-27"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-05-27"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-05-27"
+    },
+    {
+     "action": "Deed Restriction for Residual Soil Contamination Recorded",
+     "date": "2004-05-27"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-10-24"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "1999-08-11",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "23 & 27 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-254669",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 254669,
+   "end_date": "2002-09-09",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.471826166,
+   "lon": -89.729740971,
+   "muni": "TOMAHAWK",
+   "name": "WYLES, TOM & DAGEL, BONNIE PROPERTY",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2002-09-09"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2002-10-25"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2000-05-31",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "S TOMAHAWK AVE (NO FIRE #)",
+   "affected_properties": [
+    {
+     "brrts": "13-35-595373",
+     "dsn": 595373,
+     "name": "226 S TOMAHAWK AVE"
+    },
+    {
+     "brrts": "13-35-595375",
+     "dsn": 595375,
+     "name": "302 S TOMAHAWK AVE"
+    },
+    {
+     "brrts": "13-35-595376",
+     "dsn": 595376,
+     "name": "315 W RICE AVE"
+    },
+    {
+     "brrts": "13-35-595377",
+     "dsn": 595377,
+     "name": "216 S TOMAHAWK AVE"
+    },
+    {
+     "brrts": "13-35-596048",
+     "dsn": 596048,
+     "name": "310 S TOMAHAWK AVE"
+    }
+   ],
+   "brrts": "03-35-258251",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "vapor",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 258251,
+   "end_date": "2024-09-05",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.468100463,
+   "lon": -89.734216999,
+   "muni": "TOMAHAWK",
+   "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2024-09-13"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2000-08-30",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "W5120 SOUTH SHORE DR",
+   "affected_properties": [],
+   "brrts": "03-35-307480",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 307480,
+   "end_date": "2009-11-02",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.20854394,
+   "lon": -89.683925128,
+   "muni": "MERRILL",
+   "name": "BIERMAN RESIDENCE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2009-11-02"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2009-11-02"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-11-02"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2011-07-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2002-06-05",
+   "status": "CLOSED",
+   "substances": [
+    "Fuel Oil",
+    "Polynuclear Aromatic Hydrocarbons"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "W4305 CTH A",
+   "affected_properties": [],
+   "brrts": "03-35-307516",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 307516,
+   "end_date": "2006-08-03",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.487666253,
+   "lon": -89.646587664,
+   "muni": "TOMAHAWK",
+   "name": "MORRIS PROPERTY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2006-08-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2006-08-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2006-08-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2007-10-06"
+    }
+   ],
+   "parties": [
+    {
+     "city": "HINSDALE",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "IL"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2002-06-11",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1727 E SOMO AVE",
+   "affected_properties": [],
+   "brrts": "03-35-384960",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 384960,
+   "end_date": "2004-04-09",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.471313529,
+   "lon": -89.697594079,
+   "muni": "TOMAHAWK",
+   "name": "CROSSROADS MOBILE MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2004-04-09"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2004-04-09"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2004-04-09"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2005-05-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "CROSSROADS MOBILE MART",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2002-11-21",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "900 E RIVERSIDE",
+   "affected_properties": [],
+   "brrts": "03-35-472113",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 472113,
+   "end_date": "2003-07-25",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.174507047,
+   "lon": -89.686556976,
+   "muni": "MERRILL",
+   "name": "GIRSKY, FRED",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2003-07-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2003-07-25"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2004-02-16"
+    }
+   ],
+   "parties": [
+    {
+     "city": "NAVARRE",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "FL"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-06-26",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "702 CENTER AVE N",
+   "affected_properties": [],
+   "brrts": "03-35-500754",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "industrial-soil",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 500754,
+   "end_date": "2010-03-03",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.186245444,
+   "lon": -89.683386635,
+   "muni": "MERRILL",
+   "name": "HOLIDAY STATION STORES #161",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2010-03-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2010-03-03"
+    },
+    {
+     "action": "Continuing Obligation - Soil at Industrial Levels",
+     "date": "2010-03-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2010-03-03"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2010-03-12"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MINNEAPOLIS",
+     "name": "INDIANHEAD OIL CO INC",
+     "role": "Responsible Party",
+     "state": "MN"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2003-08-27",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N1591 CTH W",
+   "affected_properties": [],
+   "brrts": "03-35-532428",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 532428,
+   "end_date": "2011-03-16",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Within 100 ft of Private Well",
+     "potential": false
+    }
+   ],
+   "lat": 45.173639709,
+   "lon": -89.6425666,
+   "muni": "PINE RIVER",
+   "name": "FRUEND, LESTER FARM",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2011-03-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2011-03-16"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2011-06-14"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "PRAIRIE WOODS & STREAMS LLC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2004-09-23",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "434 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "03-35-553653",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 553653,
+   "end_date": "2010-09-22",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.466003344,
+   "lon": -89.733977367,
+   "muni": "TOMAHAWK",
+   "name": "CHARLIES SELF SERVICE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2010-09-22"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2010-09-22"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2013-01-10"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "CED INC (CHARLIE'S SELF SERVICE)",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2009-05-21",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "11 W WISCONSIN AVE",
+   "affected_properties": [
+    {
+     "brrts": "13-35-586287",
+     "dsn": 586287,
+     "name": "3 W WISCONSIN AVE"
+    },
+    {
+     "brrts": "13-35-586289",
+     "dsn": 586289,
+     "name": "17 W WISCONSIN AVE"
+    }
+   ],
+   "brrts": "03-35-554426",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": true,
+   "dsn": 554426,
+   "end_date": "2020-06-24",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.470709396,
+   "lon": -89.729778332,
+   "muni": "TOMAHAWK",
+   "name": "LUEDTKE PROPERTY",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "Continuing Obligations (COs) Apply at Off-site Property(ies)",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2020-08-17"
+    }
+   ],
+   "parties": [
+    {
+     "city": "FOND DU LAC",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2009-11-03",
+   "status": "CLOSED",
+   "substances": [
+    "Fuel Oil"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1001 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "03-35-559269",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559269,
+   "end_date": "2015-06-04",
+   "impacts": [
+    {
+     "desc": "Contamination in Right of Way",
+     "potential": false
+    },
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.188744217,
+   "lon": -89.682061619,
+   "muni": "MERRILL",
+   "name": "MURPHYS MINI MART",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2015-06-04"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2015-06-04"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2015-06-04"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2015-06-04"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2015-06-13"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2020-08-20"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2020-08-21"
+    },
+    {
+     "action": "CO Modification Final Documentation Received",
+     "date": "2022-08-04"
+    },
+    {
+     "action": "Continuing Obligation Modification Approval",
+     "date": "2022-09-28"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2023-05-18"
+    }
+   ],
+   "parties": [
+    {
+     "city": "MERRILL",
+     "name": "BREAMAN MERRILL FORD",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "MERRILL",
+     "name": "MURPHYMART LLC",
+     "role": "Responsible Party",
+     "state": "WI"
+    },
+    {
+     "city": "MERRILL",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-08-14",
+   "status": "CLOSED",
+   "substances": [
+    "Gasoline - Unleaded and Leaded",
+    "Volatile Organic Compounds"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1331 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "03-35-559777",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil",
+    "structural"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 559777,
+   "end_date": "2018-02-21",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.488533478,
+   "lon": -89.730524929,
+   "muni": "TOMAHAWK",
+   "name": "TOMAHAWK BP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-02-21"
+    },
+    {
+     "action": "Continuing Obligation - Structural Impediment to Cleanup",
+     "date": "2018-02-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-02-21"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2018-06-06"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TOMAHAWK",
+     "name": "TDSI, LLC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2012-12-13",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "2311 E MAIN ST",
+   "affected_properties": [],
+   "brrts": "03-35-578697",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 578697,
+   "end_date": "2019-08-06",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.180524755,
+   "lon": -89.667689551,
+   "muni": "MERRILL",
+   "name": "KWIK TRIP 386",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2019-08-06"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2019-08-06"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2020-03-25"
+    }
+   ],
+   "parties": [
+    {
+     "city": "LA CROSSE",
+     "name": "KWIK TRIP INC",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2017-01-20",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel",
+    "Gasoline - Unleaded and Leaded"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "W11069 USH 8",
+   "affected_properties": [],
+   "brrts": "03-35-582035",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 582035,
+   "end_date": "2021-03-29",
+   "impacts": [
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.554756478,
+   "lon": -89.990007487,
+   "muni": "SOMO",
+   "name": "TRI MART BP",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2021-03-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2021-03-29"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2021-06-24"
+    }
+   ],
+   "parties": [
+    {
+     "city": "TRIPOLI",
+     "name": "PERSONAL INFORMATION WITHHELD",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2018-08-23",
+   "status": "CLOSED",
+   "substances": [
+    "Diesel Fuel"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N5362 STH 17",
+   "affected_properties": [],
+   "brrts": "03-35-586693",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 586693,
+   "end_date": "2023-06-21",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.308224741,
+   "lon": -89.498059225,
+   "muni": "GLEASON",
+   "name": "REMINGTON OIL - GLEASON",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2023-06-21"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2023-06-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2023-06-21"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2023-06-30"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2025-09-11"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2025-09-12"
+    }
+   ],
+   "parties": [
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2020-10-22",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "1300 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "03-35-589712",
+   "co_from_another_property": false,
+   "co_types": [
+    "cap",
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 589712,
+   "end_date": "2023-12-01",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.189981095,
+   "lon": -89.680878218,
+   "muni": "MERRILL",
+   "name": "HEARTLAND COOP - RIVER COUNTRY MERRILL CENEX",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Maintain Cap Over Contaminated Area",
+     "date": "2023-12-01"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2023-12-01"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2023-12-01"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2023-12-01"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2023-12-05"
+    }
+   ],
+   "parties": [
+    {
+     "city": "CHIPPEWA FALLS",
+     "name": "RIVER COUNTRY COOP",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2021-08-04",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "N10001 CTH B",
+   "affected_properties": [],
+   "brrts": "03-35-590148",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 590148,
+   "end_date": "2024-04-25",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 45.476221686,
+   "lon": -89.497105152,
+   "muni": "HARRISON TN",
+   "name": "HARRISON CONVENIENCE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2024-04-25"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-04-25"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2024-05-02"
+    }
+   ],
+   "parties": [
+    {
+     "city": "GRAYSLAKE",
+     "name": "BRIAN BOUMA",
+     "role": "Owner",
+     "state": "IL"
+    },
+    {
+     "city": "ANTIGO",
+     "name": "REMINGTON OIL CO",
+     "role": "Responsible Party",
+     "state": "WI"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2022-07-13",
+   "status": "CLOSED",
+   "substances": [
+    "Petroleum - Unknown Type"
+   ],
+   "type": "LUST"
+  },
+  {
+   "address": "MAIN ST STH 64",
+   "affected_properties": [],
+   "brrts": "13-35-564165",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 564165,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.178899953,
+   "lon": -89.661430545,
+   "muni": "MERRILL",
+   "name": "MAIN ST STH 64",
+   "obligations": [
+    {
+     "action": "CO Packet created for Recorded Groundwater Use Restriction",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2000-12-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2000-12-21"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-000003",
+    "dsn": 20008,
+    "name": "GENES REFRIGERATION"
+   },
+   "start_date": "1986-07-24",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1205 ODAY ST",
+   "affected_properties": [],
+   "brrts": "13-35-573501",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573501,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.173957051,
+   "lon": -89.68297113,
+   "muni": "MERRILL",
+   "name": "1205 ODAY ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-04-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-001167",
+    "dsn": 25872,
+    "name": "MILLER, TOM PROPERTY"
+   },
+   "start_date": "1994-09-07",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "705 CENTER AVE",
+   "affected_properties": [],
+   "brrts": "13-35-573502",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 573502,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.173473228,
+   "lon": -89.683788301,
+   "muni": "MERRILL",
+   "name": "705 CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-04-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-04-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-001167",
+    "dsn": 25872,
+    "name": "MILLER, TOM PROPERTY"
+   },
+   "start_date": "1994-09-07",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1109 W JACKSON ST",
+   "affected_properties": [],
+   "brrts": "13-35-574804",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 574804,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.173006202,
+   "lon": -89.714970197,
+   "muni": "MERRILL",
+   "name": "1109 W JACKSON ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2009-04-28"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2009-04-28"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-364194",
+    "dsn": 364194,
+    "name": "KWATERSKI MILLWORK"
+   },
+   "start_date": "1996-09-11",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "408 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-575936",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 575936,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475343679,
+   "lon": -89.728918129,
+   "muni": "TOMAHAWK",
+   "name": "408 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-06-14"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-000005",
+    "dsn": 20012,
+    "name": "HARVEYS SERVICE"
+   },
+   "start_date": "1989-10-27",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "9 E PROSPECT AVE",
+   "affected_properties": [],
+   "brrts": "13-35-575937",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 575937,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475181234,
+   "lon": -89.728739789,
+   "muni": "TOMAHAWK",
+   "name": "9 E PROSPECT AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2007-06-14"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2007-06-14"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-000005",
+    "dsn": 20012,
+    "name": "HARVEYS SERVICE"
+   },
+   "start_date": "1989-10-27",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "702 CENTER AVE N",
+   "affected_properties": [],
+   "brrts": "13-35-579369",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579369,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.18628402,
+   "lon": -89.683641237,
+   "muni": "MERRILL",
+   "name": "702 N CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "704 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "13-35-579370",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579370,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.18666728,
+   "lon": -89.683403495,
+   "muni": "MERRILL",
+   "name": "704 N CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "705 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "13-35-579371",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579371,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.18664418,
+   "lon": -89.682803453,
+   "muni": "MERRILL",
+   "name": "705 N CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "804 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "13-35-579373",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579373,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.187203303,
+   "lon": -89.683455086,
+   "muni": "MERRILL",
+   "name": "804 N CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1107 E 9TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-579374",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579374,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.187523347,
+   "lon": -89.683887116,
+   "muni": "MERRILL",
+   "name": "1107 E 9TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1111 E 8TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-579375",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579375,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.186663386,
+   "lon": -89.683654666,
+   "muni": "MERRILL",
+   "name": "1111 E 8TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1200 E 7TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-579376",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579376,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.186278869,
+   "lon": -89.682660671,
+   "muni": "MERRILL",
+   "name": "1200 E 7TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "615 N CENTER AVE",
+   "affected_properties": [],
+   "brrts": "13-35-579377",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579377,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.185817687,
+   "lon": -89.682800644,
+   "muni": "MERRILL",
+   "name": "615 N CENTER AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "1106 E 8TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-579379",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 579379,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.18717218,
+   "lon": -89.684154357,
+   "muni": "MERRILL",
+   "name": "1106 E 8TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2017-05-03"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2017-05-03"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "02-35-000622",
+    "dsn": 35054,
+    "name": "KOCH MARGARET ANTIQUE STORE"
+   },
+   "start_date": "2017-05-03",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "3 W WISCONSIN AVE",
+   "affected_properties": [],
+   "brrts": "13-35-586287",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 586287,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.470687061,
+   "lon": -89.729457519,
+   "muni": "TOMAHAWK",
+   "name": "3 W WISCONSIN AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2020-06-24"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-554426",
+    "dsn": 554426,
+    "name": "LUEDTKE PROPERTY"
+   },
+   "start_date": "2020-06-24",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "17 W WISCONSIN AVE",
+   "affected_properties": [],
+   "brrts": "13-35-586289",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 586289,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.470774126,
+   "lon": -89.730018987,
+   "muni": "TOMAHAWK",
+   "name": "17 W WISCONSIN AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2020-06-24"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2020-06-24"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-554426",
+    "dsn": 554426,
+    "name": "LUEDTKE PROPERTY"
+   },
+   "start_date": "2020-06-24",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "408 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-587859",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587859,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475338686,
+   "lon": -89.728800492,
+   "muni": "TOMAHAWK",
+   "name": "408 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-197014",
+    "dsn": 197014,
+    "name": "CLARK STATION"
+   },
+   "start_date": "2018-06-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "412 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-587860",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587860,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475465314,
+   "lon": -89.728799884,
+   "muni": "TOMAHAWK",
+   "name": "412 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-197014",
+    "dsn": 197014,
+    "name": "CLARK STATION"
+   },
+   "start_date": "2018-06-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "413 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-587861",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587861,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475475567,
+   "lon": -89.729615697,
+   "muni": "TOMAHAWK",
+   "name": "413 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-197014",
+    "dsn": 197014,
+    "name": "CLARK STATION"
+   },
+   "start_date": "2018-06-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "416 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-587862",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587862,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475604869,
+   "lon": -89.728793959,
+   "muni": "TOMAHAWK",
+   "name": "416 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-197014",
+    "dsn": 197014,
+    "name": "CLARK STATION"
+   },
+   "start_date": "2018-06-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "417 N 4TH ST",
+   "affected_properties": [],
+   "brrts": "13-35-587863",
+   "co_from_another_property": false,
+   "co_types": [
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 587863,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.475661908,
+   "lon": -89.729851288,
+   "muni": "TOMAHAWK",
+   "name": "417 N 4TH ST",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2018-06-29"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2018-06-29"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-197014",
+    "dsn": 197014,
+    "name": "CLARK STATION"
+   },
+   "start_date": "2018-06-29",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "226 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "13-35-595373",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 595373,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.46811851,
+   "lon": -89.733913803,
+   "muni": "TOMAHAWK",
+   "name": "226 S TOMAHAWK AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-258251",
+    "dsn": 258251,
+    "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)"
+   },
+   "start_date": "2024-09-05",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "302 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "13-35-595375",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "vapor"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 595375,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.467799581,
+   "lon": -89.733974938,
+   "muni": "TOMAHAWK",
+   "name": "302 S TOMAHAWK AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-258251",
+    "dsn": 258251,
+    "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)"
+   },
+   "start_date": "2024-09-05",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "315 W RICE AVE",
+   "affected_properties": [],
+   "brrts": "13-35-595376",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "vapor"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 595376,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.468078089,
+   "lon": -89.73450082,
+   "muni": "TOMAHAWK",
+   "name": "315 W RICE AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Vapor Intrusion Response",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-258251",
+    "dsn": 258251,
+    "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)"
+   },
+   "start_date": "2024-09-05",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "216 S TOMAHAWK AVE",
+   "affected_properties": [],
+   "brrts": "13-35-595377",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 595377,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.468305063,
+   "lon": -89.734339802,
+   "muni": "TOMAHAWK",
+   "name": "216 S TOMAHAWK AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-258251",
+    "dsn": 258251,
+    "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)"
+   },
+   "start_date": "2024-09-05",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  },
+  {
+   "address": "310 S TOMAHAWK",
+   "affected_properties": [],
+   "brrts": "13-35-596048",
+   "co_from_another_property": false,
+   "co_types": [
+    "residual-gw",
+    "residual-soil",
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dsn": 596048,
+   "end_date": "",
+   "impacts": [],
+   "lat": 45.467551369,
+   "lon": -89.734671639,
+   "muni": "TOMAHAWK",
+   "name": "310 S TOMAHAWK AVE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual GW Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation - Residual Soil Contamination",
+     "date": "2024-09-05"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2024-09-05"
+    }
+   ],
+   "parties": [],
+   "pfas": false,
+   "source_site": {
+    "brrts": "03-35-258251",
+    "dsn": 258251,
+    "name": "REMINGTON OIL BULK PLT (FKA SCHWAB OIL)"
+   },
+   "start_date": "2024-09-05",
+   "status": "",
+   "substances": [],
+   "type": "OFF-SITE"
+  }
+ ]
+}

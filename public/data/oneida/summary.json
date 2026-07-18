@@ -1,0 +1,53 @@
+{
+ "activities_total": 1021,
+ "bulk_extract_date": "2026-07-01",
+ "by_status": {
+  "CLOSED": 748,
+  "N/A": 251,
+  "OPEN": 22
+ },
+ "by_type": {
+  "ABANDONED CONTAINER": 17,
+  "ERP": 89,
+  "GENERAL PROPERTY": 30,
+  "LUST": 255,
+  "NO ACTION REQUIRED": 179,
+  "OFF-SITE": 42,
+  "SPILL": 407,
+  "VPLE": 2
+ },
+ "co_by_municipality": {
+  "CASSIAN": 3,
+  "CLIFFORD": 1,
+  "CRESCENT": 1,
+  "HARSHAW": 3,
+  "HAZELHURST": 1,
+  "LAKE TOMAHAWK": 2,
+  "MCNAUGHTON": 2,
+  "MINOCQUA": 41,
+  "MONICO": 1,
+  "NOKOMIS": 1,
+  "NOKOMIS TN": 1,
+  "PELICAN LAKE": 2,
+  "RHINELANDER": 78,
+  "ST GERMAIN": 1,
+  "ST. GERMAIN": 1,
+  "STARKS": 1,
+  "SUGAR CAMP": 4,
+  "THREE LAKES": 11,
+  "TRIPOLI": 1,
+  "WOODRUFF": 6
+ },
+ "continuing_obligation_sites": 162,
+ "enforcement": {
+  "audit_followup_complete": 1,
+  "audit_followup_needed": 1,
+  "audits_complete": 21,
+  "audits_vapor_only": 0,
+  "co_applied": 162,
+  "deed_recorded": 24,
+  "deed_terminated": 0,
+  "modifications_approved": 5,
+  "obligations_removed": 0
+ }
+}
