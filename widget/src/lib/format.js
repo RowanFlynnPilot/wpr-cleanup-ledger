@@ -114,6 +114,7 @@ export function siteMatches(site, query) {
     muniDisplay(site.muni),
     site.brrts,
     ...site.parties.map((p) => p.name),
+    ...(site.substances ?? []),
   ]
     .filter(Boolean)
     .join(" ")

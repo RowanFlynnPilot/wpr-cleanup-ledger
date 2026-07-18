@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   addressDisplay,
   dnrUrl,
@@ -8,6 +8,7 @@ import {
   titleCase,
   TYPE_LABELS,
 } from "../lib/format.js";
+import { obligationTypeOf, RECORD_COPY } from "../recordCopy.js";
 
 const STATUS_NOTES = {
   closed:
@@ -17,11 +18,52 @@ const STATUS_NOTES = {
     "This record tracks a property affected by contamination that migrated from a neighboring source property. The obligation originates off-site; this property's owner did not cause the contamination.",
 };
 
-export default function SiteDetail({ site, onClose }) {
+export default function SiteDetail({ site, onClose, onJump, jumpable }) {
   const closeRef = useRef(null);
   const st = statusOf(site);
+  const [copied, setCopied] = useState(false);
 
   const drawerRef = useRef(null);
+
+  // Reset the permalink confirmation when jumping between records.
+  useEffect(() => setCopied(false), [site.dsn]);
+
+  const copyPermalink = async () => {
+    const url =
+      window.location.origin +
+      window.location.pathname +
+      window.location.search +
+      `#site=${site.dsn}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+    } catch {
+      // Clipboard access can be denied inside embeds; fall back to a
+      // prompt the reader can copy from manually.
+      window.prompt(RECORD_COPY.copyLink, url);
+    }
+  };
+
+  // Cross-link entries render as in-app jumps when the target is in the
+  // published ledger, and as plain text otherwise (the map layer can lead
+  // the quarterly bulk record by a few properties).
+  const crossLink = (entry) =>
+    onJump && jumpable?.has(entry.dsn) ? (
+      <button
+        type="button"
+        className="crosslink"
+        onClick={() => onJump(entry.dsn)}
+        aria-label={RECORD_COPY.crossLinkAria(entry.name)}
+      >
+        {entry.name}
+        <span className="crosslink__brrts"> {entry.brrts}</span>
+      </button>
+    ) : (
+      <span className="crosslink crosslink--plain">
+        {entry.name}
+        <span className="crosslink__brrts"> {entry.brrts}</span>
+      </span>
+    );
 
   // Keyed on site.dsn as well as onClose so selecting a different site
   // while the drawer is open moves focus to the new dialog content.
@@ -118,6 +160,26 @@ export default function SiteDetail({ site, onClose }) {
             {STATUS_NOTES[st.key]}
           </p>
 
+          {site.co_types?.length > 0 && (
+            <>
+              <h3>{RECORD_COPY.obligationsHeading}</h3>
+              <ul className="obl">
+                {site.co_types.map((key) => {
+                  const t = obligationTypeOf(key);
+                  return (
+                    <li key={key}>
+                      <span className="chip chip--type">{t.label}</span>
+                      <span className="obl__note">{t.note}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="drawer__fineprint drawer__fineprint--tight">
+                {RECORD_COPY.obligationsNote}
+              </p>
+            </>
+          )}
+
           <h3>Case record</h3>
           <dl className="facts">
             <dt>Program</dt>
@@ -127,6 +189,60 @@ export default function SiteDetail({ site, onClose }) {
             <dt>Case closed</dt>
             <dd>{fmtDate(site.end_date) ?? "—"}</dd>
           </dl>
+
+          {site.source_site && (
+            <>
+              <h3>{RECORD_COPY.sourceHeading}</h3>
+              <p className="drawer__crossnote">{RECORD_COPY.sourceNote}</p>
+              <ul className="crosslinks">
+                <li>{crossLink(site.source_site)}</li>
+              </ul>
+            </>
+          )}
+
+          {site.affected_properties?.length > 0 && (
+            <>
+              <h3>{RECORD_COPY.affectedHeading}</h3>
+              <p className="drawer__crossnote">{RECORD_COPY.affectedNote}</p>
+              <ul className="crosslinks">
+                {site.affected_properties.map((p) => (
+                  <li key={p.dsn}>{crossLink(p)}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {site.substances?.length > 0 && (
+            <>
+              <h3>{RECORD_COPY.substancesHeading}</h3>
+              <p className="substances">{site.substances.join(" · ")}</p>
+              <p className="drawer__fineprint drawer__fineprint--tight">
+                {RECORD_COPY.substancesNote}
+              </p>
+            </>
+          )}
+
+          {site.impacts?.length > 0 && (
+            <>
+              <h3>{RECORD_COPY.impactsHeading}</h3>
+              <ul className="impacts">
+                {site.impacts.map((im, i) => (
+                  <li key={i}>
+                    {im.desc}
+                    {im.potential && (
+                      <span className="impacts__potential">
+                        {" "}
+                        ({RECORD_COPY.potentialSuffix})
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              <p className="drawer__fineprint drawer__fineprint--tight">
+                {RECORD_COPY.impactsNote}
+              </p>
+            </>
+          )}
 
           <h3>Named in the public record</h3>
           {site.parties.length ? (
@@ -168,14 +284,23 @@ export default function SiteDetail({ site, onClose }) {
             </p>
           )}
 
-          <a
-            className="drawer__dnr"
-            href={dnrUrl(site.dsn)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View the full DNR record →
-          </a>
+          <div className="drawer__links">
+            <a
+              className="drawer__dnr"
+              href={dnrUrl(site.dsn)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View the full DNR record →
+            </a>
+            <button
+              type="button"
+              className="drawer__copylink"
+              onClick={copyPermalink}
+            >
+              {copied ? RECORD_COPY.copyLinkCopied : RECORD_COPY.copyLink}
+            </button>
+          </div>
 
           <p className="drawer__fineprint">
             Parties appear as named in the Wisconsin DNR public record at case

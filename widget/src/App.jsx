@@ -7,11 +7,25 @@ import SiteTable from "./components/SiteTable.jsx";
 import SiteDetail from "./components/SiteDetail.jsx";
 import PfasSection from "./components/PfasSection.jsx";
 import PfasDetail from "./components/PfasDetail.jsx";
+import EnforcementPanel from "./components/EnforcementPanel.jsx";
 import AboutPanel from "./components/AboutPanel.jsx";
 import Footer from "./components/Footer.jsx";
 import { siteMatches, statusOf } from "./lib/format.js";
 
-const EMPTY_FILTERS = { query: "", type: "all", status: "all", muni: "all" };
+const EMPTY_FILTERS = {
+  query: "",
+  type: "all",
+  status: "all",
+  muni: "all",
+  co_type: "all",
+};
+
+// Drawer permalinks (#site=<dsn> / #system=<pws_id>). replaceState, not
+// location.hash assignment: no scroll jump, no history entry per click.
+function setHash(hash) {
+  const base = window.location.pathname + window.location.search;
+  window.history.replaceState(null, "", hash ? `${base}#${hash}` : base);
+}
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -26,6 +40,9 @@ export default function App() {
   const [pfasError, setPfasError] = useState(null);
   const [showPfas, setShowPfas] = useState(true);
   const [selectedPfas, setSelectedPfas] = useState(null);
+  // County-wide enforcement counts for the panel. Supplementary: if
+  // summary.json fails to load, the panel simply doesn't render.
+  const [summary, setSummary] = useState(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/sites.json`)
@@ -45,6 +62,16 @@ export default function App() {
       })
       .then(setPfas)
       .catch((e) => setPfasError(e.message));
+  }, []);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/summary.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(setSummary)
+      .catch(() => setSummary(null));
   }, []);
 
   // Report our height to the parent page so the WordPress iframe can size
@@ -89,22 +116,77 @@ export default function App() {
         if (filters.status !== "all" && statusOf(s).key !== filters.status)
           return false;
         if (filters.muni !== "all" && s.muni !== filters.muni) return false;
+        if (
+          filters.co_type !== "all" &&
+          !(s.co_types ?? []).includes(filters.co_type)
+        )
+          return false;
         return siteMatches(s, filters.query);
       }),
     [sites, filters]
   );
 
   // One drawer at a time: selecting from either dataset closes the other.
+  // Selection is mirrored into the URL hash so any record can be linked.
   const handleSelect = useCallback((site) => {
     setSelected(site);
     setSelectedPfas(null);
+    setHash(`site=${site.dsn}`);
   }, []);
-  const handleClose = useCallback(() => setSelected(null), []);
+  const handleClose = useCallback(() => {
+    setSelected(null);
+    setHash("");
+  }, []);
   const handleSelectPfas = useCallback((system) => {
     setSelectedPfas(system);
     setSelected(null);
+    setHash(`system=${system.pws_id}`);
   }, []);
-  const handleClosePfas = useCallback(() => setSelectedPfas(null), []);
+  const handleClosePfas = useCallback(() => {
+    setSelectedPfas(null);
+    setHash("");
+  }, []);
+  // Cross-links between source sites and affected properties jump straight
+  // to the other record's drawer, regardless of active table filters.
+  const handleJump = useCallback(
+    (dsn) => {
+      const target = (data?.sites ?? []).find((s) => s.dsn === dsn);
+      if (target) handleSelect(target);
+    },
+    [data, handleSelect]
+  );
+  // Which cross-link targets exist in the published ledger (the map layer
+  // can lead the quarterly bulk record; unpublished targets render as
+  // plain text in the drawer).
+  const jumpable = useMemo(() => new Set(sites.map((s) => s.dsn)), [sites]);
+
+  // Deep links: apply #site=/#system= once the relevant dataset arrives,
+  // and again on manual hash edits. Our own selections use replaceState,
+  // which never fires hashchange, so there is no feedback loop.
+  useEffect(() => {
+    const apply = () => {
+      const site = /^#site=(\d+)$/.exec(window.location.hash);
+      if (site && data) {
+        const t = data.sites.find((s) => s.dsn === Number(site[1]));
+        if (t) {
+          setSelected(t);
+          setSelectedPfas(null);
+          return;
+        }
+      }
+      const sys = /^#system=([0-9A-Za-z]+)$/.exec(window.location.hash);
+      if (sys && pfas) {
+        const t = pfas.systems.find((s) => s.pws_id === sys[1]);
+        if (t) {
+          setSelectedPfas(t);
+          setSelected(null);
+        }
+      }
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, [data, pfas]);
 
   if (error) {
     return (
@@ -153,6 +235,9 @@ export default function App() {
         onSelect={handleSelect}
         loading={!data}
       />
+      {summary?.enforcement && (
+        <EnforcementPanel sites={sites} enforcement={summary.enforcement} />
+      )}
       <PfasSection
         systems={pfas?.systems ?? []}
         error={pfasError}
@@ -160,7 +245,14 @@ export default function App() {
         selected={selectedPfas}
         onSelect={handleSelectPfas}
       />
-      {selected && <SiteDetail site={selected} onClose={handleClose} />}
+      {selected && (
+        <SiteDetail
+          site={selected}
+          onClose={handleClose}
+          onJump={handleJump}
+          jumpable={jumpable}
+        />
+      )}
       {selectedPfas && (
         <PfasDetail system={selectedPfas} onClose={handleClosePfas} />
       )}

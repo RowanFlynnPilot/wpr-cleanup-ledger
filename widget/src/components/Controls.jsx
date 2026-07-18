@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { muniDisplay } from "../lib/format.js";
+import { OBLIGATION_TYPES, RECORD_COPY } from "../recordCopy.js";
 
 export default function Controls({ sites, filters, onChange, onReset }) {
   const munis = useMemo(() => {
@@ -10,10 +11,22 @@ export default function Controls({ sites, filters, onChange, onReset }) {
     return [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   }, [sites]);
 
+  // Obligation-type options, restricted to types present in the data and
+  // ordered by how many sites carry each.
+  const coTypes = useMemo(() => {
+    const counts = new Map();
+    for (const s of sites) {
+      for (const key of s.co_types ?? []) {
+        counts.set(key, (counts.get(key) ?? 0) + 1);
+      }
+    }
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  }, [sites]);
+
   const set = (patch) => onChange({ ...filters, ...patch });
   const dirty =
     filters.query || filters.type !== "all" || filters.status !== "all" ||
-    filters.muni !== "all";
+    filters.muni !== "all" || filters.co_type !== "all";
 
   return (
     <div className="controls">
@@ -72,6 +85,23 @@ export default function Controls({ sites, filters, onChange, onReset }) {
           {munis.map(([muni, n]) => (
             <option key={muni} value={muni}>
               {muniDisplay(muni)} ({n})
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="control">
+        <label className="control__label" htmlFor="cl-cotype">
+          {RECORD_COPY.filterLabel}
+        </label>
+        <select
+          id="cl-cotype"
+          value={filters.co_type}
+          onChange={(e) => set({ co_type: e.target.value })}
+        >
+          <option value="all">{RECORD_COPY.filterAll}</option>
+          {coTypes.map(([key, n]) => (
+            <option key={key} value={key}>
+              {OBLIGATION_TYPES[key].label} ({n})
             </option>
           ))}
         </select>

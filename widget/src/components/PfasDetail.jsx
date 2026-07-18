@@ -1,11 +1,29 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, PFAS_VIEWER_URL, pfasResultOf } from "../pfasCopy.js";
+import { RECORD_COPY } from "../recordCopy.js";
 
 export default function PfasDetail({ system, onClose }) {
   const closeRef = useRef(null);
   const drawerRef = useRef(null);
   const r = pfasResultOf(system);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => setCopied(false), [system.pws_id]);
+
+  const copyPermalink = async () => {
+    const url =
+      window.location.origin +
+      window.location.pathname +
+      window.location.search +
+      `#system=${system.pws_id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+    } catch {
+      window.prompt(RECORD_COPY.copyLink, url);
+    }
+  };
 
   // Same dialog behavior as SiteDetail: focus moves in on open (keyed on
   // the system so switching rows re-focuses), Escape closes, Tab stays
@@ -94,14 +112,23 @@ export default function PfasDetail({ system, onClose }) {
             <dd>{system.pws_id}</dd>
           </dl>
 
-          <a
-            className="drawer__dnr"
-            href={PFAS_VIEWER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {PFAS_COPY.dnrLink}
-          </a>
+          <div className="drawer__links">
+            <a
+              className="drawer__dnr"
+              href={PFAS_VIEWER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {PFAS_COPY.dnrLink}
+            </a>
+            <button
+              type="button"
+              className="drawer__copylink"
+              onClick={copyPermalink}
+            >
+              {copied ? RECORD_COPY.copyLinkCopied : RECORD_COPY.copyLink}
+            </button>
+          </div>
 
           <p className="drawer__fineprint">
             {PFAS_COPY.dnrLinkNote(system.pws_id)} {PFAS_COPY.fineprint}
