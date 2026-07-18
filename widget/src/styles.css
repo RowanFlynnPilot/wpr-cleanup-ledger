@@ -180,18 +180,42 @@ button {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 10px 12px 8px;
+  padding: 12px 14px 10px;
+  text-align: left;
+}
+
+/* Filterable tiles: quiet card at rest, teal affordance on hover, wash +
+   inset ring while the filter is applied. Numerals stay in ink; the dot
+   beside the label carries the status color. */
+.stat--btn {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+
+.stat--btn:hover {
+  border-color: var(--teal);
+}
+
+.stat--btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.stat--active {
+  background: var(--teal-wash);
+  border-color: var(--teal);
+  box-shadow: inset 0 0 0 1px var(--teal);
 }
 
 .stat__num {
   font-family: var(--mono);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.1;
-}
-
-.stat__num--open {
-  color: var(--open);
+  color: var(--ink);
 }
 
 .stat__label {
@@ -199,7 +223,16 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin-top: 2px;
+  margin-top: 4px;
+}
+
+.stat__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: baseline;
 }
 
 /* ---------------------------------------------------------------- controls */
@@ -210,6 +243,108 @@ button {
   gap: 10px;
   align-items: flex-end;
   margin-bottom: 14px;
+  position: relative;
+}
+
+.controls__filters {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.controls__filters:hover {
+  border-color: var(--muted);
+}
+
+.controls__filters:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.controls__filters--on {
+  border-color: var(--teal);
+  color: var(--teal-ink);
+}
+
+.controls__badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px 7px;
+  margin-left: 7px;
+}
+
+.controls__caret {
+  color: var(--muted);
+  font-size: 10px;
+  margin-left: 7px;
+}
+
+/* Filter popover: a disclosure anchored under the controls row. */
+.fpanel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 900;
+  width: min(620px, 100%);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(32, 49, 45, 0.18);
+  padding: 14px;
+}
+
+.fpanel__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 14px;
+}
+
+.fpanel__grid .control select {
+  width: 100%;
+}
+
+.fpanel__subhead {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 14px 0 6px;
+}
+
+.fpanel__flags {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.fpanel__flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.fpanel__flag input {
+  accent-color: var(--teal);
+  margin: 0;
+}
+
+.fpanel__reset {
+  margin-top: 14px;
 }
 
 .control {
@@ -1147,12 +1282,15 @@ tr.sites__row--active {
   }
 
   .stats {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .stat:nth-child(4),
   .stat:nth-child(5) {
     display: none;
+  }
+
+  .fpanel__grid {
+    grid-template-columns: 1fr;
   }
 
   .mapcard__map {

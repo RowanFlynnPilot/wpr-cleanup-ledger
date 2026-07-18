@@ -19,6 +19,8 @@ const EMPTY_FILTERS = {
   status: "all",
   muni: "all",
   co_type: "all",
+  moved_offsite: false,
+  from_offsite: false,
 };
 
 // The founding county and default view; bare pre-expansion permalinks
@@ -189,6 +191,9 @@ export default function App() {
           !(s.co_types ?? []).includes(filters.co_type)
         )
           return false;
+        if (filters.moved_offsite && !s.contamination_moved_offsite)
+          return false;
+        if (filters.from_offsite && !s.co_from_another_property) return false;
         return siteMatches(s, filters.query);
       }),
     [sites, filters]
@@ -325,7 +330,7 @@ export default function App() {
           countyDisplay={countyDisplay}
         />
       )}
-      <StatsStrip sites={sites} />
+      <StatsStrip sites={sites} filters={filters} onChange={setFilters} />
       <Controls
         sites={sites}
         filters={filters}
