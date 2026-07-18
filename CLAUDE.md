@@ -145,8 +145,19 @@ explicit workflow_call is required, gated on the commit actually happening.
     searchable table and detail drawer, in a "Drinking water" section
     kept parallel to (never joined with) the site records. Every
     reader-facing PFAS string lives in `widget/src/pfasCopy.js`; the
-    review sheet for Shereen is `docs/pfas-copy-review.md`. Her sign-off
-    is the only step left before the wausaupilotandreview.com embed.
+    review sheet for Shereen is `docs/pfas-copy-review.md`.
+  - **Site-record enrichment added July 2026, same review gate.**
+    Publishes what the quarterly bulk already held: typed obligation
+    chips (9 conditions, KNOWN_CO_CONDITIONS in build_json.py) with an
+    obligation filter, substances and impact flags verbatim in the
+    drawer, source↔affected cross-links from map layer 220's parent
+    fields, the enforcement panel (notice-gap and audit-gap counts from
+    summary.json), and `#site=`/`#system=` permalinks with copy buttons.
+    Reader-facing strings live in `widget/src/recordCopy.js`, gated by
+    `widget/scripts/check-record-copy.mjs`; review sheet is
+    `docs/record-copy-review.md`. Shereen's sign-off on the two review
+    sheets is the only step left before the wausaupilotandreview.com
+    embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char

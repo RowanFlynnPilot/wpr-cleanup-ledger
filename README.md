@@ -49,12 +49,16 @@ DNR RR Sites Map (nightly) ───┘
   sampling results, filtered to Marathon County by point-in-polygon. Kept
   parallel to — never joined with — the contamination-site records.
 - `build/build_json.py` — deterministic public JSON (`public/data/`).
-- `widget/` — React/Vite widget (map, searchable table, obligation detail,
-  and a drinking-water PFAS section whose reader-facing language lives
-  entirely in `widget/src/pfasCopy.js`), deployed to GitHub Pages by
-  `.github/workflows/deploy.yml`. Data commits from the nightly/quarterly
-  workflows redeploy it automatically; the build refuses to ship a DNR
-  PFAS result category that lacks vetted display copy.
+- `widget/` — React/Vite widget: map, searchable/filterable table, and a
+  detail drawer per record with typed obligations, substances, impact
+  flags, and source↔affected cross-links; an enforcement panel with the
+  county's notice-gap and audit-gap counts; a drinking-water PFAS section;
+  and `#site=`/`#system=` permalinks. All reader-facing PFAS and
+  record-enrichment language lives in `widget/src/pfasCopy.js` and
+  `widget/src/recordCopy.js`, and the build refuses to ship a DNR category
+  or obligation condition that lacks vetted display copy. Deployed to
+  GitHub Pages by `.github/workflows/deploy.yml`; data commits from the
+  nightly/quarterly workflows redeploy it automatically.
 
 ## Embedding (WordPress)
 
@@ -74,6 +78,7 @@ Paste into a Custom HTML block (the script must come before the iframe):
         src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"
         title="The Cleanup Ledger — contamination sites and continuing obligations in Marathon County"
         width="100%" height="1500" style="border:0;" loading="lazy"
+        allow="clipboard-write"
         onload="this.contentWindow.postMessage({type:'cleanup-ledger:ping'}, 'https://rowanflynnpilot.github.io')"></iframe>
 ```
 
