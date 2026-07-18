@@ -150,7 +150,10 @@ explicit workflow_call is required, gated on the commit actually happening.
 
 - **Phase 1 — widget. SHIPPED July 2026.** React/Vite in `widget/`, WPR
   design system (teal `#3A867C`, cream `#F6F2E9`, Fraunces display, Public
-  Sans body, JetBrains Mono for data) plus the live-site logo/wordmark.
+  Sans body, JetBrains Mono for data) plus the live-site logo/wordmark
+  and, since July 2026, the circular typewriter badge shared with
+  wpr-water (masthead 84px + footer 64px seal; white-background PNG,
+  always clipped with border-radius 50%).
   Leaflet map + searchable site table + obligation detail drawer from
   `public/data/sites.json`; every site deep-links to its DNR record
   (`apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>`). Live at

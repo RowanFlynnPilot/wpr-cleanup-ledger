@@ -1,4 +1,5 @@
 import logo from "../assets/wpr-logo.png";
+import badge from "../assets/wpr-typewriter-badge.png";
 import { fmtDate } from "../lib/format.js";
 import { RECORD_COPY } from "../recordCopy.js";
 
@@ -24,8 +25,19 @@ export default function Masthead({
         </a>
         <span className="masthead__motto">Where locals look first for news</span>
       </div>
-      <p className="masthead__kicker">A public-records project</p>
-      <h1 className="masthead__title">The Cleanup Ledger</h1>
+      <div className="masthead__lede">
+        <img
+          className="masthead__badge"
+          src={badge}
+          alt="Wausau Pilot & Review typewriter badge"
+          width="84"
+          height="84"
+        />
+        <div>
+          <p className="masthead__kicker">A public-records project</p>
+          <h1 className="masthead__title">The Cleanup Ledger</h1>
+        </div>
+      </div>
       <p className="masthead__dek">
         Every contamination cleanup in {countyDisplay} that left a legal
         obligation attached to the land — what the public record shows, and

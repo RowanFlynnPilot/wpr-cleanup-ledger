@@ -86,6 +86,22 @@ button {
   white-space: nowrap;
 }
 
+.masthead__lede {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+/* The badge PNG is a circle on a white square; the radius clips the
+   corners so it sits cleanly on the cream background. */
+.masthead__badge {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  flex: none;
+}
+
 .masthead__kicker {
   font-family: var(--sans);
   font-weight: 700;
@@ -101,7 +117,7 @@ button {
   font-weight: 900;
   font-size: clamp(30px, 5vw, 44px);
   line-height: 1.05;
-  margin: 0 0 10px;
+  margin: 0;
   letter-spacing: -0.01em;
 }
 
@@ -702,6 +718,18 @@ tr.sites__row--active {
   padding: 14px 0 18px;
   font-size: 12.5px;
   color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.foot__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex: none;
+  margin-top: 4px;
 }
 
 .foot p {
@@ -1145,6 +1173,15 @@ tr.sites__row--active {
 
   .masthead__motto {
     display: none;
+  }
+
+  .masthead__badge {
+    width: 60px;
+    height: 60px;
+  }
+
+  .masthead__lede {
+    gap: 12px;
   }
 
   .tablecard__scroll {
