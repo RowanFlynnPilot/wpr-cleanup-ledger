@@ -82,8 +82,10 @@ export const STATUS_COLORS = {
 };
 
 // Map draw order (later = on top). Single source with STATUS_COLORS so a
-// new status key touches one file.
-export const STATUS_DRAW_ORDER = { offsite: 0, closed: 1, open: 2 };
+// new status key touches one file. Closed sites draw first: they are the
+// large majority (235), so the rarer off-site records and open cases stay
+// visible where markers crowd.
+export const STATUS_DRAW_ORDER = { closed: 0, offsite: 1, open: 2 };
 
 export const TYPE_LABELS = {
   LUST: "LUST — leaking underground storage tank",

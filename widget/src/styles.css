@@ -251,7 +251,7 @@ button {
 }
 
 .mapcard__map {
-  height: 430px;
+  height: 460px;
 }
 
 .mapcard__legend {
@@ -802,13 +802,21 @@ tr.sites__row--active {
   align-items: center;
   gap: 6px;
   cursor: pointer;
+}
+
+.legend__toggle input {
+  accent-color: var(--teal);
+  margin: 0;
+}
+
+/* The PFAS master toggle separates the two datasets on the legend row. */
+.legend__toggle--sep {
   padding-left: 14px;
   border-left: 1px solid var(--line-soft);
 }
 
-.legend__toggle input {
+.legend__toggle--sep input {
   accent-color: var(--pfas);
-  margin: 0;
 }
 
 .legend__diamond {

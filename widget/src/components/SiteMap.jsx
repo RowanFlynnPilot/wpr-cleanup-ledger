@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
 import {
   muniDisplay,
@@ -22,6 +22,14 @@ const LEGEND = [
 // white, so the halo uses the fixed PFAS accent from the design system).
 const PFAS_ACCENT = "#6d4e9c";
 
+// Marker radii track zoom: compact at county view where 300+ dots crowd
+// the Wausau core, larger at street level where readers click individual
+// records. Open cases stay a step bigger throughout.
+function radiusFor(key, zoom) {
+  const grow = zoom >= 12 ? 2 : zoom >= 11 ? 1 : 0;
+  return (key === "open" ? 7 : 5.5) + grow;
+}
+
 export default function SiteMap({
   sites,
   selected,
@@ -43,6 +51,7 @@ export default function SiteMap({
     const map = L.map(divRef.current, {
       center: COUNTY_CENTER,
       zoom: 10,
+      minZoom: 8,
       // Scroll-zoom stays off until the reader clicks in, so the widget
       // never hijacks the article scroll.
       scrollWheelZoom: false,
@@ -50,22 +59,65 @@ export default function SiteMap({
     });
     map.on("focus click", () => map.scrollWheelZoom.enable());
     map.on("blur", () => map.scrollWheelZoom.disable());
+    // Base tiles carry no labels; place labels render in their own pane
+    // ABOVE the markers, so "Wausau" stays readable over the dot field.
     L.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
       {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         maxZoom: 19,
       }
     ).addTo(map);
+    map.createPane("labels");
+    map.getPane("labels").style.zIndex = 650;
+    map.getPane("labels").style.pointerEvents = "none";
+    L.tileLayer(
+      "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
+      { maxZoom: 19, pane: "labels" }
+    ).addTo(map);
+    // County outline in a pane beneath the marker SVG (overlayPane is
+    // z 400), so add-order can't put it on top. Emitted by build_json.py
+    // from the committed Census boundary.
+    map.createPane("boundary");
+    map.getPane("boundary").style.zIndex = 350;
+    const ac = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}data/county.geojson`, { signal: ac.signal })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((geo) => {
+        if (!geo || !mapRef.current) return;
+        const boundary = L.geoJSON(geo, {
+          pane: "boundary",
+          interactive: false,
+          style: { color: "#66756f", weight: 1.5, dashArray: "5 4", fill: false },
+        }).addTo(mapRef.current);
+        // Keep panning in the county's neighborhood.
+        mapRef.current.setMaxBounds(boundary.getBounds().pad(0.5));
+      })
+      .catch(() => {}); // the outline is orientation, not data — omit on failure
     markersRef.current = L.layerGroup().addTo(map);
     pfasMarkersRef.current = L.layerGroup().addTo(map);
+    // Zoom feeds React state; the markers effect below re-renders dots at
+    // the radius for the new zoom (312 circle markers rebuild in ~ms).
+    map.on("zoomend", () => setZoomLevel(map.getZoom()));
     mapRef.current = map;
+    // Debug handle for automated verification (harness scripts drive
+    // zoom/pan through it; synthetic wheel events don't reach Leaflet).
+    divRef.current._leafletMap = map;
     return () => {
+      ac.abort();
       map.remove();
       mapRef.current = null;
     };
   }, []);
+
+  // Map-only visibility per status; the table and filters are unaffected.
+  const [shownStatuses, setShownStatuses] = useState({
+    open: true,
+    closed: true,
+    offsite: true,
+  });
+  const [zoomLevel, setZoomLevel] = useState(10);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -73,20 +125,24 @@ export default function SiteMap({
     if (!map || !group) return;
     group.clearLayers();
 
-    // Open cases render last so they sit on top where markers crowd.
-    // Decorate with the status key once per site, then sort by rank.
+    // Rarer layers render last so they sit on top where markers crowd
+    // (see STATUS_DRAW_ORDER). Decorate with the status key once per
+    // site, then sort by rank.
     const ordered = sites
       .map((site) => [statusOf(site).key, site])
       .sort(([a], [b]) => STATUS_DRAW_ORDER[a] - STATUS_DRAW_ORDER[b]);
 
     for (const [key, site] of ordered) {
       if (site.lat == null || site.lon == null) continue;
+      if (!shownStatuses[key]) continue;
+      // White stroke separates overlapping same-color dots far better
+      // than a dark one on the light basemap.
       const marker = L.circleMarker([site.lat, site.lon], {
-        radius: key === "open" ? 8 : 6,
-        color: "#20312d",
-        weight: 1,
+        radius: radiusFor(key, zoomLevel),
+        color: "#ffffff",
+        weight: 1.5,
         fillColor: STATUS_COLORS[key],
-        fillOpacity: 0.85,
+        fillOpacity: 0.9,
       });
       marker.bindTooltip(
         `<span class="site-tip__name">${escapeHtml(site.name)}</span>` +
@@ -99,15 +155,20 @@ export default function SiteMap({
       marker.addTo(group);
     }
 
-    if (sites.length) {
-      const bounds = L.latLngBounds(
-        sites.filter((site) => site.lat != null).map((site) => [site.lat, site.lon])
-      );
-      if (bounds.isValid()) {
-        map.fitBounds(bounds.pad(0.12), { maxZoom: 14 });
-      }
+  }, [sites, onSelect, shownStatuses, zoomLevel]);
+
+  // Camera follows the filtered site list only — toggling a status layer
+  // on the legend must not move the map.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !sites.length) return;
+    const bounds = L.latLngBounds(
+      sites.filter((site) => site.lat != null).map((site) => [site.lat, site.lon])
+    );
+    if (bounds.isValid()) {
+      map.fitBounds(bounds.pad(0.12), { maxZoom: 14 });
     }
-  }, [sites, onSelect]);
+  }, [sites]);
 
   // Municipal water systems: a separate toggleable overlay, never mixed
   // into the site marker group. Diamonds (divIcons) so the layer reads as
@@ -207,15 +268,22 @@ export default function SiteMap({
       />
       <div className="mapcard__legend">
         {LEGEND.map(([key, label]) => (
-          <span className="legend__item" key={key}>
+          <label className="legend__toggle" key={key}>
+            <input
+              type="checkbox"
+              checked={shownStatuses[key]}
+              onChange={(e) =>
+                setShownStatuses((s) => ({ ...s, [key]: e.target.checked }))
+              }
+            />
             <span
               className="legend__dot"
               style={{ background: STATUS_COLORS[key] }}
             />
             {label}
-          </span>
+          </label>
         ))}
-        <label className="legend__toggle">
+        <label className="legend__toggle legend__toggle--sep">
           <input
             type="checkbox"
             checked={showPfas}

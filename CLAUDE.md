@@ -155,9 +155,13 @@ explicit workflow_call is required, gated on the commit actually happening.
     summary.json), and `#site=`/`#system=` permalinks with copy buttons.
     Reader-facing strings live in `widget/src/recordCopy.js`, gated by
     `widget/scripts/check-record-copy.mjs`; review sheet is
-    `docs/record-copy-review.md`. Shereen's sign-off on the two review
-    sheets is the only step left before the wausaupilotandreview.com
-    embed.
+    `docs/record-copy-review.md`. Map refinements shipped alongside:
+    county outline (build_json.py copies the committed boundary to
+    `public/data/county.geojson`), CARTO no-labels base with place labels
+    in a pane above the markers, white marker strokes with zoom-scaled
+    radii, per-status legend toggles, closed-draws-first order, and
+    county max-bounds. Shereen's sign-off on the two review sheets is
+    the only step left before the wausaupilotandreview.com embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char

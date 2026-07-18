@@ -330,6 +330,15 @@ def main() -> None:
     write(OUT_DIR / "events.json", build_events(conn))
     write(OUT_DIR / "pfas.json", build_pfas(conn))
     write(OUT_DIR / "summary.json", build_summary(conn))
+    # County outline for the widget map: verbatim copy of the committed
+    # boundary (Census TIGERweb, GEOID 55073), so the widget serves it
+    # like any other data file. Byte-identical copy keeps the quiet-repo
+    # rule intact.
+    (OUT_DIR / "county.geojson").write_text(
+        (REPO_ROOT / "data" / "marathon_county.geojson").read_text(encoding="utf-8"),
+        encoding="utf-8",
+    )
+    print(f"  wrote {(OUT_DIR / 'county.geojson').relative_to(REPO_ROOT)}")
     conn.close()
 
 
