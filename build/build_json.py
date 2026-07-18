@@ -30,6 +30,36 @@ PUBLISHED_ROLES = ("Responsible Party", "Owner")
 # Blank status is legitimate only on OFF-SITE records.
 KNOWN_STATUSES = {"OPEN", "CLOSED"}
 
+# DNR's continuing-obligation CONDITION actions ("Continuing Obligation -
+# <condition>") classified into stable keys the widget renders as typed
+# chips with vetted copy (widget/src/recordCopy.js). Same closed-vocabulary
+# rule as KNOWN_STATUSES: a condition name not listed here fails the build
+# so a human writes copy before it ships. Process/paperwork actions
+# ("CO Packet…", "…Applied", audits, modifications) deliberately do not
+# match the "Continuing Obligation - " prefix and stay untyped timeline
+# entries.
+KNOWN_CO_CONDITIONS = {
+    "Continuing Obligation - Residual GW Contamination": "residual-gw",
+    "Continuing Obligation - Residual Soil Contamination": "residual-soil",
+    "Continuing Obligation - Maintain Cap Over Contaminated Area": "cap",
+    "Continuing Obligation - Structural Impediment to Cleanup": "structural",
+    "Continuing Obligation - Vapor Intrusion Response": "vapor",
+    "Continuing Obligation - Monitoring Well Needs Abandonment": "well-abandonment",
+    "Continuing Obligation - Soil at Industrial Levels": "industrial-soil",
+    "Continuing Obligation - Site Specific Condition": "site-specific",
+    "Continuing Obligation - Sediment Engineering Control": "sediment",
+}
+CO_CONDITION_PREFIX = "Continuing Obligation - "
+
+
+def display_brrts(number: str) -> str:
+    """10-digit map-layer activity number -> dashed display form.
+
+    '0337000073' -> '03-37-000073', matching activity_display_number in the
+    bulk extract (verified identical digits for all layer-220 parents).
+    """
+    return f"{number[:2]}-{number[2:4]}-{number[4:]}"
+
 
 def write(path: Path, payload: dict) -> None:
     path.write_text(
@@ -76,6 +106,61 @@ def build_sites(conn: sqlite3.Connection) -> dict:
             "ORDER BY action_date, action_name",
             (dsn,),
         ).fetchall()
+        # Typed obligation conditions for chips/filtering. Closed vocabulary:
+        # an unknown condition name means DNR added one and a human must
+        # write display copy before it ships.
+        co_types = set()
+        for _, name in co_actions:
+            if not name.startswith(CO_CONDITION_PREFIX):
+                continue
+            if name not in KNOWN_CO_CONDITIONS:
+                raise RuntimeError(
+                    f"Activity {a[1]} has unclassified CO condition {name!r}; "
+                    "add it to KNOWN_CO_CONDITIONS and vetted display copy "
+                    "to widget/src/recordCopy.js before publishing it"
+                )
+            co_types.add(KNOWN_CO_CONDITIONS[name])
+        substances = [
+            r[0]
+            for r in conn.execute(
+                "SELECT DISTINCT substance FROM substance "
+                "WHERE detail_seq_no = ? ORDER BY substance",
+                (dsn,),
+            )
+        ]
+        impacts = [
+            {"desc": r[0], "potential": bool(r[1])}
+            for r in conn.execute(
+                "SELECT DISTINCT impact_desc, potential_flag FROM impact "
+                "WHERE detail_seq_no = ? ORDER BY impact_desc, potential_flag",
+                (dsn,),
+            )
+        ]
+        # Off-site records link back to the source contamination activity
+        # (map layer 220 carries the parent). The map lags/leads the bulk by
+        # up to a quarter, so a missing row is legitimate, not an error.
+        source_site = None
+        if a[3] == "OFF-SITE":
+            row = conn.execute(
+                "SELECT parent_dsn, parent_brrts_no, parent_name "
+                "FROM map_state WHERE layer_id = 220 AND detail_seq_no = ?",
+                (dsn,),
+            ).fetchone()
+            if row is not None:
+                source_site = {
+                    "dsn": row[0],
+                    "brrts": display_brrts(row[1]),
+                    "name": row[2],
+                }
+        affected_properties = [
+            {"dsn": r[0], "brrts": display_brrts(r[1]), "name": r[2]}
+            for r in conn.execute(
+                "SELECT detail_seq_no, activity_number, activity_name "
+                "FROM map_state WHERE layer_id = 220 AND parent_dsn = ? "
+                "ORDER BY activity_number",
+                (dsn,),
+            )
+        ]
         sites.append({
             "dsn": dsn,  # DNR public record: apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>
             "brrts": a[1],
@@ -96,6 +181,11 @@ def build_sites(conn: sqlite3.Connection) -> dict:
                 for p in parties
             ],
             "obligations": [{"date": c[0], "action": c[1]} for c in co_actions],
+            "co_types": sorted(co_types),
+            "substances": substances,
+            "impacts": impacts,
+            "source_site": source_site,
+            "affected_properties": affected_properties,
         })
     return {
         "bulk_extract_date": meta_value(conn, "bulk_extract_date"),
@@ -184,7 +274,52 @@ def build_summary(conn: sqlite3.Connection) -> dict:
         "by_type": by_type,
         "by_status": by_status,
         "co_by_municipality": co_by_muni,
+        "enforcement": build_enforcement(conn),
     }
+
+
+def build_enforcement(conn: sqlite3.Connection) -> dict:
+    """County-wide, all-time counts of how obligations get enforced.
+
+    Exact action-name matches against the quarterly bulk record: obligations
+    applied vs compliance audits ever completed (the audit gap), and deed
+    instruments recorded vs database-only notice (the notice gap — since
+    June 2006 the DNR database itself is the official public notice,
+    s. 292.12(3)). Counts are events, not sites. The widget presents these
+    only through vetted copy in widget/src/recordCopy.js.
+    """
+    def count(name: str) -> int:
+        return conn.execute(
+            "SELECT COUNT(*) FROM action WHERE action_name = ?", (name,)
+        ).fetchone()[0]
+
+    enforcement = {
+        "co_applied": count("Continuing Obligation(s) Applied"),
+        "audits_complete": count("Continuing Obligation(s) Compliance Audit Complete"),
+        "audits_vapor_only": count("CO Compliance Audit Complete - Vapor Only"),
+        "audit_followup_needed": count(
+            "Continuing Obligation(s) Compliance Audit Follow-up Needed"),
+        "audit_followup_complete": count(
+            "Continuing Obligation(s) Compliance Audit Follow-up Complete"),
+        "deed_recorded": (
+            count("Deed Restriction for Residual Soil Contamination Recorded")
+            + count("Deed Affidavit Recorded at Closure")
+            + count("Deed Affidavit for Contamination (NR 728) Recorded")
+        ),
+        "deed_terminated": count("Deed Instrument Terminated"),
+        "modifications_approved": count("Continuing Obligation Modification Approval"),
+        "obligations_removed": conn.execute(
+            "SELECT COUNT(*) FROM action WHERE action_name LIKE "
+            "'Continuing Obligation Removed - %' OR action_name = "
+            "'Continuing Obligations Satisfied - No Longer Apply'"
+        ).fetchone()[0],
+    }
+    if enforcement["co_applied"] == 0:
+        raise RuntimeError(
+            "Zero 'Continuing Obligation(s) Applied' actions — the bulk "
+            "action vocabulary changed; do not publish an empty panel"
+        )
+    return enforcement
 
 
 def main() -> None:

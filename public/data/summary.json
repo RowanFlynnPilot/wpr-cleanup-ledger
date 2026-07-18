@@ -63,5 +63,16 @@
   "WESTON": 5,
   "WIEN": 1
  },
- "continuing_obligation_sites": 312
+ "continuing_obligation_sites": 312,
+ "enforcement": {
+  "audit_followup_complete": 5,
+  "audit_followup_needed": 7,
+  "audits_complete": 35,
+  "audits_vapor_only": 2,
+  "co_applied": 313,
+  "deed_recorded": 54,
+  "deed_terminated": 3,
+  "modifications_approved": 16,
+  "obligations_removed": 4
+ }
 }
