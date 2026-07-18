@@ -180,8 +180,13 @@ button {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 12px 14px 10px;
-  text-align: left;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
 }
 
 /* Filterable tiles: quiet card at rest, teal affordance on hover, wash +
@@ -223,7 +228,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  margin-top: 4px;
+  max-width: 20ch;
 }
 
 .stat__dot {
