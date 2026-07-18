@@ -131,6 +131,7 @@ CREATE TABLE IF NOT EXISTS pfas_system (
     pws_id         TEXT PRIMARY KEY,   -- public water system ID (DWS Portal key)
     pws_name       TEXT NOT NULL,
     city           TEXT,               -- mailing city; display-only, never a join key
+    county         TEXT,               -- slug from ingest/counties.py; assigned by point-in-polygon
     sample_status  TEXT,
     sample_date    TEXT,
     sample_results TEXT,               -- DNR ordinal category verbatim; NULL = no result posted

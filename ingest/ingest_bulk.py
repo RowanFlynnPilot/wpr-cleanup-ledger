@@ -1,7 +1,8 @@
 """Quarterly ingest of the BRRTS public bulk data extract.
 
 Downloads the statewide zip (~35 MB, published quarterly), filters every
-table to Marathon County, and replaces the bulk tables in one transaction.
+table to the eight-county coverage area (ingest/counties.py), and replaces
+the bulk tables in one transaction.
 
 One correct path:
 - The zip is streamed to a temp file and read in place; nothing statewide
@@ -33,12 +34,9 @@ BULK_URL = (
     "?docSeqNo=0&bulkDownload=wdnr-brrts-data.zip&sender=bulkData"
 )
 MEMBER_DIR = "wdnr-brrts-data"
-COUNTY_NAME = "MARATHON"
-COUNTY_CODE = "37"
 
-# A quarterly extract with drastically fewer Marathon activities than the
-# ~2,537 observed in mid-2026 means the parse broke, not the county.
-MIN_EXPECTED_ACTIVITIES = 2000
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from ingest.counties import BULK_NAME_TO_CODE, COUNTIES  # noqa: E402
 
 csv.field_size_limit(10**9)
 
@@ -73,16 +71,34 @@ def load_activities(zf: zipfile.ZipFile) -> list[dict]:
     activities = [
         row
         for row in rows_of(zf, "facility-activity.txt")
-        if row["county_name"].strip().upper() == COUNTY_NAME
+        if row["county_name"].strip().upper() in BULK_NAME_TO_CODE
     ]
-    if len(activities) < MIN_EXPECTED_ACTIVITIES:
-        raise RuntimeError(
-            f"Only {len(activities)} Marathon activities parsed; "
-            f"expected at least {MIN_EXPECTED_ACTIVITIES}"
-        )
-    bad = [a["activity_number"] for a in activities if a["activity_number"][2:4] != COUNTY_CODE]
+    # Per-row cross-check: the county name and the code encoded in digits
+    # 3-4 of the activity number must agree, for every county.
+    bad = [
+        a["activity_number"]
+        for a in activities
+        if a["activity_number"][2:4] != BULK_NAME_TO_CODE[a["county_name"].strip().upper()]
+    ]
     if bad:
         raise RuntimeError(f"County-name/county-code mismatch, e.g. {bad[:3]}")
+    # Per-county floors: drastically fewer activities than the expansion
+    # baseline means the parse broke, not the county.
+    by_code = {}
+    for a in activities:
+        code = a["activity_number"][2:4]
+        by_code[code] = by_code.get(code, 0) + 1
+    for code, county in COUNTIES.items():
+        n = by_code.get(code, 0)
+        if n < county["min_activities"]:
+            raise RuntimeError(
+                f"Only {n} {county['name']} activities parsed; "
+                f"expected at least {county['min_activities']}"
+            )
+    print("  per county:", ", ".join(
+        f"{COUNTIES[code]['name']} {by_code.get(code, 0)}"
+        for code in sorted(COUNTIES)
+    ))
     return activities
 
 
@@ -102,35 +118,37 @@ def main() -> None:
         ).isoformat()
 
         activities = load_activities(zf)
-        marathon_ids = {a["detail_seq_no"] for a in activities}
+        area_ids = {a["detail_seq_no"] for a in activities}
 
         parties = [
             (r["detail_seq_no"], r["role_desc"].strip(), r["full_name"],
              flag(r["org_flag"]), r["city"], r["state_abbr"])
             for r in rows_of(zf, "who.txt")
-            if r["detail_seq_no"] in marathon_ids
+            if r["detail_seq_no"] in area_ids
         ]
         actions = [
             (r["detail_seq_no"], r["action_date"], r["action_code"],
              r["action_name"], r["action_desc"])
             for r in rows_of(zf, "actions.txt")
-            if r["detail_seq_no"] in marathon_ids
+            if r["detail_seq_no"] in area_ids
         ]
         impacts = [
             (r["detail_seq_no"], r["impact_code"], r["impact_desc"],
              flag(r["potential_flag"]))
             for r in rows_of(zf, "impacts.txt")
-            if r["detail_seq_no"] in marathon_ids
+            if r["detail_seq_no"] in area_ids
         ]
         substances = [
             (r["detail_seq_no"], r["substance_desc"],
              r["spill_released_amt"], r["spill_released_unit_code"])
             for r in rows_of(zf, "substances.txt")
-            if r["detail_seq_no"] in marathon_ids
+            if r["detail_seq_no"] in area_ids
         ]
 
     if not parties or not actions:
-        raise RuntimeError("Bulk extract yielded no parties or no actions for Marathon")
+        raise RuntimeError(
+            "Bulk extract yielded no parties or no actions for the coverage area"
+        )
 
     conn = sqlite3.connect(DB_PATH)
     conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))

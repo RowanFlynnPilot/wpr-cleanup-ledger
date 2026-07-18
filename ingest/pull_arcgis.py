@@ -1,14 +1,20 @@
-"""Nightly pull of Marathon County records from the DNR RR Sites Map.
+"""Nightly pull of coverage-area records from the DNR RR Sites Map.
 
-Queries five public ArcGIS layers, diffs each against the stored map_state,
-emits editorial events for appearances/disappearances, and replaces map_state.
+Queries five public ArcGIS layers for each county in ingest/counties.py,
+diffs each layer against the stored map_state, emits editorial events for
+appearances/disappearances, and replaces map_state.
 
 One correct path:
-- Single request per layer. Marathon counts (49-697) sit far below the
-  service's maxRecordCount of 2000; if exceededTransferLimit ever trips,
+- One request per county per layer. Each county's per-layer count sits far
+  below the service's maxRecordCount of 2000 (the region's largest is
+  Marathon's closed layer at ~700); if exceededTransferLimit ever trips,
   that is a precondition failure and we raise.
-- First ever run (empty map_state) is a baseline load: state is written,
-  no events are emitted.
+- Baseline is COUNTY-AWARE: events are emitted only for counties already
+  present in the stored state (county = digits 3-4 of the activity
+  number). A county being tracked for the first time — the July 2026
+  seven-county expansion, or any future addition — writes its state
+  silently instead of flooding the tip sheet with thousands of spurious
+  "appeared" events. An entirely empty map_state is a full baseline.
 - If nothing changed, nothing is written. The database file only moves
   when the world does, which keeps the git history quiet.
 """
@@ -24,12 +30,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 SCHEMA_PATH = REPO_ROOT / "schema.sql"
 
+sys.path.insert(0, str(REPO_ROOT))
+from ingest.counties import COUNTIES, county_code_of  # noqa: E402
+
 BASE_URL = (
     "https://dnrmaps.wi.gov/arcgis/rest/services/RR_Sites_Map/"
     "RR_PUBLIC_MAPSERVICES_CORE_EXT/MapServer"
 )
-COUNTY_CODE = "37"  # Marathon: digits 3-4 of the 10-digit BRRTS activity number
-WHERE = f"ACTIVITY_DETAIL_NO LIKE '__{COUNTY_CODE}%'"
 
 COMMON_FIELDS = [
     "DETAIL_SEQ_NO",
@@ -60,48 +67,56 @@ def epoch_ms_to_date(value):
 
 
 def fetch_layer(layer_id: int) -> dict[int, dict]:
-    """Return {detail_seq_no: attributes} for one layer, Marathon only."""
-    fields = COMMON_FIELDS + (PARENT_FIELDS if layer_id == 220 else [])
-    resp = requests.get(
-        f"{BASE_URL}/{layer_id}/query",
-        params={
-            "where": WHERE,
-            "outFields": ",".join(fields),
-            "returnGeometry": "false",
-            "f": "json",
-        },
-        timeout=60,
-    )
-    resp.raise_for_status()
-    payload = resp.json()
-    if "error" in payload:
-        raise RuntimeError(f"Layer {layer_id} query error: {payload['error']}")
-    if payload.get("exceededTransferLimit"):
-        raise RuntimeError(
-            f"Layer {layer_id} exceeded transfer limit; single-request assumption broken"
-        )
+    """Return {detail_seq_no: attributes} for one layer, whole coverage area.
 
+    One request per county keeps every response far under the service's
+    2000-record cap; a small county may legitimately contribute zero rows
+    to a sparse layer, but a layer empty across ALL counties means the
+    query broke and we raise.
+    """
+    fields = COMMON_FIELDS + (PARENT_FIELDS if layer_id == 220 else [])
     records = {}
-    for feature in payload["features"]:
-        # Map attributes carry the same stray whitespace as the bulk feed;
-        # strip at the door so map_state and the event feed stay clean.
-        a = {
-            k: v.strip() if isinstance(v, str) else v
-            for k, v in feature["attributes"].items()
-        }
-        records[a["DETAIL_SEQ_NO"]] = {
-            "activity_number": a["ACTIVITY_DETAIL_NO"],
-            "activity_name": a["ACTIVITY_DETAIL_NAME"],
-            "loc_addr": a["LOC_ADDR"],
-            "loc_city": a["LOC_CITY"],
-            "start_date": epoch_ms_to_date(a["START_DATE"]),
-            "end_date": epoch_ms_to_date(a["END_DATE"]),
-            "parent_dsn": a.get("PARENT_DSN"),
-            "parent_brrts_no": a.get("PARENT_BRRTSNO"),
-            "parent_name": a.get("PARENT_NAME"),
-        }
+    for code in COUNTIES:
+        resp = requests.get(
+            f"{BASE_URL}/{layer_id}/query",
+            params={
+                "where": f"ACTIVITY_DETAIL_NO LIKE '__{code}%'",
+                "outFields": ",".join(fields),
+                "returnGeometry": "false",
+                "f": "json",
+            },
+            timeout=60,
+        )
+        resp.raise_for_status()
+        payload = resp.json()
+        if "error" in payload:
+            raise RuntimeError(f"Layer {layer_id} query error: {payload['error']}")
+        if payload.get("exceededTransferLimit"):
+            raise RuntimeError(
+                f"Layer {layer_id} county {code} exceeded transfer limit; "
+                "single-request-per-county assumption broken"
+            )
+        for feature in payload["features"]:
+            # Map attributes carry the same stray whitespace as the bulk
+            # feed; strip at the door so map_state and the event feed stay
+            # clean.
+            a = {
+                k: v.strip() if isinstance(v, str) else v
+                for k, v in feature["attributes"].items()
+            }
+            records[a["DETAIL_SEQ_NO"]] = {
+                "activity_number": a["ACTIVITY_DETAIL_NO"],
+                "activity_name": a["ACTIVITY_DETAIL_NAME"],
+                "loc_addr": a["LOC_ADDR"],
+                "loc_city": a["LOC_CITY"],
+                "start_date": epoch_ms_to_date(a["START_DATE"]),
+                "end_date": epoch_ms_to_date(a["END_DATE"]),
+                "parent_dsn": a.get("PARENT_DSN"),
+                "parent_brrts_no": a.get("PARENT_BRRTSNO"),
+                "parent_name": a.get("PARENT_NAME"),
+            }
     if not records:
-        raise RuntimeError(f"Layer {layer_id} returned zero Marathon records")
+        raise RuntimeError(f"Layer {layer_id} returned zero coverage-area records")
     return records
 
 
@@ -112,7 +127,13 @@ def main() -> None:
     live = {layer_id: fetch_layer(layer_id) for layer_id in EVENT_TYPES}
 
     stored_total = conn.execute("SELECT COUNT(*) FROM map_state").fetchone()[0]
-    baseline = stored_total == 0
+    # County-aware baseline: only counties already in the stored state can
+    # emit events; a newly tracked county loads silently.
+    tracked_counties = {
+        county_code_of(row[0])
+        for row in conn.execute("SELECT activity_number FROM map_state")
+    }
+    baseline_counties = set(COUNTIES) - tracked_counties
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     events = []
@@ -123,11 +144,13 @@ def main() -> None:
                 "SELECT detail_seq_no FROM map_state WHERE layer_id = ?", (layer_id,)
             )
         }
-        appeared = set(records) - stored
+        appeared = {
+            dsn
+            for dsn in set(records) - stored
+            if county_code_of(records[dsn]["activity_number"]) in tracked_counties
+        }
+        # Disappearances are by construction in a tracked county.
         disappeared = stored - set(records)
-
-        if baseline:
-            continue
 
         appear_type, disappear_type = EVENT_TYPES[layer_id]
         for dsn in sorted(appeared):
@@ -145,7 +168,7 @@ def main() -> None:
             events.append((now, disappear_type, layer_id, dsn, *row))
 
     live_total = sum(len(records) for records in live.values())
-    if not baseline and not events and stored_total == live_total:
+    if not baseline_counties and not events and stored_total == live_total:
         print(f"No changes across {live_total} records in {len(live)} layers.")
         conn.close()
         return
@@ -177,8 +200,11 @@ def main() -> None:
             (now,),
         )
 
-    label = "Baseline load" if baseline else "Update"
+    label = "Baseline load" if not tracked_counties else "Update"
     print(f"{label}: {live_total} records across {len(live)} layers, {len(events)} events.")
+    if baseline_counties:
+        names = ", ".join(sorted(COUNTIES[c]["name"] for c in baseline_counties))
+        print(f"  county-aware baseline (no events): {names}")
     for e in events:
         print(f"  {e[1]}  {e[4]}  {e[5]}  ({e[6]}, {e[7]})")
     conn.close()
