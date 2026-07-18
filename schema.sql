@@ -120,3 +120,33 @@ CREATE TABLE IF NOT EXISTS meta (
     key   TEXT PRIMARY KEY,            -- bulk_extract_date / last_map_pull
     value TEXT NOT NULL
 );
+
+-- ---------------------------------------------------------------------------
+-- Nightly municipal PFAS sampling state (source: DNR Municipal System PFAS
+-- Sampling layer, filtered server-side to the Marathon County polygon in
+-- data/marathon_county.geojson). Maintained by ingest/pull_pfas.py.
+-- ---------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS pfas_system (
+    pws_id         TEXT PRIMARY KEY,   -- public water system ID (DWS Portal key)
+    pws_name       TEXT NOT NULL,
+    city           TEXT,               -- mailing city; display-only, never a join key
+    sample_status  TEXT,
+    sample_date    TEXT,
+    sample_results TEXT,               -- DNR ordinal category verbatim; NULL = no result posted
+    lat            REAL NOT NULL,      -- PLSS section centroid, not the well
+    lon            REAL NOT NULL
+);
+
+-- Editorial events emitted by the nightly PFAS diff. Same policy as event:
+-- internal tip sheet, never auto-publishes.
+CREATE TABLE IF NOT EXISTS pfas_event (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    detected_at TEXT NOT NULL,         -- UTC ISO-8601
+    event_type  TEXT NOT NULL,         -- PFAS_SYSTEM_ADDED / PFAS_SYSTEM_REMOVED / PFAS_RESULT_CHANGED
+    pws_id      TEXT NOT NULL,
+    pws_name    TEXT NOT NULL,
+    city        TEXT,
+    old_results TEXT,
+    new_results TEXT
+);

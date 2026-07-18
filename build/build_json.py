@@ -122,6 +122,51 @@ def build_events(conn: sqlite3.Connection) -> dict:
     return {"events": events}
 
 
+def build_pfas(conn: sqlite3.Connection) -> dict:
+    """Municipal PFAS sampling state + internal event feed.
+
+    Kept as its own file: the shape is system-keyed, not BRRTS-keyed, and
+    the widget must not render it until each DNR result category has vetted
+    display copy (same KNOWN_STATUSES philosophy as sites.json).
+    """
+    systems = [
+        {
+            "pws_id": s[0],
+            "name": s[1],
+            "city": s[2],
+            "sample_status": s[3],
+            "sample_date": s[4],
+            "results": s[5],
+            "lat": s[6],
+            "lon": s[7],
+        }
+        for s in conn.execute(
+            "SELECT pws_id, pws_name, city, sample_status, sample_date, "
+            "sample_results, lat, lon FROM pfas_system ORDER BY pws_id"
+        )
+    ]
+    events = [
+        {
+            "detected_at": e[0],
+            "event_type": e[1],
+            "pws_id": e[2],
+            "name": e[3],
+            "city": e[4],
+            "old_results": e[5],
+            "new_results": e[6],
+        }
+        for e in conn.execute(
+            "SELECT detected_at, event_type, pws_id, pws_name, city, "
+            "old_results, new_results FROM pfas_event ORDER BY id DESC"
+        )
+    ]
+    return {
+        "last_pfas_pull": meta_value(conn, "last_pfas_pull"),
+        "systems": systems,
+        "events": events,
+    }
+
+
 def build_summary(conn: sqlite3.Connection) -> dict:
     by_type = dict(conn.execute(
         "SELECT activity_type, COUNT(*) FROM activity GROUP BY activity_type"))
@@ -146,6 +191,7 @@ def main() -> None:
     print("Building public/data:")
     write(OUT_DIR / "sites.json", build_sites(conn))
     write(OUT_DIR / "events.json", build_events(conn))
+    write(OUT_DIR / "pfas.json", build_pfas(conn))
     write(OUT_DIR / "summary.json", build_summary(conn))
     conn.close()
 

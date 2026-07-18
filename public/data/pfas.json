@@ -1,0 +1,166 @@
+{
+ "events": [],
+ "last_pfas_pull": "2026-07-18T02:02:17+00:00",
+ "systems": [
+  {
+   "city": "WAUSAU",
+   "lat": 44.981128263282514,
+   "lon": -89.62068356613146,
+   "name": "WAUSAU WATERWORKS",
+   "pws_id": "73701023",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-05-12",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WAUSAU",
+   "lat": 45.024722085420585,
+   "lon": -89.66189749246416,
+   "name": "MAINE WATER UTILITY",
+   "pws_id": "73701078",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2023-08-02",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "SPENCER",
+   "lat": 44.7501814250778,
+   "lon": -90.30811023644806,
+   "name": "SPENCER WATERWORKS",
+   "pws_id": "73701089",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2026-03-23",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "ATHENS",
+   "lat": 45.02504263205006,
+   "lon": -90.0719594122037,
+   "name": "ATHENS WATERWORKS",
+   "pws_id": "73701496",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-24",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "EDGAR",
+   "lat": 44.92339331787681,
+   "lon": -89.9741954684143,
+   "name": "EDGAR WATERWORKS",
+   "pws_id": "73701507",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2025-04-07",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MARATHON CITY",
+   "lat": 44.937380337566566,
+   "lon": -89.83690182659255,
+   "name": "MARATHON CITY WATERWORKS",
+   "pws_id": "73701518",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-04-18",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MOSINEE",
+   "lat": 44.7932380696171,
+   "lon": -89.71909696337947,
+   "name": "MOSINEE WATERWORKS",
+   "pws_id": "73701595",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-09",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "ROTHSCHILD",
+   "lat": 44.894511682191464,
+   "lon": -89.61934816360053,
+   "name": "ROTHSCHILD WATERWORKS",
+   "pws_id": "73701617",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-04-14",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "SCHOFIELD",
+   "lat": 44.90890986516233,
+   "lon": -89.61907024990776,
+   "name": "SCHOFIELD WATERWORKS",
+   "pws_id": "73701628",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2026-03-24",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WESTON",
+   "lat": 44.909138384598144,
+   "lon": -89.60073118475196,
+   "name": "WESTON MUNICIPAL UTILITIES",
+   "pws_id": "73701639",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-05-11",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "STRATFORD",
+   "lat": 44.80802590090178,
+   "lon": -90.08930813564442,
+   "name": "STRATFORD WATERWORKS",
+   "pws_id": "73701683",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-03-19",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "COLBY",
+   "lat": 44.909660417503254,
+   "lon": -90.30715666789648,
+   "name": "COLBY WATERWORKS",
+   "pws_id": "73701694",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-05-17",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "WAUSAU",
+   "lat": 44.90889490158798,
+   "lon": -89.63941726464597,
+   "name": "RIB MOUNTAIN WATER UTILITY",
+   "pws_id": "73706600",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-05-26",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "HATLEY",
+   "lat": 44.89239506123413,
+   "lon": -89.33593794815083,
+   "name": "HATLEY WATERWORKS",
+   "pws_id": "73712562",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-06",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "KRONENWETTER",
+   "lat": 44.83662482775543,
+   "lon": -89.61900830040985,
+   "name": "KRONENWETTER WATER & SEWER UTILITY",
+   "pws_id": "73717006",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2023-06-19",
+   "sample_status": "Sampled"
+  },
+  {
+   "city": "MOSINEE",
+   "lat": 44.8077533401719,
+   "lon": -89.68016162267794,
+   "name": "MOSINEE EAST SYSTEM",
+   "pws_id": "73724805",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-05-04",
+   "sample_status": "Sampled"
+  }
+ ]
+}
