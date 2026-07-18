@@ -1,11 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import L from "leaflet";
 import {
   muniDisplay,
   STATUS_COLORS,
   STATUS_DRAW_ORDER,
   statusOf,
+  titleCase,
 } from "../lib/format.js";
+import { PFAS_COPY, pfasResultOf } from "../pfasCopy.js";
 
 // Marathon County, roughly. Used before data arrives and as a fallback.
 const COUNTY_CENTER = [44.9, -89.77];
@@ -16,11 +18,26 @@ const LEGEND = [
   ["offsite", "Off-site record"],
 ];
 
-export default function SiteMap({ sites, selected, onSelect }) {
+// Selection halo accent for water systems (category fills vary; pending is
+// white, so the halo uses the fixed PFAS accent from the design system).
+const PFAS_ACCENT = "#6d4e9c";
+
+export default function SiteMap({
+  sites,
+  selected,
+  onSelect,
+  pfasSystems,
+  showPfas,
+  onTogglePfas,
+  selectedPfas,
+  onSelectPfas,
+}) {
   const divRef = useRef(null);
   const mapRef = useRef(null);
   const markersRef = useRef(null);
   const haloRef = useRef(null);
+  const pfasMarkersRef = useRef(null);
+  const pfasHaloRef = useRef(null);
 
   useEffect(() => {
     const map = L.map(divRef.current, {
@@ -42,6 +59,7 @@ export default function SiteMap({ sites, selected, onSelect }) {
       }
     ).addTo(map);
     markersRef.current = L.layerGroup().addTo(map);
+    pfasMarkersRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
     return () => {
       map.remove();
@@ -91,6 +109,43 @@ export default function SiteMap({ sites, selected, onSelect }) {
     }
   }, [sites, onSelect]);
 
+  // Municipal water systems: a separate toggleable overlay, never mixed
+  // into the site marker group. Diamonds (divIcons) so the layer reads as
+  // different-in-kind from the site circles even without color; they sit
+  // in Leaflet's marker pane, above the 300-odd site circles — acceptable
+  // for 16 sparse, toggleable markers.
+  useEffect(() => {
+    const group = pfasMarkersRef.current;
+    if (!group) return;
+    group.clearLayers();
+    if (!showPfas) return;
+
+    const ordered = (pfasSystems ?? [])
+      .map((system) => [pfasResultOf(system), system])
+      .sort(([a], [b]) => a.rank - b.rank);
+
+    for (const [r, system] of ordered) {
+      if (system.lat == null || system.lon == null) continue;
+      const marker = L.marker([system.lat, system.lon], {
+        icon: L.divIcon({
+          className: "pfas-pin",
+          html: `<span class="pfas-pin__diamond" style="background:${r.color}"></span>`,
+          iconSize: [15, 15],
+        }),
+        keyboard: false,
+      });
+      marker.bindTooltip(
+        `<span class="site-tip__name">${escapeHtml(titleCase(system.name))}</span>` +
+          `<span class="site-tip__sub">${escapeHtml(
+            PFAS_COPY.tooltipSub(r.short)
+          )}</span>`,
+        { className: "site-tip", direction: "top", offset: [0, -8] }
+      );
+      marker.on("click", () => onSelectPfas(system));
+      marker.addTo(group);
+    }
+  }, [pfasSystems, showPfas, onSelectPfas]);
+
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -109,13 +164,46 @@ export default function SiteMap({ sites, selected, onSelect }) {
     map.panTo([selected.lat, selected.lon]);
   }, [selected]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    if (pfasHaloRef.current) {
+      pfasHaloRef.current.remove();
+      pfasHaloRef.current = null;
+    }
+    if (!selectedPfas || selectedPfas.lat == null || !showPfas) return;
+    pfasHaloRef.current = L.circleMarker([selectedPfas.lat, selectedPfas.lon], {
+      radius: 14,
+      color: PFAS_ACCENT,
+      weight: 3,
+      fill: false,
+      interactive: false,
+    }).addTo(map);
+    map.panTo([selectedPfas.lat, selectedPfas.lon]);
+  }, [selectedPfas, showPfas]);
+
+  // Legend rows only for categories present in the data, in rank order —
+  // the legend grows on its own if a new (vetted) category ever appears.
+  const pfasLegend = useMemo(() => {
+    const present = new Map();
+    for (const system of pfasSystems ?? []) {
+      const r = pfasResultOf(system);
+      present.set(r.key, r);
+    }
+    return [...present.values()].sort((a, b) => a.rank - b.rank);
+  }, [pfasSystems]);
+
   return (
     <div className="mapcard">
       <div
         ref={divRef}
         className="mapcard__map"
         role="region"
-        aria-label="Map of contamination sites with continuing obligations in Marathon County"
+        aria-label={
+          showPfas
+            ? PFAS_COPY.mapAriaWithPfas
+            : "Map of contamination sites with continuing obligations in Marathon County"
+        }
       />
       <div className="mapcard__legend">
         {LEGEND.map(([key, label]) => (
@@ -127,6 +215,24 @@ export default function SiteMap({ sites, selected, onSelect }) {
             {label}
           </span>
         ))}
+        <label className="legend__toggle">
+          <input
+            type="checkbox"
+            checked={showPfas}
+            onChange={(e) => onTogglePfas(e.target.checked)}
+          />
+          {PFAS_COPY.mapToggle}
+        </label>
+        {showPfas &&
+          pfasLegend.map((r) => (
+            <span className="legend__item" key={r.key}>
+              <span
+                className="legend__diamond"
+                style={{ background: r.color }}
+              />
+              {r.short}
+            </span>
+          ))}
       </div>
     </div>
   );

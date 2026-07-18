@@ -697,6 +697,138 @@ tr.sites__row--active {
   opacity: 0.85;
 }
 
+/* ------------------------------------------- pfas drinking-water section */
+/* All reader-facing strings rendered with these styles come from
+   src/pfasCopy.js; this block is presentation only. Purple (--pfas) is the
+   drinking-water accent, distinct from the site status colors. */
+
+.pfas {
+  margin-bottom: 16px;
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+}
+
+.pfas__kicker {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5c4a85;
+  margin: 12px 0 6px;
+}
+
+.pfas__title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.pfas__dek {
+  font-size: 14.5px;
+  max-width: 70ch;
+  margin: 0 0 12px;
+  color: #3a4a45;
+}
+
+.pfas__caveat {
+  background: #f1ecf8;
+  border-left: 3px solid var(--pfas);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+  color: #46395e;
+  max-width: 82ch;
+}
+
+.pfas__source {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+/* Result category chips — an ordinal lavender ramp, darker = further along
+   DNR's category scale. Pending is deliberately colorless. */
+
+.chip--pfas-pending {
+  background: var(--cream);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.chip--pfas-not-detected {
+  background: #f0edf8;
+  color: #5c4a85;
+}
+
+.chip--pfas-below-hi {
+  background: #e7e1f4;
+  color: #54407e;
+}
+
+.chip--pfas-exceeds-hi {
+  background: #ddd3ef;
+  color: #472f73;
+}
+
+.chip--pfas-above-hal {
+  background: #d3c6ea;
+  color: #392460;
+}
+
+/* Map markers: rotated squares so water systems read as different-in-kind
+   from the site circles even without color. Fill color comes inline from
+   pfasCopy.js entries. */
+
+.pfas-pin {
+  background: none;
+  border: none;
+}
+
+.pfas-pin__diamond {
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin: 2px;
+  transform: rotate(45deg);
+  border: 1px solid #20312d;
+}
+
+.legend__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding-left: 14px;
+  border-left: 1px solid var(--line-soft);
+}
+
+.legend__toggle input {
+  accent-color: var(--pfas);
+  margin: 0;
+}
+
+.legend__diamond {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  transform: rotate(45deg);
+  border: 1.5px solid rgba(32, 49, 45, 0.35);
+}
+
+.drawer--pfas {
+  border-left-color: var(--pfas);
+}
+
+.drawer__note--pfas {
+  background: #f1ecf8;
+  border-left-color: var(--pfas);
+  color: #46395e;
+}
+
 /* -------------------------------------------------------------- responsive */
 
 @media (max-width: 780px) {

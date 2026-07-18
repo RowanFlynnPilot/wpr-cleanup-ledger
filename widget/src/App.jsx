@@ -5,6 +5,8 @@ import Controls from "./components/Controls.jsx";
 import SiteMap from "./components/SiteMap.jsx";
 import SiteTable from "./components/SiteTable.jsx";
 import SiteDetail from "./components/SiteDetail.jsx";
+import PfasSection from "./components/PfasSection.jsx";
+import PfasDetail from "./components/PfasDetail.jsx";
 import AboutPanel from "./components/AboutPanel.jsx";
 import Footer from "./components/Footer.jsx";
 import { siteMatches, statusOf } from "./lib/format.js";
@@ -17,6 +19,13 @@ export default function App() {
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [selected, setSelected] = useState(null);
   const [aboutOpen, setAboutOpen] = useState(false);
+  // Drinking-water layer: separate file, separate state, never joined to
+  // the BRRTS site data. A pfas.json failure degrades to an in-section
+  // notice instead of taking down the site ledger.
+  const [pfas, setPfas] = useState(null);
+  const [pfasError, setPfasError] = useState(null);
+  const [showPfas, setShowPfas] = useState(true);
+  const [selectedPfas, setSelectedPfas] = useState(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/sites.json`)
@@ -26,6 +35,16 @@ export default function App() {
       })
       .then(setData)
       .catch((e) => setError(e.message));
+  }, []);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/pfas.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(setPfas)
+      .catch((e) => setPfasError(e.message));
   }, []);
 
   // Report our height to the parent page so the WordPress iframe can size
@@ -75,8 +94,17 @@ export default function App() {
     [sites, filters]
   );
 
-  const handleSelect = useCallback((site) => setSelected(site), []);
+  // One drawer at a time: selecting from either dataset closes the other.
+  const handleSelect = useCallback((site) => {
+    setSelected(site);
+    setSelectedPfas(null);
+  }, []);
   const handleClose = useCallback(() => setSelected(null), []);
+  const handleSelectPfas = useCallback((system) => {
+    setSelectedPfas(system);
+    setSelected(null);
+  }, []);
+  const handleClosePfas = useCallback(() => setSelectedPfas(null), []);
 
   if (error) {
     return (
@@ -109,14 +137,33 @@ export default function App() {
         Showing <strong>{filtered.length}</strong> of {sites.length} sites and
         records
       </p>
-      <SiteMap sites={filtered} selected={selected} onSelect={handleSelect} />
+      <SiteMap
+        sites={filtered}
+        selected={selected}
+        onSelect={handleSelect}
+        pfasSystems={pfas?.systems ?? []}
+        showPfas={showPfas}
+        onTogglePfas={setShowPfas}
+        selectedPfas={selectedPfas}
+        onSelectPfas={handleSelectPfas}
+      />
       <SiteTable
         sites={filtered}
         selected={selected}
         onSelect={handleSelect}
         loading={!data}
       />
+      <PfasSection
+        systems={pfas?.systems ?? []}
+        error={pfasError}
+        loading={!pfas && !pfasError}
+        selected={selectedPfas}
+        onSelect={handleSelectPfas}
+      />
       {selected && <SiteDetail site={selected} onClose={handleClose} />}
+      {selectedPfas && (
+        <PfasDetail system={selectedPfas} onClose={handleClosePfas} />
+      )}
       <Footer />
     </div>
   );
