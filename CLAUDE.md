@@ -93,14 +93,19 @@ restrictions. Marathon County numbers from the July 2026 audit:
 9. **PFAS diff is membership PLUS the `SAMPLE_RESULTS` category** — a
    deliberate, scoped exception to decision 2, because the category change
    (pending -> detected -> above HAL) IS the editorial signal. No other
-   attribute emits events. `pfas.json` ships systems + events but the
-   widget must not render it until every DNR category string has vetted
-   display copy (KNOWN_STATUSES philosophy).
+   attribute emits events. `pfas.json` ships systems + events; the widget
+   renders it only through vetted copy in `widget/src/pfasCopy.js`
+   (KNOWN_STATUSES philosophy, enforced since July 2026 by
+   `widget/scripts/check-pfas-copy.mjs` inside `npm run build` — an
+   unvetted DNR category string fails the build/deploy loudly, and null
+   is a defined pending state, not a fallback).
 10. **Monthly heartbeat.** The nightly workflow writes the current month to
    `data/heartbeat.txt`; the resulting one-commit-per-month is a deliberate
    exception to the quiet-repo rule, keeping scheduled workflows inside
    GitHub's 60-day activity window. Do not remove.
 ## Commands (PowerShell)
+
+The shell is PowerShell — no bash-isms (no brace expansion, no `&&`).
 
 ```powershell
 cd C:\Users\rpfly\Projects\wpr-cleanup-ledger
@@ -112,7 +117,8 @@ python build\build_json.py      # emit public/data/*.json
 cd widget
 npm install
 npm run dev                     # widget at /wpr-cleanup-ledger/ (honors $env:PORT)
-npm run build                   # production build -> widget/dist
+npm run build                   # production build -> widget/dist (runs the PFAS copy gate first)
+npm test                        # PFAS copy-gate tests (node --test)
 ```
 
 Workflows: `.github/workflows/nightly.yml` (10:30 UTC daily) and
@@ -134,6 +140,13 @@ explicit workflow_call is required, gated on the commit actually happening.
   editorial review). Note: the news site itself uses Merriweather/Oswald;
   the Fraunces/Public Sans system is the Ledger data-product brand — don't
   "fix" the widget to match the news theme.
+  - **PFAS layer added July 2026, awaiting editorial review for the
+    production embed.** Toggleable purple-diamond map layer + its own
+    searchable table and detail drawer, in a "Drinking water" section
+    kept parallel to (never joined with) the site records. Every
+    reader-facing PFAS string lives in `widget/src/pfasCopy.js`; the
+    review sheet for Shereen is `docs/pfas-copy-review.md`. Her sign-off
+    is the only step left before the wausaupilotandreview.com embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char

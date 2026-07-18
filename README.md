@@ -24,8 +24,9 @@ Marathon County readers.
 |---|---|---|
 | Case details, parties, obligation actions | [DNR BRRTS public bulk extract](https://dnr.wisconsin.gov/topic/Brownfields/botw.html) | Quarterly |
 | New/closed/flagged sites (change detection) | [DNR RR Sites Map](https://dnrmaps.wi.gov/H5/?viewer=rrsites) ArcGIS services | Nightly |
+| Municipal drinking-water PFAS sampling results | [DNR PFAS sampling viewer](https://dnrmaps.wi.gov/H5/?Viewer=PFAS) ArcGIS services | Nightly |
 
-Both sources are structured public downloads from the Wisconsin DNR — nothing
+All sources are structured public downloads from the Wisconsin DNR — nothing
 is scraped. Every site in the widget links to its full DNR record. Locations
 are as mapped by the DNR and may be approximate. Only responsible parties and
 owners named in the public record are published; DNR staff, consultants, and
@@ -44,10 +45,16 @@ DNR RR Sites Map (nightly) ───┘
 - `ingest/pull_arcgis.py` — nightly pull of five public map layers; set-diff
   against stored state emits an internal editorial event feed (never
   auto-published).
+- `ingest/pull_pfas.py` — nightly pull of municipal drinking-water PFAS
+  sampling results, filtered to Marathon County by point-in-polygon. Kept
+  parallel to — never joined with — the contamination-site records.
 - `build/build_json.py` — deterministic public JSON (`public/data/`).
-- `widget/` — React/Vite widget (map, searchable table, obligation detail),
-  deployed to GitHub Pages by `.github/workflows/deploy.yml`. Data commits
-  from the nightly/quarterly workflows redeploy it automatically.
+- `widget/` — React/Vite widget (map, searchable table, obligation detail,
+  and a drinking-water PFAS section whose reader-facing language lives
+  entirely in `widget/src/pfasCopy.js`), deployed to GitHub Pages by
+  `.github/workflows/deploy.yml`. Data commits from the nightly/quarterly
+  workflows redeploy it automatically; the build refuses to ship a DNR
+  PFAS result category that lacks vetted display copy.
 
 ## Embedding (WordPress)
 

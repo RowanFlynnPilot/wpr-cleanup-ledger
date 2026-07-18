@@ -125,9 +125,11 @@ def build_events(conn: sqlite3.Connection) -> dict:
 def build_pfas(conn: sqlite3.Connection) -> dict:
     """Municipal PFAS sampling state + internal event feed.
 
-    Kept as its own file: the shape is system-keyed, not BRRTS-keyed, and
-    the widget must not render it until each DNR result category has vetted
-    display copy (same KNOWN_STATUSES philosophy as sites.json).
+    Kept as its own file: the shape is system-keyed, not BRRTS-keyed. The
+    widget renders each DNR result category only through vetted display
+    copy (same KNOWN_STATUSES philosophy as sites.json) — enforced at
+    widget build time by widget/scripts/check-pfas-copy.mjs, so a new
+    category string here fails the deploy until copy is written.
     """
     systems = [
         {
