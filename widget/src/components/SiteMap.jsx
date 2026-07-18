@@ -97,9 +97,17 @@ export default function SiteMap({
       .catch(() => {}); // the outline is orientation, not data — omit on failure
     markersRef.current = L.layerGroup().addTo(map);
     pfasMarkersRef.current = L.layerGroup().addTo(map);
-    // Zoom feeds React state; the markers effect below re-renders dots at
-    // the radius for the new zoom (312 circle markers rebuild in ~ms).
-    map.on("zoomend", () => setZoomLevel(map.getZoom()));
+    // Rescale radii in place on zoom. Deliberately NOT a React re-render:
+    // rebuilding 312 markers during a zoom can interleave with Leaflet's
+    // projection updates and strand markers with stale clip bounds.
+    map.on("zoomend", () => {
+      const zoom = map.getZoom();
+      markersRef.current?.eachLayer((m) => {
+        if (m.options.statusKey) {
+          m.setRadius(radiusFor(m.options.statusKey, zoom));
+        }
+      });
+    });
     mapRef.current = map;
     // Debug handle for automated verification (harness scripts drive
     // zoom/pan through it; synthetic wheel events don't reach Leaflet).
@@ -117,8 +125,6 @@ export default function SiteMap({
     closed: true,
     offsite: true,
   });
-  const [zoomLevel, setZoomLevel] = useState(10);
-
   useEffect(() => {
     const map = mapRef.current;
     const group = markersRef.current;
@@ -136,13 +142,15 @@ export default function SiteMap({
       if (site.lat == null || site.lon == null) continue;
       if (!shownStatuses[key]) continue;
       // White stroke separates overlapping same-color dots far better
-      // than a dark one on the light basemap.
+      // than a dark one on the light basemap. statusKey is read back by
+      // the zoomend handler above to rescale radii in place.
       const marker = L.circleMarker([site.lat, site.lon], {
-        radius: radiusFor(key, zoomLevel),
+        radius: radiusFor(key, map.getZoom()),
         color: "#ffffff",
         weight: 1.5,
         fillColor: STATUS_COLORS[key],
         fillOpacity: 0.9,
+        statusKey: key,
       });
       marker.bindTooltip(
         `<span class="site-tip__name">${escapeHtml(site.name)}</span>` +
@@ -155,7 +163,7 @@ export default function SiteMap({
       marker.addTo(group);
     }
 
-  }, [sites, onSelect, shownStatuses, zoomLevel]);
+  }, [sites, onSelect, shownStatuses]);
 
   // Camera follows the filtered site list only — toggling a status layer
   // on the legend must not move the map.
