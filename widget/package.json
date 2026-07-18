@@ -6,8 +6,10 @@
   "description": "The Cleanup Ledger — contamination sites and continuing obligations in Marathon County, WI. A Wausau Pilot & Review public-records project.",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/check-pfas-copy.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test scripts/check-pfas-copy.test.mjs"
   },
   "dependencies": {
     "@fontsource/fraunces": "^5.2.5",

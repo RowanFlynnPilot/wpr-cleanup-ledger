@@ -52,6 +52,10 @@ jobs:
           cache-dependency-path: widget/package-lock.json
       - run: npm ci
         working-directory: widget
+      # Copy-gate tests, then the build (whose prebuild hook runs the gate
+      # itself against the data being shipped).
+      - run: npm test
+        working-directory: widget
       - run: npm run build
         working-directory: widget
       - uses: actions/configure-pages@v5
