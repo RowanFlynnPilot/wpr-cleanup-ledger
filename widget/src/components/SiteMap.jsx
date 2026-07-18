@@ -50,6 +50,10 @@ export default function SiteMap({
   const pfasHaloRef = useRef(null);
   const boundaryRef = useRef(null);
   const firstCountyRef = useRef(true);
+  // Latest rendered site count, read by the async boundary callback so it
+  // never zooms the camera back out after sites have already framed it.
+  const sitesCountRef = useRef(0);
+  sitesCountRef.current = sites.length;
 
   useEffect(() => {
     const map = L.map(divRef.current, {
@@ -135,7 +139,10 @@ export default function SiteMap({
           style: { color: "#66756f", weight: 1.5, dashArray: "5 4", fill: false },
         }).addTo(mapRef.current);
         boundaryRef.current = boundary;
-        if (isSwitch) {
+        // Frame the new county only while its sites are still loading;
+        // once they've arrived, the sites effect owns the camera and a
+        // late boundary fit would zoom back out over it.
+        if (isSwitch && sitesCountRef.current === 0) {
           mapRef.current.fitBounds(boundary.getBounds().pad(0.05));
         }
         // Keep panning in the county's neighborhood.

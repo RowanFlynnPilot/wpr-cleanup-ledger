@@ -92,7 +92,11 @@ export default function App() {
     }
   }, [counties, county]);
 
+  // Each per-county fetch ignores its response if the county changed
+  // while it was in flight — rapid switching must never land an older
+  // county's data on a newer selection.
   useEffect(() => {
+    let live = true;
     setData(null);
     setError(null);
     fetch(`${import.meta.env.BASE_URL}data/${county}/sites.json`)
@@ -100,11 +104,15 @@ export default function App() {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then(setData)
-      .catch((e) => setError(e.message));
+      .then((d) => live && setData(d))
+      .catch((e) => live && setError(e.message));
+    return () => {
+      live = false;
+    };
   }, [county]);
 
   useEffect(() => {
+    let live = true;
     setPfas(null);
     setPfasError(null);
     fetch(`${import.meta.env.BASE_URL}data/${county}/pfas.json`)
@@ -112,19 +120,26 @@ export default function App() {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then(setPfas)
-      .catch((e) => setPfasError(e.message));
+      .then((d) => live && setPfas(d))
+      .catch((e) => live && setPfasError(e.message));
+    return () => {
+      live = false;
+    };
   }, [county]);
 
   useEffect(() => {
+    let live = true;
     setSummary(null);
     fetch(`${import.meta.env.BASE_URL}data/${county}/summary.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then(setSummary)
-      .catch(() => setSummary(null));
+      .then((d) => live && setSummary(d))
+      .catch(() => live && setSummary(null));
+    return () => {
+      live = false;
+    };
   }, [county]);
 
   // Report our height to the parent page so the WordPress iframe can size
@@ -231,6 +246,11 @@ export default function App() {
     counties.find((c) => c.slug === county)?.name ?? "Marathon";
   const countyDisplay = RECORD_COPY.countyDisplay(countyName);
 
+  // Browser tab / share title follows the selected county.
+  useEffect(() => {
+    document.title = `The Cleanup Ledger — ${countyDisplay} — Wausau Pilot & Review`;
+  }, [countyDisplay]);
+
   // Deep links: apply the hash once the relevant county dataset arrives,
   // and again on manual hash edits. Our own selections use replaceState,
   // which never fires hashchange, so there is no feedback loop. A hash
@@ -269,9 +289,17 @@ export default function App() {
   }, [data, pfas, county, counties]);
 
   if (error) {
+    // Keep the county dropdown alive in the error state: if one county's
+    // data failed to load, switching counties is the recovery path.
     return (
       <div className="ledger">
-        <Masthead onAbout={() => setAboutOpen((v) => !v)} />
+        <Masthead
+          onAbout={() => setAboutOpen((v) => !v)}
+          counties={counties}
+          county={county}
+          onCounty={handleCounty}
+          countyDisplay={countyDisplay}
+        />
         <p role="alert">
           The site database could not be loaded ({error}). Please try again
           shortly.
@@ -304,10 +332,12 @@ export default function App() {
         onChange={setFilters}
         onReset={() => setFilters(EMPTY_FILTERS)}
       />
-      <p className="controls__count" aria-live="polite">
-        Showing <strong>{filtered.length}</strong> of {sites.length} sites and
-        records
-      </p>
+      {data && (
+        <p className="controls__count" aria-live="polite">
+          Showing <strong>{filtered.length}</strong> of {sites.length} sites
+          and records
+        </p>
+      )}
       <SiteMap
         sites={filtered}
         selected={selected}

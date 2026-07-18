@@ -75,6 +75,9 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
   // while the drawer is open moves focus to the new dialog content.
   useEffect(() => {
     const prev = document.activeElement;
+    // A cross-link jump reuses the mounted drawer; start the new record
+    // at the top instead of wherever the last one was scrolled.
+    if (drawerRef.current) drawerRef.current.scrollTop = 0;
     closeRef.current?.focus();
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";

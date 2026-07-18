@@ -34,7 +34,7 @@ export default function EnforcementPanel({ sites, enforcement, countyDisplay }) 
       <h2 className="enf__title">{RECORD_COPY.enforcementTitle}</h2>
       <p className="enf__dek">{RECORD_COPY.enforcementDek}</p>
 
-      <div className="enf__stats" role="list" aria-label={RECORD_COPY.enforcementTitle}>
+      <div className="enf__stats" role="list">
         {stats.map((it) => (
           <div className="stat" role="listitem" key={it.label}>
             <div className="stat__num">{it.num}</div>

@@ -34,6 +34,9 @@ export default function PfasDetail({ system, onClose, county }) {
   // inside the dialog, body scroll is parked, focus returns on close.
   useEffect(() => {
     const prev = document.activeElement;
+    // Switching systems reuses the mounted drawer; start each record at
+    // the top.
+    if (drawerRef.current) drawerRef.current.scrollTop = 0;
     closeRef.current?.focus();
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
