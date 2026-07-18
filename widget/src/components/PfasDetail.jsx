@@ -3,7 +3,7 @@ import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, PFAS_VIEWER_URL, pfasResultOf } from "../pfasCopy.js";
 import { RECORD_COPY } from "../recordCopy.js";
 
-export default function PfasDetail({ system, onClose }) {
+export default function PfasDetail({ system, onClose, county }) {
   const closeRef = useRef(null);
   const drawerRef = useRef(null);
   const r = pfasResultOf(system);
@@ -12,11 +12,15 @@ export default function PfasDetail({ system, onClose }) {
   useEffect(() => setCopied(false), [system.pws_id]);
 
   const copyPermalink = async () => {
+    const hash =
+      county === "marathon"
+        ? `#system=${system.pws_id}`
+        : `#county=${county}&system=${system.pws_id}`;
     const url =
       window.location.origin +
       window.location.pathname +
       window.location.search +
-      `#system=${system.pws_id}`;
+      hash;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);

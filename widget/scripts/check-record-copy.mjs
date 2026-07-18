@@ -64,13 +64,20 @@ export function checkRecordCopy(sites, enforcement, types = OBLIGATION_TYPES) {
   return errors;
 }
 
-// CLI: validate the committed data the build is about to ship.
+// CLI: validate the committed data the build is about to ship — every
+// county in the manifest.
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const read = (rel) =>
     JSON.parse(readFileSync(new URL(rel, import.meta.url), "utf8"));
-  const { sites } = read("../../public/data/sites.json");
-  const { enforcement } = read("../../public/data/summary.json");
-  const errors = checkRecordCopy(sites, enforcement);
+  const { counties } = read("../../public/data/counties.json");
+  const errors = [];
+  let total = 0;
+  for (const { slug } of counties) {
+    const { sites } = read(`../../public/data/${slug}/sites.json`);
+    const { enforcement } = read(`../../public/data/${slug}/summary.json`);
+    total += sites.length;
+    errors.push(...checkRecordCopy(sites, enforcement).map((e) => `[${slug}] ${e}`));
+  }
   if (errors.length) {
     console.error("Record copy gate FAILED — the widget must not ship:\n");
     for (const e of errors) console.error(`  - ${e}`);
@@ -81,7 +88,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
   console.log(
-    `Record copy gate: ${sites.length} sites checked, every obligation ` +
-      "type has vetted copy and enforcement counts are complete."
+    `Record copy gate: ${total} sites across ${counties.length} counties ` +
+      "checked, every obligation type has vetted copy and enforcement " +
+      "counts are complete."
   );
 }

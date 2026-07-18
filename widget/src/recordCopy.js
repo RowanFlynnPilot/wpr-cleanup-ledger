@@ -85,6 +85,22 @@ export const OBLIGATION_TYPES = {
       "An engineered control over contaminated sediment must remain in " +
       "place and be maintained as documented in the DNR record.",
   },
+  // Surfaced by the July 2026 eight-county expansion (Marathon carries
+  // neither; the closed-vocabulary gate required copy before either
+  // county's records could ship).
+  "inspection-reports": {
+    label: "Inspection reports required",
+    note:
+      "Periodic inspection reports are required; their schedule and what " +
+      "they must cover are described in the property's DNR record.",
+  },
+  "lgu-exemption": {
+    label: "Maintain liability exemption (local government)",
+    note:
+      "A local government unit holds this property under a state " +
+      "liability exemption; keeping that exemption's conditions, as " +
+      "described in the DNR record, is the continuing obligation.",
+  },
 };
 
 // Same closed-vocabulary contract as pfasResultOf: the build gate keeps
@@ -103,6 +119,11 @@ export function obligationTypeOf(key) {
 }
 
 export const RECORD_COPY = {
+  // County switcher (Masthead). countyDisplay renders every county name
+  // shown to readers ("Marathon" -> "Marathon County").
+  countySwitchLabel: "County",
+  countyDisplay: (name) => `${name} County`,
+
   // Drawer: typed obligation chips (SiteDetail)
   obligationsHeading: "What the record obligates",
   obligationsNote:
@@ -156,12 +177,12 @@ export const RECORD_COPY = {
   statAudits: "Full compliance audits ever completed",
   statDeeds: "Deed instruments currently recorded",
   statTyped: "Sites in this ledger carrying obligations",
-  noticeGap: (applied, recorded, terminated) =>
+  noticeGap: (countyDisplay, applied, recorded, terminated) =>
     `Since June 2006, Wisconsin's official public notice for most ` +
     `continuing obligations is the DNR database itself — not a document ` +
     `recorded on the property's deed (Wis. Stat. § 292.12(3)). DNR has ` +
     `applied continuing obligations at closure ${applied} times in ` +
-    `Marathon County; ${recorded} deed instruments have ever been ` +
+    `${countyDisplay}; ${recorded} deed instruments have ever been ` +
     `recorded (${terminated} later terminated). For everything else, the ` +
     `database entry is the notice.`,
   auditGap: (audits, vaporOnly, followupNeeded, followupComplete, mods, removed) =>
@@ -171,10 +192,10 @@ export const RECORD_COPY = {
     `recorded complete. Obligations also change: DNR has approved ` +
     `${mods} modifications and recorded ${removed} obligations as ` +
     `removed or satisfied.`,
-  enforcementFineprint:
-    "Counts are all-time action entries in the DNR case record for " +
-    "Marathon County. None of this implies wrongdoing by any owner; it " +
-    "describes how the system of record works.",
+  enforcementFineprint: (countyDisplay) =>
+    `Counts are all-time action entries in the DNR case record for ` +
+    `${countyDisplay}. None of this implies wrongdoing by any owner; it ` +
+    `describes how the system of record works.`,
   distributionHeading: "What the obligations are",
   distributionNote:
     "Published sites carrying each condition; a site can carry several.",

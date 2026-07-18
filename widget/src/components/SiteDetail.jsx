@@ -18,7 +18,7 @@ const STATUS_NOTES = {
     "This record tracks a property affected by contamination that migrated from a neighboring source property. The obligation originates off-site; this property's owner did not cause the contamination.",
 };
 
-export default function SiteDetail({ site, onClose, onJump, jumpable }) {
+export default function SiteDetail({ site, onClose, onJump, jumpable, county }) {
   const closeRef = useRef(null);
   const st = statusOf(site);
   const [copied, setCopied] = useState(false);
@@ -29,11 +29,17 @@ export default function SiteDetail({ site, onClose, onJump, jumpable }) {
   useEffect(() => setCopied(false), [site.dsn]);
 
   const copyPermalink = async () => {
+    // The default county stays bare (#site=…) so pre-expansion links and
+    // new Marathon links share one canonical form.
+    const hash =
+      county === "marathon"
+        ? `#site=${site.dsn}`
+        : `#county=${county}&site=${site.dsn}`;
     const url =
       window.location.origin +
       window.location.pathname +
       window.location.search +
-      `#site=${site.dsn}`;
+      hash;
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);

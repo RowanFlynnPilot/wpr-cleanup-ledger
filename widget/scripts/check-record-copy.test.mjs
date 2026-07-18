@@ -18,21 +18,26 @@ const GOOD_ENFORCEMENT = Object.fromEntries(
   REQUIRED_ENFORCEMENT_KEYS.map((k) => [k, 1])
 );
 
-test("the committed sites.json and summary.json pass the gate", () => {
-  const { sites } = read("../../public/data/sites.json");
-  const { enforcement } = read("../../public/data/summary.json");
-  assert.ok(sites.length > 0, "expected committed sites");
-  assert.ok(
-    sites.some((s) => (s.co_types ?? []).length),
-    "expected typed obligations in committed data"
-  );
-  assert.deepEqual(checkRecordCopy(sites, enforcement), []);
+test("the committed per-county sites and summaries pass the gate", () => {
+  const { counties } = read("../../public/data/counties.json");
+  assert.ok(counties.length >= 8, "expected the eight-county manifest");
+  for (const { slug } of counties) {
+    const { sites } = read(`../../public/data/${slug}/sites.json`);
+    const { enforcement } = read(`../../public/data/${slug}/summary.json`);
+    assert.ok(sites.length > 0, `expected committed sites for ${slug}`);
+    assert.ok(
+      sites.some((s) => (s.co_types ?? []).length),
+      `expected typed obligations for ${slug}`
+    );
+    assert.deepEqual(checkRecordCopy(sites, enforcement), [], slug);
+  }
 });
 
 test("every build-side obligation key has vetted copy", () => {
-  // build_json.py KNOWN_CO_CONDITIONS emits these nine keys; each must
-  // render through copy here.
-  assert.equal(Object.keys(OBLIGATION_TYPES).length, 9);
+  // build_json.py KNOWN_CO_CONDITIONS emits these eleven keys (nine from
+  // the Marathon baseline plus two surfaced by the eight-county
+  // expansion); each must render through copy here.
+  assert.equal(Object.keys(OBLIGATION_TYPES).length, 11);
   const sites = Object.keys(OBLIGATION_TYPES).map((key, i) => ({
     brrts: `test-${i}`,
     name: `Test Site ${i}`,

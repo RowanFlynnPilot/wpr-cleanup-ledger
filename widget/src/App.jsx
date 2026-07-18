@@ -11,6 +11,7 @@ import EnforcementPanel from "./components/EnforcementPanel.jsx";
 import AboutPanel from "./components/AboutPanel.jsx";
 import Footer from "./components/Footer.jsx";
 import { siteMatches, statusOf } from "./lib/format.js";
+import { RECORD_COPY } from "./recordCopy.js";
 
 const EMPTY_FILTERS = {
   query: "",
@@ -20,11 +21,33 @@ const EMPTY_FILTERS = {
   co_type: "all",
 };
 
-// Drawer permalinks (#site=<dsn> / #system=<pws_id>). replaceState, not
-// location.hash assignment: no scroll jump, no history entry per click.
-function setHash(hash) {
+// The founding county and default view; bare pre-expansion permalinks
+// (#site=<dsn>) keep resolving here.
+const DEFAULT_COUNTY = "marathon";
+
+// Drawer permalinks (#county=<slug>&site=<dsn> / …&system=<pws_id>; the
+// county part is omitted for the default county so pre-expansion links
+// stay canonical). replaceState, not location.hash assignment: no scroll
+// jump, no history entry per click.
+function writeHash(county, kind, id) {
+  const parts = [];
+  if (county !== DEFAULT_COUNTY) parts.push(`county=${county}`);
+  if (kind) parts.push(`${kind}=${id}`);
   const base = window.location.pathname + window.location.search;
-  window.history.replaceState(null, "", hash ? `${base}#${hash}` : base);
+  window.history.replaceState(
+    null,
+    "",
+    parts.length ? `${base}#${parts.join("&")}` : base
+  );
+}
+
+function parseHash() {
+  const params = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  return {
+    county: params.get("county"),
+    site: params.get("site"),
+    system: params.get("system"),
+  };
 }
 
 export default function App() {
@@ -40,39 +63,69 @@ export default function App() {
   const [pfasError, setPfasError] = useState(null);
   const [showPfas, setShowPfas] = useState(true);
   const [selectedPfas, setSelectedPfas] = useState(null);
-  // County-wide enforcement counts for the panel. Supplementary: if
+  // Per-county enforcement counts for the panel. Supplementary: if
   // summary.json fails to load, the panel simply doesn't render.
   const [summary, setSummary] = useState(null);
+  // The coverage area. The manifest names the counties; every data file
+  // loads from public/data/<county>/. A deep link may name the county
+  // before the manifest arrives, so seed from the hash.
+  const [counties, setCounties] = useState([]);
+  const [county, setCounty] = useState(
+    () => parseHash().county ?? DEFAULT_COUNTY
+  );
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/sites.json`)
+    fetch(`${import.meta.env.BASE_URL}data/counties.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((m) => setCounties(m.counties))
+      .catch((e) => setError(e.message));
+  }, []);
+
+  // An unknown county slug in the hash falls back to the default once the
+  // manifest can validate it.
+  useEffect(() => {
+    if (counties.length && !counties.some((c) => c.slug === county)) {
+      setCounty(DEFAULT_COUNTY);
+    }
+  }, [counties, county]);
+
+  useEffect(() => {
+    setData(null);
+    setError(null);
+    fetch(`${import.meta.env.BASE_URL}data/${county}/sites.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
       .then(setData)
       .catch((e) => setError(e.message));
-  }, []);
+  }, [county]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/pfas.json`)
+    setPfas(null);
+    setPfasError(null);
+    fetch(`${import.meta.env.BASE_URL}data/${county}/pfas.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
       .then(setPfas)
       .catch((e) => setPfasError(e.message));
-  }, []);
+  }, [county]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/summary.json`)
+    setSummary(null);
+    fetch(`${import.meta.env.BASE_URL}data/${county}/summary.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
       .then(setSummary)
       .catch(() => setSummary(null));
-  }, []);
+  }, [county]);
 
   // Report our height to the parent page so the WordPress iframe can size
   // itself (see README for the embed snippet). The parent may register its
@@ -128,23 +181,37 @@ export default function App() {
 
   // One drawer at a time: selecting from either dataset closes the other.
   // Selection is mirrored into the URL hash so any record can be linked.
-  const handleSelect = useCallback((site) => {
-    setSelected(site);
-    setSelectedPfas(null);
-    setHash(`site=${site.dsn}`);
-  }, []);
+  const handleSelect = useCallback(
+    (site) => {
+      setSelected(site);
+      setSelectedPfas(null);
+      writeHash(county, "site", site.dsn);
+    },
+    [county]
+  );
   const handleClose = useCallback(() => {
     setSelected(null);
-    setHash("");
-  }, []);
-  const handleSelectPfas = useCallback((system) => {
-    setSelectedPfas(system);
-    setSelected(null);
-    setHash(`system=${system.pws_id}`);
-  }, []);
+    writeHash(county, null);
+  }, [county]);
+  const handleSelectPfas = useCallback(
+    (system) => {
+      setSelectedPfas(system);
+      setSelected(null);
+      writeHash(county, "system", system.pws_id);
+    },
+    [county]
+  );
   const handleClosePfas = useCallback(() => {
     setSelectedPfas(null);
-    setHash("");
+    writeHash(county, null);
+  }, [county]);
+  // Switching county resets the whole view: filters, selections, hash.
+  const handleCounty = useCallback((slug) => {
+    setCounty(slug);
+    setFilters(EMPTY_FILTERS);
+    setSelected(null);
+    setSelectedPfas(null);
+    writeHash(slug, null);
   }, []);
   // Cross-links between source sites and affected properties jump straight
   // to the other record's drawer, regardless of active table filters.
@@ -156,27 +223,40 @@ export default function App() {
     [data, handleSelect]
   );
   // Which cross-link targets exist in the published ledger (the map layer
-  // can lead the quarterly bulk record; unpublished targets render as
-  // plain text in the drawer).
+  // can lead the quarterly bulk record, and a cross-county source renders
+  // as plain text in this county's view).
   const jumpable = useMemo(() => new Set(sites.map((s) => s.dsn)), [sites]);
 
-  // Deep links: apply #site=/#system= once the relevant dataset arrives,
+  const countyName =
+    counties.find((c) => c.slug === county)?.name ?? "Marathon";
+  const countyDisplay = RECORD_COPY.countyDisplay(countyName);
+
+  // Deep links: apply the hash once the relevant county dataset arrives,
   // and again on manual hash edits. Our own selections use replaceState,
-  // which never fires hashchange, so there is no feedback loop.
+  // which never fires hashchange, so there is no feedback loop. A hash
+  // naming another county switches to it; the site/system part then
+  // resolves when that county's data lands (this effect re-runs).
   useEffect(() => {
     const apply = () => {
-      const site = /^#site=(\d+)$/.exec(window.location.hash);
-      if (site && data) {
-        const t = data.sites.find((s) => s.dsn === Number(site[1]));
+      const h = parseHash();
+      const target = h.county ?? DEFAULT_COUNTY;
+      if (target !== county) {
+        if (counties.length && !counties.some((c) => c.slug === target)) return;
+        setCounty(target);
+        setSelected(null);
+        setSelectedPfas(null);
+        return;
+      }
+      if (h.site && data) {
+        const t = data.sites.find((s) => s.dsn === Number(h.site));
         if (t) {
           setSelected(t);
           setSelectedPfas(null);
           return;
         }
       }
-      const sys = /^#system=([0-9A-Za-z]+)$/.exec(window.location.hash);
-      if (sys && pfas) {
-        const t = pfas.systems.find((s) => s.pws_id === sys[1]);
+      if (h.system && pfas) {
+        const t = pfas.systems.find((s) => s.pws_id === h.system);
         if (t) {
           setSelectedPfas(t);
           setSelected(null);
@@ -186,7 +266,7 @@ export default function App() {
     apply();
     window.addEventListener("hashchange", apply);
     return () => window.removeEventListener("hashchange", apply);
-  }, [data, pfas]);
+  }, [data, pfas, county, counties]);
 
   if (error) {
     return (
@@ -206,8 +286,17 @@ export default function App() {
       <Masthead
         asOf={data?.bulk_extract_date}
         onAbout={() => setAboutOpen((v) => !v)}
+        counties={counties}
+        county={county}
+        onCounty={handleCounty}
+        countyDisplay={countyDisplay}
       />
-      {aboutOpen && <AboutPanel asOf={data?.bulk_extract_date} />}
+      {aboutOpen && (
+        <AboutPanel
+          asOf={data?.bulk_extract_date}
+          countyDisplay={countyDisplay}
+        />
+      )}
       <StatsStrip sites={sites} />
       <Controls
         sites={sites}
@@ -228,6 +317,8 @@ export default function App() {
         onTogglePfas={setShowPfas}
         selectedPfas={selectedPfas}
         onSelectPfas={handleSelectPfas}
+        county={county}
+        countyDisplay={countyDisplay}
       />
       <SiteTable
         sites={filtered}
@@ -236,7 +327,11 @@ export default function App() {
         loading={!data}
       />
       {summary?.enforcement && (
-        <EnforcementPanel sites={sites} enforcement={summary.enforcement} />
+        <EnforcementPanel
+          sites={sites}
+          enforcement={summary.enforcement}
+          countyDisplay={countyDisplay}
+        />
       )}
       <PfasSection
         systems={pfas?.systems ?? []}
@@ -244,6 +339,7 @@ export default function App() {
         loading={!pfas && !pfasError}
         selected={selectedPfas}
         onSelect={handleSelectPfas}
+        countyDisplay={countyDisplay}
       />
       {selected && (
         <SiteDetail
@@ -251,10 +347,15 @@ export default function App() {
           onClose={handleClose}
           onJump={handleJump}
           jumpable={jumpable}
+          county={county}
         />
       )}
       {selectedPfas && (
-        <PfasDetail system={selectedPfas} onClose={handleClosePfas} />
+        <PfasDetail
+          system={selectedPfas}
+          onClose={handleClosePfas}
+          county={county}
+        />
       )}
       <Footer />
     </div>

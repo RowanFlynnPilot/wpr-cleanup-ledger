@@ -112,6 +112,29 @@ button {
   color: #3a4a45;
 }
 
+.masthead__county {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.masthead__county select {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 10px;
+}
+
+.masthead__county select:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
 .masthead__meta {
   font-family: var(--mono);
   font-size: 12px;

@@ -1,6 +1,6 @@
 import { fmtDate } from "../lib/format.js";
 
-export default function AboutPanel({ asOf }) {
+export default function AboutPanel({ asOf, countyDisplay }) {
   return (
     <section className="about" aria-label="About this data">
       <h2>About this data</h2>
@@ -12,7 +12,7 @@ export default function AboutPanel({ asOf }) {
         mitigation system running. A closure with continuing obligations is a{" "}
         <em>successful</em> cleanup under Wisconsin law, and many current
         owners inherited these conditions when they bought the land. This
-        ledger is the public record of those obligations for Marathon County —
+        ledger is the public record of those obligations for {countyDisplay} —
         it is not a list of wrongdoing.
       </p>
       <p>

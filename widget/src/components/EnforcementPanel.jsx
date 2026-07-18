@@ -6,7 +6,7 @@ import { OBLIGATION_TYPES, RECORD_COPY } from "../recordCopy.js";
 // reader-facing string comes from recordCopy.js (see
 // docs/record-copy-review.md); this panel presents how the system of
 // record works and implies wrongdoing by no one.
-export default function EnforcementPanel({ sites, enforcement }) {
+export default function EnforcementPanel({ sites, enforcement, countyDisplay }) {
   const distribution = useMemo(() => {
     const counts = new Map();
     for (const s of sites) {
@@ -45,6 +45,7 @@ export default function EnforcementPanel({ sites, enforcement }) {
 
       <p className="enf__para">
         {RECORD_COPY.noticeGap(
+          countyDisplay,
           enforcement.co_applied,
           enforcement.deed_recorded,
           enforcement.deed_terminated
@@ -78,7 +79,9 @@ export default function EnforcementPanel({ sites, enforcement }) {
       </ul>
       <p className="enf__note">{RECORD_COPY.distributionNote}</p>
 
-      <p className="enf__fineprint">{RECORD_COPY.enforcementFineprint}</p>
+      <p className="enf__fineprint">
+        {RECORD_COPY.enforcementFineprint(countyDisplay)}
+      </p>
     </section>
   );
 }

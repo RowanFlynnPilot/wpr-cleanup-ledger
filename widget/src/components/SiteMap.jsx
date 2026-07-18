@@ -39,6 +39,8 @@ export default function SiteMap({
   onTogglePfas,
   selectedPfas,
   onSelectPfas,
+  county,
+  countyDisplay,
 }) {
   const divRef = useRef(null);
   const mapRef = useRef(null);
@@ -46,6 +48,8 @@ export default function SiteMap({
   const haloRef = useRef(null);
   const pfasMarkersRef = useRef(null);
   const pfasHaloRef = useRef(null);
+  const boundaryRef = useRef(null);
+  const firstCountyRef = useRef(true);
 
   useEffect(() => {
     const map = L.map(divRef.current, {
@@ -76,25 +80,11 @@ export default function SiteMap({
       "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
       { maxZoom: 19, pane: "labels" }
     ).addTo(map);
-    // County outline in a pane beneath the marker SVG (overlayPane is
-    // z 400), so add-order can't put it on top. Emitted by build_json.py
-    // from the committed Census boundary.
+    // County outline pane sits beneath the marker SVG (overlayPane is
+    // z 400), so add-order can't put it on top. The boundary layer itself
+    // is swapped by the county effect below.
     map.createPane("boundary");
     map.getPane("boundary").style.zIndex = 350;
-    const ac = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}data/county.geojson`, { signal: ac.signal })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((geo) => {
-        if (!geo || !mapRef.current) return;
-        const boundary = L.geoJSON(geo, {
-          pane: "boundary",
-          interactive: false,
-          style: { color: "#66756f", weight: 1.5, dashArray: "5 4", fill: false },
-        }).addTo(mapRef.current);
-        // Keep panning in the county's neighborhood.
-        mapRef.current.setMaxBounds(boundary.getBounds().pad(0.5));
-      })
-      .catch(() => {}); // the outline is orientation, not data — omit on failure
     markersRef.current = L.layerGroup().addTo(map);
     pfasMarkersRef.current = L.layerGroup().addTo(map);
     // Rescale radii in place on zoom. Deliberately NOT a React re-render:
@@ -113,11 +103,47 @@ export default function SiteMap({
     // zoom/pan through it; synthetic wheel events don't reach Leaflet).
     divRef.current._leafletMap = map;
     return () => {
-      ac.abort();
       map.remove();
       mapRef.current = null;
     };
   }, []);
+
+  // Swap the county outline (emitted per county by build_json.py) and the
+  // panning bounds whenever the county changes. On a switch — not the
+  // initial load, where the sites effect owns the camera — fly to the new
+  // county so the reader lands on it even before its sites arrive.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    const isSwitch = !firstCountyRef.current;
+    firstCountyRef.current = false;
+    map.setMaxBounds(null);
+    if (boundaryRef.current) {
+      boundaryRef.current.remove();
+      boundaryRef.current = null;
+    }
+    const ac = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}data/${county}/county.geojson`, {
+      signal: ac.signal,
+    })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((geo) => {
+        if (!geo || !mapRef.current) return;
+        const boundary = L.geoJSON(geo, {
+          pane: "boundary",
+          interactive: false,
+          style: { color: "#66756f", weight: 1.5, dashArray: "5 4", fill: false },
+        }).addTo(mapRef.current);
+        boundaryRef.current = boundary;
+        if (isSwitch) {
+          mapRef.current.fitBounds(boundary.getBounds().pad(0.05));
+        }
+        // Keep panning in the county's neighborhood.
+        mapRef.current.setMaxBounds(boundary.getBounds().pad(0.5));
+      })
+      .catch(() => {}); // the outline is orientation, not data — omit on failure
+    return () => ac.abort();
+  }, [county]);
 
   // Map-only visibility per status; the table and filters are unaffected.
   const [shownStatuses, setShownStatuses] = useState({
@@ -270,8 +296,8 @@ export default function SiteMap({
         role="region"
         aria-label={
           showPfas
-            ? PFAS_COPY.mapAriaWithPfas
-            : "Map of contamination sites with continuing obligations in Marathon County"
+            ? PFAS_COPY.mapAriaWithPfas(countyDisplay)
+            : `Map of contamination sites with continuing obligations in ${countyDisplay}`
         }
       />
       <div className="mapcard__legend">

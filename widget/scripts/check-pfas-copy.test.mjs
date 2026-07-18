@@ -10,11 +10,16 @@ import { checkPfasCopy } from "./check-pfas-copy.mjs";
 
 const KNOWN_CATEGORIES = Object.keys(PFAS_RESULT_COPY);
 
-test("the committed pfas.json passes the gate", () => {
-  const dataPath = new URL("../../public/data/pfas.json", import.meta.url);
-  const { systems } = JSON.parse(readFileSync(dataPath, "utf8"));
-  assert.ok(systems.length > 0, "expected committed systems");
-  assert.deepEqual(checkPfasCopy(systems), []);
+test("the committed per-county pfas.json files pass the gate", () => {
+  const read = (rel) =>
+    JSON.parse(readFileSync(new URL(rel, import.meta.url), "utf8"));
+  const { counties } = read("../../public/data/counties.json");
+  assert.ok(counties.length >= 8, "expected the eight-county manifest");
+  for (const { slug } of counties) {
+    const { systems } = read(`../../public/data/${slug}/pfas.json`);
+    assert.ok(systems.length > 0, `expected committed systems for ${slug}`);
+    assert.deepEqual(checkPfasCopy(systems), [], slug);
+  }
 });
 
 test("every canonical DNR category string has vetted copy", () => {

@@ -101,26 +101,28 @@ export function pfasResultOf(system) {
 
 // All remaining reader-facing strings in the PFAS feature.
 export const PFAS_COPY = {
-  // Section header (PfasSection)
+  // Section header (PfasSection). County-name templates take the display
+  // form from recordCopy's countyDisplay ("Marathon County"); the wording
+  // is otherwise fixed.
   kicker: "Drinking water",
   title: "PFAS sampling of municipal water systems",
-  dek:
-    "Where each municipal water system in Marathon County stands in the " +
-    "state's PFAS sampling program: the result category the Wisconsin DNR " +
-    "assigns from laboratory samples, and when the system last sampled.",
+  dek: (countyDisplay) =>
+    `Where each municipal water system in ${countyDisplay} stands in the ` +
+    `state's PFAS sampling program: the result category the Wisconsin DNR ` +
+    `assigns from laboratory samples, and when the system last sampled.`,
 
   // The context caveat (PfasSection, boxed note)
-  caveat:
-    "PFAS — per- and polyfluoroalkyl substances — are long-lasting " +
-    "synthetic chemicals used in many industrial and consumer products. " +
-    "Sampling municipal drinking water for them is a voluntary program the " +
-    "Wisconsin DNR began in 2022; coverage and sampling dates vary by " +
-    "system, and a newer sample can change a system's category. The " +
-    "program covers municipal water systems only. Private wells, which " +
-    "serve much of rural Marathon County, are tracked separately by the " +
-    "DNR and are not shown here. This table reports laboratory " +
-    "measurements and the DNR's categories for them; it does not report " +
-    "health outcomes.",
+  caveat: (countyDisplay) =>
+    `PFAS — per- and polyfluoroalkyl substances — are long-lasting ` +
+    `synthetic chemicals used in many industrial and consumer products. ` +
+    `Sampling municipal drinking water for them is a voluntary program the ` +
+    `Wisconsin DNR began in 2022; coverage and sampling dates vary by ` +
+    `system, and a newer sample can change a system's category. The ` +
+    `program covers municipal water systems only. Private wells, which ` +
+    `serve much of rural ${countyDisplay}, are tracked separately by the ` +
+    `DNR and are not shown here. This table reports laboratory ` +
+    `measurements and the DNR's categories for them; it does not report ` +
+    `health outcomes.`,
 
   // Section source line (PfasSection, fineprint under the table)
   source:
@@ -130,9 +132,9 @@ export const PFAS_COPY = {
 
   // Map toggle + legend (SiteMap)
   mapToggle: "Municipal water systems (PFAS sampling)",
-  mapAriaWithPfas:
-    "Map of contamination sites with continuing obligations and municipal " +
-    "water system PFAS sampling results in Marathon County",
+  mapAriaWithPfas: (countyDisplay) =>
+    `Map of contamination sites with continuing obligations and municipal ` +
+    `water system PFAS sampling results in ${countyDisplay}`,
   tooltipSub: (short) => `Municipal water system · ${short}`,
 
   // Systems table (PfasTable)

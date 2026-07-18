@@ -45,11 +45,19 @@ export function checkPfasCopy(systems, copy = PFAS_RESULT_COPY, pending = PFAS_P
   return errors;
 }
 
-// CLI: validate the committed data the build is about to ship.
+// CLI: validate the committed data the build is about to ship — every
+// county in the manifest.
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const dataPath = new URL("../../public/data/pfas.json", import.meta.url);
-  const { systems } = JSON.parse(readFileSync(dataPath, "utf8"));
-  const errors = checkPfasCopy(systems);
+  const read = (rel) =>
+    JSON.parse(readFileSync(new URL(rel, import.meta.url), "utf8"));
+  const { counties } = read("../../public/data/counties.json");
+  const errors = [];
+  let total = 0;
+  for (const { slug } of counties) {
+    const { systems } = read(`../../public/data/${slug}/pfas.json`);
+    total += systems.length;
+    errors.push(...checkPfasCopy(systems).map((e) => `[${slug}] ${e}`));
+  }
   if (errors.length) {
     console.error("PFAS copy gate FAILED — the widget must not ship:\n");
     for (const e of errors) console.error(`  - ${e}`);
@@ -60,7 +68,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
   console.log(
-    `PFAS copy gate: ${systems.length} systems checked, every result ` +
-      "category has vetted copy."
+    `PFAS copy gate: ${total} systems across ${counties.length} counties ` +
+      "checked, every result category has vetted copy."
   );
 }
