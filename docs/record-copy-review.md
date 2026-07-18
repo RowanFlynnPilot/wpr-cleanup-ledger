@@ -148,6 +148,29 @@ that keeps the panel from reading as a villain hunt.)
 | Copy link to this record / Link copied | button in both drawers |
 | Obligation / All | filter label and default option above the site table |
 
+## Expansion addendum (July 2026 — eight counties, county switcher)
+
+The ledger now covers the eight-county WPR coverage area with a **County**
+dropdown in the masthead (options render as "{Name} County"). Wording is
+unchanged everywhere; the county name is now a substitution in the same
+sentences — affected strings: the masthead dek and About panel line
+("…in {Name} County…"), the PFAS section dek and caveat ("…much of rural
+{Name} County…"), the map aria labels, the enforcement panel's notice-gap
+paragraph and fineprint. Enforcement counts are per county.
+
+Two obligation conditions absent from Marathon surfaced in the new
+counties, and the closed-vocabulary gate required copy before their
+records could ship:
+
+| DNR action (verbatim) | Chip | Note (verbatim) |
+|---|---|---|
+| Continuing Obligation - Inspection Reports Required | Inspection reports required | "Periodic inspection reports are required; their schedule and what they must cover are described in the property's DNR record." |
+| Continuing Obligation - Maintain Liability Exemption for LGU | Maintain liability exemption (local government) | "A local government unit holds this property under a state liability exemption; keeping that exemption's conditions, as described in the DNR record, is the continuing obligation." |
+
+Note for review: the Marathon numbers in this repo were hand-audited in
+July 2026; the seven new counties flow through the same queries and gates
+but have not had an equivalent per-county audit pass.
+
 ## What sign-off means
 
 Reply with edits (file: `widget/src/recordCopy.js`) or approval — for

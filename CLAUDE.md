@@ -1,9 +1,13 @@
 # wpr-cleanup-ledger — The Cleanup Ledger
 
-Contamination sites and continuing obligations tracker for Marathon County,
-Wisconsin. A Wausau Pilot & Review accountability archive following the Ledger
-pipeline pattern: ingest → SQLite → validation → static JSON → GitHub Actions →
-React widget → WordPress iframe embed on wausaupilotandreview.com.
+Contamination sites and continuing obligations tracker for the eight-county
+Wausau Pilot & Review coverage area — Marathon (the founding county and
+widget default) plus Langlade, Lincoln, Oneida, Portage, Shawano, Taylor,
+and Wood, matching wpr-water (expanded July 2026; county list lives in
+`ingest/counties.py`, the single source of truth). A WPR accountability
+archive following the Ledger pipeline pattern: ingest → SQLite → validation
+→ static per-county JSON → GitHub Actions → React widget with a county
+switcher → WordPress iframe embed on wausaupilotandreview.com.
 
 ## Editorial policy (approved by Shereen; settled, do not relitigate in code)
 
@@ -28,7 +32,12 @@ React widget → WordPress iframe embed on wausaupilotandreview.com.
 
 Wisconsin's public notice mechanism for continuing obligations IS the DNR
 database (s. 292.12(3)); only pre-June-2006 closures required recorded deed
-restrictions. Marathon County numbers from the July 2026 audit:
+restrictions. The numbers below are the MARATHON COUNTY audit — the founding
+county and the only one hand-verified so far. The other seven counties'
+published numbers come from the same queries and gates but have had no
+equivalent per-county audit pass (expansion baseline July 2026: 9,791
+activities and 1,545 CO-flagged records region-wide; per-county counts in
+`ingest/counties.py`). Marathon:
 
 - 2,537 BRRTS activities all-time; 49 open; 1,923 closed
 - **312 activities with continuing obligations** = 241 on-site (155 LUST +
@@ -53,16 +62,19 @@ restrictions. Marathon County numbers from the July 2026 audit:
 
 - ArcGIS base: `https://dnrmaps.wi.gov/arcgis/rest/services/RR_Sites_Map/RR_PUBLIC_MAPSERVICES_CORE_EXT/MapServer`
 - Bulk zip: `https://apps.dnr.wi.gov/rrbotw/download-document?docSeqNo=0&bulkDownload=wdnr-brrts-data.zip&sender=bulkData`
-- County filter everywhere: digits 3–4 of the BRRTS activity number = `37`
-  (ArcGIS: `ACTIVITY_DETAIL_NO LIKE '__37%'`; bulk: `county_name = MARATHON`,
-  cross-checked against the digit code, hard fail on mismatch).
+- County filter everywhere: digits 3–4 of the BRRTS activity number, per
+  the county set in `ingest/counties.py` (ArcGIS: one
+  `ACTIVITY_DETAIL_NO LIKE '__<code>%'` request per county per layer, each
+  far under the 2000-record cap; bulk: `county_name` in the set,
+  cross-checked per row against the digit code, hard fail on mismatch).
 - The PFAS layer has NO county field and its `CITY` is a mailing city
-  (Abbotsford/Birnamwood mail Marathon-ish but sit in Clark/Shawano; Maine
+  (Abbotsford mails Marathon-ish but sits in Clark — out of scope; Maine
   and Rib Mountain utilities mail as WAUSAU). County assignment is
-  point-in-polygon only, done server-side against the committed
-  `data/marathon_county.geojson` (Census TIGERweb State_County layer 55,
-  GEOID 55073, fetched 2026-07-17). County lines move ~never; regenerate
-  the file from TIGERweb only if the Census redraws it.
+  point-in-polygon only, done server-side once per committed polygon in
+  `data/counties/<slug>.geojson` (Census TIGERweb State_County layer 55,
+  fetched 2026-07-17; the matching polygon's slug is stored on the row).
+  County lines move ~never; regenerate a file from TIGERweb only if the
+  Census redraws it.
 - Join key between the two sources: `DETAIL_SEQ_NO` (native on both sides).
 - `pfas_system.pws_id` is the DWS Portal key; it never joins to BRRTS
   tables. The municipal PFAS layer is drinking-water accountability,
@@ -103,6 +115,13 @@ restrictions. Marathon County numbers from the July 2026 audit:
    `data/heartbeat.txt`; the resulting one-commit-per-month is a deliberate
    exception to the quiet-repo rule, keeping scheduled workflows inside
    GitHub's 60-day activity window. Do not remove.
+11. **County-aware baseline (July 2026).** The baseline rule generalizes:
+   the pull scripts emit events only for counties already present in
+   stored state (map_state by activity-number digits, pfas_system by its
+   county column). A county tracked for the first time writes its state
+   silently — adding a county to `ingest/counties.py` must never flood
+   the internal tip sheet with thousands of spurious "appeared" events.
+   An entirely empty table is still a full baseline.
 ## Commands (PowerShell)
 
 The shell is PowerShell — no bash-isms (no brace expansion, no `&&`).
@@ -156,12 +175,20 @@ explicit workflow_call is required, gated on the commit actually happening.
     Reader-facing strings live in `widget/src/recordCopy.js`, gated by
     `widget/scripts/check-record-copy.mjs`; review sheet is
     `docs/record-copy-review.md`. Map refinements shipped alongside:
-    county outline (build_json.py copies the committed boundary to
-    `public/data/county.geojson`), CARTO no-labels base with place labels
-    in a pane above the markers, white marker strokes with zoom-scaled
-    radii, per-status legend toggles, closed-draws-first order, and
-    county max-bounds. Shereen's sign-off on the two review sheets is
-    the only step left before the wausaupilotandreview.com embed.
+    county outline, CARTO no-labels base with place labels in a pane
+    above the markers, white marker strokes with zoom-scaled radii,
+    per-status legend toggles, closed-draws-first order, and county
+    max-bounds.
+  - **Eight-county expansion + county switcher, July 2026, same review
+    gate.** Data ships per county under `public/data/<slug>/` (manifest
+    `counties.json`); the widget carries a county dropdown in the
+    masthead, county-name templates in the copy files, and county-aware
+    permalinks (`#county=<slug>&site=<dsn>`; bare `#site=` stays
+    Marathon for pre-expansion links). The expansion surfaced two new
+    obligation conditions (inspection-reports, lgu-exemption), vetted in
+    `recordCopy.js` and flagged in the review sheet. Shereen's sign-off
+    on the two review sheets is the only step left before the
+    wausaupilotandreview.com embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char

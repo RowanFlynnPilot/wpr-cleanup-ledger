@@ -1,7 +1,9 @@
 # The Cleanup Ledger
 
-Contamination sites and continuing obligations in Marathon County, Wisconsin —
-a public-records project of [Wausau Pilot & Review](https://wausaupilotandreview.com).
+Contamination sites and continuing obligations across eight north-central
+Wisconsin counties — Marathon, Langlade, Lincoln, Oneida, Portage, Shawano,
+Taylor, and Wood — a public-records project of
+[Wausau Pilot & Review](https://wausaupilotandreview.com).
 
 **Live widget:** https://rowanflynnpilot.github.io/wpr-cleanup-ledger/
 
@@ -15,8 +17,8 @@ public record of those obligations. It is not a list of wrongdoing.**
 
 Since June 2006, the state's official public notice for most of these
 obligations is the DNR database itself, not a document recorded on the deed
-(Wis. Stat. § 292.12(3)). This project keeps that record one search away for
-Marathon County readers.
+(Wis. Stat. § 292.12(3)). This project keeps that record one search away,
+county by county, for readers across the coverage area.
 
 ## Data sources
 
