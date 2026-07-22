@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-07-18T04:11:13+00:00",
+ "last_pfas_pull": "2026-07-22T12:13:20+00:00",
  "systems": [
   {
    "city": "NEKOOSA",
@@ -59,7 +59,7 @@
    "name": "MARSHFIELD UTILITIES",
    "pws_id": "77201652",
    "results": "PFAS above the health advisory level in one or more samples from the system",
-   "sample_date": "2026-04-14",
+   "sample_date": "2026-07-06",
    "sample_status": "Sampled"
   },
   {
