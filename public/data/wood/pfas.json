@@ -1,6 +1,16 @@
 {
- "events": [],
- "last_pfas_pull": "2026-07-22T12:13:20+00:00",
+ "events": [
+  {
+   "city": "PORT EDWARDS",
+   "detected_at": "2026-07-29T12:32:13+00:00",
+   "event_type": "PFAS_RESULT_CHANGED",
+   "name": "PORT EDWARDS WATER UTILITY",
+   "new_results": "PFAS above the health advisory level in one or more samples from the system",
+   "old_results": "PFAS detected below hazard index in one or more samples from the water system",
+   "pws_id": "77201135"
+  }
+ ],
+ "last_pfas_pull": "2026-07-29T12:32:13+00:00",
  "systems": [
   {
    "city": "NEKOOSA",
@@ -38,8 +48,8 @@
    "lon": -89.89538751930867,
    "name": "PORT EDWARDS WATER UTILITY",
    "pws_id": "77201135",
-   "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2025-01-28",
+   "results": "PFAS above the health advisory level in one or more samples from the system",
+   "sample_date": "2026-07-14",
    "sample_status": "Sampled"
   },
   {
