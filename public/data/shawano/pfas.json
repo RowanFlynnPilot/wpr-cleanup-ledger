@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-07-29T12:32:13+00:00",
+ "last_pfas_pull": "2026-08-07T11:24:26+00:00",
  "systems": [
   {
    "city": "BIRNAMWOOD",
@@ -89,7 +89,7 @@
    "name": "WITTENBERG WATERWORKS",
    "pws_id": "45904650",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2025-01-29",
+   "sample_date": "2026-07-22",
    "sample_status": "Sampled"
   }
  ]
