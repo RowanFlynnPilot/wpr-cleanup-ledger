@@ -1,3 +1,22 @@
 {
- "events": []
+ "events": [
+  {
+   "address": "Cth L Over Little Rib River Br",
+   "brrts": "0237596267",
+   "detected_at": "2026-08-11T11:22:55+00:00",
+   "event_type": "CASE_CLOSED",
+   "layer_id": 103,
+   "muni": "Berlin",
+   "name": "WI DOT CTH L OVER LITTLE RIB RIVER BRIDGE"
+  },
+  {
+   "address": "Cth L Over Little Rib River Br",
+   "brrts": "0237596267",
+   "detected_at": "2026-08-11T11:22:55+00:00",
+   "event_type": "NO_LONGER_OPEN",
+   "layer_id": 101,
+   "muni": "Berlin",
+   "name": "WI DOT CTH L OVER LITTLE RIB RIVER BRIDGE"
+  }
+ ]
 }
