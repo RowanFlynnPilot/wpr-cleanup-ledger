@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-08-07T11:24:26+00:00",
+ "last_pfas_pull": "2026-08-15T10:50:15+00:00",
  "systems": [
   {
    "city": "GILMAN",
@@ -9,7 +9,7 @@
    "name": "GILMAN WATERWORKS",
    "pws_id": "86101246",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2025-02-26",
+   "sample_date": "2026-08-05",
    "sample_status": "Sampled"
   },
   {

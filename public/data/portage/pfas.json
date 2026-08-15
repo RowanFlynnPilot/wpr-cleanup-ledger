@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-08-07T11:24:26+00:00",
+ "last_pfas_pull": "2026-08-15T10:50:15+00:00",
  "systems": [
   {
    "city": "AMHERST",
@@ -39,7 +39,7 @@
    "name": "STEVENS POINT WATERWORKS",
    "pws_id": "75001410",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2024-11-08",
+   "sample_date": "2026-08-10",
    "sample_status": "Sampled"
   },
   {
