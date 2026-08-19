@@ -171,6 +171,18 @@ Note for review: the Marathon numbers in this repo were hand-audited in
 July 2026; the seven new counties flow through the same queries and gates
 but have not had an equivalent per-county audit pass.
 
+**August 2026 addition — two program-context flags** from the bulk record,
+rendered as drawer chips and filter checkboxes (with live counts; a county
+where the count is zero doesn't offer the filter):
+
+| String | Meaning |
+|---|---|
+| Dry cleaner site | the case is tracked under DNR's dry cleaner program |
+| State-funded response | the response was state-funded (public money did the cleanup) |
+
+Both are facts of the record, framed as program context — no wrongdoing
+implied by either.
+
 ## What sign-off means
 
 Reply with edits (file: `widget/src/recordCopy.js`) or approval — for

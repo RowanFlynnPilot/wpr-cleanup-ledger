@@ -157,6 +157,16 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
                 Obligation from an off-site source
               </span>
             )}
+            {site.dry_cleaner && (
+              <span className="chip chip--flag">
+                {RECORD_COPY.flagDryCleaner}
+              </span>
+            )}
+            {site.state_funded && (
+              <span className="chip chip--flag">
+                {RECORD_COPY.flagStateFunded}
+              </span>
+            )}
           </div>
         </div>
 

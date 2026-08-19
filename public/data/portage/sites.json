@@ -12,6 +12,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 33053,
    "end_date": "2002-07-09",
    "impacts": [
@@ -78,6 +79,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-08-13",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -121,6 +123,7 @@
     "sediment"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 33058,
    "end_date": "",
    "impacts": [
@@ -202,6 +205,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1986-02-05",
+   "state_funded": false,
    "status": "OPEN",
    "substances": [
     "Polynuclear Aromatic Hydrocarbons",
@@ -220,6 +224,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 33352,
    "end_date": "2000-06-08",
    "impacts": [
@@ -286,6 +291,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-03-25",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -303,6 +309,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 33452,
    "end_date": "2006-12-13",
    "impacts": [
@@ -357,6 +364,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-12-02",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -376,6 +384,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 33569,
    "end_date": "2000-03-10",
    "impacts": [
@@ -437,6 +446,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1991-06-29",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -452,6 +462,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 33916,
    "end_date": "1998-06-11",
    "impacts": [
@@ -486,6 +497,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1992-05-07",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -510,6 +522,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 34071,
    "end_date": "2008-03-18",
    "impacts": [
@@ -591,6 +604,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-04-03",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -641,6 +655,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 34225,
    "end_date": "2013-07-26",
    "impacts": [
@@ -687,6 +702,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -703,6 +719,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 34306,
    "end_date": "2018-08-08",
    "impacts": [
@@ -774,6 +791,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1991-09-09",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -807,6 +825,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 34530,
    "end_date": "2004-07-26",
    "impacts": [
@@ -857,6 +876,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-10-30",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -887,6 +907,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 34745,
    "end_date": "2002-09-06",
    "impacts": [
@@ -944,6 +965,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-10-24",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -963,6 +985,7 @@
     "well-abandonment"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 34986,
    "end_date": "2020-01-06",
    "impacts": [
@@ -1016,6 +1039,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-03-14",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded",
@@ -1035,6 +1059,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 35133,
    "end_date": "2007-11-20",
    "impacts": [
@@ -1080,6 +1105,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-10-09",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fertilizer"
@@ -1095,6 +1121,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 97336,
    "end_date": "2000-03-13",
    "impacts": [
@@ -1133,6 +1160,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-12-19",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -1152,6 +1180,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 99213,
    "end_date": "2000-02-09",
    "impacts": [
@@ -1186,6 +1215,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1996-04-03",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -1214,6 +1244,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 109562,
    "end_date": "2006-09-27",
    "impacts": [
@@ -1275,6 +1306,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1996-02-06",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -1296,6 +1328,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 179203,
    "end_date": "2003-06-13",
    "impacts": [
@@ -1349,6 +1382,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1983-06-23",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -1366,6 +1400,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 180282,
    "end_date": "2011-04-21",
    "impacts": [
@@ -1415,6 +1450,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1983-04-19",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -1434,6 +1470,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 182575,
    "end_date": "2003-08-28",
    "impacts": [
@@ -1483,6 +1520,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1988-09-20",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "ERP"
@@ -1496,6 +1534,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 189521,
    "end_date": "2003-02-21",
    "impacts": [
@@ -1545,6 +1584,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1998-06-04",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -1561,6 +1601,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 260824,
    "end_date": "2004-02-19",
    "impacts": [
@@ -1598,6 +1639,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2000-11-11",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -1616,6 +1658,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 275894,
    "end_date": "2009-01-05",
    "impacts": [
@@ -1669,6 +1712,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2001-07-23",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -1687,6 +1731,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 285401,
    "end_date": "2004-03-24",
    "impacts": [
@@ -1732,6 +1777,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2001-12-06",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -1749,6 +1795,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 484119,
    "end_date": "2003-10-20",
    "impacts": [
@@ -1812,6 +1859,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2003-08-06",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "ERP"
@@ -1827,6 +1875,7 @@
     "vapor"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": true,
    "dsn": 525911,
    "end_date": "2020-02-10",
    "impacts": [
@@ -1876,6 +1925,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2004-04-26",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -1893,6 +1943,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 531239,
    "end_date": "2004-10-19",
    "impacts": [
@@ -1923,6 +1974,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2004-09-01",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Pesticides, Herbicides and Insecticides"
@@ -1939,6 +1991,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 533339,
    "end_date": "2005-01-28",
    "impacts": [
@@ -1984,6 +2037,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2004-10-11",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fertilizer"
@@ -2000,6 +2054,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 547282,
    "end_date": "2016-02-04",
    "impacts": [],
@@ -2029,6 +2084,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1998-10-02",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "ERP"
@@ -2051,6 +2107,7 @@
     "site-specific"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 547299,
    "end_date": "2007-10-29",
    "impacts": [
@@ -2118,6 +2175,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1988-07-11",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Pesticides, Herbicides and Insecticides"
@@ -2135,6 +2193,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 547307,
    "end_date": "2007-08-01",
    "impacts": [
@@ -2188,6 +2247,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-11-12",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fertilizer"
@@ -2203,6 +2263,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 547308,
    "end_date": "2012-05-14",
    "impacts": [
@@ -2233,6 +2294,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1989-09-15",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "ERP"
@@ -2254,6 +2316,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 550758,
    "end_date": "2011-05-16",
    "impacts": [
@@ -2320,6 +2383,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2008-01-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Pesticides, Herbicides and Insecticides"
@@ -2336,6 +2400,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 557720,
    "end_date": "2012-06-20",
    "impacts": [
@@ -2411,6 +2476,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2011-09-29",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Polynuclear Aromatic Hydrocarbons",
@@ -2427,6 +2493,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 559009,
    "end_date": "2019-01-17",
    "impacts": [
@@ -2472,6 +2539,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2011-05-24",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -2496,6 +2564,7 @@
     "vapor"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 559480,
    "end_date": "2023-08-30",
    "impacts": [
@@ -2561,6 +2630,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2011-06-09",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -2579,6 +2649,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 560746,
    "end_date": "2014-02-17",
    "impacts": [
@@ -2620,6 +2691,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2013-07-03",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -2636,6 +2708,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 561359,
    "end_date": "2015-05-11",
    "impacts": [
@@ -2677,6 +2750,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2013-05-15",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fuel Oil",
@@ -2695,6 +2769,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 562554,
    "end_date": "2016-08-15",
    "impacts": [
@@ -2748,6 +2823,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2014-05-28",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -2763,6 +2839,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 562844,
    "end_date": "2020-05-12",
    "impacts": [],
@@ -2795,6 +2872,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2014-10-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Tetrachloroethene (Perchloroethylene)"
@@ -2811,6 +2889,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 577032,
    "end_date": "2020-08-05",
    "impacts": [
@@ -2845,6 +2924,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2016-04-12",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fertilizer"
@@ -2861,6 +2941,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 578308,
    "end_date": "2017-12-07",
    "impacts": [
@@ -2910,6 +2991,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2016-11-02",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Polynuclear Aromatic Hydrocarbons"
@@ -2925,6 +3007,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 581745,
    "end_date": "2019-04-29",
    "impacts": [
@@ -2966,6 +3049,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2018-07-17",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -2983,6 +3067,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 585314,
    "end_date": "2023-04-11",
    "impacts": [
@@ -3040,6 +3125,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2020-02-19",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Metals",
@@ -3059,6 +3145,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 587240,
    "end_date": "2022-03-23",
    "impacts": [
@@ -3104,6 +3191,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2021-02-22",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Polynuclear Aromatic Hydrocarbons"
@@ -3120,6 +3208,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 20077,
    "end_date": "2005-05-09",
    "impacts": [
@@ -3169,6 +3258,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1989-12-04",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -3186,6 +3276,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 20666,
    "end_date": "2003-09-09",
    "impacts": [
@@ -3243,6 +3334,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1987-03-17",
+   "state_funded": true,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -3261,6 +3353,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 20898,
    "end_date": "2004-11-05",
    "impacts": [
@@ -3326,6 +3419,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1989-11-27",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -3342,6 +3436,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 20963,
    "end_date": "2005-08-25",
    "impacts": [
@@ -3391,6 +3486,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-12-21",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -3407,6 +3503,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 21181,
    "end_date": "2002-07-02",
    "impacts": [
@@ -3452,6 +3549,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-03-07",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -3471,6 +3569,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 21227,
    "end_date": "2000-12-21",
    "impacts": [
@@ -3522,6 +3621,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1989-02-21",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -3535,6 +3635,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 21868,
    "end_date": "1999-10-05",
    "impacts": [
@@ -3573,6 +3674,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-06-15",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -3590,6 +3692,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 21914,
    "end_date": "2001-12-04",
    "impacts": [
@@ -3643,6 +3746,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-09-06",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -3660,6 +3764,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 22311,
    "end_date": "2002-10-03",
    "impacts": [
@@ -3721,6 +3826,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-10-04",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -3756,6 +3862,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 22470,
    "end_date": "2005-01-20",
    "impacts": [
@@ -3817,6 +3924,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-10-09",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded",
@@ -3835,6 +3943,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 22510,
    "end_date": "2000-11-15",
    "impacts": [
@@ -3908,6 +4017,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1990-11-02",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded",
@@ -3924,6 +4034,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 23315,
    "end_date": "2000-02-27",
    "impacts": [
@@ -3969,6 +4080,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-06-01",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -3985,6 +4097,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 23326,
    "end_date": "2007-03-30",
    "impacts": [
@@ -4023,6 +4136,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1991-10-01",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -4038,6 +4152,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 24323,
    "end_date": "2000-06-08",
    "impacts": [
@@ -4107,6 +4222,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1992-09-16",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -4123,6 +4239,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 24357,
    "end_date": "1999-08-12",
    "impacts": [
@@ -4168,6 +4285,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1992-10-29",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -4183,6 +4301,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 24489,
    "end_date": "2001-08-24",
    "impacts": [
@@ -4232,6 +4351,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1992-11-03",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -4249,6 +4369,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 24606,
    "end_date": "1996-11-20",
    "impacts": [
@@ -4302,6 +4423,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1992-12-16",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -4317,6 +4439,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25032,
    "end_date": "2004-01-27",
    "impacts": [
@@ -4362,6 +4485,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-06-07",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -4382,6 +4506,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 25036,
    "end_date": "2004-05-19",
    "impacts": [
@@ -4435,6 +4560,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-04-30",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -4453,6 +4579,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25161,
    "end_date": "2002-04-15",
    "impacts": [
@@ -4502,6 +4629,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-09-21",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -4519,6 +4647,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25265,
    "end_date": "2004-05-03",
    "impacts": [
@@ -4568,6 +4697,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1993-08-05",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -4583,6 +4713,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25620,
    "end_date": "2000-06-22",
    "impacts": [
@@ -4648,6 +4779,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-04-22",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -4664,6 +4796,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25628,
    "end_date": "2003-12-26",
    "impacts": [
@@ -4713,6 +4846,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-04-11",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -4730,6 +4864,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25687,
    "end_date": "2005-05-06",
    "impacts": [
@@ -4787,6 +4922,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-07-05",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -4806,6 +4942,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 25701,
    "end_date": "2003-07-22",
    "impacts": [
@@ -4851,6 +4988,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-07-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -4865,6 +5003,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25730,
    "end_date": "2004-11-18",
    "impacts": [
@@ -4903,6 +5042,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-07-14",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -4926,6 +5066,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 25772,
    "end_date": "2004-03-02",
    "impacts": [
@@ -4995,6 +5136,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-08-01",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -5011,6 +5153,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25887,
    "end_date": "2005-08-22",
    "impacts": [
@@ -5056,6 +5199,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-09-27",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -5074,6 +5218,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25929,
    "end_date": "2003-12-08",
    "impacts": [
@@ -5127,6 +5272,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-10-01",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -5143,6 +5289,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 25934,
    "end_date": "1999-04-28",
    "impacts": [
@@ -5188,6 +5335,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-10-14",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -5204,6 +5352,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26053,
    "end_date": "2002-10-01",
    "impacts": [
@@ -5253,6 +5402,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1994-11-17",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -5267,6 +5417,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26344,
    "end_date": "1999-10-11",
    "impacts": [
@@ -5328,6 +5479,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-04-02",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -5344,6 +5496,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26464,
    "end_date": "2002-03-12",
    "impacts": [
@@ -5413,6 +5566,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-06-15",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -5428,6 +5582,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26563,
    "end_date": "1999-12-20",
    "impacts": [
@@ -5473,6 +5628,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-08-25",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -5496,6 +5652,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 26719,
    "end_date": "2003-06-19",
    "impacts": [
@@ -5565,6 +5722,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-11-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -5584,6 +5742,7 @@
     "structural"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26739,
    "end_date": "2002-01-11",
    "impacts": [
@@ -5661,6 +5820,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -5676,6 +5836,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 26744,
    "end_date": "2002-08-23",
    "impacts": [
@@ -5721,6 +5882,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -5768,6 +5930,7 @@
     "structural"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 26754,
    "end_date": "2005-06-30",
    "impacts": [
@@ -5833,6 +5996,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -5847,6 +6011,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 106558,
    "end_date": "2004-05-27",
    "impacts": [
@@ -5885,6 +6050,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1996-07-25",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -5900,6 +6066,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 112982,
    "end_date": "2002-09-25",
    "impacts": [
@@ -5938,6 +6105,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1996-10-16",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [],
    "type": "LUST"
@@ -5951,6 +6119,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 113393,
    "end_date": "2000-03-31",
    "impacts": [
@@ -6010,6 +6179,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1996-12-06",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Engine Waste Oil",
@@ -6027,6 +6197,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 152274,
    "end_date": "2010-07-13",
    "impacts": [
@@ -6084,6 +6255,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-06-20",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -6099,6 +6271,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 152474,
    "end_date": "2005-08-23",
    "impacts": [
@@ -6144,6 +6317,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-07-09",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -6161,6 +6335,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 167464,
    "end_date": "2005-05-03",
    "impacts": [
@@ -6218,6 +6393,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-08-04",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -6245,6 +6421,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 168001,
    "end_date": "2012-08-15",
    "impacts": [
@@ -6306,6 +6483,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-08-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -6324,6 +6502,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 176938,
    "end_date": "2004-04-05",
    "impacts": [
@@ -6361,6 +6540,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-11-04",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -6377,6 +6557,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 177169,
    "end_date": "2003-02-07",
    "impacts": [
@@ -6414,6 +6595,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1997-10-24",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -6432,6 +6614,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 198872,
    "end_date": "2005-04-20",
    "impacts": [
@@ -6489,6 +6672,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1998-09-17",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -6504,6 +6688,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 202396,
    "end_date": "2002-08-27",
    "impacts": [
@@ -6549,6 +6734,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1998-10-26",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Ethanol (ethyl alcohol, grain alcohol)",
@@ -6565,6 +6751,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 210454,
    "end_date": "2001-03-12",
    "impacts": [
@@ -6610,6 +6797,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1999-01-12",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded",
@@ -6626,6 +6814,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 210503,
    "end_date": "2004-03-31",
    "impacts": [
@@ -6667,6 +6856,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1998-12-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -6683,6 +6873,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 216305,
    "end_date": "2002-10-08",
    "impacts": [
@@ -6724,6 +6915,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1999-03-12",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Petroleum - Unknown Type"
@@ -6741,6 +6933,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 216655,
    "end_date": "2008-06-01",
    "impacts": [
@@ -6802,6 +6995,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1999-03-24",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -6820,6 +7014,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 226838,
    "end_date": "2003-06-25",
    "impacts": [
@@ -6877,6 +7072,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1999-07-28",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -6896,6 +7092,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 240706,
    "end_date": "2006-06-29",
    "impacts": [
@@ -6937,6 +7134,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "1999-12-03",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -6952,6 +7150,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 279219,
    "end_date": "2003-05-28",
    "impacts": [
@@ -6993,6 +7192,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2001-07-23",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -7010,6 +7210,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 283978,
    "end_date": "2004-03-22",
    "impacts": [
@@ -7047,6 +7248,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2001-11-27",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel",
@@ -7064,6 +7266,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 286051,
    "end_date": "2012-10-12",
    "impacts": [
@@ -7113,6 +7316,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2002-01-10",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Fuel Oil",
@@ -7137,6 +7341,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 542890,
    "end_date": "2013-07-03",
    "impacts": [
@@ -7198,6 +7403,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2005-03-25",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -7217,6 +7423,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 552811,
    "end_date": "2010-11-19",
    "impacts": [
@@ -7258,6 +7465,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2008-11-05",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Diesel Fuel"
@@ -7286,6 +7494,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": true,
+   "dry_cleaner": false,
    "dsn": 554397,
    "end_date": "2015-03-18",
    "impacts": [
@@ -7339,6 +7548,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2009-10-29",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Chlorinated Solvents",
@@ -7355,6 +7565,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 554522,
    "end_date": "2010-06-23",
    "impacts": [
@@ -7392,6 +7603,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2009-11-19",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -7407,6 +7619,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 559902,
    "end_date": "2013-04-09",
    "impacts": [
@@ -7452,6 +7665,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2013-01-10",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -7467,6 +7681,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 560819,
    "end_date": "2015-04-22",
    "impacts": [
@@ -7530,6 +7745,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2013-08-08",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -7545,6 +7761,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 563677,
    "end_date": "2016-06-24",
    "impacts": [
@@ -7586,6 +7803,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2015-05-12",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -7602,6 +7820,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 585158,
    "end_date": "2020-12-10",
    "impacts": [
@@ -7647,6 +7866,7 @@
    "pfas": false,
    "source_site": null,
    "start_date": "2020-01-24",
+   "state_funded": false,
    "status": "CLOSED",
    "substances": [
     "Gasoline - Unleaded and Leaded"
@@ -7662,6 +7882,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573159,
    "end_date": "",
    "impacts": [],
@@ -7691,6 +7912,7 @@
     "name": "BLUE TOP EZ MART"
    },
    "start_date": "1989-02-21",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7704,6 +7926,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573293,
    "end_date": "",
    "impacts": [],
@@ -7729,6 +7952,7 @@
     "name": "KWIK TRIP #342 STEVENS POINT"
    },
    "start_date": "1990-10-09",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7742,6 +7966,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573294,
    "end_date": "",
    "impacts": [],
@@ -7767,6 +7992,7 @@
     "name": "KWIK TRIP #342 STEVENS POINT"
    },
    "start_date": "1990-10-09",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7780,6 +8006,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573295,
    "end_date": "",
    "impacts": [],
@@ -7805,6 +8032,7 @@
     "name": "KWIK TRIP #342 STEVENS POINT"
    },
    "start_date": "1990-10-09",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7818,6 +8046,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573296,
    "end_date": "",
    "impacts": [],
@@ -7843,6 +8072,7 @@
     "name": "KWIK TRIP #342 STEVENS POINT"
    },
    "start_date": "1990-10-09",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7856,6 +8086,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573449,
    "end_date": "",
    "impacts": [],
@@ -7881,6 +8112,7 @@
     "name": "DELZELL OIL GARYS SERVICE"
    },
    "start_date": "1993-04-30",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7894,6 +8126,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573492,
    "end_date": "",
    "impacts": [],
@@ -7923,6 +8156,7 @@
     "name": "SCHIERL SALES CORP STEVENS POINT"
    },
    "start_date": "1994-07-08",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7936,6 +8170,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573494,
    "end_date": "",
    "impacts": [],
@@ -7961,6 +8196,7 @@
     "name": "RUSIN PROPERTY"
    },
    "start_date": "1994-08-01",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -7974,6 +8210,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573558,
    "end_date": "",
    "impacts": [],
@@ -7999,6 +8236,7 @@
     "name": "POINT BAKERY"
    },
    "start_date": "1995-11-08",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8012,6 +8250,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573561,
    "end_date": "",
    "impacts": [],
@@ -8037,6 +8276,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8050,6 +8290,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573562,
    "end_date": "",
    "impacts": [],
@@ -8075,6 +8316,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8088,6 +8330,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573563,
    "end_date": "",
    "impacts": [],
@@ -8113,6 +8356,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8126,6 +8370,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573564,
    "end_date": "",
    "impacts": [],
@@ -8151,6 +8396,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8164,6 +8410,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573565,
    "end_date": "",
    "impacts": [],
@@ -8189,6 +8436,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8202,6 +8450,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 573566,
    "end_date": "",
    "impacts": [],
@@ -8227,6 +8476,7 @@
     "name": "SCHIERL TIRE & SERVICE #34"
    },
    "start_date": "1995-11-22",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8240,6 +8490,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574017,
    "end_date": "",
    "impacts": [],
@@ -8265,6 +8516,7 @@
     "name": "FLINT HILLS RESOURCES JUNCTION CITY TERM"
    },
    "start_date": "1993-04-03",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8278,6 +8530,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574033,
    "end_date": "",
    "impacts": [],
@@ -8303,6 +8556,7 @@
     "name": "SCHIERL INC BULK PLT"
    },
    "start_date": "1993-10-30",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8316,6 +8570,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574034,
    "end_date": "",
    "impacts": [],
@@ -8341,6 +8596,7 @@
     "name": "SCHIERL INC BULK PLT"
    },
    "start_date": "1993-10-30",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8354,6 +8610,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574035,
    "end_date": "",
    "impacts": [],
@@ -8379,6 +8636,7 @@
     "name": "SCHIERL INC BULK PLT"
    },
    "start_date": "1993-10-30",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8392,6 +8650,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574041,
    "end_date": "",
    "impacts": [],
@@ -8417,6 +8676,7 @@
     "name": "LULLABYE INC"
    },
    "start_date": "1994-10-24",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8430,6 +8690,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574042,
    "end_date": "",
    "impacts": [],
@@ -8455,6 +8716,7 @@
     "name": "LULLABYE INC"
    },
    "start_date": "1994-10-24",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8468,6 +8730,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574231,
    "end_date": "",
    "impacts": [],
@@ -8493,6 +8756,7 @@
     "name": "DELZELL BULK PLT"
    },
    "start_date": "1996-02-06",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8506,6 +8770,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574232,
    "end_date": "",
    "impacts": [],
@@ -8531,6 +8796,7 @@
     "name": "DELZELL BULK PLT"
    },
    "start_date": "1996-02-06",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8544,6 +8810,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 574921,
    "end_date": "",
    "impacts": [],
@@ -8569,6 +8836,7 @@
     "name": "FARMERS FLYING SERVICE-BANCROFT"
    },
    "start_date": "1988-07-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8582,6 +8850,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575325,
    "end_date": "",
    "impacts": [],
@@ -8607,6 +8876,7 @@
     "name": "SWAN OIL CO"
    },
    "start_date": "1997-08-08",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8620,6 +8890,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575416,
    "end_date": "",
    "impacts": [],
@@ -8645,6 +8916,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8658,6 +8930,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575417,
    "end_date": "",
    "impacts": [],
@@ -8683,6 +8956,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8696,6 +8970,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575418,
    "end_date": "",
    "impacts": [],
@@ -8721,6 +8996,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8734,6 +9010,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575680,
    "end_date": "",
    "impacts": [],
@@ -8759,6 +9036,7 @@
     "name": "SWAN OIL CO"
    },
    "start_date": "1997-08-08",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8772,6 +9050,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575721,
    "end_date": "",
    "impacts": [],
@@ -8797,6 +9076,7 @@
     "name": "PIZZA HUT"
    },
    "start_date": "2005-03-25",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8810,6 +9090,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575727,
    "end_date": "",
    "impacts": [],
@@ -8835,6 +9116,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8848,6 +9130,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575728,
    "end_date": "",
    "impacts": [],
@@ -8873,6 +9156,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8886,6 +9170,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575841,
    "end_date": "",
    "impacts": [],
@@ -8911,6 +9196,7 @@
     "name": "COOPER OIL BP"
    },
    "start_date": "2009-10-29",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8924,6 +9210,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575842,
    "end_date": "",
    "impacts": [],
@@ -8949,6 +9236,7 @@
     "name": "COOPER OIL BP"
    },
    "start_date": "2009-10-29",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -8962,6 +9250,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 575865,
    "end_date": "",
    "impacts": [],
@@ -8987,6 +9276,7 @@
     "name": "FS COOP AMHERST JUNCTION"
    },
    "start_date": "1991-09-05",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -9002,6 +9292,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 579008,
    "end_date": "",
    "impacts": [],
@@ -9035,6 +9326,7 @@
     "name": "WPSC STEVENS POINT MGP (ALT SF)"
    },
    "start_date": "2016-10-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -9049,6 +9341,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 579010,
    "end_date": "",
    "impacts": [],
@@ -9078,6 +9371,7 @@
     "name": "WPSC STEVENS POINT MGP (ALT SF)"
    },
    "start_date": "2016-10-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -9092,6 +9386,7 @@
     "well-abandonment"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 579011,
    "end_date": "",
    "impacts": [],
@@ -9121,6 +9416,7 @@
     "name": "WPSC STEVENS POINT MGP (ALT SF)"
    },
    "start_date": "2016-10-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -9134,6 +9430,7 @@
     "residual-gw"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 579012,
    "end_date": "",
    "impacts": [],
@@ -9159,6 +9456,7 @@
     "name": "WPSC STEVENS POINT MGP (ALT SF)"
    },
    "start_date": "2016-10-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"
@@ -9173,6 +9471,7 @@
     "residual-soil"
    ],
    "contamination_moved_offsite": false,
+   "dry_cleaner": false,
    "dsn": 579013,
    "end_date": "",
    "impacts": [],
@@ -9202,6 +9501,7 @@
     "name": "WPSC STEVENS POINT MGP (ALT SF)"
    },
    "start_date": "2016-10-11",
+   "state_funded": false,
    "status": "",
    "substances": [],
    "type": "OFF-SITE"

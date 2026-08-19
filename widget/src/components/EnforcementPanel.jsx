@@ -65,7 +65,11 @@ export default function EnforcementPanel({ sites, enforcement, countyDisplay }) 
       <h3 className="enf__subhead">{RECORD_COPY.distributionHeading}</h3>
       <ul className="enf__bars">
         {distribution.map(([key, n]) => (
-          <li className="enf__bar" key={key}>
+          <li
+            className="enf__bar"
+            key={key}
+            title={`${OBLIGATION_TYPES[key].label}: ${n} sites`}
+          >
             <span className="enf__bar-label">{OBLIGATION_TYPES[key].label}</span>
             <span className="enf__bar-track">
               <span

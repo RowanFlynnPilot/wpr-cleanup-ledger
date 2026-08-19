@@ -158,6 +158,12 @@ export const RECORD_COPY = {
     "from this site. Each carries its own record.",
   crossLinkAria: (name) => `Open details for ${name}`,
 
+  // Program-context flag chips (SiteDetail drawer head) and their filter
+  // labels (Controls). Facts of the DNR record: the case is tracked under
+  // the dry cleaner program / the response was state-funded.
+  flagDryCleaner: "Dry cleaner site",
+  flagStateFunded: "State-funded response",
+
   // Drawer: record permalink (SiteDetail + PfasDetail)
   copyLink: "Copy link to this record",
   copyLinkCopied: "Link copied",

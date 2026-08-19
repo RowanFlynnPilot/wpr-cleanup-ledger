@@ -11,6 +11,8 @@ const FILTER_KEYS = [
   "co_type",
   "moved_offsite",
   "from_offsite",
+  "dry_cleaner",
+  "state_funded",
 ];
 
 export default function Controls({ sites, filters, onChange, onReset }) {
@@ -77,6 +79,8 @@ export default function Controls({ sites, filters, onChange, onReset }) {
     () => ({
       moved_offsite: sites.filter((s) => s.contamination_moved_offsite).length,
       from_offsite: sites.filter((s) => s.co_from_another_property).length,
+      dry_cleaner: sites.filter((s) => s.dry_cleaner).length,
+      state_funded: sites.filter((s) => s.state_funded).length,
     }),
     [sites]
   );
@@ -200,6 +204,8 @@ export default function Controls({ sites, filters, onChange, onReset }) {
             <div className="fpanel__flags">
               {flag("moved_offsite", "Contamination reached other properties")}
               {flag("from_offsite", "Obligation from an off-site source")}
+              {flag("dry_cleaner", RECORD_COPY.flagDryCleaner)}
+              {flag("state_funded", RECORD_COPY.flagStateFunded)}
             </div>
             {dirty && (
               <button

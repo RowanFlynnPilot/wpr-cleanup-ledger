@@ -87,7 +87,8 @@ def build_sites(conn: sqlite3.Connection, code: str) -> dict:
     for a in conn.execute(
         "SELECT detail_seq_no, activity_display_number, activity_name, activity_type, "
         "address, muni, status, start_date, end_date, lat, lon, "
-        "co_contamination_flag, offsite_impact_flag, pfas_flag "
+        "co_contamination_flag, offsite_impact_flag, pfas_flag, "
+        "drycleaner_flag, sfr_flag "
         "FROM activity WHERE co_flag = 1 AND substr(activity_number, 3, 2) = ? "
         "ORDER BY activity_display_number",
         (code,),
@@ -184,6 +185,11 @@ def build_sites(conn: sqlite3.Connection, code: str) -> dict:
             "contamination_moved_offsite": bool(a[12]),
             "co_from_another_property": bool(a[11]),
             "pfas": bool(a[13]),
+            # Program-context flags from the bulk record; published only
+            # where true counts exist (vple_coc and pfas are zero across
+            # the coverage area and stay unpublished as filters).
+            "dry_cleaner": bool(a[14]),
+            "state_funded": bool(a[15]),
             "parties": [
                 {"role": p[0], "name": p[1], "city": p[2], "state": p[3]}
                 for p in parties

@@ -21,6 +21,8 @@ const EMPTY_FILTERS = {
   co_type: "all",
   moved_offsite: false,
   from_offsite: false,
+  dry_cleaner: false,
+  state_funded: false,
 };
 
 // The founding county and default view; bare pre-expansion permalinks
@@ -194,6 +196,8 @@ export default function App() {
         if (filters.moved_offsite && !s.contamination_moved_offsite)
           return false;
         if (filters.from_offsite && !s.co_from_another_property) return false;
+        if (filters.dry_cleaner && !s.dry_cleaner) return false;
+        if (filters.state_funded && !s.state_funded) return false;
         return siteMatches(s, filters.query);
       }),
     [sites, filters]

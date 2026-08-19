@@ -189,7 +189,10 @@ explicit workflow_call is required, gated on the commit actually happening.
     permalinks (`#county=<slug>&site=<dsn>`; bare `#site=` stays
     Marathon for pre-expansion links). The expansion surfaced two new
     obligation conditions (inspection-reports, lgu-exemption), vetted in
-    `recordCopy.js` and flagged in the review sheet. Shereen's sign-off
+    `recordCopy.js` and flagged in the review sheet. August 2026: the
+    bulk program flags with nonzero counts (dry_cleaner, sfr) publish as
+    drawer chips + filters; vple_coc and pfas_flag are zero region-wide
+    and deliberately stay unpublished. Shereen's sign-off
     on the two review sheets is the only step left before the
     wausaupilotandreview.com embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
