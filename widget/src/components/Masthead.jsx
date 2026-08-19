@@ -62,7 +62,12 @@ export default function Masthead({
         </div>
       )}
       <p className="masthead__meta">
-        {asOf ? <>Data as of {fmtDate(asOf)} · map checked nightly · </> : null}
+        {asOf ? (
+          <>
+            Case details as of {fmtDate(asOf)} (DNR quarterly extract) ·
+            statuses &amp; PFAS checked nightly ·{" "}
+          </>
+        ) : null}
         Source: Wisconsin DNR BRRTS ·{" "}
         <button type="button" onClick={onAbout}>
           About this data

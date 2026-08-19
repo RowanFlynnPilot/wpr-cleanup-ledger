@@ -2,7 +2,11 @@ name: Quarterly bulk ingest
 
 on:
   schedule:
-    - cron: "0 12 5 3,6,9,12 *"   # 5th of Mar/Jun/Sep/Dec; bulk publishes ~the 1st
+    # DNR's extracts are dated at calendar-quarter starts (observed:
+    # 2026-07-01), so fetch on the 5th of Jan/Apr/Jul/Oct — the old
+    # Mar/Jun/Sep/Dec schedule would have left each new extract sitting
+    # unfetched for two months.
+    - cron: "0 12 5 1,4,7,10 *"   # 5th of Jan/Apr/Jul/Oct; bulk publishes ~the 1st
   workflow_dispatch:
 
 permissions:

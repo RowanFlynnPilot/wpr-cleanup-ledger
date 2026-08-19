@@ -140,9 +140,10 @@ npm run build                   # production build -> widget/dist (runs the PFAS
 npm test                        # PFAS copy-gate tests (node --test)
 ```
 
-Workflows: `.github/workflows/nightly.yml` (10:30 UTC daily) and
-`quarterly.yml` (5th of Mar/Jun/Sep/Dec + manual dispatch; bulk publishes
-around the 1st). Both call `deploy.yml` (GitHub Pages) after committing —
+Workflows: `.github/workflows/nightly.yml` (10:30 UTC daily + a 17:00 UTC
+same-day recovery window) and `quarterly.yml` (5th of Jan/Apr/Jul/Oct +
+manual dispatch; DNR's extracts are dated at calendar-quarter starts,
+realigned Aug 2026 from the original Mar/Jun/Sep/Dec schedule). Both call `deploy.yml` (GitHub Pages) after committing —
 bot pushes with GITHUB_TOKEN never fire push-triggered workflows, so the
 explicit workflow_call is required, gated on the commit actually happening.
 
