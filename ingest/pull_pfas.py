@@ -43,8 +43,6 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 SCHEMA_PATH = REPO_ROOT / "schema.sql"
@@ -52,6 +50,9 @@ COUNTIES_DIR = REPO_ROOT / "data" / "counties"
 
 sys.path.insert(0, str(REPO_ROOT))
 from ingest.counties import COUNTIES  # noqa: E402
+from ingest.dnr import TIMEOUT, make_session  # noqa: E402
+
+SESSION = make_session()
 
 LAYER_URL = (
     "https://dnrmaps.wi.gov/arcgis2/rest/services/DG_Groundwater_Retrieval_Network/"
@@ -83,7 +84,7 @@ def fetch_systems() -> dict[str, dict]:
         rings = json.loads(
             (COUNTIES_DIR / f"{slug}.geojson").read_text(encoding="utf-8")
         )["geometry"]["coordinates"]
-        resp = requests.post(  # POST: a county polygon is too large for a GET URL
+        resp = SESSION.post(  # POST: a county polygon is too large for a GET URL
             LAYER_URL,
             data={
                 "where": "1=1",
@@ -98,7 +99,7 @@ def fetch_systems() -> dict[str, dict]:
                 "outSR": "4326",
                 "f": "json",
             },
-            timeout=60,
+            timeout=TIMEOUT,
         )
         resp.raise_for_status()
         payload = resp.json()

@@ -23,8 +23,6 @@ import zipfile
 from datetime import date
 from pathlib import Path
 
-import requests
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 SCHEMA_PATH = REPO_ROOT / "schema.sql"
@@ -37,6 +35,9 @@ MEMBER_DIR = "wdnr-brrts-data"
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ingest.counties import BULK_NAME_TO_CODE, COUNTIES  # noqa: E402
+from ingest.dnr import make_session  # noqa: E402
+
+SESSION = make_session()
 
 csv.field_size_limit(10**9)
 
@@ -104,7 +105,9 @@ def load_activities(zf: zipfile.ZipFile) -> list[dict]:
 
 def main() -> None:
     with tempfile.NamedTemporaryFile(suffix=".zip") as tmp:
-        with requests.get(BULK_URL, stream=True, timeout=300) as resp:
+        # Long read timeout: the statewide zip is ~35 MB. Connect errors
+        # retry via the shared session; a failure mid-stream still raises.
+        with SESSION.get(BULK_URL, stream=True, timeout=(20, 300)) as resp:
             resp.raise_for_status()
             for chunk in resp.iter_content(chunk_size=1 << 20):
                 tmp.write(chunk)

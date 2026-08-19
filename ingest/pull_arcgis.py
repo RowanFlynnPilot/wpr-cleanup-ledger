@@ -24,14 +24,15 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
-
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 SCHEMA_PATH = REPO_ROOT / "schema.sql"
 
 sys.path.insert(0, str(REPO_ROOT))
 from ingest.counties import COUNTIES, county_code_of  # noqa: E402
+from ingest.dnr import TIMEOUT, make_session  # noqa: E402
+
+SESSION = make_session()
 
 BASE_URL = (
     "https://dnrmaps.wi.gov/arcgis/rest/services/RR_Sites_Map/"
@@ -77,7 +78,7 @@ def fetch_layer(layer_id: int) -> dict[int, dict]:
     fields = COMMON_FIELDS + (PARENT_FIELDS if layer_id == 220 else [])
     records = {}
     for code in COUNTIES:
-        resp = requests.get(
+        resp = SESSION.get(
             f"{BASE_URL}/{layer_id}/query",
             params={
                 "where": f"ACTIVITY_DETAIL_NO LIKE '__{code}%'",
@@ -85,7 +86,7 @@ def fetch_layer(layer_id: int) -> dict[int, dict]:
                 "returnGeometry": "false",
                 "f": "json",
             },
-            timeout=60,
+            timeout=TIMEOUT,
         )
         resp.raise_for_status()
         payload = resp.json()

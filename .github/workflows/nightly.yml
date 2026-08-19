@@ -3,6 +3,11 @@ name: Nightly map pull
 on:
   schedule:
     - cron: "30 10 * * *"   # 10:30 UTC = 4:30/5:30 AM Central
+    # Same-day recovery window: dnrmaps.wi.gov intermittently times out
+    # around the morning run (Aug 2026). If the morning pull succeeded,
+    # this afternoon pass finds no changes and the quiet-repo rule makes
+    # it a no-op; if it failed, this is the retry.
+    - cron: "0 17 * * *"    # 17:00 UTC = 11 AM/noon Central
   workflow_dispatch:
 
 permissions:
