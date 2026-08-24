@@ -1,6 +1,33 @@
 {
  "events": [
   {
+   "address": "412 E 4th St",
+   "brrts": "0272599757",
+   "detected_at": "2026-08-24T17:35:26+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Marshfield",
+   "name": "PREMIER AUTO BODY"
+  },
+  {
+   "address": "601 S Center Ave",
+   "brrts": "0335599689",
+   "detected_at": "2026-08-24T17:35:26+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Merrill",
+   "name": "ASPIRUS MERRILL HOSPITAL"
+  },
+  {
+   "address": "1740 Bus Hwy 51 N",
+   "brrts": "0337599516",
+   "detected_at": "2026-08-24T17:35:26+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Wausau",
+   "name": "NIGBURS FINE FURNITURE (FORMER)"
+  },
+  {
    "address": "Cth L Over Little Rib River Br",
    "brrts": "0237596267",
    "detected_at": "2026-08-11T11:22:55+00:00",
