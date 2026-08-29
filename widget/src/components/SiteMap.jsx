@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
+import { labelRules, leafletLayer, paintRules } from "protomaps-leaflet";
+import { namedFlavor } from "@protomaps/basemaps";
 import {
   muniDisplay,
   STATUS_COLORS,
@@ -67,23 +69,37 @@ export default function SiteMap({
     });
     map.on("focus click", () => map.scrollWheelZoom.enable());
     map.on("blur", () => map.scrollWheelZoom.disable());
-    // Base tiles carry no labels; place labels render in their own pane
-    // ABOVE the markers, so "Wausau" stays readable over the dot field.
-    L.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
-      {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        maxZoom: 19,
-      }
-    ).addTo(map);
+    // Self-hosted basemap: an eight-county Protomaps extract committed at
+    // public/basemap.pmtiles and rendered client-side — no tile service,
+    // no API key, nothing to expire (CARTO's free basemaps began
+    // watermarking "API KEY REQUIRED" in Aug 2026). Vector data is native
+    // to z14 and overzooms crisply. Base geometry carries no labels;
+    // place labels render in their own pane ABOVE the markers, so
+    // "Wausau" stays readable over the dot field.
+    const flavor = namedFlavor("light");
+    const basemapUrl = `${import.meta.env.BASE_URL}basemap.pmtiles`;
+    leafletLayer({
+      url: basemapUrl,
+      paintRules: paintRules(flavor),
+      labelRules: [],
+      backgroundColor: flavor.background,
+      maxDataZoom: 14,
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://protomaps.com">Protomaps</a>',
+    }).addTo(map);
     map.createPane("labels");
     map.getPane("labels").style.zIndex = 650;
     map.getPane("labels").style.pointerEvents = "none";
-    L.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
-      { maxZoom: 19, pane: "labels" }
-    ).addTo(map);
+    leafletLayer({
+      url: basemapUrl,
+      paintRules: [],
+      labelRules: labelRules(flavor, "en"),
+      maxDataZoom: 14,
+      maxZoom: 19,
+      pane: "labels",
+      attribution: "", // the base layer already credits OSM + Protomaps
+    }).addTo(map);
     // County outline pane sits beneath the marker SVG (overlayPane is
     // z 400), so add-order can't put it on top. The boundary layer itself
     // is swapped by the county effect below.

@@ -179,10 +179,18 @@ explicit workflow_call is required, gated on the commit actually happening.
     Reader-facing strings live in `widget/src/recordCopy.js`, gated by
     `widget/scripts/check-record-copy.mjs`; review sheet is
     `docs/record-copy-review.md`. Map refinements shipped alongside:
-    county outline, CARTO no-labels base with place labels in a pane
-    above the markers, white marker strokes with zoom-scaled radii,
+    county outline, no-labels base with place labels in a pane above
+    the markers, white marker strokes with zoom-scaled radii,
     per-status legend toggles, closed-draws-first order, and county
-    max-bounds.
+    max-bounds. Aug 2026: the basemap is SELF-HOSTED — CARTO's free
+    tiles began watermarking "API KEY REQUIRED", so the map renders an
+    eight-county Protomaps extract committed at `public/basemap.pmtiles`
+    (55.8 MB, native z14, vector-overzooms crisply; regenerate with the
+    go-pmtiles CLI `extract` against a build.protomaps.com daily build,
+    bbox from data/counties/, --maxzoom=14 to stay under GitHub's 100 MB
+    file cap) via protomaps-leaflet, light flavor, paint rules in the
+    tile pane and label rules in the labels pane. No tile service, no
+    key, nothing to expire; needs HTTP Range support (Pages has it).
   - **Eight-county expansion + county switcher, July 2026, same review
     gate.** Data ships per county under `public/data/<slug>/` (manifest
     `counties.json`); the widget carries a county dropdown in the

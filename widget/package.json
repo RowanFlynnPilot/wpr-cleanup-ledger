@@ -15,7 +15,10 @@
     "@fontsource/fraunces": "^5.2.5",
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/public-sans": "^5.2.5",
+    "@protomaps/basemaps": "^5.7.2",
     "leaflet": "^1.9.4",
+    "pmtiles": "^4.5.0",
+    "protomaps-leaflet": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
