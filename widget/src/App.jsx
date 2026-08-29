@@ -11,6 +11,7 @@ import EnforcementPanel from "./components/EnforcementPanel.jsx";
 import AboutPanel from "./components/AboutPanel.jsx";
 import Footer from "./components/Footer.jsx";
 import { siteMatches, statusOf } from "./lib/format.js";
+import { setEmbedViewport } from "./lib/embedViewport.js";
 import { RECORD_COPY } from "./recordCopy.js";
 
 const EMPTY_FILTERS = {
@@ -166,6 +167,14 @@ export default function App() {
       );
     const onMsg = (e) => {
       if (e.data?.type === "cleanup-ledger:ping") post();
+      // The parent reports its viewport window over the iframe (see the
+      // README snippet) so record drawers can open where the reader is.
+      if (e.data?.type === "cleanup-ledger:viewport") {
+        setEmbedViewport({
+          top: Number(e.data.top) || 0,
+          height: Number(e.data.height) || 0,
+        });
+      }
     };
     const ro = new ResizeObserver(post);
     ro.observe(document.documentElement);

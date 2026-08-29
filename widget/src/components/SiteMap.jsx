@@ -24,6 +24,11 @@ const LEGEND = [
 // white, so the halo uses the fixed PFAS accent from the design system).
 const PFAS_ACCENT = "#6d4e9c";
 
+// Coverage of the committed basemap extract (public/basemap.pmtiles).
+// Panning bounds clamp to this so the reader can never reach untiled
+// void beyond the extract's edge.
+const EXTRACT_BOUNDS = L.latLngBounds([44.093, -91.076], [46.051, -88.093]);
+
 // Marker radii track zoom: compact at county view where 300+ dots crowd
 // the Wausau core, larger at street level where readers click individual
 // records. Open cases stay a step bigger throughout.
@@ -117,6 +122,9 @@ export default function SiteMap({
           m.setRadius(radiusFor(m.options.statusKey, zoom));
         }
       });
+      // PFAS diamonds grow at street level too (CSS scales the inner
+      // span, so the 15px icon anchor stays centered).
+      divRef.current?.classList.toggle("mapcard__map--close", zoom >= 12);
     });
     mapRef.current = map;
     // Debug handle for automated verification (harness scripts drive
@@ -161,8 +169,22 @@ export default function SiteMap({
         if (isSwitch && sitesCountRef.current === 0) {
           mapRef.current.fitBounds(boundary.getBounds().pad(0.05));
         }
-        // Keep panning in the county's neighborhood.
-        mapRef.current.setMaxBounds(boundary.getBounds().pad(0.5));
+        // Keep panning in the county's neighborhood — clamped to the
+        // basemap extract so the edge of the tiled world stays out of
+        // reach.
+        const padded = boundary.getBounds().pad(0.5);
+        mapRef.current.setMaxBounds(
+          L.latLngBounds(
+            [
+              Math.max(padded.getSouth(), EXTRACT_BOUNDS.getSouth()),
+              Math.max(padded.getWest(), EXTRACT_BOUNDS.getWest()),
+            ],
+            [
+              Math.min(padded.getNorth(), EXTRACT_BOUNDS.getNorth()),
+              Math.min(padded.getEast(), EXTRACT_BOUNDS.getEast()),
+            ]
+          )
+        );
       })
       .catch(() => {}); // the outline is orientation, not data — omit on failure
     return () => ac.abort();

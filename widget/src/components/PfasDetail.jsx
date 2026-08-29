@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { embedDrawerBox } from "../lib/embedViewport.js";
 import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, PFAS_VIEWER_URL, pfasResultOf } from "../pfasCopy.js";
 import { RECORD_COPY } from "../recordCopy.js";
@@ -8,6 +9,10 @@ export default function PfasDetail({ system, onClose, county }) {
   const drawerRef = useRef(null);
   const r = pfasResultOf(system);
   const [copied, setCopied] = useState(false);
+
+  // Inside the auto-height embed, open the drawer where the reader
+  // actually is (see lib/embedViewport.js).
+  const embedBox = useMemo(() => embedDrawerBox(), [system.pws_id]);
 
   useEffect(() => setCopied(false), [system.pws_id]);
 
@@ -38,8 +43,10 @@ export default function PfasDetail({ system, onClose, county }) {
     // the top.
     if (drawerRef.current) drawerRef.current.scrollTop = 0;
     closeRef.current?.focus();
+    // Scroll lock only standalone — see SiteDetail: locking body overflow
+    // inside the auto-height embed shrinks the reported iframe height.
     const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    if (!embedBox) document.body.style.overflow = "hidden";
     const onKey = (e) => {
       if (e.key === "Escape") {
         onClose();
@@ -84,6 +91,16 @@ export default function PfasDetail({ system, onClose, county }) {
         role="dialog"
         aria-modal="true"
         aria-label={PFAS_COPY.drawerAria(titleCase(system.name))}
+        style={
+          embedBox
+            ? {
+                position: "absolute",
+                top: `${embedBox.top}px`,
+                height: `${embedBox.height}px`,
+                bottom: "auto",
+              }
+            : undefined
+        }
       >
         <div className="drawer__head">
           <button

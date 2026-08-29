@@ -986,6 +986,12 @@ tr.sites__row--active {
   margin: 2px;
   transform: rotate(45deg);
   border: 1px solid #20312d;
+  transition: transform 0.12s ease;
+}
+
+/* Street-level zoom: diamonds grow with the site circles. */
+.mapcard__map--close .pfas-pin__diamond {
+  transform: rotate(45deg) scale(1.3);
 }
 
 .legend__toggle {

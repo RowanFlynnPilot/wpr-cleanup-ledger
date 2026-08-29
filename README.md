@@ -68,13 +68,37 @@ Paste into a Custom HTML block (the script must come before the iframe):
 
 ```html
 <script>
-  window.addEventListener("message", function (e) {
-    if (e.origin === "https://rowanflynnpilot.github.io" &&
-        e.data && e.data.type === "cleanup-ledger:height") {
+  (function () {
+    var ORIGIN = "https://rowanflynnpilot.github.io";
+    window.addEventListener("message", function (e) {
+      if (e.origin === ORIGIN &&
+          e.data && e.data.type === "cleanup-ledger:height") {
+        var f = document.getElementById("cleanup-ledger");
+        if (f) f.style.height = e.data.height + "px";
+      }
+    });
+    // Report where the reader's viewport sits over the iframe, so record
+    // drawers open at the reader's position instead of pinning to the
+    // top of the full-height frame.
+    var queued = false;
+    function reportViewport() {
+      queued = false;
       var f = document.getElementById("cleanup-ledger");
-      if (f) f.style.height = e.data.height + "px";
+      if (!f || !f.contentWindow) return;
+      var r = f.getBoundingClientRect();
+      f.contentWindow.postMessage({
+        type: "cleanup-ledger:viewport",
+        top: Math.max(0, -r.top),
+        height: window.innerHeight
+      }, ORIGIN);
     }
-  });
+    function queueReport() {
+      if (!queued) { queued = true; requestAnimationFrame(reportViewport); }
+    }
+    window.addEventListener("scroll", queueReport, { passive: true });
+    window.addEventListener("resize", queueReport);
+    window.addEventListener("load", reportViewport);
+  })();
 </script>
 <iframe id="cleanup-ledger"
         src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"

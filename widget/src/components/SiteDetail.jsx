@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { embedDrawerBox } from "../lib/embedViewport.js";
 import {
   addressDisplay,
   dnrUrl,
@@ -24,6 +25,11 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
   const [copied, setCopied] = useState(false);
 
   const drawerRef = useRef(null);
+
+  // Inside the auto-height embed, open the drawer where the reader
+  // actually is (snapshotted per record; null standalone). See
+  // lib/embedViewport.js.
+  const embedBox = useMemo(() => embedDrawerBox(), [site.dsn]);
 
   // Reset the permalink confirmation when jumping between records.
   useEffect(() => setCopied(false), [site.dsn]);
@@ -79,8 +85,11 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
     // at the top instead of wherever the last one was scrolled.
     if (drawerRef.current) drawerRef.current.scrollTop = 0;
     closeRef.current?.focus();
+    // Scroll lock only standalone: the auto-height embed has no internal
+    // scroll to lock, and hiding body overflow there collapses the
+    // reported document height and visibly shrinks the iframe.
     const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    if (!embedBox) document.body.style.overflow = "hidden";
     const onKey = (e) => {
       if (e.key === "Escape") {
         onClose();
@@ -127,6 +136,16 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
         role="dialog"
         aria-modal="true"
         aria-label={`Details for ${site.name}`}
+        style={
+          embedBox
+            ? {
+                position: "absolute",
+                top: `${embedBox.top}px`,
+                height: `${embedBox.height}px`,
+                bottom: "auto",
+              }
+            : undefined
+        }
       >
         <div className="drawer__head">
           <button
