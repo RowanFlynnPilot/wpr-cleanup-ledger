@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-08-15T10:50:15+00:00",
+ "last_pfas_pull": "2026-08-29T15:14:17+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -159,7 +159,7 @@
    "name": "MOSINEE EAST SYSTEM",
    "pws_id": "73724805",
    "results": "PFAS above the health advisory level in one or more samples from the system",
-   "sample_date": "2026-05-04",
+   "sample_date": "2026-08-18",
    "sample_status": "Sampled"
   }
  ]
