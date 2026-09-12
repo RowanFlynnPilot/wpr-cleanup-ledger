@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-09-10T14:35:33+00:00",
+ "last_pfas_pull": "2026-09-12T19:05:37+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -9,7 +9,7 @@
    "name": "WAUSAU WATERWORKS",
    "pws_id": "73701023",
    "results": "PFAS above the health advisory level in one or more samples from the system",
-   "sample_date": "2026-05-12",
+   "sample_date": "2026-08-25",
    "sample_status": "Sampled"
   },
   {
