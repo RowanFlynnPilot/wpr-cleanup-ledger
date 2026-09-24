@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-09-18T19:29:34+00:00",
+ "last_pfas_pull": "2026-09-24T15:26:05+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -29,7 +29,7 @@
    "name": "SPENCER WATERWORKS",
    "pws_id": "73701089",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2026-03-23",
+   "sample_date": "2026-09-15",
    "sample_status": "Sampled"
   },
   {
