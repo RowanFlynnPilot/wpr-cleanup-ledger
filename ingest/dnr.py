@@ -1,13 +1,16 @@
 """Shared HTTP session for DNR pulls: ride out transient failures.
 
-dnrmaps.wi.gov intermittently refuses connections around the nightly
-window (observed Aug 2026: connect timeouts on the first request killed
-the runs of Aug 17 and Aug 19 while Aug 18 sailed through). Every DNR
-request therefore goes through one session that retries connect errors
-and 5xx/429 responses with exponential backoff. A genuine outage still
-fails loudly after the last attempt — and the second cron entry in
-nightly.yml gives the pipeline a same-day recovery window, which the
-quiet-repo rule makes free when the first run already succeeded.
+Every DNR request goes through one session that retries connect errors
+and 5xx/429 responses with exponential backoff, for the blips a runner
+that CAN reach DNR still hits now and then. A genuine outage still fails
+loudly after the last attempt.
+
+What these retries cannot fix (and what the Aug 2026 version of this
+note mistook for DNR flakiness) is a runner the state network refuses
+outright: some GitHub runner addresses can't open a connection to any
+wi.gov host however long they wait. That is handled a level up, where
+.github/workflows/dnr-attempt.yml checks reachability first and hands
+the job to a fresh runner. See its header for the Sept 2026 probe.
 
 The retried POST (the PFAS spatial filter) is a pure query, so retrying
 it is as safe as a GET.

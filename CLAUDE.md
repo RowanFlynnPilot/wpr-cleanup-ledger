@@ -146,6 +146,14 @@ manual dispatch; DNR's extracts are dated at calendar-quarter starts,
 realigned Aug 2026 from the original Mar/Jun/Sep/Dec schedule). Both call `deploy.yml` (GitHub Pages) after committing —
 bot pushes with GITHUB_TOKEN never fire push-triggered workflows, so the
 explicit workflow_call is required, gated on the commit actually happening.
+Both run their DNR work through `dnr-attempt.yml`, up to five attempts,
+each on a FRESH runner. The State of Wisconsin network silently drops a
+subset of GitHub runner IPs (Sept 2026 probe: 6 of 16 simultaneous
+runners could not connect to any wi.gov host; ~30% of nightly runs had
+been failing on their first request), so in-place retries can never
+help. A blocked runner ends its attempt green and hands off. Anything
+that fails after the reachability preflight still fails the run loudly.
+Don't collapse this back into in-process retries.
 
 ## Roadmap
 

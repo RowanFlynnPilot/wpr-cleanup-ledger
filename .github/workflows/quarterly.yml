@@ -19,37 +19,46 @@ permissions:
 concurrency:
   group: data-pipeline
 
+# Same fresh-runner attempts as nightly.yml: the bulk zip lives on
+# apps.dnr.wi.gov, behind the same state network that turns away some
+# GitHub runner addresses (see dnr-attempt.yml).
 jobs:
-  ingest:
+  attempt-1:
+    uses: ./.github/workflows/dnr-attempt.yml
+    with: { pipeline: quarterly, attempt: 1 }
+  attempt-2:
+    needs: attempt-1
+    if: needs.attempt-1.outputs.reached == 'false'
+    uses: ./.github/workflows/dnr-attempt.yml
+    with: { pipeline: quarterly, attempt: 2 }
+  attempt-3:
+    needs: attempt-2
+    if: needs.attempt-2.outputs.reached == 'false'
+    uses: ./.github/workflows/dnr-attempt.yml
+    with: { pipeline: quarterly, attempt: 3 }
+  attempt-4:
+    needs: attempt-3
+    if: needs.attempt-3.outputs.reached == 'false'
+    uses: ./.github/workflows/dnr-attempt.yml
+    with: { pipeline: quarterly, attempt: 4 }
+  attempt-5:
+    needs: attempt-4
+    if: needs.attempt-4.outputs.reached == 'false'
+    uses: ./.github/workflows/dnr-attempt.yml
+    with: { pipeline: quarterly, attempt: 5 }
+
+  unreachable:
+    needs: attempt-5
+    if: needs.attempt-5.outputs.reached == 'false'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    outputs:
-      pushed: ${{ steps.commit.outputs.pushed }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: python -m pip install -r requirements.txt
-      - run: python ingest/ingest_bulk.py
-      - run: python build/build_json.py
-      - name: Commit if changed
-        id: commit
-        run: |
-          git config user.name "cleanup-ledger-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data public
-          if git diff --cached --quiet; then
-            echo "pushed=false" >> "$GITHUB_OUTPUT"
-          else
-            git commit -m "Quarterly bulk ingest"
-            git push
-            echo "pushed=true" >> "$GITHUB_OUTPUT"
-          fi
+      - run: |
+          echo "::error title=DNR unreachable::Five fresh runners in a row could not connect to apps.dnr.wi.gov. Nothing was ingested; re-dispatch this workflow (Actions > Quarterly bulk ingest > Run workflow) once DNR is reachable."
+          exit 1
 
   deploy:
-    needs: ingest
-    if: needs.ingest.outputs.pushed == 'true'
+    needs: [attempt-1, attempt-2, attempt-3, attempt-4, attempt-5]
+    if: ${{ !cancelled() && contains(needs.*.outputs.pushed, 'true') }}
     uses: ./.github/workflows/deploy.yml
     permissions:
       contents: read
