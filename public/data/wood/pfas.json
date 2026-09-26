@@ -10,7 +10,7 @@
    "pws_id": "77201135"
   }
  ],
- "last_pfas_pull": "2026-09-24T15:26:05+00:00",
+ "last_pfas_pull": "2026-09-26T14:40:47+00:00",
  "systems": [
   {
    "city": "NEKOOSA",
@@ -29,7 +29,7 @@
    "name": "WIS RAPIDS WATER WORKS & LIGHTING COMM",
    "pws_id": "77201080",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2025-03-04",
+   "sample_date": "2026-09-14",
    "sample_status": "Sampled"
   },
   {
