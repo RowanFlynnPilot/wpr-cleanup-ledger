@@ -1,6 +1,16 @@
 {
- "events": [],
- "last_pfas_pull": "2026-09-26T14:40:47+00:00",
+ "events": [
+  {
+   "city": "LAKE TOMAHAWK",
+   "detected_at": "2026-10-02T16:20:37+00:00",
+   "event_type": "PFAS_RESULT_CHANGED",
+   "name": "MCNAUGHTON CORRECTIONAL CENTER",
+   "new_results": "PFAS detected below hazard index in one or more samples from the water system",
+   "old_results": "PFAS not detected in any samples from the water system",
+   "pws_id": "74401151"
+  }
+ ],
+ "last_pfas_pull": "2026-10-02T16:20:37+00:00",
  "systems": [
   {
    "city": "LAKE TOMAHAWK",
@@ -8,8 +18,8 @@
    "lon": -89.64213237793375,
    "name": "MCNAUGHTON CORRECTIONAL CENTER",
    "pws_id": "74401151",
-   "results": "PFAS not detected in any samples from the water system",
-   "sample_date": "2026-03-30",
+   "results": "PFAS detected below hazard index in one or more samples from the water system",
+   "sample_date": "2026-09-21",
    "sample_status": "Sampled"
   },
   {
