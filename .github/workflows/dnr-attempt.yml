@@ -85,6 +85,15 @@ jobs:
         run: python ingest/ingest_bulk.py
       - if: steps.preflight.outputs.reached == 'true'
         run: python build/build_json.py
+      # The widget's copy gates (plain Node, no npm install), BEFORE the
+      # commit: data that would fail the deploy build, such as a DNR
+      # category string with no vetted copy, never lands on main, so main
+      # always stays deployable and the failure email names the string.
+      - name: Copy gates
+        if: steps.preflight.outputs.reached == 'true'
+        run: |
+          node widget/scripts/check-pfas-copy.mjs
+          node widget/scripts/check-record-copy.mjs
       - name: Monthly heartbeat
         if: steps.preflight.outputs.reached == 'true' && inputs.pipeline == 'nightly'
         run: date -u +%Y-%m > data/heartbeat.txt

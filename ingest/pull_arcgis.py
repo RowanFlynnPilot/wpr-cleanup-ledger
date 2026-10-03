@@ -15,12 +15,17 @@ One correct path:
   seven-county expansion, or any future addition — writes its state
   silently instead of flooding the tip sheet with thousands of spurious
   "appeared" events. An entirely empty map_state is a full baseline.
+- A county layer that moves more than max(10, 10% of its stored records)
+  in one pull trips the mass-change breaker (ingest/guard.py): the run
+  fails before writing, because that is a partial DNR response or a
+  change a human should confirm, never a normal night.
 - If nothing changed, nothing is written. The database file only moves
   when the world does, which keeps the git history quiet.
 """
 
 import sqlite3
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -29,6 +34,7 @@ DB_PATH = REPO_ROOT / "data" / "cleanup.db"
 SCHEMA_PATH = REPO_ROOT / "schema.sql"
 
 sys.path.insert(0, str(REPO_ROOT))
+from ingest import guard  # noqa: E402
 from ingest.counties import COUNTIES, county_code_of  # noqa: E402
 from ingest.dnr import TIMEOUT, make_session  # noqa: E402
 
@@ -122,7 +128,15 @@ def fetch_layer(layer_id: int) -> dict[int, dict]:
 
 
 def main() -> None:
+    # Closed on every exit, including a breaker trip or a failed fetch.
     conn = sqlite3.connect(DB_PATH)
+    try:
+        diff_and_store(conn)
+    finally:
+        conn.close()
+
+
+def diff_and_store(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
 
     live = {layer_id: fetch_layer(layer_id) for layer_id in EVENT_TYPES}
@@ -138,20 +152,30 @@ def main() -> None:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     events = []
+    # Per (layer, county) change and stored counts, for the mass-change
+    # breaker below.
+    changes, stored_counts = Counter(), Counter()
     for layer_id, records in live.items():
-        stored = {
-            row[0]
-            for row in conn.execute(
-                "SELECT detail_seq_no FROM map_state WHERE layer_id = ?", (layer_id,)
+        stored = dict(
+            conn.execute(
+                "SELECT detail_seq_no, activity_number FROM map_state "
+                "WHERE layer_id = ?",
+                (layer_id,),
             )
-        }
+        )
+        for number in stored.values():
+            stored_counts[(layer_id, county_code_of(number))] += 1
         appeared = {
             dsn
-            for dsn in set(records) - stored
+            for dsn in set(records) - set(stored)
             if county_code_of(records[dsn]["activity_number"]) in tracked_counties
         }
         # Disappearances are by construction in a tracked county.
-        disappeared = stored - set(records)
+        disappeared = set(stored) - set(records)
+        for dsn in appeared:
+            changes[(layer_id, county_code_of(records[dsn]["activity_number"]))] += 1
+        for dsn in disappeared:
+            changes[(layer_id, county_code_of(stored[dsn]))] += 1
 
         appear_type, disappear_type = EVENT_TYPES[layer_id]
         for dsn in sorted(appeared):
@@ -168,10 +192,22 @@ def main() -> None:
             ).fetchone()
             events.append((now, disappear_type, layer_id, dsn, *row))
 
+    # Stop before writing if any county layer moved far beyond a normal
+    # night (ingest/guard.py; CLAUDE.md decision 12).
+    guard.check(
+        changes,
+        stored_counts,
+        floor=10,
+        share=0.10,
+        describe=lambda key: (
+            f"{COUNTIES.get(key[1], {}).get('name', key[1])} County, "
+            f"layer {key[0]}"
+        ),
+    )
+
     live_total = sum(len(records) for records in live.values())
     if not baseline_counties and not events and stored_total == live_total:
         print(f"No changes across {live_total} records in {len(live)} layers.")
-        conn.close()
         return
 
     with conn:
@@ -208,7 +244,6 @@ def main() -> None:
         print(f"  county-aware baseline (no events): {names}")
     for e in events:
         print(f"  {e[1]}  {e[4]}  {e[5]}  ({e[6]}, {e[7]})")
-    conn.close()
 
 
 if __name__ == "__main__":

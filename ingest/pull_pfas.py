@@ -31,6 +31,9 @@ One correct path:
   for counties already present in stored state; a newly tracked county
   writes its systems silently. An empty pfas_system is a full baseline.
   If nothing changed, nothing is written.
+- A county losing more than max(2, 25% of its stored systems) in one
+  pull trips the mass-change breaker (ingest/guard.py) before anything
+  is written.
 
 Editorial note: these are drinking-water accountability records about
 municipal utilities. They are not health-outcome data and must never be
@@ -40,6 +43,7 @@ joined to disease rates in this repo (CLAUDE.md editorial policy).
 import json
 import sqlite3
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -49,6 +53,7 @@ SCHEMA_PATH = REPO_ROOT / "schema.sql"
 COUNTIES_DIR = REPO_ROOT / "data" / "counties"
 
 sys.path.insert(0, str(REPO_ROOT))
+from ingest import guard  # noqa: E402
 from ingest.counties import COUNTIES  # noqa: E402
 from ingest.dnr import TIMEOUT, make_session  # noqa: E402
 
@@ -140,7 +145,15 @@ def fetch_systems() -> dict[str, dict]:
 
 
 def main() -> None:
+    # Closed on every exit, including a breaker trip or a failed fetch.
     conn = sqlite3.connect(DB_PATH)
+    try:
+        diff_and_store(conn)
+    finally:
+        conn.close()
+
+
+def diff_and_store(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
 
     live = fetch_systems()
@@ -191,9 +204,19 @@ def main() -> None:
                  old, new)
             )
 
+    # A partial response shows up as systems going missing, so the breaker
+    # (ingest/guard.py; CLAUDE.md decision 12) counts removals per county.
+    # Additions and result changes are news, not damage, and pass freely.
+    guard.check(
+        Counter(stored[p]["county"] for p in set(stored) - set(live)),
+        Counter(r["county"] for r in stored.values()),
+        floor=2,
+        share=0.25,
+        describe=lambda slug: f"{slug.title()} County PFAS systems",
+    )
+
     if not events and stored == live:
         print(f"No changes across {len(live)} PFAS systems.")
-        conn.close()
         return
 
     with conn:
@@ -229,7 +252,6 @@ def main() -> None:
         print(f"  county-aware baseline (no events): {', '.join(baseline_counties)}")
     for e in events:
         print(f"  {e[1]}  {e[3]} ({e[4]})  {e[5]!r} -> {e[6]!r}")
-    conn.close()
 
 
 def records_sorted(records: dict[str, dict]):

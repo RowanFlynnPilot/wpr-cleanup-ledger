@@ -122,6 +122,16 @@ activities and 1,545 CO-flagged records region-wide; per-county counts in
    silently — adding a county to `ingest/counties.py` must never flood
    the internal tip sheet with thousands of spurious "appeared" events.
    An entirely empty table is still a full baseline.
+12. **Mass-change breaker (Oct 2026).** A normal night moves 1–3
+   records region-wide. A county layer that would move more than
+   max(10, 10% of its stored records) in one pull (PFAS: a county losing
+   more than max(2, 25%) of its systems) stops the pull before anything
+   is written (`ingest/guard.py`). That is a partial DNR response or a
+   change a human must confirm; the next run retries against untouched
+   state. After confirming a real mass change on the DNR map, rerun the
+   script locally with `--accept-mass-change` and commit. The nightly
+   also runs the widget copy gates BEFORE its data commit, so main is
+   always deployable.
 ## Commands (PowerShell)
 
 The shell is PowerShell — no bash-isms (no brace expansion, no `&&`).
@@ -132,6 +142,7 @@ python -m pip install -r requirements.txt
 python ingest\ingest_bulk.py    # quarterly spine (~35 MB download)
 python ingest\pull_arcgis.py    # nightly diff (first run = baseline)
 python build\build_json.py      # emit public/data/*.json
+python -m unittest discover -s tests   # pipeline tests (breaker + no-network replays of the DB)
 
 cd widget
 npm install
