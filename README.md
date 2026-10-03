@@ -102,15 +102,21 @@ Paste into a Custom HTML block (the script must come before the iframe):
 </script>
 <iframe id="cleanup-ledger"
         src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"
-        title="The Cleanup Ledger — contamination sites and continuing obligations in Marathon County"
-        width="100%" height="1500" style="border:0;" loading="lazy"
+        title="The Cleanup Ledger — contamination sites and continuing obligations in north-central Wisconsin"
+        width="100%" height="4700" style="border:0;" loading="lazy"
         allow="clipboard-write"
         onload="this.contentWindow.postMessage({type:'cleanup-ledger:ping'}, 'https://rowanflynnpilot.github.io')"></iframe>
 ```
 
-The `<script>` is optional — the widget reports its height so the iframe can
-size itself; without it, keep a fixed height (~1500px desktop). Nothing from
-this repository is embedded on wausaupilotandreview.com without editorial
+The `<script>` sizes the frame to the widget (it reports its own height)
+and lets record drawers open where the reader is. Keep it: WordPress only
+preserves it for users with the `unfiltered_html` capability
+(Administrators, and Editors on a single site), so paste the snippet from
+such an account. Without it, the frame stays at its fixed height. The
+starting `height="4700"` fits an article-width column (measured Oct 2026:
+~4,100px at 1280px wide, ~4,650px at 760px, ~5,800px on a phone), so
+without the script phones scroll inside the frame. Nothing from this
+repository is embedded on wausaupilotandreview.com without editorial
 review.
 
 ## Local development
