@@ -70,34 +70,77 @@ Paste into a Custom HTML block (the script must come before the iframe):
 <script>
   (function () {
     var ORIGIN = "https://rowanflynnpilot.github.io";
+    var OURS = /(^|&)(county|site|system)=/;
+    var GAP = 80; // breathing room above the tool when scrolling to it
+    function frame() { return document.getElementById("cleanup-ledger"); }
+    function send(msg) {
+      var f = frame();
+      if (f && f.contentWindow) f.contentWindow.postMessage(msg, ORIGIN);
+    }
+    // The part of the frame the reader can see, so record drawers open
+    // there, not at the top of the full-height frame. frameTop overrides
+    // the frame's current position (used right after scrolling to it).
+    function reportViewport(frameTop) {
+      var f = frame();
+      if (!f) return;
+      var r = f.getBoundingClientRect();
+      var top = frameTop == null ? r.top : frameTop;
+      send({ type: "cleanup-ledger:viewport",
+             top: Math.max(0, -top),
+             height: Math.min(window.innerHeight, top + r.height) - Math.max(0, top) });
+    }
+    var queued = false;
+    function queueReport() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; reportViewport(); });
+    }
+    // A record named in this page's address (#site=…, #system=…) should
+    // land with the tool in view. True when it scrolled.
+    function bringIntoView() {
+      var f = frame();
+      if (!f || !OURS.test(location.hash.slice(1))) return false;
+      var r = f.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < window.innerHeight) return false;
+      window.scrollTo(0, window.scrollY + r.top - GAP);
+      return true;
+    }
+    // This page's address, so "Copy link" points readers here, plus any
+    // record in the hash for the tool to open.
+    function sendHost(scrolled) {
+      reportViewport(scrolled ? GAP : null);
+      send({ type: "cleanup-ledger:host",
+             url: location.href.split("#")[0],
+             hash: location.hash.replace(/^#/, "") });
+    }
     window.addEventListener("message", function (e) {
-      if (e.origin === ORIGIN &&
-          e.data && e.data.type === "cleanup-ledger:height") {
-        var f = document.getElementById("cleanup-ledger");
+      if (e.origin !== ORIGIN || !e.data) return;
+      if (e.data.type === "cleanup-ledger:height") {
+        var f = frame();
         if (f) f.style.height = e.data.height + "px";
+      } else if (e.data.type === "cleanup-ledger:ready") {
+        sendHost(false);
+      } else if (e.data.type === "cleanup-ledger:hash") {
+        // Mirror the open record into this page's address (no history
+        // entry, no scroll). Only the tool's own three keys are written.
+        var p = new URLSearchParams(String(e.data.hash || "")), keep = [];
+        ["county", "site", "system"].forEach(function (k) {
+          var v = p.get(k);
+          if (v && /^[A-Za-z0-9_-]{1,40}$/.test(v)) keep.push(k + "=" + v);
+        });
+        var base = location.pathname + location.search;
+        if (keep.length) {
+          history.replaceState(history.state, "", base + "#" + keep.join("&"));
+        } else if (OURS.test(location.hash.slice(1))) {
+          history.replaceState(history.state, "", base);
+        }
       }
     });
-    // Report where the reader's viewport sits over the iframe, so record
-    // drawers open at the reader's position instead of pinning to the
-    // top of the full-height frame.
-    var queued = false;
-    function reportViewport() {
-      queued = false;
-      var f = document.getElementById("cleanup-ledger");
-      if (!f || !f.contentWindow) return;
-      var r = f.getBoundingClientRect();
-      f.contentWindow.postMessage({
-        type: "cleanup-ledger:viewport",
-        top: Math.max(0, -r.top),
-        height: window.innerHeight
-      }, ORIGIN);
-    }
-    function queueReport() {
-      if (!queued) { queued = true; requestAnimationFrame(reportViewport); }
-    }
+    window.addEventListener("hashchange", function () { sendHost(bringIntoView()); });
     window.addEventListener("scroll", queueReport, { passive: true });
     window.addEventListener("resize", queueReport);
-    window.addEventListener("load", reportViewport);
+    window.addEventListener("load", function () { reportViewport(); });
+    document.addEventListener("DOMContentLoaded", bringIntoView);
   })();
 </script>
 <iframe id="cleanup-ledger"
@@ -108,8 +151,17 @@ Paste into a Custom HTML block (the script must come before the iframe):
         onload="this.contentWindow.postMessage({type:'cleanup-ledger:ping'}, 'https://rowanflynnpilot.github.io')"></iframe>
 ```
 
-The `<script>` sizes the frame to the widget (it reports its own height)
-and lets record drawers open where the reader is. Keep it: WordPress only
+The `<script>` does three jobs:
+- It sizes the frame to the widget, which reports its own height.
+- It lets record drawers open where the reader is.
+- It ties records to the article (Oct 2026). "Copy link to this record"
+  copies the article's address plus the record (`…/your-article/#site=20315`).
+  Opening such an address opens that record and scrolls the tool into view.
+  A link in the story's own text (`<a href="#system=73701507">`) does the
+  same. While a record is open, the article's address shows it.
+
+The widget only writes `county`, `site` and `system` into the article's
+hash, and only through this script. Keep the script: WordPress only
 preserves it for users with the `unfiltered_html` capability
 (Administrators, and Editors on a single site), so paste the snippet from
 such an account. Without it, the frame stays at its fixed height. The

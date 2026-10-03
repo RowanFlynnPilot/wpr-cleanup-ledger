@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Icon from "./Icon.jsx";
+import { permalink } from "../lib/embedHost.js";
 import { embedDrawerBox } from "../lib/embedViewport.js";
 import {
   addressDisplay,
@@ -42,11 +43,8 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
       county === "marathon"
         ? `#site=${site.dsn}`
         : `#county=${county}&site=${site.dsn}`;
-    const url =
-      window.location.origin +
-      window.location.pathname +
-      window.location.search +
-      hash;
+    // Embedded, the link points at the article (lib/embedHost.js).
+    const url = permalink(hash);
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);

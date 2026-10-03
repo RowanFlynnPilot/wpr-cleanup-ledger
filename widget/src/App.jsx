@@ -12,6 +12,7 @@ import AboutPanel from "./components/AboutPanel.jsx";
 import Footer from "./components/Footer.jsx";
 import { siteMatches, statusOf } from "./lib/format.js";
 import { setEmbedViewport } from "./lib/embedViewport.js";
+import { receiveHost, reportHash } from "./lib/embedHost.js";
 import { RECORD_COPY } from "./recordCopy.js";
 
 const EMPTY_FILTERS = {
@@ -44,6 +45,8 @@ function writeHash(county, kind, id) {
     "",
     parts.length ? `${base}#${parts.join("&")}` : base
   );
+  // Embedded: the article's address follows along (lib/embedHost.js).
+  reportHash(parts.join("&"));
 }
 
 function parseHash() {
@@ -175,12 +178,17 @@ export default function App() {
           height: Number(e.data.height) || 0,
         });
       }
+      // The article's own address (and any record named in its hash).
+      if (e.data?.type === "cleanup-ledger:host") receiveHost(e);
     };
     const ro = new ResizeObserver(post);
     ro.observe(document.documentElement);
     window.addEventListener("message", onMsg);
     window.addEventListener("load", post);
     post();
+    // Ask the host page to introduce itself; snippets older than Oct 2026
+    // ignore this, and the widget keeps its own links.
+    window.parent.postMessage({ type: "cleanup-ledger:ready" }, "*");
     return () => {
       ro.disconnect();
       window.removeEventListener("message", onMsg);

@@ -191,7 +191,19 @@ Don't collapse this back into in-process retries.
   28, 2026 (email reply: "looks as it should... I don't see any red
   flags"). The Oct 2026 chrome lines went to her as a no-action FYI in
   the same thread. Not yet embedded in production; the embed is the
-  remaining step. Note: the news site itself uses Merriweather/Oswald;
+  remaining step. Embed protocol (postMessage, origin-checked both
+  ways; the README snippet is the parent half):
+  - `height` and `ping` size the frame.
+  - `viewport` (the visible part of the frame) places drawers where the
+    reader is.
+  - Since Oct 2026, `ready`/`host` hand the widget the article's URL and
+    hash, so "Copy link" points at the article and `#site=`/`#system=`
+    in the article opens the record.
+  - `hash` mirrors the open record into the article's address. Only the
+    county/site/system keys are ever written, via replaceState.
+
+  Older snippets keep working, minus the article links. Note: the news
+  site itself uses Merriweather/Oswald;
   the Fraunces/Public Sans system is the Ledger data-product brand — don't
   "fix" the widget to match the news theme.
   - **PFAS layer added July 2026, editorially approved Aug 28, 2026.**

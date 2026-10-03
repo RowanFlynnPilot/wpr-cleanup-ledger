@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Icon from "./Icon.jsx";
+import { permalink } from "../lib/embedHost.js";
 import { embedDrawerBox } from "../lib/embedViewport.js";
 import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, PFAS_VIEWER_URL, pfasResultOf } from "../pfasCopy.js";
@@ -22,11 +23,7 @@ export default function PfasDetail({ system, onClose, county }) {
       county === "marathon"
         ? `#system=${system.pws_id}`
         : `#county=${county}&system=${system.pws_id}`;
-    const url =
-      window.location.origin +
-      window.location.pathname +
-      window.location.search +
-      hash;
+    const url = permalink(hash);
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
