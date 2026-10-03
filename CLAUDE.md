@@ -202,8 +202,14 @@ Don't collapse this back into in-process retries.
   - `hash` mirrors the open record into the article's address. Only the
     county/site/system keys are ever written, via replaceState.
 
-  Older snippets keep working, minus the article links. Note: the news
-  site itself uses Merriweather/Oswald;
+  Older snippets keep working, minus the article links. The snippet's
+  script must stay free of `<`, `&` and `//` comments. WordPress's
+  wptexturize entity-encodes every `&` after a `<` in post content, which
+  produced a syntax error that killed the whole script in an Oct 2026
+  WordPress Playground test. It also carries LiteSpeed/Cloudflare
+  opt-outs, because the site runs LiteSpeed Cache, which defers inline
+  JS. `widget/scripts/check-embed-snippet.test.mjs` enforces both in
+  `npm test`. Note: the news site itself uses Merriweather/Oswald;
   the Fraunces/Public Sans system is the Ledger data-product brand — don't
   "fix" the widget to match the news theme.
   - **PFAS layer added July 2026, editorially approved Aug 28, 2026.**

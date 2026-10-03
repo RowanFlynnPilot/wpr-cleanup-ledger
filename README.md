@@ -67,19 +67,28 @@ DNR RR Sites Map (nightly) ───┘
 Paste into a Custom HTML block (the script must come before the iframe):
 
 ```html
-<script>
+<script data-no-optimize="1" data-no-minify="1" data-cfasync="false">
+  /* WordPress-safe by construction: no less-than signs and no ampersands
+     anywhere in this script (WordPress entity-encodes the ampersands that
+     follow a less-than sign in post content, which breaks the script), and
+     block comments only, so nothing breaks if a minifier joins lines. */
   (function () {
     var ORIGIN = "https://rowanflynnpilot.github.io";
-    var OURS = /(^|&)(county|site|system)=/;
-    var GAP = 80; // breathing room above the tool when scrolling to it
+    var KEYS = ["county", "site", "system"];
+    var GAP = 80; /* breathing room above the tool when scrolling to it */
     function frame() { return document.getElementById("cleanup-ledger"); }
     function send(msg) {
       var f = frame();
-      if (f && f.contentWindow) f.contentWindow.postMessage(msg, ORIGIN);
+      if (f) { if (f.contentWindow) f.contentWindow.postMessage(msg, ORIGIN); }
     }
-    // The part of the frame the reader can see, so record drawers open
-    // there, not at the top of the full-height frame. frameTop overrides
-    // the frame's current position (used right after scrolling to it).
+    /* Does this page's address name a record (#site=…, #system=…)? */
+    function namesRecord() {
+      var p = new URLSearchParams(location.hash.slice(1));
+      return KEYS.some(function (k) { return p.has(k); });
+    }
+    /* The part of the frame the reader can see, so record drawers open
+       there, not at the top of the full-height frame. frameTop overrides
+       the frame's current position (used right after scrolling to it). */
     function reportViewport(frameTop) {
       var f = frame();
       if (!f) return;
@@ -95,43 +104,47 @@ Paste into a Custom HTML block (the script must come before the iframe):
       queued = true;
       requestAnimationFrame(function () { queued = false; reportViewport(); });
     }
-    // A record named in this page's address (#site=…, #system=…) should
-    // land with the tool in view. True when it scrolled.
+    /* A record named in the address should land with the tool in view.
+       True when it scrolled. */
     function bringIntoView() {
       var f = frame();
-      if (!f || !OURS.test(location.hash.slice(1))) return false;
+      if (!f) return false;
+      if (!namesRecord()) return false;
       var r = f.getBoundingClientRect();
-      if (r.bottom > 0 && r.top < window.innerHeight) return false;
+      var inView = r.bottom > 0 ? window.innerHeight > r.top : false;
+      if (inView) return false;
       window.scrollTo(0, window.scrollY + r.top - GAP);
       return true;
     }
-    // This page's address, so "Copy link" points readers here, plus any
-    // record in the hash for the tool to open.
+    /* This page's address, so "Copy link" points readers here, plus any
+       record in the hash for the tool to open. */
     function sendHost(scrolled) {
       reportViewport(scrolled ? GAP : null);
       send({ type: "cleanup-ledger:host",
              url: location.href.split("#")[0],
-             hash: location.hash.replace(/^#/, "") });
+             hash: location.hash.slice(1) });
     }
     window.addEventListener("message", function (e) {
-      if (e.origin !== ORIGIN || !e.data) return;
+      if (e.origin !== ORIGIN) return;
+      if (!e.data) return;
       if (e.data.type === "cleanup-ledger:height") {
         var f = frame();
         if (f) f.style.height = e.data.height + "px";
       } else if (e.data.type === "cleanup-ledger:ready") {
         sendHost(false);
       } else if (e.data.type === "cleanup-ledger:hash") {
-        // Mirror the open record into this page's address (no history
-        // entry, no scroll). Only the tool's own three keys are written.
-        var p = new URLSearchParams(String(e.data.hash || "")), keep = [];
-        ["county", "site", "system"].forEach(function (k) {
+        /* Mirror the open record into this page's address (no history
+           entry, no scroll). Only the tool's own three keys are written. */
+        var p = new URLSearchParams(String(e.data.hash || ""));
+        var keep = new URLSearchParams();
+        KEYS.forEach(function (k) {
           var v = p.get(k);
-          if (v && /^[A-Za-z0-9_-]{1,40}$/.test(v)) keep.push(k + "=" + v);
+          if (/^[A-Za-z0-9_-]{1,40}$/.test(v || "")) keep.set(k, v);
         });
         var base = location.pathname + location.search;
-        if (keep.length) {
-          history.replaceState(history.state, "", base + "#" + keep.join("&"));
-        } else if (OURS.test(location.hash.slice(1))) {
+        if (keep.toString()) {
+          history.replaceState(history.state, "", base + "#" + keep.toString());
+        } else if (namesRecord()) {
           history.replaceState(history.state, "", base);
         }
       }
@@ -140,10 +153,21 @@ Paste into a Custom HTML block (the script must come before the iframe):
     window.addEventListener("scroll", queueReport, { passive: true });
     window.addEventListener("resize", queueReport);
     window.addEventListener("load", function () { reportViewport(); });
-    document.addEventListener("DOMContentLoaded", bringIntoView);
+    /* If a caching plugin still delays this script past the tool's own
+       hello, start the conversation from this side: whichever side comes
+       up last makes contact. */
+    function init() {
+      send({ type: "cleanup-ledger:ping" });
+      sendHost(bringIntoView());
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
   })();
 </script>
-<iframe id="cleanup-ledger"
+<iframe id="cleanup-ledger" data-no-lazy="1"
         src="https://rowanflynnpilot.github.io/wpr-cleanup-ledger/"
         title="The Cleanup Ledger — contamination sites and continuing obligations in north-central Wisconsin"
         width="100%" height="4700" style="border:0;" loading="lazy"
@@ -161,7 +185,26 @@ The `<script>` does three jobs:
   same. While a record is open, the article's address shows it.
 
 The widget only writes `county`, `site` and `system` into the article's
-hash, and only through this script. Keep the script: WordPress only
+hash, and only through this script.
+
+Two kinds of protection keep the script working on
+wausaupilotandreview.com:
+- **Plugin opt-outs.** The script carries `data-no-optimize="1"`,
+  `data-no-minify="1"` and `data-cfasync="false"`. They keep LiteSpeed
+  Cache (which the site runs; it rewrites inline scripts into deferred
+  ones) and Cloudflare from delaying or minifying it. `data-no-lazy="1"`
+  keeps LiteSpeed from rewriting the iframe, which still lazy-loads
+  natively. If something delays the script anyway, it makes contact from
+  its side when it finally runs.
+- **Characters WordPress mangles.** The script contains no `<`, no `&`
+  and no `//` comments. WordPress's wptexturize filter treats a `<` inside
+  post content as the start of a tag and rewrites every later `&` as
+  `&#038;`. A WordPress Playground test in Oct 2026 caught exactly that
+  turning `&&` into a syntax error that killed the whole script.
+  `widget/scripts/check-embed-snippet.test.mjs` guards both rules in
+  `npm test`.
+
+Keep the script: WordPress only
 preserves it for users with the `unfiltered_html` capability
 (Administrators, and Editors on a single site), so paste the snippet from
 such an account. Without it, the frame stays at its fixed height. The
