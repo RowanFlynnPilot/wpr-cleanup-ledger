@@ -160,7 +160,7 @@ export default function SiteMap({
         const boundary = L.geoJSON(geo, {
           pane: "boundary",
           interactive: false,
-          style: { color: "#66756f", weight: 1.5, dashArray: "5 4", fill: false },
+          style: { color: "#58665f", weight: 1.5, dashArray: "5 4", fill: false },
         }).addTo(mapRef.current);
         boundaryRef.current = boundary;
         // Frame the new county only while its sites are still loading;
@@ -345,41 +345,47 @@ export default function SiteMap({
             : `Map of contamination sites with continuing obligations in ${countyDisplay}`
         }
       />
+      {/* Two groups (site statuses | water systems) that wrap as units,
+          so a narrow legend never strands one key on its own line. */}
       <div className="mapcard__legend">
-        {LEGEND.map(([key, label]) => (
-          <label className="legend__toggle" key={key}>
+        <div className="legend__group">
+          {LEGEND.map(([key, label]) => (
+            <label className="legend__toggle" key={key}>
+              <input
+                type="checkbox"
+                checked={shownStatuses[key]}
+                onChange={(e) =>
+                  setShownStatuses((s) => ({ ...s, [key]: e.target.checked }))
+                }
+              />
+              <span
+                className="legend__dot"
+                style={{ background: STATUS_COLORS[key] }}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+        <div className="legend__group legend__group--pfas">
+          <label className="legend__toggle">
             <input
               type="checkbox"
-              checked={shownStatuses[key]}
-              onChange={(e) =>
-                setShownStatuses((s) => ({ ...s, [key]: e.target.checked }))
-              }
+              checked={showPfas}
+              onChange={(e) => onTogglePfas(e.target.checked)}
             />
-            <span
-              className="legend__dot"
-              style={{ background: STATUS_COLORS[key] }}
-            />
-            {label}
+            {PFAS_COPY.mapToggle}
           </label>
-        ))}
-        <label className="legend__toggle legend__toggle--sep">
-          <input
-            type="checkbox"
-            checked={showPfas}
-            onChange={(e) => onTogglePfas(e.target.checked)}
-          />
-          {PFAS_COPY.mapToggle}
-        </label>
-        {showPfas &&
-          pfasLegend.map((r) => (
-            <span className="legend__item" key={r.key}>
-              <span
-                className="legend__diamond"
-                style={{ background: r.color }}
-              />
-              {r.short}
-            </span>
-          ))}
+          {showPfas &&
+            pfasLegend.map((r) => (
+              <span className="legend__item" key={r.key}>
+                <span
+                  className="legend__diamond"
+                  style={{ background: r.color }}
+                />
+                {r.short}
+              </span>
+            ))}
+        </div>
       </div>
     </div>
   );

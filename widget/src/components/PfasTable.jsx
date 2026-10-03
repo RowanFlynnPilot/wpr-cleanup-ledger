@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react";
+import Icon from "./Icon.jsx";
 import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, pfasResultOf } from "../pfasCopy.js";
 
+// The sample-date column folds under the system name on phones
+// (.sites__meta), keeping the result chip on screen.
 const COLUMNS = [
   { key: "name", label: PFAS_COPY.colSystem },
   { key: "result", label: PFAS_COPY.colResult },
-  { key: "sample_date", label: PFAS_COPY.colSampled },
+  { key: "sample_date", label: PFAS_COPY.colSampled, hideSm: true },
 ];
 
 // "result" sorts by the ordinal rank of the DNR category; the other
@@ -74,14 +77,17 @@ export default function PfasTable({ systems, selected, onSelect, loading }) {
       <p className="controls__count" aria-live="polite">
         {PFAS_COPY.count(shown.length, systems.length)}
       </p>
-      <div className="tablecard">
-        <div className="tablecard__scroll" tabIndex={0}>
+      {/* At most 16 systems per county: the table shows them all rather
+          than nesting a scroll box inside the page. */}
+      <div className="tablecard tablecard--full">
+        <div className="tablecard__scroll">
           <table className="sites">
             <thead>
               <tr>
                 {COLUMNS.map((c) => (
                   <th
                     key={c.key}
+                    className={c.hideSm ? "hide-sm" : undefined}
                     aria-sort={
                       sort.key === c.key
                         ? sort.dir === 1
@@ -93,8 +99,11 @@ export default function PfasTable({ systems, selected, onSelect, loading }) {
                     <button type="button" onClick={() => clickSort(c.key)}>
                       {c.label}
                       {sort.key === c.key && (
-                        <span className="sort-arrow" aria-hidden="true">
-                          {sort.dir === 1 ? "▲" : "▼"}
+                        <span className="sort-arrow">
+                          <Icon
+                            name={sort.dir === 1 ? "sortAsc" : "sortDesc"}
+                            size={12}
+                          />
                         </span>
                       )}
                     </button>
@@ -106,6 +115,7 @@ export default function PfasTable({ systems, selected, onSelect, loading }) {
               {shown.map((system) => {
                 const r = pfasResultOf(system);
                 const active = selected?.pws_id === system.pws_id;
+                const sampled = fmtDate(system.sample_date) ?? "—";
                 return (
                   <tr
                     key={system.pws_id}
@@ -122,13 +132,14 @@ export default function PfasTable({ systems, selected, onSelect, loading }) {
                   >
                     <td>
                       <span className="sites__name">{titleCase(system.name)}</span>
+                      <span className="sites__meta">
+                        {PFAS_COPY.colSampled}: {sampled}
+                      </span>
                     </td>
                     <td>
                       <span className={`chip chip--pfas-${r.key}`}>{r.short}</span>
                     </td>
-                    <td className="sites__brrts">
-                      {fmtDate(system.sample_date) ?? "—"}
-                    </td>
+                    <td className="hide-sm sites__date">{sampled}</td>
                   </tr>
                 );
               })}

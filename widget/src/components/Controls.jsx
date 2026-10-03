@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import Icon from "./Icon.jsx";
 import { muniDisplay } from "../lib/format.js";
 import { OBLIGATION_TYPES, RECORD_COPY } from "../recordCopy.js";
 
@@ -65,11 +66,13 @@ export default function Controls({ sites, filters, onChange, onReset }) {
         setOpen(false);
       }
     };
+    // pointerdown, not mousedown: closes on the first touch too, without
+    // waiting for the compatibility mouse events.
     document.addEventListener("keydown", onKey);
-    document.addEventListener("mousedown", onDown);
+    document.addEventListener("pointerdown", onDown);
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("pointerdown", onDown);
     };
   }, [open]);
 
@@ -123,8 +126,8 @@ export default function Controls({ sites, filters, onChange, onReset }) {
           {activeCount > 0 && (
             <span className="controls__badge">{activeCount}</span>
           )}
-          <span className="controls__caret" aria-hidden="true">
-            {open ? "▴" : "▾"}
+          <span className="controls__caret">
+            <Icon name={open ? "chevronUp" : "chevronDown"} size={14} />
           </span>
         </button>
         {open && (

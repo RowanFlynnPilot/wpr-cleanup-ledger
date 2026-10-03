@@ -1,25 +1,45 @@
-/* The Cleanup Ledger — WPR ledger design system.
-   Teal #3A867C · cream #F6F2E9 · Fraunces display · Public Sans body ·
-   JetBrains Mono for data. */
+/* The Cleanup Ledger — WPR "Follow the Money" system: Fraunces (variable,
+   optical size) for display and headline figures, Public Sans for text,
+   labels, and column figures, JetBrains Mono only for record IDs (BRRTS #,
+   PWS ID). Teal #3A867C on cream #F6F2E9, warm hairlines.
+
+   Contrast: every text token below clears WCAG AA (4.5:1) on each surface
+   it sits on; status hues are mark colors, and text on a status wash uses
+   the matching *-ink token. Form-control borders (--field) clear 3:1. */
 
 :root {
   --teal: #3a867c;
-  --teal-ink: #2a6159; /* AA on cream/white for text & links */
+  --teal-ink: #2a6159;
   --teal-wash: #e4efec;
+  --teal-line: #c5ddd6;
   --cream: #f6f2e9;
+  --cream-hover: #faf8f3;
   --paper: #ffffff;
   --ink: #20312d;
-  --muted: #66756f;
+  --ink-2: #3a4a45;
+  --muted: #58665f;
   --line: #e3dccb;
   --line-soft: #ece6d8;
+  --field: #8f8672;
+  --select: #cfe3de;
+  --scrollbar: #c9c0ac;
   --open: #b4553c;
+  --open-ink: #9c4632;
   --open-wash: #f6e7e2;
-  --offsite: #5b7a99;
+  --offsite: #4171a8;
+  --offsite-ink: #3a6595;
   --offsite-wash: #e8eef4;
   --pfas: #6d4e9c;
-  --serif: "Fraunces", Georgia, serif;
-  --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", Consolas, monospace;
+  --pfas-ink: #5c4a85;
+  --pfas-wash: #f1ecf8;
+  --pfas-line: #ddd2ee;
+  --radius: 6px;
+  --serif: "Fraunces Variable", "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --mono: "JetBrains Mono", Consolas, ui-monospace, monospace;
+  /* The chevron every select draws, matching the Icon set's stroke. */
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2320312d' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 8l4.5 4.5L14.5 8'/%3E%3C/svg%3E");
 }
 
 * {
@@ -39,122 +59,163 @@ body {
   font-size: 15px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.ledger {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 20px 20px 8px;
+/* Browser surfaces carry the palette too. */
+::selection {
+  background: var(--select);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+input,
+select {
+  caret-color: var(--teal-ink);
 }
 
 a {
   color: var(--teal-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 button {
   font-family: var(--sans);
 }
 
-/* ---------------------------------------------------------------- masthead */
-
-.masthead {
-  border-bottom: 3px solid var(--ink);
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-}
-
-.masthead__brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-.masthead__logo img {
-  display: block;
-  height: 26px;
-  width: auto;
-}
-
-.masthead__motto {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.masthead__lede {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-
-/* The badge PNG is a circle on a white square; the radius clips the
-   corners so it sits cleanly on the cream background. */
-.masthead__badge {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
+.icon {
+  display: inline-block;
   flex: none;
 }
 
+.ledger {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 20px 8px;
+}
+
+/* ------------------------------------------------------------------ flag */
+/* WPR's flag: seal + wordmark + tagline as one lockup, closed by the
+   newspaper thick-over-thin rule. The tool's title sits below it. */
+
+.flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.flag__badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* the PNG is a seal on a white square */
+  flex: none;
+}
+
+.flag__words {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.flag__wordmark {
+  display: block;
+  height: 26px;
+  width: auto;
+  max-width: 100%;
+}
+
+.flag__tagline {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.flag-rule {
+  height: 8px;
+  border-top: 4px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin: 14px 0 24px;
+}
+
+/* ------------------------------------------------------------ masthead */
+
+.masthead {
+  margin-bottom: 26px;
+}
+
+.masthead__tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "heading county"
+    "dek dek"
+    "meta meta";
+  column-gap: 28px;
+  align-items: end;
+}
+
+.masthead__heading {
+  grid-area: heading;
+}
+
 .masthead__kicker {
-  font-family: var(--sans);
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--teal-ink);
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 }
 
 .masthead__title {
   font-family: var(--serif);
-  font-weight: 900;
-  font-size: clamp(30px, 5vw, 44px);
-  line-height: 1.05;
+  font-weight: 800;
+  font-size: clamp(36px, 6.2vw, 60px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
   margin: 0;
-  letter-spacing: -0.01em;
-}
-
-.masthead__dek {
-  font-size: 16.5px;
-  max-width: 62ch;
-  margin: 0 0 10px;
-  color: #3a4a45;
+  text-wrap: balance;
 }
 
 .masthead__county {
+  grid-area: county;
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 10px;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 4px;
 }
 
-.masthead__county select {
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 7px 10px;
-}
-
-.masthead__county select:focus {
-  outline: 2px solid var(--teal);
-  outline-offset: 1px;
+.masthead__dek {
+  grid-area: dek;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 60ch;
+  margin: 16px 0 10px;
+  text-wrap: pretty;
 }
 
 .masthead__meta {
-  font-family: var(--mono);
-  font-size: 12px;
+  grid-area: meta;
+  font-size: 12.5px;
   color: var(--muted);
+  margin: 0;
 }
 
 .masthead__meta button {
@@ -164,136 +225,249 @@ button {
   font: inherit;
   color: var(--teal-ink);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
   cursor: pointer;
 }
 
-/* ------------------------------------------------------------------- stats */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  margin-bottom: 18px;
+.masthead__meta button:hover {
+  text-decoration-thickness: 2px;
 }
 
-.stat {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 14px 12px;
+/* ---------------------------------------------------------- form fields */
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.control--search {
+  flex: 1 1 240px;
+}
+
+.control__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.control input[type="search"],
+.control select,
+.masthead__county select {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--ink);
+  background-color: var(--paper);
+  border: 1px solid var(--field);
+  border-radius: var(--radius);
+  padding: 9px 12px;
+  min-height: 40px;
+  min-width: 0;
+}
+
+.control select,
+.masthead__county select {
+  appearance: none;
+  padding-right: 36px;
+  background-image: var(--chevron);
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+.masthead__county select {
+  font-weight: 600;
+}
+
+.control input[type="search"] {
+  width: 100%;
+}
+
+.control input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.control input[type="search"]:focus,
+.control select:focus,
+.masthead__county select:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+  border-color: var(--teal);
+}
+
+/* Quiet secondary button: Clear filters, empty-state recovery. */
+.btn--quiet,
+.controls__reset {
+  background: none;
+  border: 1px solid var(--field);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+  font-size: 13px;
+  padding: 8px 12px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.btn--quiet:hover,
+.controls__reset:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ------------------------------------------------------------------ tally */
+/* The county's totals as one ruled ledger band: columns split by warm
+   hairlines, headline figures in Fraunces. Status columns are toggles. */
+
+.tally {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.tally--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 4px 0 20px;
+}
+
+.tally__cell {
+  display: flex;
+  min-width: 0;
+}
+
+.tally__cell + .tally__cell {
+  border-left: 1px solid var(--line);
+}
+
+.tally__btn,
+.tally__static {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
+  gap: 9px;
+  padding: 18px 10px 16px;
   text-align: center;
 }
 
-/* Filterable tiles: quiet card at rest, teal affordance on hover, wash +
-   inset ring while the filter is applied. Numerals stay in ink; the dot
-   beside the label carries the status color. */
-.stat--btn {
+.tally__btn {
   font: inherit;
   color: inherit;
+  background: none;
+  border: 0;
+  border-radius: 0;
   cursor: pointer;
-  transition: border-color 0.12s ease, box-shadow 0.12s ease,
-    background 0.12s ease;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.stat--btn:hover {
-  border-color: var(--teal);
+.tally__btn:hover {
+  background: rgba(58, 134, 124, 0.07);
 }
 
-.stat--btn:focus-visible {
+.tally__btn:focus-visible {
   outline: 2px solid var(--teal);
-  outline-offset: 1px;
+  outline-offset: -2px;
 }
 
-.stat--active {
+.tally__btn--on,
+.tally__btn--on:hover {
   background: var(--teal-wash);
-  border-color: var(--teal);
-  box-shadow: inset 0 0 0 1px var(--teal);
+  box-shadow: inset 0 -3px 0 var(--teal);
 }
 
-.stat__num {
-  font-family: var(--mono);
+.tally__btn:disabled {
+  cursor: default;
+  background: none;
+}
+
+.tally__num {
+  font-family: var(--serif);
   font-weight: 600;
-  font-size: 28px;
-  line-height: 1.1;
+  font-size: clamp(28px, 3.6vw, 38px);
+  line-height: 1;
+  font-variant-numeric: lining-nums proportional-nums;
   color: var(--ink);
 }
 
-.stat__label {
+.tally__label {
   font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.35;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
-  max-width: 20ch;
+  max-width: 21ch;
 }
 
-.stat__dot {
+.tally__dot {
+  display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 5px;
-  vertical-align: baseline;
+  margin-right: 6px;
+  vertical-align: 0.05em;
 }
 
-/* ---------------------------------------------------------------- controls */
+/* --------------------------------------------------------------- controls */
 
 .controls {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: flex-end;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   position: relative;
 }
 
 .controls__filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
   font-family: var(--sans);
   font-size: 14px;
   font-weight: 600;
   color: var(--ink);
   background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  border: 1px solid var(--field);
+  border-radius: var(--radius);
   padding: 8px 12px;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
 }
 
 .controls__filters:hover {
-  border-color: var(--muted);
-}
-
-.controls__filters:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 1px;
+  border-color: var(--ink);
 }
 
 .controls__filters--on {
-  border-color: var(--teal);
+  border-color: var(--teal-ink);
   color: var(--teal-ink);
 }
 
 .controls__badge {
-  font-family: var(--mono);
   font-size: 11px;
-  font-weight: 600;
-  background: var(--teal);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: var(--teal-ink);
   color: #fff;
   border-radius: 10px;
-  padding: 1px 7px;
-  margin-left: 7px;
+  padding: 3px 7px;
 }
 
 .controls__caret {
+  display: inline-flex;
   color: var(--muted);
-  font-size: 10px;
-  margin-left: 7px;
 }
 
 /* Filter popover: a disclosure anchored under the controls row. */
@@ -305,15 +479,15 @@ button {
   width: min(620px, 100%);
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 6px;
-  box-shadow: 0 10px 28px rgba(32, 49, 45, 0.18);
-  padding: 14px;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(32, 49, 45, 0.18);
+  padding: 16px;
 }
 
 .fpanel__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
 }
 
 .fpanel__grid .control select {
@@ -326,25 +500,28 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
-  margin: 14px 0 6px;
+  margin: 16px 0 6px;
 }
 
 .fpanel__flags {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 2px;
 }
 
 .fpanel__flag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
+  min-height: 30px;
   font-size: 13.5px;
   cursor: pointer;
 }
 
 .fpanel__flag input {
   accent-color: var(--teal);
+  width: 16px;
+  height: 16px;
   margin: 0;
 }
 
@@ -352,114 +529,131 @@ button {
   margin-top: 14px;
 }
 
-.control {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.control--search {
-  flex: 1 1 220px;
-}
-
-.control__label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-}
-
-.control input[type="search"],
-.control select {
-  font-family: var(--sans);
-  font-size: 14px;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 8px 10px;
-  min-width: 0;
-}
-
-.control input[type="search"] {
-  width: 100%;
-}
-
-.control input[type="search"]:focus,
-.control select:focus {
-  outline: 2px solid var(--teal);
-  outline-offset: 1px;
-}
-
-.controls__reset {
-  background: none;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: var(--muted);
-  font-size: 13px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.controls__reset:hover {
-  color: var(--ink);
-  border-color: var(--muted);
-}
-
 .controls__count {
-  font-family: var(--mono);
-  font-size: 12px;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
   color: var(--muted);
   margin: 0 0 10px;
 }
 
 .controls__count strong {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* --------------------------------------------------------------------- map */
+/* -------------------------------------------------------------------- map */
 
+/* isolation: Leaflet's own z-indexes (controls at 1000) stay inside this
+   card, so the Filters popover and the drawers always layer above it. */
 .mapcard {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 16px;
+  isolation: isolate;
 }
 
 .mapcard__map {
   height: 460px;
 }
 
-.mapcard__legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  padding: 8px 12px;
-  border-top: 1px solid var(--line-soft);
-  font-size: 12.5px;
-  color: var(--muted);
+.mapcard .leaflet-container {
+  font-family: var(--sans);
+  font-size: 13px;
 }
 
+.mapcard .leaflet-bar {
+  border: 1px solid var(--field);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(32, 49, 45, 0.12);
+  overflow: hidden;
+}
+
+.mapcard .leaflet-bar a {
+  width: 32px;
+  height: 32px;
+  line-height: 31px;
+  color: var(--ink);
+  background: var(--paper);
+  border-bottom-color: var(--line);
+}
+
+.mapcard .leaflet-bar a:hover {
+  background: var(--cream);
+}
+
+.mapcard .leaflet-control-attribution {
+  font-size: 10.5px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.mapcard .leaflet-control-attribution a {
+  color: var(--teal-ink);
+}
+
+/* Two legend rows, site statuses over water systems: together they never
+   fit one line, so they stack at every width instead of wrapping apart. */
+.mapcard__legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 14px 10px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+.legend__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 18px;
+}
+
+.legend__group--pfas {
+  padding-top: 6px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.legend__toggle,
 .legend__item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  min-height: 28px;
 }
 
+.legend__toggle {
+  cursor: pointer;
+}
+
+.legend__toggle input {
+  accent-color: var(--teal);
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+.legend__group--pfas .legend__toggle input {
+  accent-color: var(--pfas);
+}
+
+/* Keys mirror the map marks: dots ringed in white, diamonds edged in ink. */
 .legend__dot {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  display: inline-block;
-  border: 1.5px solid rgba(32, 49, 45, 0.35);
+  box-shadow: 0 0 0 1.5px var(--paper), 0 0 0 2.5px rgba(32, 49, 45, 0.22);
 }
 
-.leaflet-container {
-  font-family: var(--sans);
-  font-size: 13px;
+.legend__diamond {
+  width: 9px;
+  height: 9px;
+  margin: 0 1px;
+  transform: rotate(45deg);
+  border: 1px solid var(--ink);
 }
 
 .leaflet-tooltip.site-tip {
@@ -467,9 +661,9 @@ button {
   color: var(--cream);
   border: none;
   border-radius: 4px;
-  padding: 5px 9px;
+  padding: 6px 10px;
   font-size: 12.5px;
-  box-shadow: 0 2px 8px rgba(32, 49, 45, 0.35);
+  box-shadow: 0 3px 10px rgba(32, 49, 45, 0.3);
 }
 
 .leaflet-tooltip.site-tip::before {
@@ -482,17 +676,39 @@ button {
 }
 
 .site-tip__sub {
-  font-family: var(--mono);
-  font-size: 11px;
-  opacity: 0.8;
+  font-size: 11.5px;
+  opacity: 0.85;
 }
 
-/* ------------------------------------------------------------------- table */
+/* Water-system markers: rotated squares, so they read as different-in-
+   kind from the site circles even without color. Fill comes inline from
+   pfasCopy.js. */
+.pfas-pin {
+  background: none;
+  border: none;
+}
+
+.pfas-pin__diamond {
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin: 2px;
+  transform: rotate(45deg);
+  border: 1px solid var(--ink);
+  transition: transform 0.12s ease;
+}
+
+/* Street-level zoom: diamonds grow with the site circles. */
+.mapcard__map--close .pfas-pin__diamond {
+  transform: rotate(45deg) scale(1.3);
+}
+
+/* ------------------------------------------------------------------ table */
 
 .tablecard {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 16px;
 }
@@ -500,6 +716,12 @@ button {
 .tablecard__scroll {
   max-height: 480px;
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar) transparent;
+}
+
+.tablecard--full .tablecard__scroll {
+  max-height: none;
 }
 
 table.sites {
@@ -525,79 +747,124 @@ table.sites th {
 
 table.sites th button {
   all: unset;
-  display: block;
-  width: 100%;
-  padding: 9px 10px;
-  cursor: pointer;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 10px 12px;
+  cursor: pointer;
 }
 
-table.sites th button:hover,
-table.sites th button:focus-visible {
+table.sites th button:hover {
   background: #33443f;
 }
 
+table.sites th button:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: -4px;
+}
+
 .sort-arrow {
-  font-size: 9px;
-  margin-left: 4px;
+  display: inline-flex;
 }
 
 table.sites td {
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-top: 1px solid var(--line-soft);
   vertical-align: top;
 }
 
 tr.sites__row {
   cursor: pointer;
+  transition: background-color 0.12s ease;
 }
 
 tr.sites__row:hover {
+  background: var(--cream-hover);
+}
+
+/* Inset ring (box-shadow paints reliably on table rows, outline doesn't). */
+tr.sites__row:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--teal);
+}
+
+tr.sites__row--active,
+tr.sites__row--active:hover {
   background: var(--teal-wash);
 }
 
-tr.sites__row--active {
-  background: var(--teal-wash);
-  box-shadow: inset 3px 0 0 var(--teal);
+tr.sites__row--active .sites__name {
+  color: var(--teal-ink);
 }
 
-.sites__brrts {
+.sites__id {
   font-family: var(--mono);
   font-size: 12px;
   white-space: nowrap;
+  color: var(--ink-2);
 }
 
 .sites__name {
+  display: block;
   font-weight: 600;
 }
 
 .sites__addr {
+  display: block;
   color: var(--muted);
   font-size: 12.5px;
+  margin-top: 2px;
+}
+
+/* Phone-only line folding the hidden columns into the name cell. */
+.sites__meta {
+  display: none;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.sites__chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sites__date {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2);
 }
 
 .sites__empty {
-  padding: 28px;
+  padding: 32px 16px;
   text-align: center;
   color: var(--muted);
 }
 
-/* ------------------------------------------------------------------- chips */
+.sites__empty .btn--quiet {
+  margin-left: 12px;
+}
+
+/* ------------------------------------------------------------------ chips */
 
 .chip {
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  border-radius: 20px;
-  padding: 2px 9px;
+  border-radius: 999px;
+  padding: 1px 9px;
   white-space: nowrap;
 }
 
 .chip--open {
   background: var(--open-wash);
-  color: var(--open);
+  color: var(--open-ink);
 }
 
 .chip--closed {
@@ -607,21 +874,184 @@ tr.sites__row--active {
 
 .chip--offsite {
   background: var(--offsite-wash);
-  color: var(--offsite);
+  color: var(--offsite-ink);
 }
 
 .chip--pfas {
-  background: #efe8f8;
-  color: var(--pfas);
+  background: var(--pfas-wash);
+  color: var(--pfas-ink);
 }
 
+/* Outlined chips draw their edge inside, so every chip is the same size. */
 .chip--flag {
   background: var(--cream);
   color: #6b5d3f;
-  border: 1px solid var(--line);
+  box-shadow: inset 0 0 0 1px var(--line);
 }
 
-/* ------------------------------------------------------------------ drawer */
+.chip--type {
+  background: var(--paper);
+  color: var(--teal-ink);
+  box-shadow: inset 0 0 0 1px var(--teal);
+}
+
+/* PFAS result chips: an ordinal lavender ramp, darker = further along
+   DNR's category scale. Pending is deliberately colorless. */
+.chip--pfas-pending {
+  background: var(--cream);
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.chip--pfas-not-detected {
+  background: #f0edf8;
+  color: #5c4a85;
+}
+
+.chip--pfas-below-hi {
+  background: #e7e1f4;
+  color: #54407e;
+}
+
+.chip--pfas-exceeds-hi {
+  background: #ddd3ef;
+  color: #472f73;
+}
+
+.chip--pfas-above-hal {
+  background: #d3c6ea;
+  color: #392460;
+}
+
+/* --------------------------------------------------------------- sections */
+/* The two story sections (enforcement record, drinking water) open with
+   a ruled head and sit directly on the page, not in cards. */
+
+.section {
+  margin: 44px 0 16px;
+  padding-top: 14px;
+  border-top: 2px solid var(--ink);
+}
+
+.section__kicker {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-ink);
+  margin: 0 0 8px;
+}
+
+.section--pfas .section__kicker {
+  color: var(--pfas-ink);
+}
+
+.section__title {
+  font-family: var(--serif);
+  font-weight: 650;
+  font-size: clamp(24px, 3vw, 31px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+
+.section__dek {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 66ch;
+  margin: 0 0 18px;
+  text-wrap: pretty;
+}
+
+.section__subhead {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 26px 0 10px;
+}
+
+.section__fineprint {
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 90ch;
+  margin: 16px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.enf__para {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 72ch;
+  margin: 0 0 10px;
+}
+
+/* One series, so one color and no legend; values at the bar tips. */
+.enf__bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 860px;
+}
+
+.enf__bar {
+  display: grid;
+  grid-template-columns: minmax(150px, 250px) 1fr 44px;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.enf__bar-track {
+  height: 10px;
+  background: var(--line-soft);
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+}
+
+.enf__bar-fill {
+  display: block;
+  height: 100%;
+  min-width: 3px;
+  background: var(--teal);
+  border-radius: 0 4px 4px 0;
+}
+
+.enf__bar-num {
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.enf__note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+/* Callouts: a tinted panel with a hairline edge all the way round. */
+.callout,
+.drawer__note {
+  font-size: 13.5px;
+  line-height: 1.55;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  margin: 0 0 16px;
+}
+
+.callout--pfas {
+  background: var(--pfas-wash);
+  box-shadow: inset 0 0 0 1px var(--pfas-line);
+  color: #46395e;
+  max-width: 82ch;
+}
+
+/* ----------------------------------------------------------------- drawer */
 
 .drawer-backdrop {
   position: fixed;
@@ -635,38 +1065,59 @@ tr.sites__row--active {
   top: 0;
   right: 0;
   bottom: 0;
-  width: min(460px, 94vw);
+  width: min(480px, 94vw);
   background: var(--paper);
   z-index: 1001;
-  box-shadow: -6px 0 24px rgba(32, 49, 45, 0.25);
+  box-shadow: -8px 0 32px rgba(32, 49, 45, 0.22);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  border-left: 4px solid var(--teal);
+  overscroll-behavior: contain;
+  border-top: 4px solid var(--teal);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar) transparent;
 }
 
-.drawer__head {
-  padding: 18px 20px 14px;
-  border-bottom: 1px solid var(--line);
-  background: var(--cream);
+.drawer--pfas {
+  border-top-color: var(--pfas);
+}
+
+/* Zero-height sticky bar: the close button floats over the record and
+   stays in reach while it scrolls. */
+.drawer__bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .drawer__close {
-  float: right;
-  background: none;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin: 12px 12px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-  line-height: 1;
+  color: var(--ink-2);
+  box-shadow: 0 2px 6px rgba(32, 49, 45, 0.12);
   cursor: pointer;
-  color: var(--muted);
 }
 
 .drawer__close:hover {
   color: var(--ink);
-  border-color: var(--muted);
+  border-color: var(--field);
+}
+
+.drawer__head {
+  padding: 20px 66px 16px 22px;
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
 }
 
 .drawer__brrts {
@@ -678,16 +1129,17 @@ tr.sites__row--active {
 
 .drawer__title {
   font-family: var(--serif);
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 1.15;
+  font-weight: 650;
+  font-size: 24px;
+  line-height: 1.12;
   margin: 0 0 8px;
+  text-wrap: balance;
 }
 
 .drawer__addr {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 14px;
-  color: #3a4a45;
+  color: var(--ink-2);
 }
 
 .drawer__chips {
@@ -697,23 +1149,25 @@ tr.sites__row--active {
 }
 
 .drawer__body {
-  padding: 16px 20px 20px;
+  padding: 18px 22px 26px;
 }
 
 .drawer__note {
   background: var(--teal-wash);
-  border-left: 3px solid var(--teal);
-  border-radius: 0 6px 6px 0;
-  font-size: 13px;
-  padding: 10px 12px;
-  margin: 0 0 16px;
+  box-shadow: inset 0 0 0 1px var(--teal-line);
   color: #2c4a44;
 }
 
 .drawer__note--offsite {
   background: var(--offsite-wash);
-  border-left-color: var(--offsite);
-  color: #3d5468;
+  box-shadow: inset 0 0 0 1px #cfdbe8;
+  color: #34506b;
+}
+
+.drawer__note--pfas {
+  background: var(--pfas-wash);
+  box-shadow: inset 0 0 0 1px var(--pfas-line);
+  color: #46395e;
 }
 
 .drawer h3 {
@@ -723,7 +1177,7 @@ tr.sites__row--active {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--muted);
-  margin: 18px 0 8px;
+  margin: 22px 0 8px;
 }
 
 .drawer h3:first-child {
@@ -734,7 +1188,7 @@ tr.sites__row--active {
   margin: 0;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 4px 14px;
+  gap: 5px 16px;
   font-size: 13.5px;
 }
 
@@ -744,6 +1198,10 @@ tr.sites__row--active {
 
 .facts dd {
   margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.facts__id {
   font-family: var(--mono);
   font-size: 12.5px;
 }
@@ -755,7 +1213,7 @@ tr.sites__row--active {
 }
 
 .parties li {
-  padding: 7px 0;
+  padding: 8px 0;
   border-top: 1px solid var(--line-soft);
   font-size: 13.5px;
 }
@@ -795,253 +1253,19 @@ tr.sites__row--active {
   content: "";
   position: absolute;
   left: -5px;
-  top: 5px;
+  top: 6px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--teal);
+  box-shadow: 0 0 0 2px var(--paper);
 }
 
 .timeline__date {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  color: var(--muted);
   display: block;
-}
-
-.drawer__dnr {
-  display: inline-block;
-  margin-top: 14px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.drawer__fineprint {
   font-size: 12px;
+  font-variant-numeric: tabular-nums;
   color: var(--muted);
-  margin-top: 14px;
-}
-
-/* ------------------------------------------------------------------- about */
-
-.about {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-
-.about h2 {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 20px;
-  margin: 0 0 10px;
-}
-
-.about p {
-  max-width: 72ch;
-}
-
-.about__law {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* ------------------------------------------------------------------ footer */
-
-.foot {
-  border-top: 3px solid var(--ink);
-  margin-top: 4px;
-  padding: 14px 0 18px;
-  font-size: 12.5px;
-  color: var(--muted);
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.foot__badge {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  flex: none;
-  margin-top: 4px;
-}
-
-.foot p {
-  margin: 0 0 6px;
-}
-
-.foot a {
-  color: var(--teal-ink);
-}
-
-.foot__logo img {
-  height: 18px;
-  width: auto;
-  display: block;
-  margin-bottom: 8px;
-  opacity: 0.85;
-}
-
-/* ------------------------------------------- pfas drinking-water section */
-/* All reader-facing strings rendered with these styles come from
-   src/pfasCopy.js; this block is presentation only. Purple (--pfas) is the
-   drinking-water accent, distinct from the site status colors. */
-
-.pfas {
-  margin-bottom: 16px;
-  padding-top: 6px;
-  border-top: 1px solid var(--line);
-}
-
-.pfas__kicker {
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #5c4a85;
-  margin: 12px 0 6px;
-}
-
-.pfas__title {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 0 0 8px;
-}
-
-.pfas__dek {
-  font-size: 14.5px;
-  max-width: 70ch;
-  margin: 0 0 12px;
-  color: #3a4a45;
-}
-
-.pfas__caveat {
-  background: #f1ecf8;
-  border-left: 3px solid var(--pfas);
-  border-radius: 0 6px 6px 0;
-  font-size: 13px;
-  padding: 10px 12px;
-  margin: 0 0 14px;
-  color: #46395e;
-  max-width: 82ch;
-}
-
-.pfas__source {
-  font-size: 12px;
-  color: var(--muted);
-  margin: 10px 0 0;
-}
-
-/* Result category chips — an ordinal lavender ramp, darker = further along
-   DNR's category scale. Pending is deliberately colorless. */
-
-.chip--pfas-pending {
-  background: var(--cream);
-  color: var(--muted);
-  border: 1px solid var(--line);
-}
-
-.chip--pfas-not-detected {
-  background: #f0edf8;
-  color: #5c4a85;
-}
-
-.chip--pfas-below-hi {
-  background: #e7e1f4;
-  color: #54407e;
-}
-
-.chip--pfas-exceeds-hi {
-  background: #ddd3ef;
-  color: #472f73;
-}
-
-.chip--pfas-above-hal {
-  background: #d3c6ea;
-  color: #392460;
-}
-
-/* Map markers: rotated squares so water systems read as different-in-kind
-   from the site circles even without color. Fill color comes inline from
-   pfasCopy.js entries. */
-
-.pfas-pin {
-  background: none;
-  border: none;
-}
-
-.pfas-pin__diamond {
-  display: block;
-  width: 11px;
-  height: 11px;
-  margin: 2px;
-  transform: rotate(45deg);
-  border: 1px solid #20312d;
-  transition: transform 0.12s ease;
-}
-
-/* Street-level zoom: diamonds grow with the site circles. */
-.mapcard__map--close .pfas-pin__diamond {
-  transform: rotate(45deg) scale(1.3);
-}
-
-.legend__toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.legend__toggle input {
-  accent-color: var(--teal);
-  margin: 0;
-}
-
-/* The PFAS master toggle separates the two datasets on the legend row. */
-.legend__toggle--sep {
-  padding-left: 14px;
-  border-left: 1px solid var(--line-soft);
-}
-
-.legend__toggle--sep input {
-  accent-color: var(--pfas);
-}
-
-.legend__diamond {
-  width: 9px;
-  height: 9px;
-  display: inline-block;
-  transform: rotate(45deg);
-  border: 1.5px solid rgba(32, 49, 45, 0.35);
-}
-
-.drawer--pfas {
-  border-left-color: var(--pfas);
-}
-
-.drawer__note--pfas {
-  background: #f1ecf8;
-  border-left-color: var(--pfas);
-  color: #46395e;
-}
-
-/* --------------------------------------------- site-record enrichment */
-/* All reader-facing strings rendered with these styles come from
-   src/recordCopy.js; this block is presentation only. */
-
-.chip--type {
-  background: var(--paper);
-  border: 1px solid var(--teal);
-  color: var(--teal-ink);
 }
 
 .obl {
@@ -1051,7 +1275,7 @@ tr.sites__row--active {
 }
 
 .obl li {
-  padding: 7px 0;
+  padding: 8px 0;
   border-top: 1px solid var(--line-soft);
   font-size: 13px;
 }
@@ -1061,12 +1285,18 @@ tr.sites__row--active {
 }
 
 .obl .chip {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .obl__note {
   display: block;
-  color: #3a4a45;
+  color: var(--ink-2);
+}
+
+.drawer__fineprint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 16px;
 }
 
 .drawer__fineprint--tight {
@@ -1098,6 +1328,8 @@ tr.sites__row--active {
   font-weight: 600;
   color: var(--teal-ink);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
   cursor: pointer;
   text-align: left;
 }
@@ -1119,7 +1351,7 @@ tr.sites__row--active {
 .substances {
   font-size: 13px;
   margin: 0;
-  color: #3a4a45;
+  color: var(--ink-2);
 }
 
 .impacts {
@@ -1147,209 +1379,270 @@ tr.sites__row--active {
 
 .drawer__links {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.drawer__dnr {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .drawer__copylink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: none;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: var(--muted);
-  font-size: 12px;
-  padding: 5px 10px;
+  border: 1px solid var(--field);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+  font-size: 12.5px;
+  padding: 6px 11px;
+  min-height: 36px;
   cursor: pointer;
-  margin-top: 14px;
 }
 
 .drawer__copylink:hover {
   color: var(--ink);
-  border-color: var(--muted);
+  border-color: var(--ink);
 }
 
-/* Enforcement panel */
+/* ------------------------------------------------------------------ about */
 
-.enf {
+.about {
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin-bottom: 16px;
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.enf__kicker {
-  font-family: var(--sans);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--teal-ink);
-  margin: 0 0 6px;
-}
-
-.enf__title {
+.about h2 {
   font-family: var(--serif);
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.15;
-  margin: 0 0 8px;
-}
-
-.enf__dek {
-  font-size: 14.5px;
-  max-width: 70ch;
-  margin: 0 0 14px;
-  color: #3a4a45;
-}
-
-.enf__stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.enf__stats .stat {
-  background: var(--cream);
-}
-
-.enf__para {
-  font-size: 13.5px;
-  max-width: 78ch;
+  font-weight: 650;
+  font-size: 21px;
   margin: 0 0 10px;
 }
 
-.enf__subhead {
-  font-family: var(--sans);
-  font-size: 11.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--muted);
-  margin: 16px 0 8px;
+.about p {
+  max-width: 72ch;
 }
 
-.enf__bars {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.enf__bar {
-  display: grid;
-  grid-template-columns: minmax(150px, 240px) 1fr 40px;
-  align-items: center;
-  gap: 10px;
-  padding: 3px 0;
-  font-size: 12.5px;
-}
-
-.enf__bar-label {
-  color: var(--ink);
-}
-
-.enf__bar-track {
-  background: var(--line-soft);
-  border-radius: 3px;
-  height: 10px;
-  overflow: hidden;
-}
-
-.enf__bar-fill {
-  display: block;
-  height: 100%;
-  background: var(--teal);
-  border-radius: 3px;
-  min-width: 2px;
-}
-
-.enf__bar-num {
+.about__law {
   font-family: var(--mono);
   font-size: 12px;
-  text-align: right;
-}
-
-.enf__note {
-  font-size: 12px;
   color: var(--muted);
-  margin: 6px 0 0;
 }
 
-.enf__fineprint {
+.notice {
+  background: var(--open-wash);
+  color: var(--open-ink);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+/* ----------------------------------------------------------------- footer */
+
+.foot {
+  margin-top: 44px;
+  padding-bottom: 22px;
   font-size: 12px;
+  line-height: 1.6;
   color: var(--muted);
-  margin: 12px 0 0;
-  border-top: 1px solid var(--line-soft);
-  padding-top: 10px;
 }
 
-/* -------------------------------------------------------------- responsive */
+.foot .flag-rule {
+  margin: 0 0 16px;
+}
+
+.foot__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.foot__badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.foot__body {
+  max-width: 88ch;
+}
+
+.foot p {
+  margin: 0 0 6px;
+}
+
+.foot__org {
+  color: var(--ink-2);
+}
+
+.foot__org a:first-child {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.foot__org a:first-child:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------- responsive */
 
 @media (max-width: 780px) {
   .ledger {
-    padding: 14px 12px 6px;
+    padding: 16px 14px 8px;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
+  .flag {
+    gap: 12px;
   }
 
-  .stat:nth-child(5) {
+  .flag__badge {
+    width: 48px;
+    height: 48px;
+  }
+
+  .flag__wordmark {
+    height: 21px;
+  }
+
+  .flag__tagline {
+    letter-spacing: 0.2em;
+    white-space: normal;
+  }
+
+  .flag-rule {
+    margin-bottom: 20px;
+  }
+
+  .masthead__tool {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "heading"
+      "dek"
+      "county"
+      "meta";
+  }
+
+  .masthead__dek {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .masthead__county {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 10px;
+  }
+
+  /* iOS zooms the page into any focused field set under 16px. */
+  .control input[type="search"],
+  .control select,
+  .masthead__county select {
+    font-size: 16px;
+  }
+
+  .tally {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tally__cell + .tally__cell {
+    border-left: 0;
+  }
+
+  .tally__cell:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+
+  .tally__cell:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  /* Municipalities is a desktop-only column. */
+  .tally > .tally__cell:nth-child(5) {
     display: none;
   }
 
+  .tally__btn,
+  .tally__static {
+    padding: 14px 8px 12px;
+  }
+
   .fpanel__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .mapcard__map {
-    height: 320px;
+    height: 340px;
   }
 
   .hide-sm {
     display: none;
   }
 
-  .enf__stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .enf__bar {
-    grid-template-columns: minmax(110px, 150px) 1fr 34px;
-  }
-
-  .masthead__motto {
-    display: none;
-  }
-
-  .masthead__badge {
-    width: 60px;
-    height: 60px;
-  }
-
-  .masthead__lede {
-    gap: 12px;
+  .sites__meta {
+    display: block;
   }
 
   .tablecard__scroll {
-    max-height: 400px;
+    max-height: 460px;
+  }
+
+  .enf__bar {
+    grid-template-columns: minmax(110px, 150px) 1fr 36px;
+    gap: 10px;
+  }
+
+  .section {
+    margin-top: 36px;
   }
 }
 
+@media (max-width: 520px) {
+  .drawer {
+    width: 100vw;
+  }
+}
+
+/* One authored moment: the record drawer slides in over a fading scrim. */
 @media (prefers-reduced-motion: no-preference) {
   .drawer {
-    animation: drawer-in 0.18s ease-out;
+    animation: drawer-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .drawer-backdrop {
+    animation: scrim-in 0.22s ease-out;
   }
 
   @keyframes drawer-in {
     from {
-      transform: translateX(24px);
+      transform: translateX(28px);
       opacity: 0.6;
     }
     to {
       transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scrim-in {
+    from {
+      opacity: 0;
+    }
+    to {
       opacity: 1;
     }
   }

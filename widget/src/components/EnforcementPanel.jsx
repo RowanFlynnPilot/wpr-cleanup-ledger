@@ -29,19 +29,23 @@ export default function EnforcementPanel({ sites, enforcement, countyDisplay }) 
   ];
 
   return (
-    <section className="enf" aria-label={RECORD_COPY.enforcementTitle}>
-      <p className="enf__kicker">{RECORD_COPY.enforcementKicker}</p>
-      <h2 className="enf__title">{RECORD_COPY.enforcementTitle}</h2>
-      <p className="enf__dek">{RECORD_COPY.enforcementDek}</p>
+    <section className="section" aria-labelledby="cl-enf-title">
+      <p className="section__kicker">{RECORD_COPY.enforcementKicker}</p>
+      <h2 className="section__title" id="cl-enf-title">
+        {RECORD_COPY.enforcementTitle}
+      </h2>
+      <p className="section__dek">{RECORD_COPY.enforcementDek}</p>
 
-      <div className="enf__stats" role="list">
+      <ul className="tally tally--four">
         {stats.map((it) => (
-          <div className="stat" role="listitem" key={it.label}>
-            <div className="stat__num">{it.num}</div>
-            <div className="stat__label">{it.label}</div>
-          </div>
+          <li className="tally__cell" key={it.label}>
+            <div className="tally__static">
+              <span className="tally__num">{it.num}</span>
+              <span className="tally__label">{it.label}</span>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <p className="enf__para">
         {RECORD_COPY.noticeGap(
@@ -62,7 +66,7 @@ export default function EnforcementPanel({ sites, enforcement, countyDisplay }) 
         )}
       </p>
 
-      <h3 className="enf__subhead">{RECORD_COPY.distributionHeading}</h3>
+      <h3 className="section__subhead">{RECORD_COPY.distributionHeading}</h3>
       <ul className="enf__bars">
         {distribution.map(([key, n]) => (
           <li
@@ -83,7 +87,7 @@ export default function EnforcementPanel({ sites, enforcement, countyDisplay }) 
       </ul>
       <p className="enf__note">{RECORD_COPY.distributionNote}</p>
 
-      <p className="enf__fineprint">
+      <p className="section__fineprint">
         {RECORD_COPY.enforcementFineprint(countyDisplay)}
       </p>
     </section>

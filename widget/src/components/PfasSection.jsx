@@ -14,11 +14,13 @@ export default function PfasSection({
   countyDisplay,
 }) {
   return (
-    <section className="pfas" aria-label={PFAS_COPY.title}>
-      <p className="pfas__kicker">{PFAS_COPY.kicker}</p>
-      <h2 className="pfas__title">{PFAS_COPY.title}</h2>
-      <p className="pfas__dek">{PFAS_COPY.dek(countyDisplay)}</p>
-      <p className="pfas__caveat">{PFAS_COPY.caveat(countyDisplay)}</p>
+    <section className="section section--pfas" aria-labelledby="cl-pfas-title">
+      <p className="section__kicker">{PFAS_COPY.kicker}</p>
+      <h2 className="section__title" id="cl-pfas-title">
+        {PFAS_COPY.title}
+      </h2>
+      <p className="section__dek">{PFAS_COPY.dek(countyDisplay)}</p>
+      <p className="callout callout--pfas">{PFAS_COPY.caveat(countyDisplay)}</p>
       {error ? (
         <p role="alert">{PFAS_COPY.loadError(error)}</p>
       ) : (
@@ -29,7 +31,7 @@ export default function PfasSection({
           loading={loading}
         />
       )}
-      <p className="pfas__source">{PFAS_COPY.source}</p>
+      <p className="section__fineprint">{PFAS_COPY.source}</p>
     </section>
   );
 }

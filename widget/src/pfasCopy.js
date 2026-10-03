@@ -21,11 +21,13 @@
 
 // Ordinal display metadata per DNR category. `rank` orders table sorts and
 // map draw order (higher renders on top); `color` fills the map diamond.
+// The four fills are one validated ordinal ramp (single hue, monotone
+// lightness, light end >= 2:1 against the map; Oct 2026).
 export const PFAS_RESULT_COPY = {
   "PFAS not detected in any samples from the water system": {
     key: "not-detected",
     rank: 1,
-    color: "#C9BCDF",
+    color: "#B8A8D8",
     short: "Not detected",
     label: "PFAS not detected",
     note:
@@ -35,7 +37,7 @@ export const PFAS_RESULT_COPY = {
   "PFAS detected below hazard index in one or more samples from the water system": {
     key: "below-hi",
     rank: 2,
-    color: "#9F8AC8",
+    color: "#9A84C6",
     short: "Detected below index",
     label: "PFAS detected, below the hazard index",
     note:
@@ -159,7 +161,8 @@ export const PFAS_COPY = {
   factSampled: "Most recent sample",
   factCity: "Mailing city",
   factPwsId: "PWS ID",
-  dnrLink: "View DNR's PFAS sampling map →",
+  // The trailing arrow is drawn (an external-link icon), not part of the copy.
+  dnrLink: "View DNR's PFAS sampling map",
   dnrLinkNote: (pwsId) =>
     `This system appears on the DNR viewer under PWS ID ${pwsId}.`,
   fineprint:

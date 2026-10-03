@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import Icon from "./Icon.jsx";
 import { embedDrawerBox } from "../lib/embedViewport.js";
 import {
   addressDisplay,
@@ -147,7 +148,9 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
             : undefined
         }
       >
-        <div className="drawer__head">
+        {/* Zero-height sticky bar: the close button stays in reach while
+            a long record scrolls beneath it. */}
+        <div className="drawer__bar">
           <button
             ref={closeRef}
             type="button"
@@ -155,8 +158,10 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
             onClick={onClose}
             aria-label="Close details"
           >
-            ✕
+            <Icon name="close" size={18} />
           </button>
+        </div>
+        <div className="drawer__head">
           <p className="drawer__brrts">BRRTS {site.brrts}</p>
           <h2 className="drawer__title">{site.name}</h2>
           <p className="drawer__addr">
@@ -329,13 +334,15 @@ export default function SiteDetail({ site, onClose, onJump, jumpable, county }) 
               target="_blank"
               rel="noopener noreferrer"
             >
-              View the full DNR record →
+              View the full DNR record
+              <Icon name="external" size={15} />
             </a>
             <button
               type="button"
               className="drawer__copylink"
               onClick={copyPermalink}
             >
+              <Icon name={copied ? "check" : "link"} size={15} />
               {copied ? RECORD_COPY.copyLinkCopied : RECORD_COPY.copyLink}
             </button>
           </div>

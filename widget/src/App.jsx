@@ -313,82 +313,101 @@ export default function App() {
       <div className="ledger">
         <Masthead
           onAbout={() => setAboutOpen((v) => !v)}
+          aboutOpen={aboutOpen}
           counties={counties}
           county={county}
           onCounty={handleCounty}
           countyDisplay={countyDisplay}
         />
-        <p role="alert">
-          The site database could not be loaded ({error}). Please try again
-          shortly.
-        </p>
+        <main>
+          {aboutOpen && <AboutPanel countyDisplay={countyDisplay} />}
+          <p className="notice" role="alert">
+            The site database could not be loaded ({error}). Please try again
+            shortly, or choose another county above.
+          </p>
+        </main>
         <Footer />
       </div>
     );
   }
+
+  const resetFilters = () => setFilters(EMPTY_FILTERS);
 
   return (
     <div className="ledger">
       <Masthead
         asOf={data?.bulk_extract_date}
         onAbout={() => setAboutOpen((v) => !v)}
+        aboutOpen={aboutOpen}
         counties={counties}
         county={county}
         onCounty={handleCounty}
         countyDisplay={countyDisplay}
       />
-      {aboutOpen && (
-        <AboutPanel
-          asOf={data?.bulk_extract_date}
-          countyDisplay={countyDisplay}
-        />
-      )}
-      <StatsStrip sites={sites} filters={filters} onChange={setFilters} />
-      <Controls
-        sites={sites}
-        filters={filters}
-        onChange={setFilters}
-        onReset={() => setFilters(EMPTY_FILTERS)}
-      />
-      {data && (
-        <p className="controls__count" aria-live="polite">
-          Showing <strong>{filtered.length}</strong> of {sites.length} sites
-          and records
-        </p>
-      )}
-      <SiteMap
-        sites={filtered}
-        selected={selected}
-        onSelect={handleSelect}
-        pfasSystems={pfas?.systems ?? []}
-        showPfas={showPfas}
-        onTogglePfas={setShowPfas}
-        selectedPfas={selectedPfas}
-        onSelectPfas={handleSelectPfas}
-        county={county}
-        countyDisplay={countyDisplay}
-      />
-      <SiteTable
-        sites={filtered}
-        selected={selected}
-        onSelect={handleSelect}
-        loading={!data}
-      />
-      {summary?.enforcement && (
-        <EnforcementPanel
+      <main>
+        {aboutOpen && (
+          <AboutPanel
+            asOf={data?.bulk_extract_date}
+            countyDisplay={countyDisplay}
+          />
+        )}
+        <StatsStrip
           sites={sites}
-          enforcement={summary.enforcement}
+          loading={!data}
+          filters={filters}
+          onChange={setFilters}
+        />
+        <Controls
+          sites={sites}
+          filters={filters}
+          onChange={setFilters}
+          onReset={resetFilters}
+        />
+        <p className="controls__count" aria-live="polite">
+          {data ? (
+            <>
+              Showing <strong>{filtered.length}</strong> of {sites.length}{" "}
+              sites and records
+            </>
+          ) : (
+            "Loading the public record…"
+          )}
+        </p>
+        <SiteMap
+          sites={filtered}
+          selected={selected}
+          onSelect={handleSelect}
+          pfasSystems={pfas?.systems ?? []}
+          showPfas={showPfas}
+          onTogglePfas={setShowPfas}
+          selectedPfas={selectedPfas}
+          onSelectPfas={handleSelectPfas}
+          county={county}
           countyDisplay={countyDisplay}
         />
-      )}
-      <PfasSection
-        systems={pfas?.systems ?? []}
-        error={pfasError}
-        loading={!pfas && !pfasError}
-        selected={selectedPfas}
-        onSelect={handleSelectPfas}
-        countyDisplay={countyDisplay}
-      />
+        <SiteTable
+          sites={filtered}
+          selected={selected}
+          onSelect={handleSelect}
+          loading={!data}
+          onReset={resetFilters}
+        />
+        {summary?.enforcement && (
+          <EnforcementPanel
+            sites={sites}
+            enforcement={summary.enforcement}
+            countyDisplay={countyDisplay}
+          />
+        )}
+        <PfasSection
+          systems={pfas?.systems ?? []}
+          error={pfasError}
+          loading={!pfas && !pfasError}
+          selected={selectedPfas}
+          onSelect={handleSelectPfas}
+          countyDisplay={countyDisplay}
+        />
+      </main>
       {selected && (
         <SiteDetail
           site={selected}

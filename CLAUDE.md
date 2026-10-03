@@ -169,11 +169,20 @@ Don't collapse this back into in-process retries.
 ## Roadmap
 
 - **Phase 1 — widget. SHIPPED July 2026.** React/Vite in `widget/`, WPR
-  design system (teal `#3A867C`, cream `#F6F2E9`, Fraunces display, Public
-  Sans body, JetBrains Mono for data) plus the live-site logo/wordmark
-  and, since July 2026, the circular typewriter badge shared with
-  wpr-water (masthead 84px + footer 64px seal; white-background PNG,
-  always clipped with border-radius 50%).
+  "Follow the Money" system: teal `#3A867C`, cream `#F6F2E9`, Fraunces
+  (variable, optical sizing) for display and headline figures, Public
+  Sans for text and column figures, JetBrains Mono only for record IDs
+  (BRRTS #, PWS ID). Since Oct 2026 the masthead follows the WPR fleet
+  standard: the flag (60px typewriter seal + wordmark + "Where Locals
+  Look First For News", one link home), closed by a thick-over-thin rule,
+  with the tool's title beneath it. The footer is a 44px seal plus
+  provenance and cadence, the DNR non-affiliation line, and "Wausau Pilot
+  & Review · 715-301-5539". Every text token in styles.css is AA-checked.
+  Status hues are mark colors; text on a status wash uses the *-ink
+  tokens. The seal is a white-background PNG clipped with border-radius
+  50%; public/favicon.png and apple-touch-icon.png are exact crops of it.
+  Don't AI-upscale WPR marks: Magnific's upscaler rewrote the seal's
+  motto (Oct 2026). A high-res master needs WPR's original file.
   Leaflet map + searchable site table + obligation detail drawer from
   `public/data/sites.json`; every site deep-links to its DNR record
   (`apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>`). Live at

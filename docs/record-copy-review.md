@@ -183,6 +183,24 @@ where the count is zero doesn't offer the filter):
 Both are facts of the record, framed as program context — no wrongdoing
 implied by either.
 
+**October 2026 — page chrome aligned to the WPR fleet standard.** No
+record or PFAS wording changed. These page-level strings are new or
+reworded (in `widget/src/components/Masthead.jsx`, `Footer.jsx`, and
+`App.jsx`):
+
+| String | Where | Why |
+|---|---|---|
+| Where Locals Look First For News | masthead tagline, under the wordmark | WPR's exact tagline, now set with the seal and wordmark as one flag |
+| Case details refresh quarterly; statuses and PFAS results are checked nightly. | footer, after the source line | refresh cadence beside the provenance line |
+| Not affiliated with or endorsed by the Wisconsin Department of Natural Resources. | footer | standard non-affiliation line for a government data source |
+| Wausau Pilot & Review · 715-301-5539 · Part of the accountability archive · Methodology & code | footer, last line | newsroom line with phone (tap-to-call on phones) |
+| …Please try again shortly, or choose another county above. | load-failure notice | names the recovery path |
+| Clear filters | inside the "No sites match the current filters." row | lets the reader recover from the empty result |
+
+On phones, the site table folds the BRRTS number and municipality under
+each site name, and the water-system table folds in "Most recent sample:
+{date}", reusing the vetted column label.
+
 ## What sign-off means
 
 Reply with edits (file: `widget/src/recordCopy.js`) or approval — for

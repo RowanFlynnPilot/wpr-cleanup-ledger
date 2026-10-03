@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import Icon from "./Icon.jsx";
 import {
   addressDisplay,
   fmtDate,
@@ -7,10 +8,12 @@ import {
   typeShort,
 } from "../lib/format.js";
 
+// hideSm columns fold into the site cell on phones (see .sites__meta), so
+// the status chip never scrolls off-screen.
 const COLUMNS = [
-  { key: "brrts", label: "BRRTS #" },
+  { key: "brrts", label: "BRRTS #", hideSm: true },
   { key: "name", label: "Site" },
-  { key: "muni", label: "Municipality" },
+  { key: "muni", label: "Municipality", hideSm: true },
   { key: "type", label: "Program", hideSm: true },
   { key: "status", label: "Status" },
   { key: "end_date", label: "Closed", hideSm: true },
@@ -27,7 +30,7 @@ function sortValue(site, key) {
   }
 }
 
-export default function SiteTable({ sites, selected, onSelect, loading }) {
+export default function SiteTable({ sites, selected, onSelect, loading, onReset }) {
   const [sort, setSort] = useState({ key: "brrts", dir: 1 });
 
   const sorted = useMemo(() => {
@@ -48,7 +51,12 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
 
   return (
     <div className="tablecard">
-      <div className="tablecard__scroll" tabIndex={0}>
+      <div
+        className="tablecard__scroll"
+        tabIndex={0}
+        role="region"
+        aria-label="Site records"
+      >
         <table className="sites">
           <thead>
             <tr>
@@ -67,8 +75,11 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
                   <button type="button" onClick={() => clickSort(c.key)}>
                     {c.label}
                     {sort.key === c.key && (
-                      <span className="sort-arrow" aria-hidden="true">
-                        {sort.dir === 1 ? "▲" : "▼"}
+                      <span className="sort-arrow">
+                        <Icon
+                          name={sort.dir === 1 ? "sortAsc" : "sortDesc"}
+                          size={12}
+                        />
                       </span>
                     )}
                   </button>
@@ -94,25 +105,28 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
                   tabIndex={0}
                   aria-label={`${site.name}, ${muniDisplay(site.muni)} — open details`}
                 >
-                  <td className="sites__brrts">{site.brrts}</td>
+                  <td className="hide-sm sites__id">{site.brrts}</td>
                   <td>
                     <span className="sites__name">{site.name}</span>
                     {site.address ? (
-                      <>
-                        <br />
-                        <span className="sites__addr">
-                          {addressDisplay(site.address)}
-                        </span>
-                      </>
+                      <span className="sites__addr">
+                        {addressDisplay(site.address)}
+                      </span>
                     ) : null}
+                    <span className="sites__meta">
+                      <span className="sites__id">{site.brrts}</span> ·{" "}
+                      {muniDisplay(site.muni)}
+                    </span>
                   </td>
-                  <td>{muniDisplay(site.muni)}</td>
+                  <td className="hide-sm">{muniDisplay(site.muni)}</td>
                   <td className="hide-sm">{typeShort(site.type)}</td>
                   <td>
-                    <span className={`chip chip--${st.key}`}>{st.short}</span>
-                    {site.pfas && <span className="chip chip--pfas"> PFAS</span>}
+                    <span className="sites__chips">
+                      <span className={`chip chip--${st.key}`}>{st.short}</span>
+                      {site.pfas && <span className="chip chip--pfas">PFAS</span>}
+                    </span>
                   </td>
-                  <td className="hide-sm sites__brrts">
+                  <td className="hide-sm sites__date">
                     {fmtDate(site.end_date) ?? "—"}
                   </td>
                 </tr>
@@ -121,9 +135,22 @@ export default function SiteTable({ sites, selected, onSelect, loading }) {
             {!sorted.length && (
               <tr>
                 <td colSpan={COLUMNS.length} className="sites__empty">
-                  {loading
-                    ? "Loading the public record…"
-                    : "No sites match the current filters."}
+                  {loading ? (
+                    "Loading the public record…"
+                  ) : (
+                    <>
+                      No sites match the current filters.
+                      {onReset && (
+                        <button
+                          type="button"
+                          className="btn btn--quiet"
+                          onClick={onReset}
+                        >
+                          Clear filters
+                        </button>
+                      )}
+                    </>
+                  )}
                 </td>
               </tr>
             )}

@@ -2,7 +2,7 @@ import { fmtDate } from "../lib/format.js";
 
 export default function AboutPanel({ asOf, countyDisplay }) {
   return (
-    <section className="about" aria-label="About this data">
+    <section className="about" id="cl-about" aria-label="About this data">
       <h2>About this data</h2>
       <p>
         When a contamination cleanup in Wisconsin is completed, the state often

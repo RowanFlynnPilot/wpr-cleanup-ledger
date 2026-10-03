@@ -1,5 +1,7 @@
-import "@fontsource/fraunces/600.css";
-import "@fontsource/fraunces/900.css";
+// Fraunces is variable on optical size: one file serves every weight, and
+// the browser matches the opsz axis to each font-size (display cut for the
+// title, text cut in the drawer).
+import "@fontsource-variable/fraunces/opsz.css";
 import "@fontsource/public-sans/400.css";
 import "@fontsource/public-sans/500.css";
 import "@fontsource/public-sans/600.css";

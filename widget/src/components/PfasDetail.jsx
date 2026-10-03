@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import Icon from "./Icon.jsx";
 import { embedDrawerBox } from "../lib/embedViewport.js";
 import { fmtDate, titleCase } from "../lib/format.js";
 import { PFAS_COPY, PFAS_VIEWER_URL, pfasResultOf } from "../pfasCopy.js";
@@ -102,7 +103,7 @@ export default function PfasDetail({ system, onClose, county }) {
             : undefined
         }
       >
-        <div className="drawer__head">
+        <div className="drawer__bar">
           <button
             ref={closeRef}
             type="button"
@@ -110,8 +111,10 @@ export default function PfasDetail({ system, onClose, county }) {
             onClick={onClose}
             aria-label="Close details"
           >
-            ✕
+            <Icon name="close" size={18} />
           </button>
+        </div>
+        <div className="drawer__head">
           <p className="drawer__brrts">{PFAS_COPY.drawerKicker(system.pws_id)}</p>
           <h2 className="drawer__title">{titleCase(system.name)}</h2>
           <div className="drawer__chips">
@@ -133,7 +136,7 @@ export default function PfasDetail({ system, onClose, county }) {
             <dt>{PFAS_COPY.factCity}</dt>
             <dd>{system.city ? titleCase(system.city) : "—"}</dd>
             <dt>{PFAS_COPY.factPwsId}</dt>
-            <dd>{system.pws_id}</dd>
+            <dd className="facts__id">{system.pws_id}</dd>
           </dl>
 
           <div className="drawer__links">
@@ -144,12 +147,14 @@ export default function PfasDetail({ system, onClose, county }) {
               rel="noopener noreferrer"
             >
               {PFAS_COPY.dnrLink}
+              <Icon name="external" size={15} />
             </a>
             <button
               type="button"
               className="drawer__copylink"
               onClick={copyPermalink}
             >
+              <Icon name={copied ? "check" : "link"} size={15} />
               {copied ? RECORD_COPY.copyLinkCopied : RECORD_COPY.copyLink}
             </button>
           </div>

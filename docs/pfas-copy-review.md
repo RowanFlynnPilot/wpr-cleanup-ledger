@@ -142,7 +142,7 @@ color-blind readers. Darker = further along DNR's category scale.
 | "Details for {system}" | drawer aria-label | |
 | Sampling record | facts heading | |
 | DNR result category / Most recent sample / Mailing city / PWS ID | fact labels | "Mailing city" is labeled precisely — DNR's CITY field is a mailing address city, not location (4) |
-| View DNR's PFAS sampling map → | link to https://dnrmaps.wi.gov/H5/?Viewer=PFAS | every record points back to the DNR source; no per-system deep link exists, so the drawer names the PWS ID for lookup |
+| View DNR's PFAS sampling map (followed by an external-link icon) | link to https://dnrmaps.wi.gov/H5/?Viewer=PFAS | every record points back to the DNR source; no per-system deep link exists, so the drawer names the PWS ID for lookup |
 | "This system appears on the DNR viewer under PWS ID {pws_id}." | fineprint, first sentence | |
 | "Categories are assigned by the Wisconsin DNR from the system's posted laboratory results and reflect samples taken to date, not continuous monitoring. Sampling under this program is voluntary; dates vary by system. Locations are mapped to the section of land the DNR records for the system, not the exact well." | fineprint | samples-to-date, voluntary cadence, and location precision, all stated (4) |
 

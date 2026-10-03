@@ -75,10 +75,14 @@ export function statusOf(site) {
   };
 }
 
+// Mark colors (map dots, legend keys, stat dots). Validated as a set with
+// the dataviz palette checker: CVD and normal-vision separation pass; the
+// teal is the brand accent and keeps its lower chroma by design. Text on
+// these hues uses the darker *-ink tokens in styles.css, never the mark.
 export const STATUS_COLORS = {
   open: "#B4553C",
   closed: "#3A867C",
-  offsite: "#5B7A99",
+  offsite: "#4171A8",
 };
 
 // Map draw order (later = on top). Single source with STATUS_COLORS so a
