@@ -3,8 +3,8 @@
 **For:** Shereen
 **Preview:** https://rowanflynnpilot.github.io/wpr-cleanup-ledger/ (scroll to
 "Drinking water", or click any purple diamond on the map)
-**Status:** Copy is live on the GitHub Pages preview only. Nothing is
-embedded on wausaupilotandreview.com until you sign off.
+**Status:** Signed off by Shereen on Aug 28, 2026 (email reply). Live on
+the GitHub Pages preview; not yet embedded on wausaupilotandreview.com.
 
 ## How this copy is governed
 

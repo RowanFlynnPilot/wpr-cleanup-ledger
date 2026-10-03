@@ -6,8 +6,8 @@ site's drawer; the enforcement panel sits between the site table and the
 drinking-water section)
 **Companion sheet:** [pfas-copy-review.md](pfas-copy-review.md) (the
 drinking-water wave). Reviewing both signs off the entire preview.
-**Status:** Live on the GitHub Pages preview only. Nothing is embedded on
-wausaupilotandreview.com until you sign off.
+**Status:** Signed off by Shereen on Aug 28, 2026 (email reply). Live on
+the GitHub Pages preview; not yet embedded on wausaupilotandreview.com.
 
 ## What this wave adds
 
@@ -183,7 +183,8 @@ where the count is zero doesn't offer the filter):
 Both are facts of the record, framed as program context — no wrongdoing
 implied by either.
 
-**October 2026 — page chrome aligned to the WPR fleet standard.** No
+**October 2026 — page chrome aligned to the WPR fleet standard** (added
+after the Aug 28 sign-off; shared with Shereen as a no-action FYI). No
 record or PFAS wording changed. These page-level strings are new or
 reworded (in `widget/src/components/Masthead.jsx`, `Footer.jsx`, and
 `App.jsx`):

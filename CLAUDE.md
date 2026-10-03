@@ -187,12 +187,15 @@ Don't collapse this back into in-process retries.
   `public/data/sites.json`; every site deep-links to its DNR record
   (`apps.dnr.wi.gov/rrbotw/botw-activity-detail?dsn=<dsn>`). Live at
   https://rowanflynnpilot.github.io/wpr-cleanup-ledger/ — iframe embed
-  snippet in README.md. Not yet embedded in production (awaits Shereen's
-  editorial review). Note: the news site itself uses Merriweather/Oswald;
+  snippet in README.md. Shereen signed off on both review sheets on Aug
+  28, 2026 (email reply: "looks as it should... I don't see any red
+  flags"). The Oct 2026 chrome lines went to her as a no-action FYI in
+  the same thread. Not yet embedded in production; the embed is the
+  remaining step. Note: the news site itself uses Merriweather/Oswald;
   the Fraunces/Public Sans system is the Ledger data-product brand — don't
   "fix" the widget to match the news theme.
-  - **PFAS layer added July 2026, awaiting editorial review for the
-    production embed.** Toggleable purple-diamond map layer + its own
+  - **PFAS layer added July 2026, editorially approved Aug 28, 2026.**
+    Toggleable purple-diamond map layer + its own
     searchable table and detail drawer, in a "Drinking water" section
     kept parallel to (never joined with) the site records. Every
     reader-facing PFAS string lives in `widget/src/pfasCopy.js`; the
@@ -229,9 +232,9 @@ Don't collapse this back into in-process retries.
     `recordCopy.js` and flagged in the review sheet. August 2026: the
     bulk program flags with nonzero counts (dry_cleaner, sfr) publish as
     drawer chips + filters; vple_coc and pfas_flag are zero region-wide
-    and deliberately stay unpublished. Shereen's sign-off
-    on the two review sheets is the only step left before the
-    wausaupilotandreview.com embed.
+    and deliberately stay unpublished. All of this was in what Shereen
+    approved on Aug 28. Any NEW reader-facing copy still goes to her
+    before it ships to the production embed.
 - **Phase 2 — the transactions join.** Spatial join: BRRTS point →
   point-in-polygon against Marathon County parcels → parcel ID → match
   wpr-property-transactions (DOR TAP) transfers. `LOC_ADDR` is 30-char
