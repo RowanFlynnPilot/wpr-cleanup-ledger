@@ -1,6 +1,15 @@
 {
  "events": [
   {
+   "address": "412 E 4th St",
+   "brrts": "0272599757",
+   "detected_at": "2026-10-05T19:22:47+00:00",
+   "event_type": "NO_LONGER_OPEN",
+   "layer_id": 101,
+   "muni": "Marshfield",
+   "name": "PREMIER AUTO BODY"
+  },
+  {
    "address": "2111 Jefferson St",
    "brrts": "0372599931",
    "detected_at": "2026-10-01T17:07:12+00:00",
