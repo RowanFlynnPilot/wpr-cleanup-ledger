@@ -1,8 +1,8 @@
 {
- "activities_total": 1398,
- "bulk_extract_date": "2026-07-01",
+ "activities_total": 1400,
+ "bulk_extract_date": "2026-10-01",
  "by_status": {
-  "CLOSED": 1113,
+  "CLOSED": 1115,
   "N/A": 259,
   "OPEN": 26
  },
@@ -13,7 +13,7 @@
   "LUST": 233,
   "NO ACTION REQUIRED": 187,
   "OFF-SITE": 43,
-  "SPILL": 735,
+  "SPILL": 737,
   "VPLE": 1
  },
  "co_by_municipality": {
@@ -42,13 +42,13 @@
  "continuing_obligation_sites": 150,
  "enforcement": {
   "audit_followup_complete": 1,
-  "audit_followup_needed": 1,
-  "audits_complete": 13,
+  "audit_followup_needed": 2,
+  "audits_complete": 15,
   "audits_vapor_only": 0,
   "co_applied": 152,
   "deed_recorded": 38,
   "deed_terminated": 2,
-  "modifications_approved": 3,
+  "modifications_approved": 4,
   "obligations_removed": 5
  }
 }

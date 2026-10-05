@@ -1,5 +1,5 @@
 {
- "bulk_extract_date": "2026-07-01",
+ "bulk_extract_date": "2026-10-01",
  "sites": [
   {
    "address": "MARSH RD NEAR CHICAGO & NW RR",
@@ -568,7 +568,7 @@
    "parties": [
     {
      "city": "SHAWANO",
-     "name": "MID COUNTY COOP",
+     "name": "MID-COUNTY COOPERATIVE",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -4328,7 +4328,7 @@
    "parties": [
     {
      "city": "SHAWANO",
-     "name": "WESCOTT TN",
+     "name": "TOWN OF WESCOTT",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -5713,9 +5713,19 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2014-01-02"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2026-07-08"
     }
    ],
    "parties": [
+    {
+     "city": "PIKESVILLE",
+     "name": "SAMUEL ISAACSON",
+     "role": "Owner",
+     "state": "MD"
+    },
     {
      "city": "CECIL",
      "name": "WESTERFELD OIL CO INC",
@@ -7060,7 +7070,7 @@
    "parties": [
     {
      "city": "BONDUEL",
-     "name": "BONDUEL VIL",
+     "name": "VILLAGE OF BONDUEL",
      "role": "Responsible Party",
      "state": "WI"
     }

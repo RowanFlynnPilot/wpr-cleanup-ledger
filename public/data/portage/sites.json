@@ -1,5 +1,5 @@
 {
- "bulk_extract_date": "2026-07-01",
+ "bulk_extract_date": "2026-10-01",
  "sites": [
   {
    "address": "OFF JERRYS LN",
@@ -696,6 +696,10 @@
     {
      "action": "Continuing Obligation Modification Request Received (fee)",
      "date": "2026-05-19"
+    },
+    {
+     "action": "Continuing Obligation Modification Approval",
+     "date": "2026-07-20"
     }
    ],
    "parties": [],
@@ -2156,6 +2160,14 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2007-11-02"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-08-20"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Needed",
+     "date": "2026-08-20"
     }
    ],
    "parties": [
@@ -2234,6 +2246,10 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2007-08-10"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-07-22"
     }
    ],
    "parties": [
@@ -3105,19 +3121,19 @@
    "parties": [
     {
      "city": "WISCONSIN RAPIDS",
-     "name": "MATT SCHNEIDER",
-     "role": "Owner",
-     "state": "WI"
-    },
-    {
-     "city": "WISCONSIN RAPIDS",
-     "name": "MID STATE TECHNICAL COLLEGE",
+     "name": "MID-STATE TECHNICAL COLLEGE",
      "role": "Owner",
      "state": "WI"
     },
     {
      "city": "STEVENS POINT",
      "name": "CITY OF STEVENS POINT",
+     "role": "Responsible Party",
+     "state": "WI"
+    },
+    {
+     "city": "WISCONSIN RAPIDS",
+     "name": "MID-STATE TECHNICAL COLLEGE",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -3541,7 +3557,7 @@
    "parties": [
     {
      "city": "PLOVER",
-     "name": "PLOVER VIL",
+     "name": "VILLAGE OF PLOVER",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -7737,7 +7753,7 @@
     },
     {
      "city": "JUNCTION CITY",
-     "name": "JUNCTION CITY VILLAGE OF",
+     "name": "VILLAGE OF JUNCTION CITY",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -9282,7 +9298,7 @@
    "type": "OFF-SITE"
   },
   {
-   "address": "1111 CROSBY AVE",
+   "address": "2828 WAYNE ST",
    "affected_properties": [],
    "brrts": "13-50-579008",
    "co_from_another_property": false,

@@ -1,19 +1,19 @@
 {
- "activities_total": 692,
- "bulk_extract_date": "2026-07-01",
+ "activities_total": 697,
+ "bulk_extract_date": "2026-10-01",
  "by_status": {
-  "CLOSED": 537,
-  "N/A": 150,
-  "OPEN": 5
+  "CLOSED": 538,
+  "N/A": 153,
+  "OPEN": 6
  },
  "by_type": {
   "ABANDONED CONTAINER": 5,
   "ERP": 56,
   "GENERAL PROPERTY": 19,
-  "LUST": 146,
-  "NO ACTION REQUIRED": 104,
+  "LUST": 147,
+  "NO ACTION REQUIRED": 107,
   "OFF-SITE": 27,
-  "SPILL": 333,
+  "SPILL": 334,
   "VPLE": 2
  },
  "co_by_municipality": {

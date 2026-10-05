@@ -1,5 +1,5 @@
 {
- "bulk_extract_date": "2026-07-01",
+ "bulk_extract_date": "2026-10-01",
  "sites": [
   {
    "address": "CTH B & BOGUS RD",
@@ -39,7 +39,7 @@
    "parties": [
     {
      "city": "LYNDON",
-     "name": "LYNDON TN",
+     "name": "TOWN OF LYNDON",
      "role": "Responsible Party",
      "state": "WI"
     }

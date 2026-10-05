@@ -1,21 +1,21 @@
 {
- "activities_total": 2214,
- "bulk_extract_date": "2026-07-01",
+ "activities_total": 2226,
+ "bulk_extract_date": "2026-10-01",
  "by_status": {
-  "CLOSED": 1755,
-  "CONDITIONALLY CLOSED": 3,
-  "N/A": 427,
-  "OPEN": 25,
+  "CLOSED": 1763,
+  "CONDITIONALLY CLOSED": 2,
+  "N/A": 429,
+  "OPEN": 28,
   "VPLE WITHDRAWN": 4
  },
  "by_type": {
   "ABANDONED CONTAINER": 8,
-  "ERP": 160,
+  "ERP": 162,
   "GENERAL PROPERTY": 49,
-  "LUST": 363,
-  "NO ACTION REQUIRED": 212,
+  "LUST": 364,
+  "NO ACTION REQUIRED": 214,
   "OFF-SITE": 166,
-  "SPILL": 1250,
+  "SPILL": 1257,
   "VPLE": 6
  },
  "co_by_municipality": {
@@ -26,6 +26,7 @@
   "GRAND RAPIDS": 1,
   "GRAND RAPIDS TN": 1,
   "HANSEN": 1,
+  "HANSEN TN": 1,
   "LINCOLN TN": 1,
   "MARSHFIELD": 146,
   "MARSHFIELD CITY": 1,
@@ -46,13 +47,13 @@
   "WISCONSIN RAPDIS": 1,
   "WISCONSIN RAPIDS": 143
  },
- "continuing_obligation_sites": 394,
+ "continuing_obligation_sites": 395,
  "enforcement": {
   "audit_followup_complete": 2,
   "audit_followup_needed": 2,
-  "audits_complete": 22,
+  "audits_complete": 23,
   "audits_vapor_only": 1,
-  "co_applied": 395,
+  "co_applied": 396,
   "deed_recorded": 48,
   "deed_terminated": 2,
   "modifications_approved": 8,

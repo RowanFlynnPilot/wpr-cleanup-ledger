@@ -1,8 +1,8 @@
 {
- "activities_total": 944,
- "bulk_extract_date": "2026-07-01",
+ "activities_total": 956,
+ "bulk_extract_date": "2026-10-01",
  "by_status": {
-  "CLOSED": 744,
+  "CLOSED": 756,
   "N/A": 188,
   "OPEN": 12
  },
@@ -13,7 +13,7 @@
   "LUST": 192,
   "NO ACTION REQUIRED": 119,
   "OFF-SITE": 49,
-  "SPILL": 460,
+  "SPILL": 472,
   "VPLE": 1
  },
  "co_by_municipality": {

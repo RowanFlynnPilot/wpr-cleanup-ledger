@@ -1,5 +1,5 @@
 {
- "bulk_extract_date": "2026-07-01",
+ "bulk_extract_date": "2026-10-01",
  "sites": [
   {
    "address": "STEWART AND 28TH ST",
@@ -1593,7 +1593,7 @@
    "parties": [
     {
      "city": "WAUSAU",
-     "name": "WAUSAU COMMUNITY DEVELOPMENT AUTHORITY",
+     "name": "CITY OF WAUSAU COMMUNITY DEVELOPMENT AUTHORITY",
      "role": "Owner",
      "state": "WI"
     },
@@ -2597,6 +2597,10 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2007-05-16"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-08-25"
     }
    ],
    "parties": [
@@ -3072,7 +3076,7 @@
    "parties": [
     {
      "city": "WAUSAU",
-     "name": "WAUSAU COMMUNITY DEVELOPMENT AUTHORITY",
+     "name": "CITY OF WAUSAU COMMUNITY DEVELOPMENT AUTHORITY",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -3480,6 +3484,14 @@
     {
      "action": "Continuing Obligation Modification Approval",
      "date": "2020-01-23"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-08-06"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Follow-up Needed",
+     "date": "2026-08-06"
     }
    ],
    "parties": [
@@ -3557,6 +3569,10 @@
     {
      "action": "Continuing Obligation(s) Compliance Audit Complete",
      "date": "2010-07-21"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2026-09-29"
     }
    ],
    "parties": [
@@ -3633,6 +3649,10 @@
     {
      "action": "Continuing Obligation Modification Approval",
      "date": "2020-01-23"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-08-06"
     }
    ],
    "parties": [
@@ -4109,7 +4129,7 @@
    "parties": [
     {
      "city": "ATHENS",
-     "name": "ATHENS VIL FIRE DEPT",
+     "name": "VILLAGE OF ATHENS FIRE DEPT",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -4250,7 +4270,7 @@
    "parties": [
     {
      "city": "BIRNAMWOOD",
-     "name": "PLOVER TN",
+     "name": "TOWN OF PLOVER",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -6289,7 +6309,7 @@
    "parties": [
     {
      "city": "MARATHON CITY",
-     "name": "MARATHON CITY VILLAGE",
+     "name": "VILLAGE OF MARATHON CITY",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -8088,7 +8108,7 @@
    "parties": [
     {
      "city": "WAUSAU",
-     "name": "WAUSAU TN",
+     "name": "TOWN OF WAUSAU",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -8777,7 +8797,7 @@
    "parties": [
     {
      "city": "RINGLE",
-     "name": "RINGLE TN",
+     "name": "TOWN OF RINGLE",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -9440,6 +9460,10 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2024-09-19"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-08-18"
     }
    ],
    "parties": [
@@ -9563,7 +9587,7 @@
    "parties": [
     {
      "city": "EDGAR",
-     "name": "WIEN TN",
+     "name": "TOWN OF WIEN",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -9861,7 +9885,7 @@
    "parties": [
     {
      "city": "ROTHSCHILD",
-     "name": "ROTHSCHILD VIL",
+     "name": "VILLAGE OF ROTHSCHILD",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -10673,7 +10697,7 @@
    "parties": [
     {
      "city": "MOSINEE",
-     "name": "CENTRAL WISCONSIN AIRPORT",
+     "name": "MARATHON COUNTY CENTRAL WISCONSIN AIRPORT (CWA)",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -15678,14 +15702,14 @@
    ],
    "parties": [
     {
-     "city": "MARATHON CITY",
-     "name": "MARATHON CITY VILLAGE",
+     "city": "MOSINEE",
+     "name": "PERSONAL INFORMATION WITHHELD",
      "role": "Responsible Party",
      "state": "WI"
     },
     {
-     "city": "MOSINEE",
-     "name": "PERSONAL INFORMATION WITHHELD",
+     "city": "MARATHON CITY",
+     "name": "VILLAGE OF MARATHON CITY",
      "role": "Responsible Party",
      "state": "WI"
     }

@@ -1,5 +1,5 @@
 {
- "bulk_extract_date": "2026-07-01",
+ "bulk_extract_date": "2026-10-01",
  "sites": [
   {
    "address": "101 HWY 73 SOUTH",
@@ -4778,6 +4778,66 @@
    "type": "ERP"
   },
   {
+   "address": "6053 JACKSON RD",
+   "affected_properties": [],
+   "brrts": "02-72-592123",
+   "co_from_another_property": false,
+   "co_types": [
+    "well-abandonment"
+   ],
+   "contamination_moved_offsite": false,
+   "dry_cleaner": false,
+   "dsn": 592123,
+   "end_date": "2026-09-21",
+   "impacts": [
+    {
+     "desc": "Groundwater Contamination",
+     "potential": false
+    },
+    {
+     "desc": "Soil Contamination",
+     "potential": false
+    }
+   ],
+   "lat": 44.466901062,
+   "lon": -90.022099842,
+   "muni": "HANSEN TN",
+   "name": "ENBRIDGE ENERGY JACKSON RD VALVE SITE",
+   "obligations": [
+    {
+     "action": "Continuing Obligation - Monitoring Well Needs Abandonment",
+     "date": "2026-09-21"
+    },
+    {
+     "action": "Continuing Obligation(s) Applied",
+     "date": "2026-09-21"
+    }
+   ],
+   "parties": [
+    {
+     "city": "VESPER",
+     "name": "AMOS AND JODY WOLF",
+     "role": "Owner",
+     "state": "WI"
+    },
+    {
+     "city": "DULUTH",
+     "name": "ENBRIDGE ENERGY LIMITED PARTNERSHIP",
+     "role": "Responsible Party",
+     "state": "MN"
+    }
+   ],
+   "pfas": false,
+   "source_site": null,
+   "start_date": "2023-05-19",
+   "state_funded": false,
+   "status": "CLOSED",
+   "substances": [
+    "Volatile Organic Compounds"
+   ],
+   "type": "ERP"
+  },
+  {
    "address": "2100 E 29TH ST",
    "affected_properties": [],
    "brrts": "02-72-593900",
@@ -4891,14 +4951,22 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2026-06-10"
+    },
+    {
+     "action": "Continuing Obligation Modification Request Received (fee)",
+     "date": "2026-07-14"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2026-08-14"
     }
    ],
    "parties": [
     {
-     "city": "WISCONSIN RAPIDS",
-     "name": "WRVA LLC",
+     "city": "",
+     "name": "FAMILY HEALTH CENTER OF MARSHFIELD INC",
      "role": "Owner",
-     "state": "WI"
+     "state": ""
     },
     {
      "city": "WISCONSIN RAPIDS",
@@ -5733,7 +5801,7 @@
    "parties": [
     {
      "city": "MARSHFIELD",
-     "name": "WEYERHAEUSER COMPANY",
+     "name": "WEYERHAEUSER CO",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -6464,7 +6532,7 @@
    "parties": [
     {
      "city": "MARSHFIELD",
-     "name": "UNIVERSITY OF WISCONSIN",
+     "name": "UW MADISON MARSHFIELD RESEARCH STATION",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -7367,7 +7435,7 @@
    "parties": [
     {
      "city": "WIS RAPIDS",
-     "name": "GRAND RAPIDS TN",
+     "name": "TOWN OF GRAND RAPIDS",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -7742,7 +7810,7 @@
    "parties": [
     {
      "city": "MARSHFIELD",
-     "name": "U W MADISON RESEARCH STATION",
+     "name": "UW MADISON MARSHFIELD RESEARCH STATION",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -9346,7 +9414,7 @@
    "parties": [
     {
      "city": "MARSHFIELD",
-     "name": "MARSHFIELD AIRPORT",
+     "name": "CITY OF MARSHFIELD MUNICIPAL AIRPORT",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -9408,7 +9476,7 @@
    "parties": [
     {
      "city": "MARSHFIELD",
-     "name": "MARSHFIELD AIRPORT",
+     "name": "CITY OF MARSHFIELD MUNICIPAL AIRPORT",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -13274,7 +13342,7 @@
    "parties": [
     {
      "city": "WISCONSIN RAPIDS",
-     "name": "ALEXANDER FIELD MUN AIRPORT COMMISSION",
+     "name": "ALEXANDER FIELD SOUTH WOOD COUNTY AIRPORT (KISW)",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -14175,12 +14243,16 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2007-08-13"
+    },
+    {
+     "action": "Continuing Obligation(s) Compliance Audit Complete",
+     "date": "2026-07-13"
     }
    ],
    "parties": [
     {
      "city": "MILLADORE",
-     "name": "MILLADORE VIL OF",
+     "name": "VILLAGE OF MILLADORE",
      "role": "Responsible Party",
      "state": "WI"
     }
@@ -15529,6 +15601,22 @@
     {
      "action": "CO Packet and GIS QAQC Completed by DNR",
      "date": "2013-08-29"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2025-02-20"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2025-02-21"
+    },
+    {
+     "action": "CO Modification Notification Received (non-fee)",
+     "date": "2026-08-17"
+    },
+    {
+     "action": "CO Modification Notice to Proceed (NTP)",
+     "date": "2026-08-18"
     }
    ],
    "parties": [
@@ -16735,6 +16823,10 @@
     {
      "action": "Continuing Obligation(s) Applied",
      "date": "2025-12-19"
+    },
+    {
+     "action": "CO Packet and GIS QAQC Completed by DNR",
+     "date": "2026-08-18"
     }
    ],
    "parties": [
