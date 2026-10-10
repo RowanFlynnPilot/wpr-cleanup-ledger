@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-10-08T17:33:28+00:00",
+ "last_pfas_pull": "2026-10-10T15:56:10+00:00",
  "systems": [
   {
    "city": "IRMA",
@@ -19,7 +19,7 @@
    "name": "MERRILL WATERWORKS",
    "pws_id": "73501230",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-05-31",
+   "sample_date": "2026-10-06",
    "sample_status": "Sampled"
   },
   {

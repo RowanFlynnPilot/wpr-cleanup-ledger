@@ -10,7 +10,7 @@
    "pws_id": "74401151"
   }
  ],
- "last_pfas_pull": "2026-10-08T17:33:28+00:00",
+ "last_pfas_pull": "2026-10-10T15:56:10+00:00",
  "systems": [
   {
    "city": "LAKE TOMAHAWK",
@@ -39,7 +39,7 @@
    "name": "RHINELANDER WATER & WASTEWATER",
    "pws_id": "74401261",
    "results": "PFAS above the health advisory level in one or more samples from the system",
-   "sample_date": "2025-05-28",
+   "sample_date": "2026-10-06",
    "sample_status": "Sampled"
   },
   {
