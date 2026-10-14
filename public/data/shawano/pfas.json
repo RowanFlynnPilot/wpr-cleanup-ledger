@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-10-10T15:56:10+00:00",
+ "last_pfas_pull": "2026-10-14T15:23:01+00:00",
  "systems": [
   {
    "city": "BIRNAMWOOD",
@@ -19,7 +19,7 @@
    "name": "BONDUEL WATERWORKS",
    "pws_id": "45904507",
    "results": "PFAS not detected in any samples from the water system",
-   "sample_date": "2023-04-04",
+   "sample_date": "2026-10-06",
    "sample_status": "Sampled"
   },
   {
