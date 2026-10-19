@@ -1,6 +1,24 @@
 {
  "events": [
   {
+   "address": "Cth P Over Fenwood Creek",
+   "brrts": "0237596167",
+   "detected_at": "2026-10-19T17:07:11+00:00",
+   "event_type": "CASE_CLOSED",
+   "layer_id": 103,
+   "muni": "Cleveland Tn",
+   "name": "WI DOT CTH P OVER FENWOOD CREEK"
+  },
+  {
+   "address": "Cth P Over Fenwood Creek",
+   "brrts": "0237596167",
+   "detected_at": "2026-10-19T17:07:11+00:00",
+   "event_type": "NO_LONGER_OPEN",
+   "layer_id": 101,
+   "muni": "Cleveland Tn",
+   "name": "WI DOT CTH P OVER FENWOOD CREEK"
+  },
+  {
    "address": "Row Adj To N6001 Cth D",
    "brrts": "0259596795",
    "detected_at": "2026-10-15T15:17:09+00:00",
