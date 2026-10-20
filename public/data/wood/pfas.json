@@ -10,7 +10,7 @@
    "pws_id": "77201135"
   }
  ],
- "last_pfas_pull": "2026-10-18T14:06:53+00:00",
+ "last_pfas_pull": "2026-10-20T15:25:59+00:00",
  "systems": [
   {
    "city": "NEKOOSA",
@@ -39,7 +39,7 @@
    "name": "PITTSVILLE WATERWORKS",
    "pws_id": "77201124",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-04-11",
+   "sample_date": "2026-10-12",
    "sample_status": "Sampled"
   },
   {
