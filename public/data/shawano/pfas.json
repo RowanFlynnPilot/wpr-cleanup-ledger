@@ -1,6 +1,16 @@
 {
- "events": [],
- "last_pfas_pull": "2026-10-20T15:25:59+00:00",
+ "events": [
+  {
+   "city": "BOWLER",
+   "detected_at": "2026-10-22T15:31:13+00:00",
+   "event_type": "PFAS_RESULT_CHANGED",
+   "name": "BOWLER WATERWORKS",
+   "new_results": "PFAS not detected in any samples from the water system",
+   "old_results": "PFAS detected below hazard index in one or more samples from the water system",
+   "pws_id": "45904518"
+  }
+ ],
+ "last_pfas_pull": "2026-10-22T15:31:13+00:00",
  "systems": [
   {
    "city": "BIRNAMWOOD",
@@ -28,8 +38,8 @@
    "lon": -88.97135545690405,
    "name": "BOWLER WATERWORKS",
    "pws_id": "45904518",
-   "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-04-19",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2026-10-13",
    "sample_status": "Sampled"
   },
   {
