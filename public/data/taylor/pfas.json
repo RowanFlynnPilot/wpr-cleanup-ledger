@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-10-22T15:31:13+00:00",
+ "last_pfas_pull": "2026-10-28T16:46:44+00:00",
  "systems": [
   {
    "city": "GILMAN",
@@ -19,7 +19,7 @@
    "name": "MEDFORD WATERWORKS",
    "pws_id": "86101257",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2025-05-12",
+   "sample_date": "2026-10-19",
    "sample_status": "Sampled"
   },
   {
