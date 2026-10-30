@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-10-28T16:46:44+00:00",
+ "last_pfas_pull": "2026-10-30T16:47:37+00:00",
  "systems": [
   {
    "city": "ANTIGO",
@@ -29,7 +29,7 @@
    "name": "WHITE LAKE WATERWORKS",
    "pws_id": "73401185",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-04-26",
+   "sample_date": "2026-10-21",
    "sample_status": "Sampled"
   }
  ]
