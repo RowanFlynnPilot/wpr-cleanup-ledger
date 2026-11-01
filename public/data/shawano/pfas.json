@@ -10,7 +10,7 @@
    "pws_id": "45904518"
   }
  ],
- "last_pfas_pull": "2026-10-30T16:47:37+00:00",
+ "last_pfas_pull": "2026-11-01T16:53:32+00:00",
  "systems": [
   {
    "city": "BIRNAMWOOD",
@@ -59,7 +59,7 @@
    "name": "MATTOON WATERWORKS",
    "pws_id": "45904551",
    "results": "PFAS not detected in any samples from the water system",
-   "sample_date": "2023-04-20",
+   "sample_date": "2026-10-28",
    "sample_status": "Sampled"
   },
   {
