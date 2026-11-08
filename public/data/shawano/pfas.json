@@ -10,7 +10,7 @@
    "pws_id": "45904518"
   }
  ],
- "last_pfas_pull": "2026-11-06T17:39:43+00:00",
+ "last_pfas_pull": "2026-11-08T16:45:31+00:00",
  "systems": [
   {
    "city": "BIRNAMWOOD",
@@ -69,7 +69,7 @@
    "name": "SHAWANO WATERWORKS",
    "pws_id": "45904562",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-05-22",
+   "sample_date": "2026-11-03",
    "sample_status": "Sampled"
   },
   {
