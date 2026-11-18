@@ -1,6 +1,15 @@
 {
  "events": [
   {
+   "city": "SPENCER",
+   "detected_at": "2026-11-18T18:58:59+00:00",
+   "event_type": "PFAS_RESULT_CHANGED",
+   "name": "SPENCER WATERWORKS",
+   "new_results": "PFAS not detected in any samples from the water system",
+   "old_results": "PFAS detected below hazard index in one or more samples from the water system",
+   "pws_id": "73701089"
+  },
+  {
    "city": "ATHENS",
    "detected_at": "2026-11-14T16:41:15+00:00",
    "event_type": "PFAS_RESULT_CHANGED",
@@ -10,7 +19,7 @@
    "pws_id": "73701496"
   }
  ],
- "last_pfas_pull": "2026-11-14T16:41:15+00:00",
+ "last_pfas_pull": "2026-11-18T18:58:59+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -38,8 +47,8 @@
    "lon": -90.30811023644806,
    "name": "SPENCER WATERWORKS",
    "pws_id": "73701089",
-   "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2026-09-15",
+   "results": "PFAS not detected in any samples from the water system",
+   "sample_date": "2026-11-10",
    "sample_status": "Sampled"
   },
   {
