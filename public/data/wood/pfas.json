@@ -10,7 +10,7 @@
    "pws_id": "77201135"
   }
  ],
- "last_pfas_pull": "2026-11-18T18:58:59+00:00",
+ "last_pfas_pull": "2026-11-20T18:44:49+00:00",
  "systems": [
   {
    "city": "NEKOOSA",
@@ -19,7 +19,7 @@
    "name": "ROME WATER UTILITY",
    "pws_id": "70101086",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-05-04",
+   "sample_date": "2026-11-11",
    "sample_status": "Sampled"
   },
   {

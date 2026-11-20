@@ -19,7 +19,7 @@
    "pws_id": "73701496"
   }
  ],
- "last_pfas_pull": "2026-11-18T18:58:59+00:00",
+ "last_pfas_pull": "2026-11-20T18:44:49+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -128,7 +128,7 @@
    "name": "STRATFORD WATERWORKS",
    "pws_id": "73701683",
    "results": "PFAS above the health advisory level in one or more samples from the system",
-   "sample_date": "2026-03-19",
+   "sample_date": "2026-11-11",
    "sample_status": "Sampled"
   },
   {
