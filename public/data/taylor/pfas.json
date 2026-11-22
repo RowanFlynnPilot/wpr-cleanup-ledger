@@ -1,6 +1,6 @@
 {
  "events": [],
- "last_pfas_pull": "2026-11-20T18:44:49+00:00",
+ "last_pfas_pull": "2026-11-22T17:59:21+00:00",
  "systems": [
   {
    "city": "GILMAN",
@@ -29,7 +29,7 @@
    "name": "RIB LAKE WATERWORKS",
    "pws_id": "86101268",
    "results": "PFAS not detected in any samples from the water system",
-   "sample_date": "2023-05-31",
+   "sample_date": "2026-11-12",
    "sample_status": "Sampled"
   },
   {
