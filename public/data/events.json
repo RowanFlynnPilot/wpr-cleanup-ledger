@@ -1,6 +1,24 @@
 {
  "events": [
   {
+   "address": "9750 Sth 70 W",
+   "brrts": "0344600265",
+   "detected_at": "2026-11-23T22:10:58+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Minocqua",
+   "name": "TRIGS SHELL STATION"
+  },
+  {
+   "address": "444 Ush 45",
+   "brrts": "0359600176",
+   "detected_at": "2026-11-23T22:10:58+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Birnamwood",
+   "name": "BIRNAMWOOD MART"
+  },
+  {
    "address": "Cth P Over Fenwood Creek",
    "brrts": "0237596167",
    "detected_at": "2026-10-19T17:07:11+00:00",
