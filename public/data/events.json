@@ -1,6 +1,33 @@
 {
  "events": [
   {
+   "address": "Ne Corner Of Cth F And Cth Hh",
+   "brrts": "0372600286",
+   "detected_at": "2026-11-24T20:47:48+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Vesper",
+   "name": "8 CORNERS BAR (FORMER)"
+  },
+  {
+   "address": "1101 Centerpoint Dr",
+   "brrts": "0250600106",
+   "detected_at": "2026-11-24T20:47:48+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Stevens Point",
+   "name": "GREAT LAKES EDUCATIONAL LOAN SERVICES (FMR)"
+  },
+  {
+   "address": "151609 Goose Ln",
+   "brrts": "0237597332",
+   "detected_at": "2026-11-24T20:47:48+00:00",
+   "event_type": "CASE_OPENED",
+   "layer_id": 101,
+   "muni": "Rib Mountain",
+   "name": "VILLAGE OF RIB MOUNTAIN TOWN GARAGE"
+  },
+  {
    "address": "9750 Sth 70 W",
    "brrts": "0344600265",
    "detected_at": "2026-11-23T22:10:58+00:00",

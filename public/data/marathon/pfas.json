@@ -19,7 +19,7 @@
    "pws_id": "73701496"
   }
  ],
- "last_pfas_pull": "2026-11-22T17:59:21+00:00",
+ "last_pfas_pull": "2026-11-24T20:47:49+00:00",
  "systems": [
   {
    "city": "WAUSAU",
@@ -88,7 +88,7 @@
    "name": "MOSINEE WATERWORKS",
    "pws_id": "73701595",
    "results": "PFAS detected below hazard index in one or more samples from the water system",
-   "sample_date": "2023-05-09",
+   "sample_date": "2026-11-12",
    "sample_status": "Sampled"
   },
   {
